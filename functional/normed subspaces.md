@@ -65,3 +65,114 @@ Let $W\subset B$ be a closed subspace. Then, $B/W$ is a Banach space.
 Suppose the series $\sum_n \norm{v_n + W}$ converges. Then, for each $n\in \NN$, there exists an $w_n\in W$ such that $$ \norm{v_n + w_n}\leq \norm{v_n + W} + 2^{-n} $$ (by definition of infimum). This is good, because $\sum_n \norm{v_n + w_n} < \infty$; then because $B$ is Banach, the summation goes through in $B$: $$ v = \sum_n (v_n + w_n) \in B $$ Great; now we just want to show that $v+W = \sum_n (v_n + W)$. Well (and let's be careful here), \begin{align*} \lim_{N\to \infty} \norm{v + W - \sum_{n=1}^N (v_n + W)} & = \lim_{N\to \infty} \norm{( v - \sum_{n=1}^N)  + W}        \\ & = \lim_{N\to \infty} \norm{\sum_{n=N+1}^\infty (v_n + w_n)} \end{align*} The tail vanishes, so we're done. 
 
 
+
+$$
+\require{physics}
+
+% Misc
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\ii}[1]{\textit{#1}}
+\newcommand{\eps}{\varepsilon}
+
+% Expected Value
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\newcommand{\pperp}{\perp\kern-6pt\perp}
+
+% Operators
+\newcommand{\xx}{\hat{x}}
+\newcommand{\pp}{\hat{p}}
+\newcommand{\ee}{\hat{E}}
+\renewcommand{\aa}{\hat{a}} % aa makes an a with a dot on top.
+\newcommand{\bb}{\hat{b}}
+\renewcommand{\AA}{\hat{a}}
+\newcommand{\BB}{\hat{B}}
+
+\newcommand{\ad}{\hat{a}^\dagger}
+
+% Woah, relativity
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\pa}{\partial}
+
+% Inequalities
+\newcommand{\cyc}{\sum\limits_{\mathrm{cyc}}}
+\newcommand{\sym}{\sum\limits_{\mathrm{sym}}}
+\newcommand{\cycprod}{\prod_{\mathrm{cyc}}}
+\newcommand{\symprod}{\prod_{\mathrm{sym}}}
+
+\newcommand{\eq}[1]{\stackrel{#1}{=}}
+\newcommand{\rgeq}[1]{\stackrel{#1}{\geq}}
+\newcommand{\rleq}[1]{\stackrel{#1}{\leq}}
+
+% Measure Theory
+\newcommand{\AAA}{\mathscr{A}}
+\newcommand{\BBB}{\mathscr{B}}
+\newcommand{\FFF}{\mathscr{F}}
+\newcommand{\GGG}{\mathscr{G}}
+\newcommand{\HHH}{\mathscr{H}}
+
+\DeclareMathOperator{\ess}{ess}
+
+% A bunch of sets
+\newcommand{\CC}{\mathbb C}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\II}{\mathbb I}
+
+% Complex Bashing
+\newcommand{\conj}[1]{\overline{#1}}
+\DeclareMathOperator{\cis}{cis}
+
+
+% A bunch of geometry
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\dang}{\measuredangle} %% Directed angle
+\newcommand{\ray}[1]{\overrightarrow{#1}}
+\newcommand{\seg}[1]{\overline{#1}}
+\newcommand{\arc}[1]{\wideparen{#1}}
+\newcommand{\pow}{\text{pow}} %% Power
+
+% Things about NT
+\newcommand{\jacobi}[2] {\genfrac{(}{)}{1.5pt}{}{\,#1\,}{#2}}
+\DeclareMathOperator*{\lcm}{lcm}
+\DeclareMathOperator*{\ord}{ord}
+
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+
+
+% Linalg
+\DeclareMathOperator*{\range}{range}
+\DeclareMathOperator*{\nul}{null}
+\DeclareMathOperator*{\Tr}{Tr}
+\newcommand{\id}{1\!\!1}
+
+% Other physics things
+\newcommand{\der}{\ \mathrm {d}}
+
+\newcommand{\ihat}{\boldsymbol{\hat{\textbf{\i}}}}
+\newcommand{\jhat}{\boldsymbol{\hat{\textbf{\j}}}}
+\newcommand{\khat}{\boldsymbol{\hat{\textbf{k}}}}
+\newcommand{\rhat}{\boldsymbol{\hat{\textbf{r}}}}
+\newcommand{\that}{\boldsymbol{\hat{\mathbf{\theta}}}}
+
+
+
+% Lol, some groups
+\newcommand{\Zc}[1]{\ZZ / #1 \ZZ}
+\newcommand{\Zm}[1]{\left(\ZZ / #1 \ZZ\right)^\times}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\newcommand{\GL}{\mathbb{GL}}
+\newcommand{\SL}{\mathbb{SL}}
+$$

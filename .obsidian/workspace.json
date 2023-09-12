@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vision.md",
+                "file": "functional/Minkowski norm.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vision.md",
+                "file": "functional/Minkowski norm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Vision.md",
+                "file": "functional/Minkowski norm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Vision.md"
+                "file": "functional/Minkowski norm.md"
               }
             }
           },
@@ -175,18 +175,21 @@
   "active": "957cefcd4d6c631d",
   "lastOpenFiles": [
     "functional/normed.md",
+    "functional/Minkowski norm.md",
+    "Differential Geometry/Differential Geometry.md",
+    "functional/banach.md",
+    "functional/Functional Analysis.md",
+    "Vision.md",
     "functional/infinity norm.md",
     "functional/eigen.md",
     "functional/Euclidean norm.md",
     "functional/hahnbanach.md",
     "Differential Geometry/Regular Functions.md",
     "Differential Geometry/Germ.md",
-    "Vision.md",
     "Differential Geometry/locally homeomorphic.md",
     "Differential Geometry/Basic Manifold Exercises.md",
     "Differential Geometry/Jacobian matrix.md",
     "Differential Geometry/Derivative.md",
-    "Differential Geometry/Differential Geometry.md",
     "Differential Geometry/implicit function theorem.md",
     "Differential Geometry/Ring of Sets.md",
     "Differential Geometry/Atlas.md",
@@ -199,9 +202,6 @@
     "publish.css",
     "Differential Geometry/publish.css",
     "Differential Geometry/Analytic Manifolds.md",
-    "Lie/topological manifolds.md",
-    "Lie/Lie Groups and Lie Algebras.md",
-    "Lie/Topological Groups.md",
     "measure/homework/hw1.synctex(busy)",
     "measure/homework/pdflatex956.fls",
     "measure/homework/pdflatex23988.fls",
