@@ -1,3 +1,14 @@
+These are Rowechen Zhong's personal notes on mathematics.
+
+See:
+
+-   [[Homotopy Theory]]
+-   [[Measure Theory]]
+-   [[Functional Analysis]]
+-   [[Differential Geometry]]
+-   [[Lie Groups and Lie Algebras]]
+-   [[Probability]]
+
 $$
 \require{physics}
 
@@ -15,7 +26,18 @@ $$
 
 \newcommand{\pperp}{\perp\kern-6pt\perp}
 
-% Lol relativity
+% Operators
+\newcommand{\xx}{\hat{x}}
+\newcommand{\pp}{\hat{p}}
+\newcommand{\ee}{\hat{E}}
+\renewcommand{\aa}{\hat{a}} % aa makes an a with a dot on top.
+\newcommand{\bb}{\hat{b}}
+\renewcommand{\AA}{\hat{a}}
+\newcommand{\BB}{\hat{B}}
+
+\newcommand{\ad}{\hat{a}^\dagger}
+
+% Woah, relativity
 \newcommand{\LL}{\mathcal{L}}
 \newcommand{\pa}{\partial}
 
@@ -29,7 +51,16 @@ $$
 \newcommand{\rgeq}[1]{\stackrel{#1}{\geq}}
 \newcommand{\rleq}[1]{\stackrel{#1}{\leq}}
 
-% Sets
+% Measure Theory
+\newcommand{\AAA}{\mathscr{A}}
+\newcommand{\BBB}{\mathscr{B}}
+\newcommand{\FFF}{\mathscr{F}}
+\newcommand{\GGG}{\mathscr{G}}
+\newcommand{\HHH}{\mathscr{H}}
+
+\DeclareMathOperator{\ess}{ess}
+
+% A bunch of sets
 \newcommand{\CC}{\mathbb C}
 \newcommand{\FF}{\mathbb F}
 \newcommand{\NN}{\mathbb N}
@@ -39,7 +70,12 @@ $$
 \newcommand{\SSS}{\mathbb S}
 \newcommand{\II}{\mathbb I}
 
-% Geometry
+% Complex Bashing
+\newcommand{\conj}[1]{\overline{#1}}
+\DeclareMathOperator{\cis}{cis}
+
+
+% A bunch of geometry
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
 \newcommand{\dang}{\measuredangle} %% Directed angle
@@ -48,12 +84,7 @@ $$
 \newcommand{\arc}[1]{\wideparen{#1}}
 \newcommand{\pow}{\text{pow}} %% Power
 
-
-% Complex Bashing
-\newcommand{\conj}[1]{\overline{#1}}
-\DeclareMathOperator{\cis}{cis}
-
-% NT
+% Things about NT
 \newcommand{\jacobi}[2] {\genfrac{(}{)}{1.5pt}{}{\,#1\,}{#2}}
 \DeclareMathOperator*{\lcm}{lcm}
 \DeclareMathOperator*{\ord}{ord}
@@ -61,61 +92,30 @@ $$
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 
-% Derivative
+
+% Linalg
+\DeclareMathOperator*{\range}{range}
+\DeclareMathOperator*{\nul}{null}
+\DeclareMathOperator*{\Tr}{Tr}
+\newcommand{\id}{1\!\!1}
+
+% Other physics things
 \newcommand{\der}{\ \mathrm {d}}
 
-% Unit Vectors
 \newcommand{\ihat}{\boldsymbol{\hat{\textbf{\i}}}}
 \newcommand{\jhat}{\boldsymbol{\hat{\textbf{\j}}}}
 \newcommand{\khat}{\boldsymbol{\hat{\textbf{k}}}}
 \newcommand{\rhat}{\boldsymbol{\hat{\textbf{r}}}}
 \newcommand{\that}{\boldsymbol{\hat{\mathbf{\theta}}}}
 
-% Operators
-\newcommand{\xx}{\hat{x}}
-\newcommand{\pp}{\hat{p}}
-\newcommand{\ee}{\hat{E}}
-\renewcommand{\aa}{\hat{a}} % aa makes an a with a dot on top.
-\newcommand{\bb}{\hat{b}}
-\renewcommand{\AA}{\hat{a}}
-\newcommand{\BB}{\hat{B}}
 
-\newcommand{\ad}{\hat{a}^\dagger}
 
-% Groups
+% Lol, some groups
 \newcommand{\Zc}[1]{\ZZ / #1 \ZZ}
 \newcommand{\Zm}[1]{\left(\ZZ / #1 \ZZ\right)^\times}
 
-% Linalg
-\DeclareMathOperator*{\range}{range}
-\DeclareMathOperator*{\nul}{null}
-\DeclareMathOperator*{\Tr}{Tr}
-
-% Homomorphism
 \DeclareMathOperator{\Hom}{Hom}
-% Endomorphism
 \DeclareMathOperator{\End}{End}
-
-\newcommand{\id}{1\!\!1}
-
 \newcommand{\GL}{\mathbb{GL}}
 \newcommand{\SL}{\mathbb{SL}}
-
-% Measure Theory
-\newcommand{\AAA}{\mathscr{A}}
-\newcommand{\BBB}{\mathscr{B}}
-\newcommand{\FFF}{\mathscr{F}}
-\newcommand{\GGG}{\mathscr{G}}
-\newcommand{\HHH}{\mathscr{H}}
-
-\DeclareMathOperator{\ess}{ess}
 $$
-These are Rowechen Zhong's personal notes on mathematics.
-
-See:
-- [[Homotopy Theory]]
-- [[Measure Theory]]
-- [[Functional Analysis]]
-- [[Differential Geometry]]
-- [[Lie Groups and Lie Algebras]]
-- [[Probability]]

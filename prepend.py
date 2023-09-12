@@ -3,15 +3,29 @@ import os
 prefix = open('preamble.sty').read()
 
 print(prefix[:100])
-prefix = "$$\n" + prefix + "\n$$\n"
+prefix = "\n$$\n" + prefix + "\n$$\n"
 
 # iterate over all files in directory
 for subdir, dirs, files in os.walk('.'):
     for file in files:
         # print(os.path.join(subdir, file))
-        # append prefix to the beginning of each file
         if file.endswith(".md"):
-            with open(os.path.join(subdir, file), 'r+') as f:
-                content = f.read()
-                f.seek(0, 0)
-                f.write(prefix + content)
+
+            # # Append prefix to front of file
+            # with open(os.path.join(subdir, file), 'r') as f:
+            #     text = f.read()
+            #     text = prefix + text
+
+            # # write file back
+            # with open(os.path.join(subdir, file), 'w') as f:
+            #     f.write(text)
+
+            # if file begins with prefix, remove that prefix.
+            with open(os.path.join(subdir, file), 'r') as f:
+                text = f.read()
+                if text.startswith(prefix):
+                    text = text[len(prefix):]
+
+            # write file back
+            with open(os.path.join(subdir, file), 'w') as f:
+                f.write(text)

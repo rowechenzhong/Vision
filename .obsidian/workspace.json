@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "5db145e98ccae6fa",
+        "id": "34e9ad02c2ba4199",
         "type": "tabs",
         "children": [
           {
-            "id": "485076a2ab0158db",
+            "id": "957cefcd4d6c631d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Differential Geometry/Regular Maps.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d778027d48e80522",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "measure/Caratheodory extension Theorem.md",
+                "file": "Vision.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -53,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "caratheo",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +79,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -124,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "measure/Caratheodory extension Theorem.md",
+                "file": "Vision.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "measure/Caratheodory extension Theorem.md",
+                "file": "Vision.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "measure/Caratheodory extension Theorem.md"
+                "file": "Vision.md"
               }
             }
           },
@@ -185,28 +172,36 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "d778027d48e80522",
+  "active": "957cefcd4d6c631d",
   "lastOpenFiles": [
-    "Differential Geometry/Derivative.md",
-    "measure/Measure Theory.md",
+    "functional/normed.md",
+    "functional/infinity norm.md",
+    "functional/eigen.md",
+    "functional/Euclidean norm.md",
+    "functional/hahnbanach.md",
+    "Differential Geometry/Regular Functions.md",
+    "Differential Geometry/Germ.md",
     "Vision.md",
+    "Differential Geometry/locally homeomorphic.md",
+    "Differential Geometry/Basic Manifold Exercises.md",
+    "Differential Geometry/Jacobian matrix.md",
+    "Differential Geometry/Derivative.md",
+    "Differential Geometry/Differential Geometry.md",
+    "Differential Geometry/implicit function theorem.md",
+    "Differential Geometry/Ring of Sets.md",
+    "Differential Geometry/Atlas.md",
+    "measure/Caratheodory extension Theorem.md",
+    "Differential Geometry/Regular Maps.md",
+    "measure/Measure Theory.md",
     "Differential Geometry/analytic.md",
     "Differential Geometry/Tangent spaces.md",
     "homotopy/homotopy.md",
-    "Differential Geometry/Regular Maps.md",
     "publish.css",
     "Differential Geometry/publish.css",
     "Differential Geometry/Analytic Manifolds.md",
     "Lie/topological manifolds.md",
-    "Differential Geometry/Germ.md",
-    "Differential Geometry/Regular Functions.md",
-    "Differential Geometry/locally homeomorphic.md",
-    "Differential Geometry/Basic Manifold Exercises.md",
-    "Differential Geometry/implicit function theorem.md",
-    "Differential Geometry/Jacobian matrix.md",
     "Lie/Lie Groups and Lie Algebras.md",
     "Lie/Topological Groups.md",
-    "measure/pi lambda system.md",
     "measure/homework/hw1.synctex(busy)",
     "measure/homework/pdflatex956.fls",
     "measure/homework/pdflatex23988.fls",
@@ -215,14 +210,6 @@
     "measure/homework/pdflatex17548.fls",
     "measure/homework/pdflatex23068.fls",
     "measure/homework/pdflatex7896.fls",
-    "measure/measure space.md",
-    "measure/Lebesgue Measure.md",
-    "measure/semialgebra extension.md",
-    "measure/pre-measure.md",
-    "measure/measurable space.md",
-    "measure/Caratheodory extension Theorem.md",
-    "measure/semi-algebra.md",
-    "Differential Geometry/Ring of Sets.md",
     "Untitled.canvas",
     "homotopy/images/homotopy.png"
   ]
