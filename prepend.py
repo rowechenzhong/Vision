@@ -1,17 +1,17 @@
-import fileinput
-import sys
+import os
+# get string from preamble.sty
+prefix = open('preamble.sty').read()
 
-"""
-This code is used to add a prefix to each line of a file.
-"""
-
-# get the prefix from preamble.sty
-prefix = ''
-with open('preamble.sty', 'r') as f:
-    prefix = f.read()
 print(prefix[:100])
-prefix = "$\n" + prefix + "\n$\n"
+prefix = "$$\n" + prefix + "\n$$\n"
 
-
-for line in fileinput.input(['./ampo.txt'], inplace=True):
-    sys.stdout.write('EDF {l}'.format(l=line))
+# iterate over all files in directory
+for subdir, dirs, files in os.walk('.'):
+    for file in files:
+        # print(os.path.join(subdir, file))
+        # append prefix to the beginning of each file
+        if file.endswith(".md"):
+            with open(os.path.join(subdir, file), 'r+') as f:
+                content = f.read()
+                f.seek(0, 0)
+                f.write(prefix + content)
