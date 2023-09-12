@@ -1,0 +1,1 @@
+A ==**ring**== is a nonempty family of sets $\mathcal{R}$ which is closed under $A\cup B \in \mathcal{R}$ and $A \setminus B \in \mathcal{R}$.

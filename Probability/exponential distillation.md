@@ -1,0 +1,1 @@
+There is a phenomenon which is roughly summarized by $\lim_{n\to \infty}\frac1n \log\left(e^{na} + e^{nb}\right) = \max(a,b)$. Exponents aggressively dominate polynomials and lower exponentials, creating "sharp edges" like the $\max$ here. This is responsible for most of the results in large-$n$ limits. For example, this creates the $\sup$ in [[Cramer|Cramer's Theorem]].

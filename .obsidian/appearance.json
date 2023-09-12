@@ -1,0 +1,9 @@
+{
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "callouts",
+    "highlight"
+  ],
+  "theme": "obsidian",
+  "baseFontSize": 22
+}
