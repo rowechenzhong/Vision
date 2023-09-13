@@ -4,7 +4,8 @@ Everything is very easy here, so we'll move quickly. All vector spaces are norme
 
 # Sequences
 1. [[Derivative]]
-2. 
+
+
 $$
 \require{physics}
 

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "34e9ad02c2ba4199",
+        "id": "76c8aec21c8293c0",
         "type": "tabs",
         "children": [
           {
-            "id": "957cefcd4d6c631d",
+            "id": "3baef9565bc4c04f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "functional/Minkowski norm.md",
+                "file": "Differential Geometry/Basic Manifold Exercises.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "manifold",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,12 +79,12 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -111,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "functional/Minkowski norm.md",
+                "file": "Differential Geometry/Basic Manifold Exercises.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "functional/Minkowski norm.md",
+                "file": "Differential Geometry/Basic Manifold Exercises.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "functional/Minkowski norm.md"
+                "file": "Differential Geometry/Basic Manifold Exercises.md"
               }
             }
           },
@@ -172,36 +172,36 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "957cefcd4d6c631d",
+  "active": "3baef9565bc4c04f",
   "lastOpenFiles": [
-    "functional/normed.md",
-    "functional/Minkowski norm.md",
+    "desktop.ini",
+    "homotopy/galois/galois correspondence preserves the natural poset ordering.md",
+    "homotopy/galois/constructing the galois correspondence.md",
     "Differential Geometry/Differential Geometry.md",
+    "functional/Euclidean norm.md",
+    "Differential Geometry/Jacobian matrix.md",
+    "measure/Lp.md",
+    "measure/Borel-Cantelli.md",
+    "measure/Standard Measure Construction.md",
+    "measure/pi lambda system.md",
+    "measure/measure prologue.md",
+    "measure/Caratheodory extension Theorem.md",
+    "measure/Lebesgue Measure.md",
+    "measure/pre-measure.md",
+    "measure/measure space.md",
+    "measure/measurable functions.md",
+    "functional/Minkowski norm.md",
+    "functional/normed.md",
     "functional/banach.md",
     "functional/Functional Analysis.md",
     "Vision.md",
     "functional/infinity norm.md",
     "functional/eigen.md",
-    "functional/Euclidean norm.md",
     "functional/hahnbanach.md",
     "Differential Geometry/Regular Functions.md",
     "Differential Geometry/Germ.md",
-    "Differential Geometry/locally homeomorphic.md",
-    "Differential Geometry/Basic Manifold Exercises.md",
-    "Differential Geometry/Jacobian matrix.md",
-    "Differential Geometry/Derivative.md",
-    "Differential Geometry/implicit function theorem.md",
-    "Differential Geometry/Ring of Sets.md",
-    "Differential Geometry/Atlas.md",
-    "measure/Caratheodory extension Theorem.md",
-    "Differential Geometry/Regular Maps.md",
-    "measure/Measure Theory.md",
-    "Differential Geometry/analytic.md",
-    "Differential Geometry/Tangent spaces.md",
-    "homotopy/homotopy.md",
     "publish.css",
     "Differential Geometry/publish.css",
-    "Differential Geometry/Analytic Manifolds.md",
     "measure/homework/hw1.synctex(busy)",
     "measure/homework/pdflatex956.fls",
     "measure/homework/pdflatex23988.fls",

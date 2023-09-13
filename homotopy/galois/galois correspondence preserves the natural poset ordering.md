@@ -5,6 +5,7 @@
 
 > [!proof]-
  Given the condition, by lifting criterion, there is a $q:\tilde{X}\to \tilde{X}'$ lifting $p$; by chaining, this is a covering map. On the other hand, if $q:\tilde{X}\to \tilde{X}'$ is a covering space, it induces the inclusion $$ q_*(\pi_1(\tilde{X},\tilde{x}_0))\subset \pi_1(\tilde{X}', \tilde{x}'_0) $$ which gets sent through $p'$. The result sans basepoints follows quickly. 
+
 $$
 \require{physics}
 
