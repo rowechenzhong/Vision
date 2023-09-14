@@ -1,12 +1,12 @@
-On (smooth/RA) manifolds $X$, a ==**derivation at**== $P$ is a functional on [[Germ|germs]] $D: O_P\to \RR$. This must satisfy the ==**Leibniz rule**==
+$\require{physics}\newcommand{\cbrt}[1]{\sqrt[3]{#1}}\newcommand{\sgn}{\text{sgn}}\newcommand{\ii}[1]{\textit{#1}}\newcommand{\eps}{\varepsilon}\newcommand{\EE}{\mathbb E}\newcommand{\PP}{\mathbb P}\newcommand{\Var}{\mathrm{Var}}\newcommand{\Cov}{\mathrm{Cov}}\newcommand{\pperp}{\perp\kern-6pt\perp}\newcommand{\LL}{\mathcal{L}}\newcommand{\pa}{\partial}\newcommand{\AAA}{\mathscr{A}}\newcommand{\BBB}{\mathscr{B}}\newcommand{\FFF}{\mathscr{F}}\newcommand{\GGG}{\mathscr{G}}\newcommand{\HHH}{\mathscr{H}}\DeclareMathOperator{\ess}{ess}\newcommand{\CC}{\mathbb C}\newcommand{\FF}{\mathbb F}\newcommand{\NN}{\mathbb N}\newcommand{\QQ}{\mathbb Q}\newcommand{\RR}{\mathbb R}\newcommand{\ZZ}{\mathbb Z}\newcommand{\SSS}{\mathbb S}\newcommand{\II}{\mathbb I}\newcommand{\conj}[1]{\overline{#1}}\DeclareMathOperator{\cis}{cis}\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}\DeclareMathOperator*{\range}{range}\DeclareMathOperator*{\nul}{null}\DeclareMathOperator*{\Tr}{Tr}\newcommand{\id}{1\!\!1}\newcommand{\der}{\ \mathrm {d}}\newcommand{\Zc}[1]{\ZZ / #1 \ZZ}\newcommand{\Zm}[1]{\left(\ZZ / #1 \ZZ\right)^\times}\DeclareMathOperator{\Hom}{Hom}\DeclareMathOperator{\End}{End}\newcommand{\GL}{\mathbb{GL}}\newcommand{\SL}{\mathbb{SL}}$On (smooth/RA) manifolds $X$, a ==**derivation at**== $P$ is a functional on [[Germ|germs]] $D: O_P\to \RR$. This must satisfy the ==**Leibniz rule**==
 $$
 	D(fg) = D(f)g(P) + f(P)D(g)
 $$
 In particular, $D(1) = 0$.
 
-We call the space of all such derivations $T_P X$, the ==**tangent space**==. This is a real vector space.
+We call the space of all such derivations $T_P X$, the ==**tangent space**==. This is a real vector space. (Everything ditto for CA manifolds).
 
-Ditto for CA manifolds.
+ At first, this might seem really large, but it turns out that it's exactly what we think it is:
 
 >[!claim] Basis
 >Let $x_1,\cdots, x_n$ be local coordinates at $P$. Then $T_PX$ has basis
@@ -16,119 +16,19 @@ Ditto for CA manifolds.
 
 >[!proof] Boring, Todo
 
-Every tangent vector $v\in T_PX$ defines a derivation $\pa_v: O(U)\to \RR,\CC$ for each neighborhood $U$ of $P$.
+>[!idea]
+>The elements of $T_PX$ are functionals of functions. (Differentiable) functions are locally "linear maps". Thus, elements of $T_PX$ are comparable with elements of $X$, and should be thought of as literally a space "tangent" to $X$ at $P$.
 
->[!todo]
->Understand this slightly more thoroughly.
+>[!idea]
+>The point of confusion comes from notation. Previously, $x_i$ was a local coordinate - a function from $U\subset X$ to $\RR$). We have now written $D_i\in T_PX = \frac{\pa}{\pa x_i}$. This object has different type from $x_i$; it can be imagined as "the point with coordinates $(0,\dots, 1,\dots, 0)$."
+>
+>So $\pa_{x_i} = D_i$, but you should never write $\pa_{x_i} = x_i$. 
+>
+>$x_i$, as a function, is a ``covector," while objects like $\pa_{x_i} \in T_P X$ are vectors. To "contract" $\pa_{x_i}$ with a function $f$ is to evaluate $\pa_{x_i} f$, which is how much $f$ changes if you move by "$\eps x_i$", divided by $\eps$.
+>
+>For some reason, people write $v\in T_PX$ and then write $\pa_v : O(U)\to X$. I guess we're supposed to think $\pa_v\equiv v$. This is fine; just note that $\frac{\pa}{\pa x_i} \neq \pa_{x_i}$; we should write $\frac{\pa}{\pa x_i} \equiv \pa_{D_i} = D_i$.
+>
+>Of course, in the real world absolutely nobody gives a fuck.
 
-
-$$
-\require{physics}
-
-% Misc
-\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
-\newcommand{\sgn}{\text{sgn}}
-\newcommand{\ii}[1]{\textit{#1}}
-\newcommand{\eps}{\varepsilon}
-
-% Expected Value
-\newcommand{\EE}{\mathbb E}
-\newcommand{\PP}{\mathbb P}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-
-\newcommand{\pperp}{\perp\kern-6pt\perp}
-
-% Operators
-\newcommand{\xx}{\hat{x}}
-\newcommand{\pp}{\hat{p}}
-\newcommand{\ee}{\hat{E}}
-\renewcommand{\aa}{\hat{a}} % aa makes an a with a dot on top.
-\newcommand{\bb}{\hat{b}}
-\renewcommand{\AA}{\hat{a}}
-\newcommand{\BB}{\hat{B}}
-
-\newcommand{\ad}{\hat{a}^\dagger}
-
-% Woah, relativity
-\newcommand{\LL}{\mathcal{L}}
-\newcommand{\pa}{\partial}
-
-% Inequalities
-\newcommand{\cyc}{\sum\limits_{\mathrm{cyc}}}
-\newcommand{\sym}{\sum\limits_{\mathrm{sym}}}
-\newcommand{\cycprod}{\prod_{\mathrm{cyc}}}
-\newcommand{\symprod}{\prod_{\mathrm{sym}}}
-
-\newcommand{\eq}[1]{\stackrel{#1}{=}}
-\newcommand{\rgeq}[1]{\stackrel{#1}{\geq}}
-\newcommand{\rleq}[1]{\stackrel{#1}{\leq}}
-
-% Measure Theory
-\newcommand{\AAA}{\mathscr{A}}
-\newcommand{\BBB}{\mathscr{B}}
-\newcommand{\FFF}{\mathscr{F}}
-\newcommand{\GGG}{\mathscr{G}}
-\newcommand{\HHH}{\mathscr{H}}
-
-\DeclareMathOperator{\ess}{ess}
-
-% A bunch of sets
-\newcommand{\CC}{\mathbb C}
-\newcommand{\FF}{\mathbb F}
-\newcommand{\NN}{\mathbb N}
-\newcommand{\QQ}{\mathbb Q}
-\newcommand{\RR}{\mathbb R}
-\newcommand{\ZZ}{\mathbb Z}
-\newcommand{\SSS}{\mathbb S}
-\newcommand{\II}{\mathbb I}
-
-% Complex Bashing
-\newcommand{\conj}[1]{\overline{#1}}
-\DeclareMathOperator{\cis}{cis}
-
-
-% A bunch of geometry
-\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
-\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
-\newcommand{\dang}{\measuredangle} %% Directed angle
-\newcommand{\ray}[1]{\overrightarrow{#1}}
-\newcommand{\seg}[1]{\overline{#1}}
-\newcommand{\arc}[1]{\wideparen{#1}}
-\newcommand{\pow}{\text{pow}} %% Power
-
-% Things about NT
-\newcommand{\jacobi}[2] {\genfrac{(}{)}{1.5pt}{}{\,#1\,}{#2}}
-\DeclareMathOperator*{\lcm}{lcm}
-\DeclareMathOperator*{\ord}{ord}
-
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-
-
-% Linalg
-\DeclareMathOperator*{\range}{range}
-\DeclareMathOperator*{\nul}{null}
-\DeclareMathOperator*{\Tr}{Tr}
-\newcommand{\id}{1\!\!1}
-
-% Other physics things
-\newcommand{\der}{\ \mathrm {d}}
-
-\newcommand{\ihat}{\boldsymbol{\hat{\textbf{\i}}}}
-\newcommand{\jhat}{\boldsymbol{\hat{\textbf{\j}}}}
-\newcommand{\khat}{\boldsymbol{\hat{\textbf{k}}}}
-\newcommand{\rhat}{\boldsymbol{\hat{\textbf{r}}}}
-\newcommand{\that}{\boldsymbol{\hat{\mathbf{\theta}}}}
-
-
-
-% Lol, some groups
-\newcommand{\Zc}[1]{\ZZ / #1 \ZZ}
-\newcommand{\Zm}[1]{\left(\ZZ / #1 \ZZ\right)^\times}
-
-\DeclareMathOperator{\Hom}{Hom}
-\DeclareMathOperator{\End}{End}
-\newcommand{\GL}{\mathbb{GL}}
-\newcommand{\SL}{\mathbb{SL}}
-$$
+>[!idea]
+>You can extend derivations to algebras of regular functions, because the regular functions are elements of germs; you can write $\pa_v: O(U)\to \RR$.

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Differential Geometry/Basic Manifold Exercises.md",
+                "file": "differential.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "manifold",
+                "query": "$#",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Differential Geometry/Basic Manifold Exercises.md",
+                "file": "differential.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Differential Geometry/Basic Manifold Exercises.md",
+                "file": "differential.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Differential Geometry/Basic Manifold Exercises.md"
+                "file": "differential.md"
               }
             }
           },
@@ -174,6 +173,18 @@
   },
   "active": "3baef9565bc4c04f",
   "lastOpenFiles": [
+    "functional/zabreikos.md",
+    "functional/Review.md",
+    "functional/banach.md",
+    "functional/adjoint.md",
+    "differential.md",
+    "Differential Geometry/Regular Maps.md",
+    "Lie/topological manifolds.md",
+    "Differential Geometry/Tangent spaces.md",
+    "Lie/Lie Groups and Lie Algebras.md",
+    "meta/homepage.md",
+    "Vision.md",
+    "Differential Geometry/Basic Manifold Exercises.md",
     "desktop.ini",
     "homotopy/galois/galois correspondence preserves the natural poset ordering.md",
     "homotopy/galois/constructing the galois correspondence.md",
@@ -189,17 +200,6 @@
     "measure/Lebesgue Measure.md",
     "measure/pre-measure.md",
     "measure/measure space.md",
-    "measure/measurable functions.md",
-    "functional/Minkowski norm.md",
-    "functional/normed.md",
-    "functional/banach.md",
-    "functional/Functional Analysis.md",
-    "Vision.md",
-    "functional/infinity norm.md",
-    "functional/eigen.md",
-    "functional/hahnbanach.md",
-    "Differential Geometry/Regular Functions.md",
-    "Differential Geometry/Germ.md",
     "publish.css",
     "Differential Geometry/publish.css",
     "measure/homework/hw1.synctex(busy)",
@@ -209,7 +209,6 @@
     "measure/homework/pdflatex17556.fls",
     "measure/homework/pdflatex17548.fls",
     "measure/homework/pdflatex23068.fls",
-    "measure/homework/pdflatex7896.fls",
     "Untitled.canvas",
     "homotopy/images/homotopy.png"
   ]
