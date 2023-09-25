@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:functional/",
@@ -43,23 +43,30 @@
       }
     },
     {
-      "query": "path:Lie ",
+      "query": "path:Lie/",
       "color": {
         "a": 1,
         "rgb": 5419488
+      }
+    },
+    {
+      "query": "path:\"Differential Geometry\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
       }
     }
   ],
   "collapse-display": false,
   "showArrow": true,
-  "textFadeMultiplier": -3,
+  "textFadeMultiplier": -0.2,
   "nodeSizeMultiplier": 1.84336523618401,
   "lineSizeMultiplier": 2.23064526088299,
   "collapse-forces": false,
-  "centerStrength": 0.333333333333333,
-  "repelStrength": 9.58333333333333,
+  "centerStrength": 0.236883116883117,
+  "repelStrength": 7.68237476808905,
   "linkStrength": 1,
   "linkDistance": 282,
-  "scale": 0.2504784519659845,
+  "scale": 0.25047845196598867,
   "close": false
 }

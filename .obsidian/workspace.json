@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "76c8aec21c8293c0",
+        "id": "392b3bd8d5da2fb3",
         "type": "tabs",
         "children": [
           {
-            "id": "3baef9565bc4c04f",
+            "id": "7663dd8bf36ac114",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "differential.md",
+                "file": "Differential Geometry/implicit function theorem.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "$#",
+                "query": "differentiable",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "differential.md",
+                "file": "Differential Geometry/implicit function theorem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "differential.md",
+                "file": "Differential Geometry/implicit function theorem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "differential.md"
+                "file": "Differential Geometry/implicit function theorem.md"
               }
             }
           },
@@ -157,8 +157,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5,
-    "collapsed": true
+    "width": 337.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,44 +170,44 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "3baef9565bc4c04f",
+  "active": "7663dd8bf36ac114",
   "lastOpenFiles": [
-    "functional/zabreikos.md",
-    "functional/Review.md",
-    "functional/banach.md",
-    "functional/adjoint.md",
-    "differential.md",
-    "Differential Geometry/Regular Maps.md",
-    "Lie/topological manifolds.md",
+    "Lie/hw/hw1.synctex(busy)",
+    "Lie/hw/pdflatex25784.fls",
+    "Lie/hw/pdflatex20252.fls",
+    "Lie/hw/pdflatex25776.fls",
+    "Lie/hw/pdflatex20964.fls",
+    "Lie/hw/pdflatex27720.fls",
+    "Lie/hw/pdflatex31680.fls",
+    "Lie/hw/pdflatex15848.fls",
+    "Lie/hw/pdflatex24404.fls",
+    "Lie/hw/pdflatex28196.fls",
+    "Lie/hw/pdflatex12268.fls",
     "Differential Geometry/Tangent spaces.md",
+    "regularity class.md",
+    "Differential Geometry/Derivative.md",
+    "Differential Geometry/implicit function theorem.md",
+    "Differential Geometry/differential.md",
+    "Differential Geometry/Submanifolds.md",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "Lie/Lie groups.md",
     "Lie/Lie Groups and Lie Algebras.md",
-    "meta/homepage.md",
-    "Vision.md",
-    "Differential Geometry/Basic Manifold Exercises.md",
-    "desktop.ini",
-    "homotopy/galois/galois correspondence preserves the natural poset ordering.md",
-    "homotopy/galois/constructing the galois correspondence.md",
-    "Differential Geometry/Differential Geometry.md",
-    "functional/Euclidean norm.md",
-    "Differential Geometry/Jacobian matrix.md",
-    "measure/Lp.md",
-    "measure/Borel-Cantelli.md",
-    "measure/Standard Measure Construction.md",
-    "measure/pi lambda system.md",
-    "measure/measure prologue.md",
+    "Lie/Topological Groups.md",
+    "Differential Geometry/Regular Maps.md",
+    "Lie/Lie groups and Homotopy.md",
+    "central.md",
+    "connected.md",
+    "discrete topology.md",
     "measure/Caratheodory extension Theorem.md",
-    "measure/Lebesgue Measure.md",
-    "measure/pre-measure.md",
-    "measure/measure space.md",
-    "publish.css",
-    "Differential Geometry/publish.css",
-    "measure/homework/hw1.synctex(busy)",
-    "measure/homework/pdflatex956.fls",
-    "measure/homework/pdflatex23988.fls",
-    "measure/homework/pdflatex21480.fls",
-    "measure/homework/pdflatex17556.fls",
-    "measure/homework/pdflatex17548.fls",
-    "measure/homework/pdflatex23068.fls",
+    "integration/complete measure space.md",
+    "measure/pi lambda system.md",
+    "measure/measurable space.md",
+    "measure/Measure Theory.md",
+    "homotopy/Homotopy Theory.md",
+    "measure/product/box product measure.md",
+    "Probability/independence.md",
+    "Untitled.md",
     "Untitled.canvas",
     "homotopy/images/homotopy.png"
   ]

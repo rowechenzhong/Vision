@@ -32,4 +32,8 @@ First, we cover some prerequisite material:
 - [[Topology review for Lie|Topology]]
 - [[Topological Groups]]
 - [[topological manifolds|Manifolds]]
+
+We now begin the study of Lie groups, proper.
+- [[Lie groups]]
+- [[Lie groups and Homotopy]]
 - 

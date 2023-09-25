@@ -4,3 +4,5 @@ $\require{physics}\newcommand{\cbrt}[1]{\sqrt[3]{#1}}\newcommand{\sgn}{\text{sgn
 
 > [!example] Half-open intervals
 > The collection of intervals $[a,b)$ (and $(a,\infty)$) is a semialgebra.
+
+This is also called a ==**Ring of sets**==; it is a nonempty family of sets $\mathcal{R}$ which is closed under $A\cup B \in \mathcal{R}$ and $A \setminus B \in \mathcal{R}$.

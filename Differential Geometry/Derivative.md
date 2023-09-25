@@ -2,9 +2,16 @@ $\require{physics}\newcommand{\cbrt}[1]{\sqrt[3]{#1}}\newcommand{\sgn}{\text{sgn
 $$
 \lim_{\norm{v}_V\to 0} \frac{\norm{f(p + v) - f(p) - T(v)}}{\norm{v}_V} = 0
 $$
-Then, $T$ is the ==**total derivative**== of $f$ at $p$, we let $(Df)_p = T$, and we say $f$ is ==**differentiable at**== $p$. As usual, if $f$ is differentiable at all points, then $f$ is ==**differentiable**==.
+Then, $T$ is the ==**total derivative**== of $f$ at $p$, we let $(Df)_p = T$, and we say $f$ is ==**differentiable at**== $p$. As usual, if $f$ is differentiable at all points, then $f$ is ==**differentiable**==. One can then discuss properties of $Df$, such as whether it is continuous; this leads to the notion of [[regularity class]].
 
 Nobody actually cares about anything other than $W = \RR^1$ because you can project, so I'll do that from now on, such that $(Df)_p \in V^\vee$. It is a terrible accident that $V^\vee \cong V$, thus $Df$ can be interpreted as a vector in its own right called the *gradient*; this is morally reprehensible and we will never use this.
+
+>[!problem] Chain Rule
+>Show for any map $g:W\to X$ for which all quantities are defined, $D(g\circ f)_p = Dg_{f(p)}\cdot Df_p$.
+>
+>In particular if $A$ is linear, $D(A\circ f))_p = A\circ (Df)_p$ as expected.
+>
+
 
 # Partial derivative
 
@@ -27,8 +34,7 @@ just as you expect. This reduces to what you learned in high school:
 >$$
 >Thus all partials exist, and we can expand $Df$ in the $\{e_i^\vee\}$ basis.
 
-In words, "the total derivative is a matrix full of partial derivatives." This yields the [[Jacobian matrix]] in the general case.
-
+In words, "the total derivative is a matrix full of partial derivatives." This yields the [[Jacobian matrix]] in the general case
 
 >[!problem] Continuous Partials implies differentiable
 >Let $f:U\to \RR$, and suppose that $\frac{\pa f}{\pa e_i}$ is both defined and continuous for each $i$. Then $f$ is differentiable.
@@ -55,10 +61,6 @@ In words, "the total derivative is a matrix full of partial derivatives." This y
 >\norm{\frac{\pa f}{\pa e_i}(p + w_i) - \frac{\pa f}{\pa e_i}(p)} < 0.001\delta
 >$$
 >Combining everything, we get our result.
-
-
-
-
 
 
 

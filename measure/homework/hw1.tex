@@ -1,5 +1,7 @@
 \documentclass[11pt, headheight=30pt]{scrartcl}
 \usepackage[white, nologo]{darkWhite}
+\usepackage{mathrsfs}
+
 
 \title{18.675 Problem Set 1}
 
@@ -379,46 +381,46 @@ Then, $A\cap B$ is a finite union of disjoint intervals.\footnote{
     Write $\mathcal{N}$ for the set of null sets.
     Prove that the set of subsets
     \[
-        \mathcal{E}_\mu = \{A \cup N : A \in \mathcal{E}, N \in \mathcal{N}\}
+        \mathcal{E}^\mu = \{A \cup N : A \in \mathcal{E}, N \in \mathcal{N}\}
     \]
     is a $\sigma$-algebra and show that $\mu$ has a well-defined and countably
-    additive extension to $\mathcal{E}_\mu$ given by $\mu(A \cup N) = \mu(A)$.
-    We call $\mathcal{E}_\mu$ the completion of $\mathcal{E}$ with respect to
+    additive extension to $\mathcal{E}^\mu$ given by $\mu(A \cup N) = \mu(A)$.
+    We call $\mathcal{E}^\mu$ the completion of $\mathcal{E}$ with respect to
     $\mu$.
     
-    Suppose now that $\mathcal{E}$ is $\sigma$-finite and write $\mu^*$
+    Suppose now that $E$ is $\sigma$-finite and write $\mu^*$
     for the outer measure associated to $\mu$, as in the proof of Caratheodory's
-    extension theorem. Show that $\mathcal{E}_\mu$ is exactly the
+    extension theorem. Show that $\mathcal{E}^\mu$ is exactly the
     set of $\mu^*$-measurable sets.
 \end{prob}
 
 \begin{psec*}
-    [Proof $\mathcal{E}_\mu$ is a $\sigma$-algebra]
+    [Proof $\mathcal{E}^\mu$ is a $\sigma$-algebra]
     We check the axioms:
     \begin{enumerate}[(a)]
         \item $\emptyset \in \mathcal{E}$ and $\emptyset \in \mathcal{N}$,
-        so $\emptyset \in \mathcal{E}_\mu$.
+        so $\emptyset \in \mathcal{E}^\mu$.
         \item In the above definition where $N\subset B \in \mathcal{E}$ with $\mu(B) = 0$,
         note that $B\setminus N \subset B$ too. This lets us write
         \[
             \left(A\cup N\right)^c = A^c \setminus N
             = \underbrace{A^c\setminus B}_{\in \mathcal{E}} \cap \underbrace{B\setminus N}_{\in \mathcal{N}}
         \]
-        thus $\left(A\cup N\right)^c \in \mathcal{E}_\mu$.
+        thus $\left(A\cup N\right)^c \in \mathcal{E}^\mu$.
 
-        \item If $(A_n\cup N_n : n\in \NN)$ is a sequence of sets in $\mathcal{E}_\mu$,
+        \item If $(A_n\cup N_n : n\in \NN)$ is a sequence of sets in $\mathcal{E}^\mu$,
         with each $N_n\subset B_n$ with $\mu(B_n) = 0$,
         then
         \[
             \bigcup_n \left(A_n\cup N_n\right) = \underbrace{\bigcup_n A_n}_{\in \mathcal{E}} \cup \underbrace{\bigcup_n N_n}_{\subset \bigcup_n B_n}
         \]
         Note that $\mu\left(\bigcup_n B_n\right)\leq \sum_n \mu(B_n) = 0$,
-        so $\bigcup_n \left(A_n\cup N_n\right) \in \mathcal{E}_\mu$.
+        so $\bigcup_n \left(A_n\cup N_n\right) \in \mathcal{E}^\mu$.
     \end{enumerate}
 \end{psec*}
 
 \begin{psec*}
-    [Extension]
+    [Well-defined]
     To show this is well-defined, we need to show that the relation $A\sim C$
     iff there exists $N, M\in \mathcal{N}$ such that $A\cup N = C\cup M$ is an equivalence
     relation. Reflexivity and symmetry are clear. For transitivity, if
@@ -431,7 +433,7 @@ Then, $A\cap B$ is a finite union of disjoint intervals.\footnote{
 
 \begin{psec*}
     [Countable Additivity]
-    Let $(A_n\cup N_n : n\in \NN)$ be a sequence of disjoint sets in $\mathcal{E}_\mu$.
+    Let $(A_n\cup N_n : n\in \NN)$ be a sequence of disjoint sets in $\mathcal{E}^\mu$.
     Then
     \begin{align*}
         \mu\left(\bigcup_n \left(A_n\cup N_n\right)\right) &= \mu\left(\bigcup_n A_n \cup \bigcup_n N_n\right)\\
@@ -441,8 +443,80 @@ Then, $A\cap B$ is a finite union of disjoint intervals.\footnote{
     \end{align*}
 \end{psec*}
 
-\todo{Finish this!}
+To be explicit, the outer measure associated to $\mu$
+maps $A\subset 2^E$ to
+\[
+    \mu^*(A) = \inf\left\{\mu(K): A\subset K\right\}    
+\]
+where $K \in \mathcal{E}$ for all $n\in \NN$ ($\mathcal{E}$ is a
+$\sigma$-algebra, so we don't need to do the summation garbage).
 
+A set $A$ is $\mu^*$-measurable in the sense of Caratheodory if
+\[
+    \mu^*(B) = \mu^*(B\cap A) + \mu^*(B\cap A^c)
+\]
+for all $B\subset E$. Outer measures are automatically subadditive,
+so this is equivalent to 
+\[
+    \mu^*(B) \geq \mu^*(B\cap A) + \mu^*(B\cap A^c)
+\]
+
+
+\begin{psec*}
+    [$\mathcal{E}^\mu$ are Caratheodory Measurable]
+    For all $A\cup N\subset \mathcal{E}^\mu$ where $A\in \mathcal{E}$
+    and $N\subset C$ for some $C\in \mathcal{E}$ with $\mu(C) = 0$,
+    and all $B\subset D\in \mathcal{E}$, observe
+    \[
+        B\cap (A\cup N)\subset D\cap (A\cup C),\qquad B\cap (A\cup N)^c\subset D\cap (A^c\cup C)
+    \]
+    Adding up the measures, this is
+    \begin{align*}
+        \mu^*(B\cap A) + \mu^*(B\cap A^c)&\leq \mu(D\cap (A\cup C)) + \mu(D\cap (A^c\cup C))\\
+        &\leq \mu(D\cup A) + \mu(D\cup A^c) + \mu(D\cup C) + \mu(D \cup C)\\
+        &= \mu(D)
+    \end{align*}
+    This is true for all $B\subset D$, thus we have shown all elements of $\mathcal{E}^\mu$
+    are $\mu^*$-measurable.
+\end{psec*}
+
+\begin{psec*}
+    [Caratheodory Measurable are in $\mathcal{E}^\mu$]
+    Oh that's kind of silly lol. We need to use the $\sigma$-finite condition
+    now; let $\Omega_n\uparrow E$ such that $\mu(\Omega_n) < \infty$ for all $n$.
+
+    Now, suppose $K$ is measurable. We know
+    \begin{align*}
+        \mu(\Omega_n) &\geq \mu^*(\Omega\cap K)  + \mu^*(\Omega \cap K^c)\\
+        &= \inf\left\{\mu(B): \Omega\cap K\subset B\right\} + \inf\left\{\mu(B): \Omega\cap K^c\subset B\right\}\\
+        &= \inf\left\{\mu(B) + \mu(C): \Omega\cap K\subset B, \Omega\cap K^c\subset C\right\}
+    \end{align*}
+    We know that $\Omega_n\subset B\cup C$, thus
+    \[
+        \mu(B) + \mu(C) \geq \mu(\Omega_n) + \mu(B\cap C)    
+    \]
+    Thus,
+    \[
+        0 = \inf\left\{\mu(B\cap C): \Omega\cap K\subset B, \Omega\cap K^c\subset C\right\}
+    \]
+    Here's the trick now; we can't usually extract a minima from an
+    infimum, but the $\sigma$-algebra will help us. For each $m\in \NN$,
+    there exist $B_m, C_m$ such that $\mu(B\cap C)\leq \frac{1}{m}$
+    and $\Omega\cap K\subset B_m$, $\Omega\cap K^c\subset C_m$.
+    Without loss of generality $B_m$ and $C_m$ are nonincreasing,
+    because one can take intersections of finite prefixes.
+
+    The $\sigma$-algebra allows us to take the infinite intersection
+    of the $B_n$'s and the infinite intersection of the $C_n$'s.
+    This yields two final sets $B_n\downarrow B$ and $C_n\downarrow C$
+    such that $\mu(B\cap C) = 0$, $\Omega\cap K\subset B$, and $\Omega\cap K^c\subset C$.
+
+    Well, that's nice. We now know that $\Omega_n \cap K = (B\setminus C)\cap (K\cap (B\cap C))$,
+    and $K\cap (B\cap C)\subset (B\cap C)$ which has measure $0$.
+
+    Finally, $K = \bigcup \left(\Omega_n \cap K\right)$, each of which is an element of
+    $\mathcal{E}^*$, thus $K\in \mathcal{E}^*$.
+\end{psec*}
 
 \section{Function manipulation}
 
@@ -452,14 +526,68 @@ Then, $A\cap B$ is a finite union of disjoint intervals.\footnote{
     \begin{enumerate}[(a)]
         \item $f_1 + f_2$,
         \item $f_1 f_2$,
-        \item $\inf_n f_n$,
-        \item $\sup_n f_n$,
-        \item $\liminf_n f_n$,
-        \item $\limsup_n f_n$.
+        \item $\inf_n f_n$ and $\sup_n f_n$,
+        \item $\liminf_n f_n$ and $\limsup_n f_n$.
     \end{enumerate}
     Show also that $\{x \in E : f_n(x) \text{ converges as } n \to \infty\} \in \mathcal{E}$.
 \end{prob}
 
+Are you serious right now. Fine.
+
+We need only show the pre-image of $[a,\infty)$ or $(a,\infty)$ under all such functions
+are measurable, because the Borel $\sigma$-algebra
+is generated by such intervals.
+
+\begin{psec*}
+    [Addition]
+    The pre-image of $(a,\infty)$ under $f_1 + f_2$ is
+    \[
+        \bigcup_{q\in \QQ} f_1^{-1}\left((q,\infty)\right) \cap f_2^{-1}\left((a-q,\infty)\right)
+    \]
+    which is a countable union of measurable sets.
+\end{psec*}
+
+
+\begin{psec*}
+    [Multiplication]
+    The pre-image of $(a,\infty)$ for $a > 0$ under $f_1f_2$
+    is
+    \[
+        \left\{\bigcup_{q\in \QQ_{> 0}} f_1^{-1}\left((q,\infty)\right) \cap f_2^{-1}\left((a/q,\infty)\right)\right\}
+        \cup \left\{\bigcup_{q\in \QQ_{< 0}} f_1^{-1}\left((-\infty, q)\right) \cap f_2^{-1}\left((-\infty, a/q)\right)\right\}
+    \]
+    which is a countable union of measurable sets. The pre-image
+    of $(0,\infty)$ under $f_1f_2$ is just
+    \[
+        \left\{f_1^{-1}\left((0,\infty)\right)\cap f_2^{-1}\left((0,\infty)\right)\right\}
+        \cup \left\{f_1^{-1}\left((-\infty, 0)\right)\cap f_2^{-1}\left((-\infty, 0)\right)\right\}
+    \]
+    The pre-image of $(a, \infty)$ for $a < 0$ is the union of the above with
+    \[
+        \left\{\bigcup_{q\in \QQ_{> 0}} f_1^{-1}\left((q,\infty)\right) \cap f_2^{-1}\left((-\infty, a/q,)\right)\right\}
+        \cup \left\{\bigcup_{q\in \QQ_{< 0}} f_1^{-1}\left((-\infty, q)\right) \cap f_2^{-1}\left((a/q, \infty)\right)\right\}
+    \]
+    all of which are measurable.
+\end{psec*}
+\begin{psec*}
+    [Infimum, Supremum, liminf, limsup]
+    Infimum works the same, so I'll show supremum. The pre-image of $(a,\infty)$
+    is simply
+    \[
+        \bigcup_n \left\{f_n^{-1}\left((a,\infty)\right)\right\}    
+    \]
+    which is a countable union of measurable sets.
+
+    The limit infimum is just a supremum over an infimum, which
+    is thus measurable by the previous claim. Ditto for limit supremum.
+\end{psec*}
+
+\begin{psec*}
+    [Converging Subset]
+    Bruh, this is just the subset where $\lim\inf f_n = \lim\sup f_n$,
+    but we know that $\lim\inf f_n - \lim\sup f_n$ is measurable,
+    thus the pre-image of $\{0\}$ is too.
+\end{psec*}
 
 \begin{prob}
     [Pushforward measure]
@@ -468,6 +596,15 @@ Then, $A\cap B$ is a finite union of disjoint intervals.\footnote{
     function. Show that we can define a measure $\nu$ on $G$ by setting
     $\nu(A) = \mu(f^{-1}(A))$ for each $A \in \mathcal{G}$.
 \end{prob}
+We need to show that $\nu$ is countably additive. Let $(A_n : n\in \NN)$
+be a sequence of disjoint sets in $\mathcal{G}$. Then
+\[
+    \nu\left(\bigcup_n A_n\right) = \mu\left(f^{-1}\left(\bigcup_n A_n\right)\right)
+    = \mu\left(\bigcup_n f^{-1}(A_n)\right) = \sum_n \mu(f^{-1}(A_n)) = \sum_n \nu(A_n)
+\]
+where the second equality is because $f^{-1}$ is a function, and the
+third equality is because the $f^{-1}(A_n)$ are disjoint.
+
 
 \section{Independence}
 
@@ -476,5 +613,40 @@ Then, $A\cap B$ is a finite union of disjoint intervals.\footnote{
     are independent: $\PP(X \leq x, Y\leq y) = \PP(X\leq x)\PP(Y\leq y)$
     for all $x, y \in \RR$.
 \end{prob}
-
+What, this is stupid. Call a pair $(A,B)\in \mathscr{B}_{\RR}^2$ \emph{citrus}
+if
+\[
+    \PP\left(X^{-1}(A)\cap Y^{-1}(B)\right) = \PP\left(X^{-1}(A)\right)\PP\left(Y^{-1}(B)\right)
+\]
+Okay. If $B_i$ are disjoint such that $(A, B_i)$ are all citrus,
+I claim that $(A, \bigcup B_i)$ is citrus. Indeed,
+\begin{align*}
+    \PP\left(X^{-1}(A)\cap Y^{-1}\left(\bigcup B_i\right)\right) &= \PP\left(X^{-1}(A)\cap \bigcup Y^{-1}(B_i)\right)\\
+    &= \sum_i \PP\left(X^{-1}(A)\cap Y^{-1}(B_i)\right)\\
+    &= \sum_i \PP\left(X^{-1}(A)\right)\PP\left(Y^{-1}(B_i)\right)\\
+    &= \PP\left(X^{-1}(A)\right)\PP\left(Y^{-1}\left(\bigcup B_i\right)\right)
+\end{align*}
+Also, if $(A,B)$ is citrus, I claim that $(A, B^c)$ is citrus.
+Indeed,
+\begin{align*}
+    \PP\left(X^{-1}(A)\cap Y^{-1}(B^c)\right) &= \PP\left(X^{-1}(A)\setminus Y^{-1}(B)\right)\\
+    &= \PP\left(X^{-1}(A)\right) - \PP\left(X^{-1}(A)\cap Y^{-1}(B)\right)\\
+    &= \PP\left(X^{-1}(A)\right) - \PP\left(X^{-1}(A)\right)\PP\left(Y^{-1}(B)\right)\\
+    &= \PP\left(X^{-1}(A)\right)\left(1 - \PP\left(Y^{-1}(B)\right)\right)\\
+    &= \PP\left(X^{-1}(A)\right)\PP\left(Y^{-1}(B^c)\right)
+\end{align*}
+Finally, if $B_i\uparrow B$
+and $(A, B_i)$ are all citrus, then $(A, B)$ is citrus. Indeed,
+\begin{align*}
+    \PP\left(X^{-1}(A)\cap Y^{-1}(B)\right) &= \PP\left(X^{-1}(A)\cap \bigcup_i Y^{-1}(B_i)\right)\\
+    &= \lim_i \PP\left(X^{-1}(A)\cap Y^{-1}(B_i)\right)\\
+    &= \lim_i \PP\left(X^{-1}(A)\right)\PP\left(Y^{-1}(B_i)\right)\\
+    &= \PP\left(X^{-1}(A)\right)\PP\left(Y^{-1}(B)\right)
+\end{align*}
+Okay cool. For any $A$, the above implies that the set of $B$
+such that $(A,B)$ is citrus forms a $\lambda$-system; by Dynkin's
+theorem, we know that for all $A$ of the form $(-\infty, a]$,
+all $B\in \mathscr{B}_\RR$ are citrus. By Dynkin's theorem again with
+$A$ and $B$ flipped, we know that for all $A, B \in \mathscr{B}_\RR$,
+$(A,B)$ is citrus. Thus, $X$ and $Y$ are independent.
 \end{document}
