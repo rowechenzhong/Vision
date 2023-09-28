@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tensor Fields and Lie Groups.md",
+                "file": "Lie/Tensor Fields and Lie Groups.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5d4bc042018185fd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vision.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tensor Fields and Lie Groups.md",
+                "file": "Vision.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tensor Fields and Lie Groups.md",
+                "file": "Vision.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tensor Fields and Lie Groups.md"
+                "file": "Vision.md"
               }
             }
           },
@@ -150,7 +164,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Tensor Fields and Lie Groups.md",
+                "file": "Vision.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -264,10 +278,19 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "2f431345d89bd546",
+  "active": "5d4bc042018185fd",
   "lastOpenFiles": [
+    "graph.png",
+    "Pasted image 20230928144237.png",
+    "readme.md",
+    "Pasted image 20230928144229.png",
+    "Vision.md",
+    "Lie/Tensor Fields and Lie Groups.md",
+    "Tensor Fields/Tensor Fields.md",
+    "subpage.md",
+    "Tensor Fields/frame.md",
+    "Tensor Fields/Differential Forms.md",
     "Lie/Lie Groups and Lie Algebras.md",
-    "Tensor Fields and Lie Groups.md",
     "Lie/Homogenous Spaces.md",
     "Lie/Representations of Lie Groups.md",
     "Lie/Lie groups.md",
@@ -277,24 +300,17 @@
     "Tensor Fields/Tensor Field Homepage.md",
     "Differential Geometry/Fiber Bundle.md",
     "meta/homepage.md",
-    "subpage.md",
     "Untitled",
-    "Tensor Fields.md",
-    "Differential Forms.md",
     "Differential Geometry/Germ.md",
     "Differential Geometry/Regular Functions.md",
     "Tensor Fields/Section.md",
-    "frame.md",
     "Tensor Fields/Vector Fields.md",
     "Tensor Fields/Vector Bundle.md",
     "Differential Geometry/Derivation.md",
     "Differential Geometry/Tangent spaces.md",
     "Tensor Fields/Tangent Bundle.md",
     "Tensor Fields",
-    "Lie/Submanifolds and Lie Groups.md",
-    "Representation/Representation Theory.md",
     "Representation",
-    "Lie/Various Adjoint maps.md",
     "Topology",
     "Lie/hw/hw1.synctex(busy)",
     "Lie/hw/pdflatex25784.fls",
