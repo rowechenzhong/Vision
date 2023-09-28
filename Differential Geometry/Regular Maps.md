@@ -5,4 +5,4 @@ $\require{physics}\newcommand{\cbrt}[1]{\sqrt[3]{#1}}\newcommand{\sgn}{\text{sgn
 
 Composition works, and if $F$ is a homeomorphism where $F$, $F^{-1}$ are both regular, then $F$ is a diffeomorphism.
 
-We now have differentiation structure, so we can define the [[differential]] of $F$ at $P$.
+We now have differentiation structure, so we can define the [[Differential]] of $F$ at $P$.

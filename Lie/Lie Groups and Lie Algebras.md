@@ -36,4 +36,14 @@ First, we cover some prerequisite material:
 We now begin the study of Lie groups, proper.
 - [[Lie groups]]
 - [[Lie groups and Homotopy]]
+- [[Submanifolds and Lie Groups]]
+- [[Homogenous Spaces]]
+
+How Lie groups act on spaces:
+- [[Representations of Lie Groups]]
+- [[Tensor Fields and Lie Groups]]
+
+Now, for Lie algebras.
+- [[Lie Algebras]]
+- [[Various Adjoint maps]]
 - 

@@ -19,17 +19,11 @@ If $X = \emptyset$, we declare $X$ to be of any integer dimension; else the dime
 
 >[!idea]
 > Being a manifold of a certain dimension is clearly a **local** property. Also, Hausdorffness and second countability are sanity checks which are inherited by subspaces, so in nearly all cases we only care about local homemorphism.
-# Sequences
+
+# Sequence
 1. [[locally homeomorphic|Local chart]]
 2. [[Atlas]]
 3. [[Analytic Manifolds]]
 4. [[Basic Manifold Exercises]]
 5. [[Regular Functions]]
 6. [[Germ]]
-
->[!idea]
->Starting here, a manifold must be smooth, RA, or CA.
-
-7. [[Tangent spaces]]
-8. [[Regular Maps]]
-9. [[Submanifolds]]

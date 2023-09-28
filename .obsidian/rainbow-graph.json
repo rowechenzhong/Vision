@@ -1,0 +1,79 @@
+{
+    "collapse-filter": false,
+    "search": "",
+    "showTags": false,
+    "showAttachments": false,
+    "hideUnresolved": false,
+    "showOrphans": true,
+    "collapse-color-groups": false,
+    "colorGroups": [
+        {
+            "query": "path:functional/",
+            "color": {
+                "a": 1,
+                "rgb": 14701138
+            }
+        },
+        {
+            "query": "path:homotopy/",
+            "color": {
+                "a": 1,
+                "rgb": 14725458
+            }
+        },
+        {
+            "query": "path:Lie/",
+            "color": {
+                "a": 1,
+                "rgb": 11657298
+            }
+        },
+        {
+            "query": "path:\"Differential Geometry\"",
+            "color": {
+                "a": 1,
+                "rgb": 5431378
+            }
+        },
+        {
+            "query": "path:\"Tensor Fields/\"",
+            "color": {
+                "a": 1,
+                "rgb": 5431473
+            }
+        },
+        {
+            "query": "path:measure/",
+            "color": {
+                "a": 1,
+                "rgb": 5419488
+            }
+        },
+        {
+            "query": "path:integration/",
+            "color": {
+                "a": 1,
+                "rgb": 5395168
+            }
+        },
+        {
+            "query": "path:Probability/",
+            "color": {
+                "a": 1,
+                "rgb": 11621088
+            }
+        }
+    ],
+    "collapse-display": true,
+    "showArrow": true,
+    "textFadeMultiplier": 0,
+    "nodeSizeMultiplier": 1.84336523618401,
+    "lineSizeMultiplier": 2.23064526088299,
+    "collapse-forces": true,
+    "centerStrength": 0.236883116883117,
+    "repelStrength": 7.49090909090909,
+    "linkStrength": 1,
+    "linkDistance": 173,
+    "scale": 0.41845769697751595,
+    "close": false
+}
