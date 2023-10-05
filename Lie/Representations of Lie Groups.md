@@ -1,16 +1,11 @@
-> [!definition] Action
-> Let $X$ be a [[topological manifolds|manifold]], and $G$ be a [[Lie groups|Lie group]]. An ==**action**== of $G$ on $X$ is a left-action $a:G\times X\to X$ which is a regular map.
-
->[!example] Classical
->$\GL_n(\RR)$ and all of its subgroups act on $\RR^n$ by linear transformations; $\GL_n(\CC)$ and any of its Lie subgroups act on $\CC^n$.
->
->$\SO(3)$ acts on $S^2$ by rotations.
 
 >[!definition] Representation
 >If $X$ is a finite-dimensional vector space over $\RR$ or $\CC$, and the action is linear, then the action is called a ==**representation**==.
 >
 >(If $G$ is complex, then the vector space should be complex, but if $G$ is real the vector space can be $\RR$ or $\CC$).
 
+>[!example] Classical
+>$\GL_n(\RR)$ and all of its subgroups act on $\RR^n$ by linear transformations; $\GL_n(\CC)$ and any of its Lie subgroups act on $\CC^n$.
 We now import [[Representation Theory]].
 
 # Pending Proof

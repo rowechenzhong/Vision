@@ -31,8 +31,9 @@ The theory of Lie groups was established in the latter half of the 19th century 
 First, we cover some prerequisite material:
 - [[Topology review for Lie|Topology]]
 - [[Topological Groups]]
-- [[topological manifolds|Manifolds]]
+- [[Differential Geometry]]
 
+### Lie Groups
 We now begin the study of Lie groups, proper.
 - [[Lie groups]]
 - [[Lie groups and Homotopy]]
@@ -40,10 +41,28 @@ We now begin the study of Lie groups, proper.
 - [[Homogenous Spaces]]
 
 How Lie groups act on spaces:
+- [[Lie Group Actions]]
 - [[Representations of Lie Groups]]
 - [[Tensor Fields and Lie Groups]]
 
+### Lie Algebras
 Now, for Lie algebras.
 - [[Lie Algebras]]
+
+
+ Motivation:
+- [[14 classical Lie groups]].
+- [[Exponential and Logarithmic maps on Linear Maps]]
+- [[Quaternionic Groups]]
+
+From the Exp/Log direction:
+- [[Exponential Map]]
 - [[Various Adjoint maps]]
-- 
+- [[Logarithm Map]]
+- [[Exponential Map Problems]]
+- [[Commutator]]
+- [[Adjoint Coincidence]]
+
+
+We execute the legendary bridge which we've had intuition on but black-boxed since middle school:
+- [[Lie groups are Lie Algebras]]

@@ -26,4 +26,3 @@ We explore the varieties of submanifolds.
 Then we discuss Fiber Bundles.
 5. [[Fiber Bundle]]
 6. [[Tensor Fields]]
-

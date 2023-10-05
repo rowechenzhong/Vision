@@ -9,3 +9,5 @@ In this case, the clutching functions on two overlapping coordinate systems woul
 >A skew-symmetric tensor field of rank $(0,m)$ (a sectoion of $\Lambda^m T^*X$) is just a ==**differential $m$-form**==!
 
 More on [[Differential Forms]] here.
+
+Of course we can talk about ==**tensor bundles**== which are just $\Gamma(X, V^{\otimes p}\otimes (V^\vee)^{\otimes q})$.

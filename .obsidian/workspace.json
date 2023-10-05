@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2f431345d89bd546",
+            "id": "eefb22b21b309675",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lie/Tensor Fields and Lie Groups.md",
+                "file": "Adjoint Coincidence.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "5d4bc042018185fd",
+            "id": "0f0ce63fc6bc72fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vision.md",
+                "file": "Lie/Various Adjoint maps.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "derivation",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,71 +92,6 @@
                 "sortOrder": "alphabetical"
               }
             }
-          }
-        ],
-        "currentTab": 3
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300
-  },
-  "right": {
-    "id": "70876c55eafe561d",
-    "type": "split",
-    "children": [
-      {
-        "id": "37214656731dd7da",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "53d8e401727da66b",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "c8338d49929b48a6",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Vision.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "4b7bba97d42829f2",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Vision.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "b6656c33aadbb00c",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Vision.md"
-              }
-            }
           },
           {
             "id": "d0fbb4b873e16de1",
@@ -164,14 +99,14 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Vision.md",
+                "file": "Lie/Various Adjoint maps.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
                   "localJumps": 1,
                   "localBacklinks": true,
                   "localForelinks": true,
-                  "localInterlinks": true,
+                  "localInterlinks": false,
                   "showTags": false,
                   "showAttachments": false,
                   "hideUnresolved": false,
@@ -244,7 +179,107 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0000000000000018,
+                  "scale": 0.6423430687510112,
+                  "close": false
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 344.51103591918945,
+    "collapsed": true
+  },
+  "right": {
+    "id": "70876c55eafe561d",
+    "type": "split",
+    "children": [
+      {
+        "id": "37214656731dd7da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d8e401727da66b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c8338d49929b48a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Lie/Various Adjoint maps.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b7bba97d42829f2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Lie/Various Adjoint maps.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6656c33aadbb00c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Lie/Various Adjoint maps.md"
+              }
+            }
+          },
+          {
+            "id": "22e3b88618a3b7a8",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Lie/Various Adjoint maps.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 2,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.9968435874530834,
                   "close": false
                 }
               }
@@ -265,7 +300,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 844.5
+    "width": 970.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -278,38 +313,39 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "5d4bc042018185fd",
+  "active": "0f0ce63fc6bc72fe",
   "lastOpenFiles": [
+    "Adjoint Coincidence.md",
+    "Lie/Lie Groups and Lie Algebras.md",
+    "Lie groups are Lie Algebras.md",
+    "Lie/Various Adjoint maps.md",
+    "Differential Geometry/Differential.md",
+    "Differential Geometry/Basic Manifold Exercises.md",
+    "Exponential Map Problems.md",
+    "Exponential Map.md",
+    "Lie/Tensor Fields and Lie Groups.md",
+    "Commutator.md",
+    "14 classical Lie groups.md",
+    "Exponential and Logarithmic maps on Linear Maps.md",
+    "Logarithm Map.md",
+    "Lie/Lie groups.md",
+    "Lie/Submanifolds and Lie Groups.md",
+    "Quaternionic Groups.md",
+    "Differential Geometry/Differential Geometry.md",
+    "Differential Geometry/Tangent spaces.md",
+    "Differential Geometry/topological manifolds.md",
+    "Lie/Homogenous Spaces.md",
+    "Lie/Topological Groups.md",
+    "Lie/Lie Algebras.md",
+    "Lie/Lie groups and Homotopy.md",
+    "Differential Geometry/Tensor Fields/Tensor Fields.md",
+    "Differential Geometry/Tensor Fields/frame.md",
+    "Differential Geometry/Tensor Fields/Section.md",
     "graph.png",
     "Pasted image 20230928144237.png",
-    "readme.md",
     "Pasted image 20230928144229.png",
-    "Vision.md",
-    "Lie/Tensor Fields and Lie Groups.md",
-    "Tensor Fields/Tensor Fields.md",
-    "subpage.md",
-    "Tensor Fields/frame.md",
-    "Tensor Fields/Differential Forms.md",
-    "Lie/Lie Groups and Lie Algebras.md",
-    "Lie/Homogenous Spaces.md",
-    "Lie/Representations of Lie Groups.md",
-    "Lie/Lie groups.md",
-    "Lie/Lie Algebras.md",
-    "Differential Geometry/Differential Geometry.md",
-    "Differential Geometry/topological manifolds.md",
-    "Tensor Fields/Tensor Field Homepage.md",
-    "Differential Geometry/Fiber Bundle.md",
-    "meta/homepage.md",
     "Untitled",
-    "Differential Geometry/Germ.md",
-    "Differential Geometry/Regular Functions.md",
-    "Tensor Fields/Section.md",
-    "Tensor Fields/Vector Fields.md",
-    "Tensor Fields/Vector Bundle.md",
-    "Differential Geometry/Derivation.md",
-    "Differential Geometry/Tangent spaces.md",
-    "Tensor Fields/Tangent Bundle.md",
-    "Tensor Fields",
+    "Differential Geometry/Tensor Fields",
     "Representation",
     "Topology",
     "Lie/hw/hw1.synctex(busy)",

@@ -1,7 +1,5 @@
-
 >[!problem]
 >Show that a vector bundle $p:E\to X$ is trivial (isomorphic to $X\times k^n$) iff it admits [[Section|sections]] which form a basis in every fiber. Such a collection of sections is called a ==**frame**==.
-
 
 >[!solution]- This is dumb
 >If you are trivial, then fine, pick your stupid basis.

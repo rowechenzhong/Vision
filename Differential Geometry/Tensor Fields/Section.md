@@ -4,7 +4,7 @@ This is just how one extracts a function from a graph in a basis-free way. Gener
 
 # Sections of Vector Bundles
 
-The collection of all possible sections on a vector bundle is denoted $\Gamma(U,E)$; a ==**vector field**== is a section of the [[Tangent Bundle|tangent bundle]] $TX$.
+The collection of all possible sections on a vector bundle is denoted $\Gamma(X,E)$; a ==**vector field**== is a section of the [[Tangent Bundle|tangent bundle]] $TX$.
 
 >[!idea]
 >The Hairy Ball theorem says that $S^{2m}$ does not admit a nonwhere-vanishing vector field for any even-dimensional $S^{2m}$.

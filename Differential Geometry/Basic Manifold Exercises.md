@@ -33,6 +33,16 @@
 >[!todo]
 >DO this!!! (better)
 
+>[!problem]
+>Show that any holomorphic function on a connected compact complex Lie group $f:G\to \CC$ is constant.
+>^holomorphic-constant
 
+Suppose otherwise; $G$ is non-constant on some open set $U$. Call a point $x$ locally-constant if there exists an open set containing $x$ on which $f$ is constant; otherwise call it a potato. Now:
+- The set of all LC points is an open set, because if $x$ is LC, then it admits a chart $(U,\phi)$, and then $f$ is forced to be constant on $U\subset \CC^n$ by complex analysis.
+- The set of all potatoes is an open set, because if $x$ is a potato, then it admits a chart $(U,\phi)$, and then $f$ is forced to be non-locally-constant on $U\subset \CC^n$.
+
+It's not that deep. Assuming $f$ is never locally constant, it is potato everywhere. Thus, by complex analysis again, non-constant holomorphic functions are open maps, thus the image of $G$ must be an open set in $\CC$.
+
+The image of $G$ is compact just because continuous maps preserve compact sets. But there are no compact open sets of $\CC$! So $f$ must be constant.
 
 
