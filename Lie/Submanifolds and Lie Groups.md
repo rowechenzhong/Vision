@@ -6,9 +6,6 @@
 >
 >If $f(G)$ is an embedded submanifold in $K$, then it is a Lie subgroup. In this case, $G/H\cong f(G)$.
 
-
-
-
 >[!definition] Closed Lie Subgroup
 >A ==**closed Lie Subgroup**== is a subgroup of a Lie group $G$ which is also an [[Embedding|embedded submanifold]].
 

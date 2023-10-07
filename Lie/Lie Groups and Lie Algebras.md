@@ -45,24 +45,29 @@ How Lie groups act on spaces:
 - [[Representations of Lie Groups]]
 - [[Tensor Fields and Lie Groups]]
 
-### Lie Algebras
-Now, for Lie algebras.
-- [[Lie Algebras]]
+### Lie groups are Tight
 
-
- Motivation:
+Motivation:
 - [[14 classical Lie groups]].
 - [[Exponential and Logarithmic maps on Linear Maps]]
 - [[Quaternionic Groups]]
 
 From the Exp/Log direction:
 - [[Exponential Map]]
-- [[Various Adjoint maps]]
 - [[Logarithm Map]]
-- [[Exponential Map Problems]]
 - [[Commutator]]
+  
+- [[Various Adjoint maps]]
 - [[Adjoint Coincidence]]
 
+- [[Exponential Map Problems]]
+- [[Adjoint Problems]]
+### The bridge
 
 We execute the legendary bridge which we've had intuition on but black-boxed since middle school:
-- [[Lie groups are Lie Algebras]]
+
+- [[Lie Algebras]]
+- [[Tangent spaces of Lie groups are Lie Algebras]]
+- [[Lie algebra Cat words]]
+- [[Lie Subalgebras and Ideals]]
+- 

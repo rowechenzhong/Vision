@@ -38,5 +38,14 @@
       ],
       "key": "R"
     }
+  ],
+  "sync-graph-settings:sync-graph-colorgroups-to-localgraph": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "G"
+    }
   ]
 }

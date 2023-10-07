@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d1ea1a3248bd04bc",
+        "id": "646f0a3c8c13856e",
         "type": "tabs",
         "children": [
           {
-            "id": "eefb22b21b309675",
+            "id": "2a5753585d72073f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Adjoint Coincidence.md",
+                "file": "Lie/Lie Groups and Lie Algebras.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,33 @@
             }
           },
           {
-            "id": "0f0ce63fc6bc72fe",
+            "id": "caa44590a0b2bc99",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lie/Various Adjoint maps.md",
+                "file": "Lie/Vect(X) is a Lie algebra.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e8343662ede2b60c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "90e1233b8ff20750",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Differential Geometry/Derivation.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +55,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -53,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "adjoint coin",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Lie/Various Adjoint maps.md",
+                "file": "Lie/Lie Groups and Lie Algebras.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -185,12 +206,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 344.51103591918945,
-    "collapsed": true
+    "width": 244.51103591918945
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -217,7 +238,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lie/Various Adjoint maps.md",
+                "file": "Lie/Lie Groups and Lie Algebras.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -234,7 +255,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lie/Various Adjoint maps.md",
+                "file": "Lie/Lie Groups and Lie Algebras.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -246,7 +267,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lie/Various Adjoint maps.md"
+                "file": "Lie/Lie Groups and Lie Algebras.md"
               }
             }
           },
@@ -256,11 +277,11 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Lie/Various Adjoint maps.md",
+                "file": "Lie/Lie Groups and Lie Algebras.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
-                  "localJumps": 2,
+                  "localJumps": 1,
                   "localBacklinks": true,
                   "localForelinks": true,
                   "localInterlinks": false,
@@ -268,7 +289,64 @@
                   "showAttachments": false,
                   "hideUnresolved": false,
                   "collapse-color-groups": true,
-                  "colorGroups": [],
+                  "colorGroups": [
+                    {
+                      "query": "path:functional/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:homotopy/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:Lie/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Differential Geometry\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431378
+                      }
+                    },
+                    {
+                      "query": "path:\"Tensor Fields/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:measure/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    },
+                    {
+                      "query": "path:integration/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5395168
+                      }
+                    },
+                    {
+                      "query": "path:Probability/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11621088
+                      }
+                    }
+                  ],
                   "collapse-display": true,
                   "showArrow": true,
                   "textFadeMultiplier": 0,
@@ -279,7 +357,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.9968435874530834,
+                  "scale": 0.9713414176963792,
                   "close": false
                 }
               }
@@ -300,7 +378,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 970.5
+    "width": 258.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -313,47 +391,47 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "0f0ce63fc6bc72fe",
+  "active": "e8343662ede2b60c",
   "lastOpenFiles": [
-    "Adjoint Coincidence.md",
+    "Lie/Tangent spaces of Lie groups are Lie Algebras.md",
+    "Lie/14 classical Lie groups.md",
+    "readme.md",
+    "Lie/Vect(X) is a Lie algebra.md",
+    "graph.png",
+    "Lie/hw/pdflatex9232.fls",
+    "Lie/hw/hw2.out",
+    "Lie/hw/hw2.synctex(busy)",
+    "Lie/hw/hw2.log",
+    "Lie/hw/hw2.fls",
+    "Lie/hw/pdflatex21060.fls",
+    "Lie/hw/hw2.fdb_latexmk",
+    "Lie/hw/hw2.aux",
+    "Lie/hw/pdflatex10756.fls",
+    "Lie/hw/pdflatex6184.fls",
+    "Lie/Lie Algebras.md",
+    "Lie/Derivations are Lie Algebras.md",
+    "Differential Geometry/Derivation.md",
+    "Differential Geometry/Germ.md",
     "Lie/Lie Groups and Lie Algebras.md",
-    "Lie groups are Lie Algebras.md",
-    "Lie/Various Adjoint maps.md",
-    "Differential Geometry/Differential.md",
-    "Differential Geometry/Basic Manifold Exercises.md",
-    "Exponential Map Problems.md",
-    "Exponential Map.md",
-    "Lie/Tensor Fields and Lie Groups.md",
-    "Commutator.md",
-    "14 classical Lie groups.md",
-    "Exponential and Logarithmic maps on Linear Maps.md",
-    "Logarithm Map.md",
-    "Lie/Lie groups.md",
-    "Lie/Submanifolds and Lie Groups.md",
-    "Quaternionic Groups.md",
     "Differential Geometry/Differential Geometry.md",
     "Differential Geometry/Tangent spaces.md",
-    "Differential Geometry/topological manifolds.md",
-    "Lie/Homogenous Spaces.md",
-    "Lie/Topological Groups.md",
-    "Lie/Lie Algebras.md",
+    "Lie/Lie Subalgebras and Ideals.md",
+    "Lie/Lie algebra Cat words.md",
+    "Lie/Adjoint Coincidence.md",
+    "Lie/Adjoint Problems.md",
+    "Lie/Various Adjoint maps.md",
+    "Lie/How to invert the commutator.md",
+    "Lie/Exponential Map Problems.md",
+    "Lie/Commutator.md",
+    "Lie/Exponential Map.md",
+    "Lie/Logarithm Map.md",
     "Lie/Lie groups and Homotopy.md",
-    "Differential Geometry/Tensor Fields/Tensor Fields.md",
-    "Differential Geometry/Tensor Fields/frame.md",
-    "Differential Geometry/Tensor Fields/Section.md",
-    "graph.png",
+    "Lie/Lie groups.md",
+    "Lie/Submanifolds and Lie Groups.md",
+    "Differential Geometry/Immersed Submanifold.md",
+    "Differential Geometry/Differential.md",
     "Pasted image 20230928144237.png",
     "Pasted image 20230928144229.png",
-    "Untitled",
-    "Differential Geometry/Tensor Fields",
-    "Representation",
-    "Topology",
-    "Lie/hw/hw1.synctex(busy)",
-    "Lie/hw/pdflatex25784.fls",
-    "Lie/hw/pdflatex20252.fls",
-    "Lie/hw/pdflatex25776.fls",
-    "Lie/hw/pdflatex20964.fls",
-    "Lie/hw/pdflatex27720.fls",
     "Untitled.canvas",
     "homotopy/images/homotopy.png"
   ]
