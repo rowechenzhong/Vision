@@ -1,4 +1,3 @@
-
 > [!example] Euclidean Norm
 Over $\RR^n$ or $\CC^n$, one can define the ==**Euclidean norm**== for any $1\leq p \leq \infty$ via $$ \norm{x}_p = \left(\sum_{i=1}^n \abs{x_i}^p\right)^{1/p}. $$ If $p = 2$, we recover the usual Euclidean norm. If $p = \infty$, this degenerates to a supremum. 
 

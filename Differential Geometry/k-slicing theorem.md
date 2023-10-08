@@ -1,4 +1,3 @@
-
 >[!theorem] Intrinsic Definition ($k$-slicing theorem)
 >Let $Y$ be an $n$-dimensional manifold, and let $k$ be an integer such that $0\leq k\leq n$. A $k$-dimensional [[Embedding|embedded submanifold]] of $Y$ is a subset $X\subset Y$ such that for every point $p \in X$ there exists an [[atlas|chart]] $(U, \phi)$ such that $\phi(X\cap U)$ is the intersection of a $k$-dimensional [[plane]] with $\phi(U)$.
 >

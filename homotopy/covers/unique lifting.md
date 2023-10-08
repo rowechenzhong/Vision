@@ -1,4 +1,3 @@
-
 This, combined with the [[lifting criterion]] describe how one can lift arbitrary maps.
 > [!theorem] Unique Lifting Property
  Suppose two lifts $\tilde{f}_1, \tilde{f}_2: Y\to \tilde{X}$ of $f$ agree at one point $y\in Y$, and $Y$ is ==*connected*==. Then $\tilde{f}_1 = \tilde{f}_2$. 

@@ -1,4 +1,3 @@
-
 >[!definition] Topological Groups
 >A topological group is a group $G$ which is also a topological space, so that the multiplication map $m : G\times G\to G$ and the inversion map $\iota: G\to G$ are continuous.
 

@@ -1,5 +1,4 @@
 
-
  Let $p: (\tilde{X}, \tilde{x}_0) \to (X, x_0)$ be a covering map, as usual. We are given a map $f: (Y, y_0) \to (X, x_0)$. Then, a ==**lift**== of $f$, $\tilde{f}$, is a map such that $p\circ \tilde{f} = f$ and $\tilde{f}(y_0) = \tilde{x}_0$. The lifting property told us all we need to know about lifting homotopies. Let's see if we can find analogous results for the general case. There are two directions: existence and uniqueness. 
 > [!theorem] Lifting Criterion
 > Suppose $Y$ is ==*path-connected*== and ==*locally path-connected*==. Then, a lift exists iff $$ f_*(\pi_1(Y, y_0))\subset p_*(\pi_1(\tilde{X}, \tilde{x}_0)) $$ 

@@ -1,4 +1,3 @@
-
 > [!theorem] Lifting Property
  Suppose you are given a map $F:Y\times I \to X$. I give you a a branch-cut / \"initial condition\" $\tilde{F}: Y\times \{0\} \to \tilde{X}$, which is a lift of $F$ over $Y\times \{0\}$. Then $\tilde{F}$ can be extended to a unique lift $\tilde{F}: Y\times I \to \tilde{X}$. 
  

@@ -1,4 +1,3 @@
-
 Here are some basic point-set calculations to familiarize yourself with the topology of [[covering spaces|covering spaces]], before we dive into the algebra side of things. More advanced results are linked.
 
 > [!example] Restriction

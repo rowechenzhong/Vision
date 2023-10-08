@@ -1,4 +1,3 @@
-
 > [!problem] Products of Manifolds
 > Suppose $X$ is an $m$-dimensional manifold, and $Y$ is an $n$-dimensional manifold. Show that:
 > - $X\times Y$ is an $m + n$-dimensional manifold.

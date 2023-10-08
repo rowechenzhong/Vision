@@ -1,4 +1,3 @@
-
 The purpose of this little document is to prove some foundational results about $L^p$ spaces, which are one massive class of Banach spaces. Results from both [[Measure Theory]] and [[Functional Analysis]] will be used.
 
 # Definitions 

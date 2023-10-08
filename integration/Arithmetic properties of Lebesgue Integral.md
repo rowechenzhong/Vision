@@ -1,4 +1,3 @@
-
 > [!theorem] Integration Works
 > Let $f,g: \Omega \to \CC$ be measurable functions. If $f,g$ agree almost everywhere, then their integrability and integrals match. Then, given that they are both integrable:
 >

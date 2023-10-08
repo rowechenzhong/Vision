@@ -1,4 +1,3 @@
-
 > [!definition] Indicator Functions
 > The ==**indicator function**== of a set $A\subset \Omega$ is the function $\id_A: \Omega \to \{0,1\}$ defined by
 >

@@ -1,4 +1,3 @@
-
 >[!definition] Representation
 >If $X$ is a finite-dimensional vector space over $\RR$ or $\CC$, and the action is linear, then the action is called a ==**representation**==.
 >

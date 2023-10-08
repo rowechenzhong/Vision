@@ -1,4 +1,3 @@
-
 >[!claim] How to invert the commutator
 >$\log\left(\exp(x)\exp(y)\exp(x)^{-1}\exp(y)^{-1}\right) = [x,y]$ to third order (by which we mean $O(x^3, x^2y, xy^2, y^3)$).
 >^Commutator-Inverse

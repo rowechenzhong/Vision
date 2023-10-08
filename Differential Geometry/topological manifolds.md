@@ -1,4 +1,3 @@
-
 >[!definition] Manifold
 >An ==**$n$-dimensional topological manifold**== is:
 >1. Hausdorff and has countable base.

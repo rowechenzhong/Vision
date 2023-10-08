@@ -1,4 +1,3 @@
-
  We've constructed a wondrous bijection. The fundamental reason why this bijection is nice is because it preserves the natural poset ordering on subgroups (inclusion) and covering spaces (covers). 
 > [!theorem] Galois Correspondence Part 3
  Let $p:(\tilde{X}, \tilde{x}_0)\to (X, x_0)$ and $p':(\tilde{X}', \tilde{x}_0')\to (X, x_0)$ be ==*path-connected*== covering spaces, and let $\tilde{X}$ be ==*locally path-connected*==. Then $(\tilde{X}, \tilde{x}_0)$ is a covering space of $(\tilde{X}', \tilde{x}_0')$ iff $$ p_*(\pi_1(\tilde{X}, \tilde{x}_0)) \subset p'_*(\pi_1(\tilde{X}', \tilde{x}'_0)) $$ If one deletes all basepoints, this is true iff $p_*(\pi_1(\tilde{X}))$ maps to some conjugate of a subgroup of $p'_*(\pi_1(\tilde{X}'))$. 

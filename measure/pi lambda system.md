@@ -1,4 +1,3 @@
-
 > [!definition] Pi system
 > A ==**pi system**== on $\Omega$ is a collection of subsets that is closed under finite intersections.
 

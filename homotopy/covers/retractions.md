@@ -1,4 +1,3 @@
-
 Retractions are the topological analogues of projection operators in linear algebra. 
 > [!definition] Retraction
 > A ==**retraction**== of a space $X$ onto a subspace $A\subset X$ is a continuous map $r:X\to X$ such that $r(X) = A$ and $r|_A = \id_A$. Equivalently, $r^2 = r$. 

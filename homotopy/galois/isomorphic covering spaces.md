@@ -1,4 +1,3 @@
-
 > [!definition] Isomorphic Covering Spaces
  Two [[covering spaces]] $p_1: \tilde{X}_1\to X$ and $p_2: \tilde{X}_2\to X$ are ==**isomorphic**== if there exists a homeomorphism $\phi: \tilde{X}_1\to \tilde{X}_2$ such that $p_2\circ \phi = p_1$. If we specified basepoints on each of these spaces, then we require $\phi(\tilde{x}_1) = \tilde{x}_2$. 
 

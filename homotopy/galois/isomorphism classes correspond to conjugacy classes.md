@@ -1,4 +1,3 @@
-
  If one ignores the basepoints, the Galois Correspondence gives a bijection between **isomorphism classes of path-connected covering spaces** and **conjugacy classes of subgroups of $\pi_1(X, x_0)$**. 
 > [!theorem] Galois Correspondence Part 2
  Given some covering space $p: (\tilde{X}, \tilde{x}_0)\to (X, x_0)$ corresponding to subgroup $H_0 = p_*(\pi_1(\tilde{X}, \tilde{x}_0))$, we have to show two things: 

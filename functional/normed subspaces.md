@@ -1,4 +1,3 @@
-
 We're going to continue figuring out how topology interacts with linear algebra. 
 
 Given a ==**subspace**== as in linear algebra, the topology on this subspace is the usual subspace topology, which is the coarsest topology that makes the inclusion map continuous. Equivalently, intersect all open sets with the subspace. Equivalently, we inherit the metric from the ambient space. 

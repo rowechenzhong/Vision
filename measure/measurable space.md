@@ -1,4 +1,3 @@
-
 > [!definition] Measurable Space and $\sigma$-algebra
 > A ==**measurable space**== is a set $\Omega$ together with a non-empty $\AAA$ of subsets of $\Omega$. The elements of $\AAA$ are called ==**measurable sets**==. The set $\AAA$ is required to be closed under complements and *countable* unions. If we replace \"countable\" with \"finite,\" we get an ==**algebra**== instead. 
 > People sometimes also use the word "field" instead of "algebra."
