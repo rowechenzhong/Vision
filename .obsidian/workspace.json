@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Probability/Probability.md",
+                "file": "measure/Stieltjes Measure.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "measure",
+                "query": "pushforward",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Probability/Probability.md",
+                "file": "measure/Stieltjes Measure.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -202,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability/Probability.md",
+                "file": "measure/Stieltjes Measure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Probability/Probability.md",
+                "file": "measure/Stieltjes Measure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -231,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Probability/Probability.md"
+                "file": "measure/Stieltjes Measure.md"
               }
             }
           },
@@ -241,7 +241,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Probability/Probability.md",
+                "file": "measure/Stieltjes Measure.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -321,7 +321,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.7623517265169996,
+                  "scale": 0.6725440020130874,
                   "close": false
                 }
               }
@@ -357,32 +357,32 @@
   },
   "active": "091d86ae09feef5e",
   "lastOpenFiles": [
+    "pushforward measure.md",
+    "measure/measurable functions.md",
+    "measure/Stieltjes Measure.md",
+    "Radon measures.md",
+    "Borel Measure.md",
+    "More examples of measures.md",
     "Probability/independence.md",
+    "integration/real-valued measurable functions.md",
+    "integration/Integration.md",
+    "integration/Convergence properties of Lebesgue Integral.md",
+    "measure/Caratheodory extension Theorem.md",
+    "measure/pi lambda system.md",
+    "measure/product/Kolmogorov Extension.md",
+    "integration/complete measure space.md",
+    "Measurable functions generate sigma algebras.md",
+    "integration/constructing the Lebesgue Integral.md",
+    "integration/sigma finite measures.md",
+    "measure/product/box product measure.md",
+    "measure/Measure Theory.md",
     "Probability/Probability.md",
+    "Probability/probability objects.md",
     "measure/Borel-Cantelli.md",
     "finite measure.md",
     "measure/types of convergence.md",
     "Untitled.md",
-    "integration/sigma finite measures.md",
-    "integration/constructing the Lebesgue Integral.md",
-    "measure/Caratheodory extension Theorem.md",
-    "Borel Measure.md",
-    "measure/measurable functions.md",
     "measure/Lebesgue Measure.md",
-    "measure/pre-measure.md",
-    "measure/semi-algebra.md",
-    "More examples of measures.md",
-    "measure/Measure Theory.md",
-    "measure/Standard Measure Construction.md",
-    "measure/measure space.md",
-    "measure.md",
-    "measure/measurable space.md",
-    "measure/measure prologue.md",
-    "measure/product/Ionescu-Tulcea.md",
-    "measure/product/Kolmogorov Extension.md",
-    "measure/product/product space.md",
-    "Differential Geometry/Derivation.md",
-    "Lie/Lie Groups and Lie Algebras.md",
     "graph.png",
     "Lie/hw/pdflatex9232.fls",
     "Lie/hw/hw2.out",

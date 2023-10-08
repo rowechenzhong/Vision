@@ -1,4 +1,4 @@
-We follow the [[measure theory function scaffold|usual scaffold]]. Technical detail: some later parts of this construction will only work in the case of $\sigma$-[[sigma finite measures|finite measures]].
+We follow the [[measure theory function scaffold|usual scaffold]]. Technical detail: some later parts of this construction will only work in the case of [[sigma finite measures|$\sigma$-finite measures]].
 
 We first define the integral of [[indicator functions]]:
 

@@ -1,5 +1,3 @@
-  
-
 > [!definition] Completion
 > A ==**null set**== of a measure space $(\Omega, \AAA, \mu)$ is a measurable set $A$ such that $\mu(A) = 0$. A measure space is ==**complete**== if every subset of a null set is measurable.
 

@@ -1,4 +1,4 @@
-This is the [[homepage]] for axiomatic probability theory, which builds off of [[Measure Theory| measure theory]].
+This is the [[homepage]] for axiomatic probability theory, which builds off of [[Measure Theory|measure theory]].
 
 # Main Sequence
 

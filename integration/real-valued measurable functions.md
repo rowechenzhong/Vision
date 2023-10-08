@@ -1,16 +1,19 @@
 We're trying to upgrade to [[Integration]], so from now on most of our [[measurable functions]] will point into the reals, extended reals, or the [[complex-valued measurable functions|complex numbers]]. On the other hand, the domain is pretty unimportant; $\Omega$ is some arbitrary [[measure space]]. 
 
-The set of all measurable functions from $\Omega$ to $\RR_{\geq 0}$ is sometimes denoted $L^+(\Omega)$. Obligatory results, left as an exercise.
+>[!idea]
+>From now on, a "measurable function" without qualifiers has a tendency to point into $\RR$, and a "non-negative measurable function" will always point into $[0,\infty]$.
+
+The set of all measurable functions from $\Omega$ to $\RR_{\geq 0}$ is sometimes denoted $L^+(\Omega)$. Obligatory results:
 
 > [!theorem] Making Measurable Functions
-> 1. Given $f,g: \Omega \to \RR$ are measurable functions and $c \in \RR$, then $cf, f + g, fg$ are all measurable.
-> 2. Let $f_n: \Omega \to \RR$ be a sequence of measurable functions. Then the pointwise supremum and infimum are measurable.
+> 1. Given $f,g: \Omega \to \RR, [0,\infty], \CC$ are measurable functions and $c \in \KK$, then $cf, f + g, fg$ are all measurable.
+> 2. Let $f_n: \Omega \to \RR, [0,\infty]$ be a sequence of measurable functions. Then, the pointwise supremum and infimum are measurable. (If $\RR$, you need to check that the sup and inf are still real-valued).
 > 	1. Consequently,
 >    $$
 >    \lim \sup_{n\to \infty} f_n(x) = \inf_{n\geq 1} \sup_{k\geq n} f_k(x)
 >    $$
 >    and $\lim \inf$ are also measurable.
-> 	2. Most importantly, if these coincide, that is, if the functions converge pointwise, then the limit is measurable; this extends to the complex case as well
+> 	2. Most importantly, if these coincide, that is, if the functions converge pointwise, then the limit is measurable. This works for $\RR, [0,\infty], \CC$. 
 > 3. Suppose $\Omega$ is a [[complete measure space]]. If $f,g: \Omega\to [-\infty, \infty]$ agree almost everywhere, then they are both measurable or both not measurable.
 
 > [!solution]- Part 1
@@ -59,3 +62,16 @@ The characterization that is most amenable to verifying implementation details i
 > are a sequence of measurable set, thus
 > $$ f^{-1}((a,\infty)) = \bigcap_{m\geq 0} B_m $$
 > is measurable.
+
+This proof is sort of the same as this problem:
+>[!problem] Monotone Class Theorem
+>Let $(\Omega, \FFF)$ be a measurable space and let $\AAA$ be a $\pi$-system generating $\FFF$. Let $V$ be a vector space of **bounded** functions $f:E\to \RR$ such that:
+>- $1\in V$ and $1_A\in V$ for all $A\in \AAA$.
+>- For any sequence of **nonnegative** $f_n\in V$, if $f_n\uparrow f$ is also bounded, then $f\in V$.
+>Then, $V$ contains every bounded measurable function.
+
+>[!solution]-
+>The collection $\{A\in \FFF, A_1\in V\}$ is a $\lambda$-system containing $\AAA$, and we thus have all indicators. Then the approximation lemma above kills.
+
+
+

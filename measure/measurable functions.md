@@ -1,9 +1,6 @@
 > [!definition] Measurable Function
 > Let $(X, \AAA)$ and $(Y, \BBB)$ be measurable spaces. A function $f: X \to Y$ is ==**measurable**== if for every $B \in \BBB$, we have $f^{-1}(B) \in \AAA$.
 
-> [!example]
-> In particular, assuming we pick the Borel measure on two topological spaces $X$ and $Y$, continuous functions are measurable.
-
 If one is interested in [[real-valued measurable functions]], there is more intuition to be found.
 
 > [!claim] Only need to check the generators.
@@ -20,5 +17,11 @@ If one is interested in [[real-valued measurable functions]], there is more intu
 
 For example, one needs only verify that the pre-image of $(a, \infty)$ is measurable when working with $(X,\AAA)\to \RR$.
 
-> [!definition] Pushforward Measure
-> Let $(X, \AAA, \mu)$ and $(Y, \BBB)$ be measure spaces, and let $f: X \to Y$ be a measurable function. Then, the ==**pushforward measure**== $f_\sharp\mu$ on $B\in \BBB$ is defined by $f_\sharp\mu(B) = \mu(f^{-1}(B))$.
+> [!example]
+> In particular, assuming we pick the Borel measure on two topological spaces $X$ and $Y$, continuous functions are measurable.
+> 
+> A (real-valued) measurable function *from* a Borel space is a ==**Borel function**== (so we point from $(E, \BBB(E))\to (\RR, \BBB)$).
+
+[[Measurable functions generate sigma algebras]].
+
+[[pushforward measure|Measurable functions induce measures]].

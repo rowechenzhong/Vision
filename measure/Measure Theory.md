@@ -36,9 +36,9 @@ Next, we will _construct_ the most important measure spaces, starting with the r
 
 From here, one can study integration over measures, which is a large subject.
 
-7. [[Integration]]
+6. [[Integration]]
 
 There is also more to be discussed in "point-set measure theory"
 
-8.  [[box product measure]]
-9.  [[product measure]]
+7.  [[box product measure]]
+8.  [[product measure]]
