@@ -1,5 +1,6 @@
 > [!definition] Measure Space
-> A ==**measure space**== is a triple $(\Omega, \AAA, \mu)$ where $\Omega$ is a set, $\AAA$ is a $\sigma$-[[measurable space|algebra of subsets]], and $\mu$ is a ==**measure**==, i.e. a function $\mu: \AAA \to [0,\infty]$. This $\mu$ is required to be countably additive, and $\mu(\emptyset) = 0$.
+> A ==**measure space**== is a triple $(\Omega, \AAA, \mu)$ where $\Omega$ is a set, $\AAA$ is a $\sigma$-[[measurable space|algebra of subsets]], and $\mu$ is a [[measure]].
+> 
 > In probability, $\Omega$ is commonly called the ==**state space**== or ==**outcome space**==, and elements of $\AAA$ are called ==**events**==.
 
 > [!problem] Basic Properties
@@ -28,4 +29,4 @@
 > [!solution]-
 > Let $A_1, A_2, \dots$ be measurable sets of measure $1$. Then, their complements $\conj{A}_1, \conj{A}_2, \dots$ have measure $0$. By countable additivity, the union of these complements has measure $0$. Thus, the intersection of the $A_i$ has measure $1$.
 
-[[Lebesgue Measure]]
+The most famous measure is the [[Lebesgue Measure]] over $\RR$.

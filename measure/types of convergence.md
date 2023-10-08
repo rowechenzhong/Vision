@@ -1,17 +1,37 @@
 There are $3$ main types of convergence of functions $(\Omega, \FFF, \mu)\to (\RR, \BBB_\RR)$ relevant for our purposes; each implies the next. Given a sequence of functions $f_n$ and another function $f$,
 1. $f_n\to f$ ==**pointwise**== if $f_n(\omega)\to f(\omega)$ for all $\omega$.
-2. $f_n\to f$ ==**with respect to $\mu$ almost everywhere**== if
-   $$\mu\left( \left\{\omega: \lim_{n\to\infty} f_n(\omega) \neq f(\omega)\right\}\right) = 0$$
+2. $f_n\to f$ ==**with respect to $\mu$ almost everywhere**== if$$\mu\left( \left\{\omega: \lim_{n\to\infty} f_n(\omega) \neq f(\omega)\right\}\right) = 0$$
 3. $f_n\to f$ **==in $\mu$-measure**== if for all $\eps > 0$, 
    $$ \lim_{n\to \infty} \mu\left( \left\{\omega: \abs{f_n(\omega) - f(\omega)} \geq \eps\right\}\right) = 0$$
 In [[Probability]] theory, these are called pointwise, **==almost sure==**, and **==in probability==** convergence.
+
 Finally, there is convergence in $L^2$ norm, which is what it sounds like. This implies convergence in $\mu$-measure on probability measures.
+
 > [!todo] prove this shit smh
 
 # Random Problems
 
 >[!problem]
 >Suppose $X_1, X_2,\cdots$ converge in probability. Show they also converge almost surely along some subsequence.
+
+>[!solution]- Boring
+> WLOG $X = 0$.
+> 
+> Okay! Suppose $X_1, X_2,\dots,\to X$ in probability, i.e. for all $\frac1n > 0$, there exists an $a_n$ such that for all $m \geq a_n$, 
+> $$
+> 	\mu\left(\{\omega: \abs{X_m(\omega)}\geq \frac1n\}\right)\leq \frac1n
+> $$
+> In this subsequence, for all $\frac1n$,
+> 
+> $$
+> 	\mu\left(\{\omega: \lim_{m\to \infty} \abs{X_{a_m}(\omega)} \geq \frac1n\}\right) = 0
+> $$
+> 
+> right? Because it's an intersection of a bunch of sets, so by monotonicity it must have measure $< \frac1n$ for all $n$; this means it has measure $0$.
+> 
+> Okay?
+> 
+> But then, a countable union of measure-0 sets is measure zero. So we're done.
 
 >[!problem] Cauchy in Probability
 >Suppose $X_1, X_2, \dots$ are random variables such that

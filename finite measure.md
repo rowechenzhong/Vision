@@ -1,0 +1,2 @@
+A finite measure just means $\mu(\Omega) < \infty$.
+

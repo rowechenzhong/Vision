@@ -4,58 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "646f0a3c8c13856e",
+        "id": "4dfd7512b7e60c50",
         "type": "tabs",
         "children": [
           {
-            "id": "2a5753585d72073f",
+            "id": "091d86ae09feef5e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lie/Lie Groups and Lie Algebras.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "caa44590a0b2bc99",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lie/Vect(X) is a Lie algebra.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e8343662ede2b60c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
-            "id": "90e1233b8ff20750",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Differential Geometry/Derivation.md",
+                "file": "Probability/Probability.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -74,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "adjoint coin",
+                "query": "measure",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -120,7 +85,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Lie/Lie Groups and Lie Algebras.md",
+                "file": "Probability/Probability.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -206,8 +171,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -238,7 +202,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lie/Lie Groups and Lie Algebras.md",
+                "file": "Probability/Probability.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -255,7 +219,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lie/Lie Groups and Lie Algebras.md",
+                "file": "Probability/Probability.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -267,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lie/Lie Groups and Lie Algebras.md"
+                "file": "Probability/Probability.md"
               }
             }
           },
@@ -277,11 +241,11 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Lie/Lie Groups and Lie Algebras.md",
+                "file": "Probability/Probability.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
-                  "localJumps": 1,
+                  "localJumps": 2,
                   "localBacklinks": true,
                   "localForelinks": true,
                   "localInterlinks": false,
@@ -357,7 +321,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.9713414176963792,
+                  "scale": 0.7623517265169996,
                   "close": false
                 }
               }
@@ -378,7 +342,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258.5
+    "width": 512.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -391,12 +355,34 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "e8343662ede2b60c",
+  "active": "091d86ae09feef5e",
   "lastOpenFiles": [
-    "Lie/Tangent spaces of Lie groups are Lie Algebras.md",
-    "Lie/14 classical Lie groups.md",
-    "readme.md",
-    "Lie/Vect(X) is a Lie algebra.md",
+    "Probability/independence.md",
+    "Probability/Probability.md",
+    "measure/Borel-Cantelli.md",
+    "finite measure.md",
+    "measure/types of convergence.md",
+    "Untitled.md",
+    "integration/sigma finite measures.md",
+    "integration/constructing the Lebesgue Integral.md",
+    "measure/Caratheodory extension Theorem.md",
+    "Borel Measure.md",
+    "measure/measurable functions.md",
+    "measure/Lebesgue Measure.md",
+    "measure/pre-measure.md",
+    "measure/semi-algebra.md",
+    "More examples of measures.md",
+    "measure/Measure Theory.md",
+    "measure/Standard Measure Construction.md",
+    "measure/measure space.md",
+    "measure.md",
+    "measure/measurable space.md",
+    "measure/measure prologue.md",
+    "measure/product/Ionescu-Tulcea.md",
+    "measure/product/Kolmogorov Extension.md",
+    "measure/product/product space.md",
+    "Differential Geometry/Derivation.md",
+    "Lie/Lie Groups and Lie Algebras.md",
     "graph.png",
     "Lie/hw/pdflatex9232.fls",
     "Lie/hw/hw2.out",
@@ -408,28 +394,6 @@
     "Lie/hw/hw2.aux",
     "Lie/hw/pdflatex10756.fls",
     "Lie/hw/pdflatex6184.fls",
-    "Lie/Lie Algebras.md",
-    "Lie/Derivations are Lie Algebras.md",
-    "Differential Geometry/Derivation.md",
-    "Differential Geometry/Germ.md",
-    "Lie/Lie Groups and Lie Algebras.md",
-    "Differential Geometry/Differential Geometry.md",
-    "Differential Geometry/Tangent spaces.md",
-    "Lie/Lie Subalgebras and Ideals.md",
-    "Lie/Lie algebra Cat words.md",
-    "Lie/Adjoint Coincidence.md",
-    "Lie/Adjoint Problems.md",
-    "Lie/Various Adjoint maps.md",
-    "Lie/How to invert the commutator.md",
-    "Lie/Exponential Map Problems.md",
-    "Lie/Commutator.md",
-    "Lie/Exponential Map.md",
-    "Lie/Logarithm Map.md",
-    "Lie/Lie groups and Homotopy.md",
-    "Lie/Lie groups.md",
-    "Lie/Submanifolds and Lie Groups.md",
-    "Differential Geometry/Immersed Submanifold.md",
-    "Differential Geometry/Differential.md",
     "Pasted image 20230928144237.png",
     "Pasted image 20230928144229.png",
     "Untitled.canvas",

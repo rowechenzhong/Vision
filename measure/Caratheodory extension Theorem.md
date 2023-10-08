@@ -1,5 +1,5 @@
 > [!theorem] Caratheodory Extension Theorem
-> Let $\mu_0$ be a pre-measure over the [[measurable space#^algebra|algebra]] $\AAA_0$. Then there exists a unique measure $\mu: \AAA\to [0,\infty)$ on the generated $\sigma$-[[measurable space|algebra]] $\AAA$ such that $\mu_0(A) = \mu(A)$ for all $A\in \AAA_0$.
+> Let $\mu_0$ be a [[pre-measure]] over the [[measurable space#^algebra|algebra]] $\AAA_0$. Then there exists a unique [[measure space|measure]] $\mu: \AAA\to [0,\infty)$ on the generated $\sigma$-[[measurable space|algebra]] $\AAA$ such that $\mu_0(A) = \mu(A)$ for all $A\in \AAA_0$.
 
 This theorem is completely legendary; its what makes measure theory tick. In topology, if I hand you $\RR^2$ and ask you to draw an open set, you draw some connected blob and _have confidence that your intuition is completely general_. In measure theory, this lets you do the same thing.
 
