@@ -17,7 +17,7 @@
 >^Lie-functor
 
 >[!solution]-
->We just need to show this for small $(x,y)$, because both sides are bilinear in $x,y$ and we can scal through constants. We already saw that $\phi$ commuted with the exponential map here: [[Exponential Map]]. Recall [[How to invert the commutator]]. Observe that
+>We just need to show this for small $(x,y)$, because both sides are bilinear in $x,y$ and we can scal through constants. We already saw that $\phi$ commuted with the exponential map here: [[Exponential Map (Interface)]]. Recall [[How to invert the commutator]]. Observe that
 >$$
 >\begin{align*}
 >	\exp(\phi^*([x,y])) &= \phi(\exp([x,y]))\\

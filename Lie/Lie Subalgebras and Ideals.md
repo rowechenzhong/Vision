@@ -1,8 +1,8 @@
 >[!thm]
->Suppose $H\subset G$ is a Lie subgroup. Then:
-> - $Lie(H)\subset Lie(G)$ is a Lie subalgebra.
-> - If $H \trianglelefteq G$ then  $Lie(H)$ is a Lie ideal in $Lie(G)$.
-> - If $\hh$ is  a Lie ideal in $\fg$, and $G,H$ are connected, then $Lie(H)\trianglelefteq Lie(G)$.
+>Suppose $H\subset G$ is a Lie subgroup with algebras $\hh$ and $\fg$. Then:
+> - $\hh\subset \fg$ is a Lie subalgebra.
+> - If $H \trianglelefteq G$ then  $\hh$ is a Lie ideal in $\fg$.
+> - If $\hh$ is  a Lie ideal in $\fg$, and $G,H$ are connected, then $H\trianglelefteq G$.
 
 > [!proof]- Subalgebra
 > The claim is just that for any $x,y\in \hh$. $[x,y]\in \hh$. Well, for all sufficiently small $s,t$ we have

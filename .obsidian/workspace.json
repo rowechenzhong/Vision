@@ -4,16 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "4dfd7512b7e60c50",
+        "id": "cddde4d911af10b5",
         "type": "tabs",
         "children": [
           {
-            "id": "091d86ae09feef5e",
+            "id": "7785831215b894d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "measure/Stieltjes Measure.md",
+                "file": "Fourier/Measure Theoretic Fourier Transform.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c79b18f8badb9502",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "seminorm.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "pushforward",
+                "query": "seminorm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "measure/Stieltjes Measure.md",
+                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,11 +184,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 244.51103591918945
+    "width": 346.51103591918945
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -202,7 +216,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "measure/Stieltjes Measure.md",
+                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +233,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "measure/Stieltjes Measure.md",
+                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -231,7 +245,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "measure/Stieltjes Measure.md"
+                "file": "Fourier/Measure Theoretic Fourier Transform.md"
               }
             }
           },
@@ -241,7 +255,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "measure/Stieltjes Measure.md",
+                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -314,15 +328,15 @@
                   "collapse-display": true,
                   "showArrow": true,
                   "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
+                  "nodeSizeMultiplier": 1.58654545454545,
+                  "lineSizeMultiplier": 3.37854545454545,
+                  "collapse-forces": false,
                   "centerStrength": 0.518713248970312,
                   "repelStrength": 10,
                   "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.6725440020130874,
-                  "close": false
+                  "linkDistance": 63,
+                  "scale": 0.8152323255408461,
+                  "close": true
                 }
               }
             }
@@ -342,7 +356,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 512.5
+    "width": 538.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -355,45 +370,45 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "091d86ae09feef5e",
+  "active": "7785831215b894d5",
   "lastOpenFiles": [
-    "pushforward measure.md",
-    "measure/measurable functions.md",
-    "measure/Stieltjes Measure.md",
-    "Radon measures.md",
-    "Borel Measure.md",
-    "More examples of measures.md",
-    "Probability/independence.md",
-    "integration/real-valued measurable functions.md",
-    "integration/Integration.md",
-    "integration/Convergence properties of Lebesgue Integral.md",
-    "measure/Caratheodory extension Theorem.md",
-    "measure/pi lambda system.md",
-    "measure/product/Kolmogorov Extension.md",
-    "integration/complete measure space.md",
-    "Measurable functions generate sigma algebras.md",
-    "integration/constructing the Lebesgue Integral.md",
-    "integration/sigma finite measures.md",
-    "measure/product/box product measure.md",
-    "measure/Measure Theory.md",
-    "Probability/Probability.md",
-    "Probability/probability objects.md",
-    "measure/Borel-Cantelli.md",
-    "finite measure.md",
-    "measure/types of convergence.md",
+    "Fourier/Fourier Transform.md",
+    "functional/Functional Analysis.md",
+    "functional/zabreikos.md",
     "Untitled.md",
-    "measure/Lebesgue Measure.md",
+    "functional/hahnbanach.md",
+    "seminorm.md",
+    "functional/normed.md",
+    "Untitled 2.md",
+    "functional/banach.md",
+    "functional/normed subspaces.md",
+    "integration/Convergence properties of Lebesgue Integral.md",
+    "Probability/Convolution.md",
+    "integration/Arithmetic properties of Lebesgue Integral.md",
+    "Lie/Lie Groups Homepage.md",
+    "functional/operators.md",
+    "Fourier/Measure Theoretic Fourier Transform.md",
+    "functional/Review.md",
+    "functional/hilbert.md",
+    "integration/measure theory function scaffold.md",
+    "integration/simple functions.md",
+    "Untitled 1.md",
+    "Lie/Tangent spaces of Lie groups are Lie Algebras.md",
+    "Lie/ExpLog/Adjoint Problems.md",
+    "Lie/Lie Algebras.md",
+    "Lie/Lie Subalgebras and Ideals.md",
+    "Lie/ExpLog/Exponential Map Problems.md",
+    "Lie/ExpLog",
+    "Lie/Lie groups",
+    "measure/hw/hw2.synctex(busy)",
+    "measure/hw/pdflatex9768.fls",
+    "measure/hw/hw2.out",
+    "measure/hw/hw2.log",
+    "measure/hw/hw2.fls",
+    "measure/hw/pdflatex6720.fls",
+    "measure/hw/hw2.fdb_latexmk",
+    "measure/hw/hw2.aux",
     "graph.png",
-    "Lie/hw/pdflatex9232.fls",
-    "Lie/hw/hw2.out",
-    "Lie/hw/hw2.synctex(busy)",
-    "Lie/hw/hw2.log",
-    "Lie/hw/hw2.fls",
-    "Lie/hw/pdflatex21060.fls",
-    "Lie/hw/hw2.fdb_latexmk",
-    "Lie/hw/hw2.aux",
-    "Lie/hw/pdflatex10756.fls",
-    "Lie/hw/pdflatex6184.fls",
     "Pasted image 20230928144237.png",
     "Pasted image 20230928144229.png",
     "Untitled.canvas",

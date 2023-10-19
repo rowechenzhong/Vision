@@ -1,4 +1,4 @@
-Recall that a [[Derivation]] on anything is just a functional satisfying the Leibniz rule. We claim that if $v,w$ are derivations on $A$, then $vw - wv$ is as well.
+Recall that a [[Derivation]] on an algebra is just a functional satisfying the Leibniz rule. We claim that if $v,w$ are derivations on $A$, then $vw - wv$ is as well.
 
 >[!proof] Compute, uninsightful
 

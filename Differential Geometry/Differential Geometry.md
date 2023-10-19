@@ -1,6 +1,6 @@
 This is the [[homepage]] for differential geometry.
 
-Everything is very easy here, so we'll move quickly. All vector spaces are normed over $\RR$. Most things are created purely as setup for [[Lie Groups and Lie Algebras]].
+Everything is very easy here, so we'll move quickly. All vector spaces are normed over $\RR$. Most things are created purely as setup for [[Lie Groups Homepage]].
 
 # Sequences
 1. [[Derivative]]

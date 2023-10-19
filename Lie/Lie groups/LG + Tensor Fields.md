@@ -1,4 +1,4 @@
-If a Lie group $G$ [[Lie Group Actions|acts on]] a manifold $X$, then it also acts on the tangent bundle $TX$! Indeed, for all $g\in G$, $p\in X$, $v\in T_pX$, send
+If a Lie group $G$ [[LG + Actions|acts on]] a manifold $X$, then it also acts on the tangent bundle $TX$! Indeed, for all $g\in G$, $p\in X$, $v\in T_pX$, send
 
 $$
 g((p, v)) = (gp, d_pg(v))
@@ -16,8 +16,10 @@ In particular $G$ acts on tensor fields _on itself_ via left and right translati
 >
 > In particular, all Lie groups are [[frame|parallelizable]].
 
+^b9afb7
 
 This is blithingly obvious. After you have see the [[Various Adjoint maps]]:
+
 > [!problem]
 >$L_\tau$ is also right invariant iff $R_\tau$ is also left invariant iff $\tau$ is invariant under the [[Various Adjoint maps|adjoint representation]] $Ad_g$.
 

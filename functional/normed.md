@@ -16,8 +16,7 @@ A ==**norm**== on a vector space $V$ is a function $\norm{\bullet}: V \to \RR_{\
 >  -  (==**Definiteness**==) $\norm{v} = 0 \iff v = 0$, 
 >  -  (==**Homogeneity**==) $\norm{\lambda v} = \abs{\lambda} \norm{v}$, and 
 >  -  (==**Triangle Inequality**==) $\norm{v + w} \leq \norm{v} + \norm{w}$.
->  
->  A ==**seminorm**== satisfies homogeneity and the triangle inequality, but not definiteness. A vector space endowed with a norm is called a ==**normed vector space**==. 
+> A vector space endowed with a norm is called a ==**normed vector space**==. 
 
 This norm induces a metric on $V$ by $d(v, w) = \norm{v - w}$. 
 
@@ -42,7 +41,6 @@ Let $A,B\subset V$ be arbitrary sets. Let $\overline{A}$ and $\overline{B}$ deno
 
 > [!solution] 
 Recall that in metric spaces, the closure of a set is the set of all limits of convergent sequences in the set. Well, take any convergent sequence $\{a_n\}\to a$ in $A$ and any convergent sequence $\{b_n\}\to b$ in $B$. Then, $\{a_n + b_n\}$ converges to $a + b$ in $A + B$. 
-
 
 # Major Examples
 

@@ -5,7 +5,7 @@ Everything in functional analysis uses really nice topology; everything is a met
 > [!problem] The Metric is Continuous
 As a function from $X\times X\to \RR$, the metric $d$ is continuous. 
 
-> [!solution] 
+> [!solution]-
 We use sequential continuity. Observe $$ d(x,y) - d(x_i, x) - d(y_i, y)\leq d(x_i, y_i) \leq d(x,y) + d(x_i, x) + d(y_i, y). $$ so we conclude by squeeze theorem. 
 
 In particular, distances commute with limits; $\lim d(x_i, y) = d(x,y)$ for fixed $y$. Next up: whenever I have two metric spaces $X$ and $Y$, I will always assume that $X\times Y$ has the product metric. This is the metric where $$ d((x_1, y_1), (x_2, y_2)) = d_X(x_1, x_2) + d_Y(y_1, y_2). $$ This makes the product of complete spaces complete, for instance.
@@ -39,10 +39,11 @@ Let $A\subset X$.
 >  On the other hand, a ==**maximal**== element of $A$ is an element $x\in A$ such that for all $a\in A$, $x\leq a$ iff $x = a$. All maximums are maximal, but maximal elements are otherwise an unrelated idea. We define ==**lower bound**==, ==**infimum**==, ==**minimum**==, and ==**minimal**== similarly. 
 
 More stupid theorems that should be in my Sys1: 
+
 > [!problem] Infimums Add
 If $A, B$ are nonempty subsets of $\RR$, then $\inf_{a\in A, b\in B}( a + b) = \inf A + \inf B$. 
 
-> [!solution] 
+> [!solution]- 
 Let $\inf(A+B) = Z$, $\inf A = X$, $\inf B = Y$. We are told that: 
 >  
 >  
@@ -61,8 +62,7 @@ If $S_n$ are a bunch of nonempty subsets of $\RR_{\geq 0}$, then $$ \sum_{n = 1}
 > [!idea] 
 We consider countable sums because uncountable sums of positive real numbers are guaranteed to be infinite.
 
-
-> [!solution] 
+> [!solution]-
 First, we show LHS $\leq$ RHS. Pick all $s_n \in S_n$. Then, $$ \sum_{n = 1}^\infty \inf S_n \leq \sum_{n = 1}^\infty s_n. $$ because it is true termwise, and thus true for all partial sums, and thus true in the limit. Thus the LHS is a lower bound of $\sum S_n$, and thus $\leq$ the infimum. Great! For the other direction, we show $\eps + \text{LHS} \geq \text{RHS}$ for all $\eps > 0$. $$ \eps + \sum_{n = 1}^\infty \inf S_n = \sum_{n = 1}^\infty \inf S_n + \frac{\eps}{2^n} $$ Thus there exist some $s_n \in S_n$ such that $$ \sum_{n = 1}^\infty \inf S_n + \frac{\eps}{2^n} \geq \sum_{n = 1}^\infty s_n\geq \inf \sum S_n $$ win. 
 
 

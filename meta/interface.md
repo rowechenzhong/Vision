@@ -1,0 +1,3 @@
+This idea comes from programming. If you want to black-box something, you'd better do it right. An interface exposes all details necessary to use an idea, without showing a tedious construction (unnecessary private implementation).
+
+Not all ideas can use an interface, but if you're going to try to climb a ladder as tall as mathematics, you've got to keep the big picture and choose your battles...

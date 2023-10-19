@@ -19,4 +19,3 @@ This is *exactly* what you think it is.
 >$$
 >	(d(G\circ F)_P \cdot v)(f) = v(f\circ G\circ F) = dF_PV(f\circ G) = ((dG_{F(P)}\circ dF_P)\cdot v)(f)
 >$$
-

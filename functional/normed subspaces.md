@@ -59,8 +59,6 @@ Again, we need to delicately step around the infimums, because we're not sure wh
 > [!theorem] 
 Let $W\subset B$ be a closed subspace. Then, $B/W$ is a Banach space. 
 
-
 > [!proof] 
-Suppose the series $\sum_n \norm{v_n + W}$ converges. Then, for each $n\in \NN$, there exists an $w_n\in W$ such that $$ \norm{v_n + w_n}\leq \norm{v_n + W} + 2^{-n} $$ (by definition of infimum). This is good, because $\sum_n \norm{v_n + w_n} < \infty$; then because $B$ is Banach, the summation goes through in $B$: $$ v = \sum_n (v_n + w_n) \in B $$ Great; now we just want to show that $v+W = \sum_n (v_n + W)$. Well (and let's be careful here), \begin{align*} \lim_{N\to \infty} \norm{v + W - \sum_{n=1}^N (v_n + W)} & = \lim_{N\to \infty} \norm{( v - \sum_{n=1}^N)  + W}        \\ & = \lim_{N\to \infty} \norm{\sum_{n=N+1}^\infty (v_n + w_n)} \end{align*} The tail vanishes, so we're done. 
-
-
+Suppose the series $\sum_n \norm{v_n + W}$ converges. By definition of $\norm{v_n + W}$, for each $n\in \NN$, I can find a $w_n\in W$ such that $$ \norm{v_n + w_n}\leq \norm{v_n + W} + 2^{-n} $$ (by definition of infimum). This is good, because $\sum_n \norm{v_n + w_n} < \infty$; then because $B$ is Banach, the summation goes through in $B$; there is some $v$ such that $$ v = \sum_n (v_n + w_n) \in B $$ Great; now we just want to show that $v+W = \sum_n (v_n + W)$. Well (and let's be careful here), $$\begin{align*} \lim_{N\to \infty} \norm{v + W - \sum_{n=1}^N (v_n + W)} & = \lim_{N\to \infty} \norm{( v - \sum_{n=1}^N v_n) + W}        \\ & = \lim_{N\to \infty} \norm{\sum_{n=N+1}^\infty (v_n + w_n)} \end{align*}$$
+The tail vanishes, so we're done. 

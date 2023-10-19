@@ -49,6 +49,7 @@ This map is exactly what we want.
 > 	\phi(\exp(x)) = \exp\left(\phi_*x\right)
 > $$
 > where $\phi_*$ is the differential of $\phi$ at $1$.
+> ^interface
 
 >[!proof]-
 >1. The regularity is handwaved. $\gamma_0(t) = 1$, thus $\exp(0) = 1$. $\exp'(0)$ is a map from a vector space so this isn't a differential or anything (although the concepts coincide); we can simply give it a vector $x\in \fg$, and $\exp'(0)v$ should tell us $\frac{\der}{\der t}\exp(tx) = x$. Thus $\exp' = 1$.
@@ -61,24 +62,3 @@ This map is exactly what we want.
 > 	(\exp(\phi_*(tx)))' = \exp(\phi_*(tx))\left(\phi_*(tx)\right)' = \exp(\phi_*(tx))\phi_*x
 > $$
 > because $\phi_*$ is a fucking linear map.
-
->[!idea] $\fg$ is the canonical chart for $G$.
->We will basically never have to say the word ``chart" again when discussing Lie groups! $\fg$ (and $g\fg$ in general, via the differential of left translation) *is* a chart at all points in $G$.
-
-See [[Various Adjoint maps]].
-
->[!problem] Important of $Ad$
->For all $g\in G$ and $x\in \fg$, $g\exp(x)g^{-1} = \exp(Ad_g x)$.
-
->[!solution]-
->Consider the map $\phi:G\to G$ via $h\to ghg^{-1}$. Then, by definition, $\phi_* = \Ad_g$, so this is just the previous property.
-
-We can see the bridge being built now; $\fg$ completely describes $G$.
-
->[!problem]
->Suppose $G$ is a connected Lie group and $\phi:G\to K$ is a morphism of Lie groups. Then, $\phi$ is completely determined by the linear map $\phi_*:T_1G\to T_1K$.
-
->[!solution]-
->Indeed, $\phi(\exp(x)) = \exp(\phi_*(x))$. We know that $\exp$ is a diffeomorphism $\uu\to \fg$ on some neighborhoods $0\in \uu\subset \fg$ and some $1\in U\subset G$. Thus, $\phi(g)$ is completely specified on $g\in U$ by $\phi_*$.
->
->Because [[Submanifolds and Lie Groups#^homomorphisms-tight|homomorphisms are tight]], we conclude.

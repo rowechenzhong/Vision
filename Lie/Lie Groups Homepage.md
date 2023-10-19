@@ -1,4 +1,4 @@
-This is the [[homepage]] for Lie Groups and Lie Algebras.
+This is the [[homepage]] for Lie Groups
 
 # Introduction
 
@@ -36,16 +36,17 @@ First, we cover some prerequisite material:
 ### Lie Groups
 We now begin the study of Lie groups, proper.
 - [[Lie groups]]
-- [[Lie groups and Homotopy]]
-- [[Submanifolds and Lie Groups]]
+- [[LG + Homotopy]]
+- [[LG + Submanifolds]]
 - [[Homogenous Spaces]]
 
 How Lie groups act on spaces:
-- [[Lie Group Actions]]
-- [[Representations of Lie Groups]]
-- [[Tensor Fields and Lie Groups]]
+- [[LG + Actions]]
+- [[LG + Representations]]
+- [[LG + Tensor Fields]]
+- [[LG Tangent Space]] (A collection of ideas).
 
-### Lie groups are Tight
+### Exponent and Logarithm
 
 Motivation:
 - [[14 classical Lie groups]].
@@ -53,7 +54,7 @@ Motivation:
 - [[Quaternionic Groups]]
 
 From the Exp/Log direction:
-- [[Exponential Map]]
+- [[Exponential Map (Interface)]]
 - [[Logarithm Map]]
 - [[Commutator]]
   

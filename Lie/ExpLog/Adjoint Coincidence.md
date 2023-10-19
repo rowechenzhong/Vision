@@ -1,10 +1,10 @@
-For $x\in \fg$, the [[Commutator|commutator]] defines a linear map $\ad_x:\fg\to \fg$ via $\ad_x(y) = [x,y]$. The claim is that this is actually [[Various Adjoint maps|the same adjoint as before]].
+For $x\in \fg$, the [[Commutator|commutator]] defines a linear map $\ad_x:\fg\to \fg$ via $\ad_x(y) = [x,y]$. The claim is that this is actually [[Various Adjoint maps|the same adjoint as before]]; this is a key part of the bridge, and can be boxed as an [[interface]].
 
 >[!theorem] Adjoint Coincidence
->$\ad = \Ad_{\fg}$, i.e. $\ad_x = \Ad_{\fg}(x)$, i.e.
 >$$
 >	[x,y] = \left.\frac{\der}{\der t}\right|_{t = 0} \Ad_{\exp(xt)}(y)
 >$$
+# Proof
 
 >[!claim] Express the commutator in terms of limits
 > Fix $x$ and $y$. We launch two curves out of $1$ in the $x$ and $y$ directions: let $X(t)$ and $Y(s)$ be parameterized curves on $G$ such that $X(0) = Y(0) = 1$, $X'(0) = x$, and $Y'(0) = y$. 

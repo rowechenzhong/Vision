@@ -1,11 +1,7 @@
-Actually, we have already done significant amounts of the work.
-
-Watch:
-
 >[!theorem] Jacobi Identity holds for any Lie group
->$\fg$ under the [[Commutator|commutator]] is a Lie algebra.
+>$\fg$ endowed with the [[Commutator|commutator]] is a Lie algebra.
 
-Indeed, this follows from [[Adjoint Problems#^Lie-functor|the fact that Lie brackets preserve the Adjoint]]. For all $g\in G$, the map $\Ad(g):G\to G$ is a morphism whose differential preserves the commutator:
+All we need to show is the Jacobi identity. Recall [[Adjoint Problems#^Lie-functor|Lie brackets preserve the Adjoint]]. For all $g\in G$, the map $\Ad(g):G\to G$ is a morphism whose differential preserves the commutator:
 $$
 \Ad_G(g)([x,y]) = [\Ad_G(g)(x), \Ad_G(g)(y)]
 $$
@@ -24,3 +20,6 @@ which is precisely Jacobi.
 >$$
 >	\Ad_\fg [x,y] = [\Ad_\fg x, \Ad_\fg y]
 >$$
+>This says that $\Ad_\fg$ is an automorphism.
+
+

@@ -1,38 +1,91 @@
 # Foundational Theorems 
- 
- We will now prove $4$ foundational theorems of functional analysis. As suggested by \href{https://math.blogoverflow.com/2014/06/25/zabreikos-lemma-and-four-fundamental-theorems-of-functional-analysis/}{this blog post}, all of these four theorems follow from an overarching main lemma. The main lemma itself follows from Baire category theorem. ## Zabreikos Lemma 
- 
- 
+
+We will now prove $4$ foundational theorems of functional analysis. As suggested by [this blog post](https://math.blogoverflow.com/2014/06/25/zabreikos-lemma-and-four-fundamental-theorems-of-functional-analysis/), all of these four theorems follow from an overarching main lemma. The main lemma itself follows from the Baire category theorem.
+## An obvious but crucial lemma
+
 > [!theorem] Zabreikos Lemma
- Let $p: X\to [0,\infty)$ be a seminorm on a Banach space. Suppose that, for all *absolutely convergent* sequences $\sum_{n=1}^\infty x_n$, $$ p\left(\sum_{n=1}^\infty x_n\right) \leq \sum_{n=1}^\infty p(x_n) $$ Then, $p$ is continuous on $X$. 
+ Let $p: X\to [0,\infty)$ be a [[seminorm]] on a Banach space. Suppose that, for all *absolutely convergent* sequences $\sum_{n=1}^\infty \norm{x_n} < \infty$, $$ p\left(\sum_{n=1}^\infty x_n\right) \leq \sum_{n=1}^\infty p(x_n) $$ Then, $p$ is continuous on $X$. 
 
- 
-> [!proof] 
- The standard way to begin all of these proofs is to let $A_n = p^{-1}([0,n])$ for all $n > 0$, and let $F_n = \overline{A_n}$. Observe that $A_n$ and $F_n$ are both convex. Then, the $F_n$ form a closed cover of $X$, thus by Baire's theorem (which is the only usage of completeness of $X$), $$ \exists N, R, x_0 \qquad B_R(x_0)\subset F_N $$ Then, WLOG $x_0 = 0$, because $B_R(-x_0)\subset F_N$, and by convexity $B_R(0)\subset F_N$. Also, WLOG $R = 1$ by scaling. The result is that $B_1(0)\subset F_N$. We claim that $B_1(0)\subset A_N$, which would finish. Pick any $x$ and $r$ such that $\norm{x} < r < 1$. Let $0 < \eps < 1 - r$. Then, $y = \frac{x}{r}$ is inside $F_N$. Pick a $y_0\in A_N$ such that $\norm{y - y_0} < \eps$. Then, $\frac{1}{\eps}(y - y_0) \in B_1(0)$, so we can repeat; choose a $y_1\in A_N$ such that $\norm{\frac{1}{\eps}(y - y_0) - y_1} < \eps$. Then, $\frac{1}{\eps^2}(y - y_0 - \eps y_1) \in B_1(0)$, ad infinitum. Thus, $y = \sum_{k = 0}^\infty \eps^k y_k$. Each $\norm{y_k}\leq 1 + \eps$, thus this series is absolutely convergent. Thus, by the hypothesis, $$ p(y) \leq \sum_{k=0}^\infty p(\eps^k y_k) \leq \sum_{k=0}^\infty \eps^kN = \frac{N}{1-\eps} $$ Thus $p(x) = rp(y) < \frac{N}{1-\eps}r < N$, so $x\in A_N$. 
+>[!example]
+>If $p$ is continuous on $X$, then the theorem trivially holds (prove it!)
+>
+>It is surprising and non-trivial that a generic seminorm need not be continuous on $X$; such seminorms are [pathological and non-constructive](https://math.stackexchange.com/questions/907560/discontinuous-seminorm-on-banach-space). So in a sense, this lemma is really silly. It's a river to cross in all of our major theorems, but the river is highly pathological.
 
- 
-> [!problem] Uniform Boundedness Theorem
- Let $\{T_n\}$ be a sequence in $\BB(B, V)$. Suppose for all $b\in B$, we have $\sup_n \norm{T_n b} < \infty$. Then, $\sup_n \norm{T_n} < \infty$. In other words, pointwise boundedness implies uniform boundedness. 
+> [!proof]- Baire go brr
+>  The standard way to begin all of these proofs is to let $A_n = p^{-1}([0,n))$ for all $n > 0$, and let $F_n = \overline{A_n}$. Observe that $A_n$ and $F_n$ are both [[seminorm|convex]].
+> 
+> The $F_n$ form a closed cover of $X$, thus by Baire's theorem (which is the only usage of completeness of $X$), $$ \exists N, R, x_0 \qquad B_R(x_0)\subset F_N $$ Then, WLOG $x_0 = 0$, because $B_R(-x_0)\subset F_N$, and by convexity $B_R(0)\subset F_N$. Also, WLOG $R = 1$ by scaling. The result is that $B_1(0)\subset F_N$.
 
+>[!idea] This theorem is really weak but important.
+> We haven't used the problem condition yet, and we already know that for some $n > 0$, $B_1(0)\subset \overline{p^{-1}([0,n))}$!
+
+>[!proof]- Finishing it
+Pick any $x$ and $r$ such that $\norm{x} < r < 1$. Let $0 < \eps < 1 - r$. Then, $y = \frac{x}{r}$ is inside $F_N$. Pick a $y_0\in A_N$ such that $\norm{y - y_0} < \eps$. Then, $\frac{1}{\eps}(y - y_0) \in B_1(0)$, so we can repeat; choose a $y_1\in A_N$ such that $\norm{\frac{1}{\eps}(y - y_0) - y_1} < \eps$. Then, $\frac{1}{\eps^2}(y - y_0 - \eps y_1) \in B_1(0)$, ad infinitum. Thus, $y = \sum_{k = 0}^\infty \eps^k y_k$. Each $\norm{y_k}\leq 1 + \eps$, thus this series is absolutely convergent. Thus, by the hypothesis, $$ p(y) \leq \sum_{k=0}^\infty p(\eps^k y_k) \leq \sum_{k=0}^\infty \eps^kN = \frac{N}{1-\eps} $$ Thus $p(x) = rp(y) < \frac{N}{1-\eps}r < N$, so $x\in A_N$. 
+
+# The four major theorems
  
 > [!problem] Open Mapping Theorem
  Let $X, Y$ be Banach spaces, and $T\in \BB(X, Y)$ be surjective. Then, $T$ is an open map. 
 
- 
+>[!solution]- Could be phrased better, todo
+>Let $p:W\to \RR$ be the seminorm sending
+> $$
+> 	p(w) = \inf_{v\in T^{-1}(w)}\norm{v}
+> $$
+> Then, ummmm, why's this a seminorm? Well, for any $u,w\in W$, 
+> $$\inf_{v\in T^{-1}(u + w)} \norm{v} \leq \inf_{v \in T^{-1}(u)} \norm{v} + \inf_{v'\in T^{-1}(w)} \norm{v'}$$
+> right? why? because for all $v,v'$, um, $\norm{v} + \norm{v'}\geq \norm{v + v'}$, sure.
+> 
+> So now um $p$ is a seminorm and it satisfies the conditions because it just does.
+> 
+> And the theorem says that there exists an open ball inside $\{w: \inf_{v\in T^{-1}(w)}\norm{v} < 1\} = T(B_0(1))$, as desired.
+> 
+
+
 > [!problem] Bounded Inverse Theorem
  If $T\in \BB(X, Y)$ is a bijective map, then $T^{-1}$ is bounded. 
 
- 
+>[!solution]-
+>By the previous solution, $T$ is an open map, thus $T^{-1}$ is a homeomorphism.
+> 
+> Alternatively, we can let $p(w) = \norm{T^{-1}(w)}$. Then, $p$ is a seminorm because $$\norm{T^{-1}(u + v)} = \norm{T^{-1}(u)} + \norm{T^{-1}(v)} \leq \norm{T^{-1}(u)} + \norm{T^{-1}(u + v)}$$
+> Then uh, there exists a ball inside $\{w: \norm{T^{-1}(w)} < 1\} = T(B_1(0,1))$, i.e. $T^{-1}$ is continuous gg.
+
+
+> [!problem] Uniform Boundedness Theorem
+ Let $\{T_n\}$ be a sequence in $\BB(B, V)$. Suppose for all $b\in B$, we have $\sup_n \norm{T_n b} < \infty$. Then, $\sup_n \norm{T_n} < \infty$. In other words, pointwise boundedness implies uniform boundedness. 
+
+> [!solution]-
+> Just let $p(x) = \sup_{n\in \NN} \norm{T_n(x)}$ which is finite by assumption; this is obviously a seminorm.
+> $$
+> \sup_n \norm{T_n\left(\sum_i x_i\right)} = \sup_n \norm{\sum_i T_nx_i}\leq \sup_n \sum_i \norm{T_nx_i}\leq \sum_i \sup_n \norm{T_nx_i}
+> $$
+> Thus $$p^{-1}([0,1)) = \{x: \sup_{n\in N} \norm{T_n(x)} < 1\}$$contains a ball $\norm{x} < \eps$; but then $\sup_n \norm{T_n} \leq \frac{1}{\eps}$, win.
+
+
 > [!definition] Graph
  Let $f:X\to Y$ be a function. The ==**graph**== of $f$ is the set $$ \Gamma_f = \{(x, f(x)) : x\in X\}\subset X\times Y $$ 
 
- 
+
 > [!problem] Closed Graph Theorem
  Let $X$ and $Y$ be Banach spaces, and $T:X\to Y$ be an *arbitrary* linear operator. Then, $T$ is bounded iff $\Gamma_T$ is closed. 
 
- ## Deprecated 
+> [!solution]-
+> For any Cauchy sequence $(x_i, y_i)\subset \Gamma_T$ your $x_i$'s must be Cauchy; then they admit a limit $x$. Suppose $T$ is bounded; then $x_i\to x$ implies $T(x_i)\to T(x)$. Thus the limit point is in the set, and $\Gamma_T$ is closed.
+> 
+> Let $p(x) = \norm{T(x)}$; this is clearly a seminorm.
+> $$
+> 	\sum_n \norm{T(x_n)}\leq \norm{\sum_n T(x_n)}
+> $$
+> because stare at tails or something lol (this doesn't really require the lemma; its a composition of continuous functions).
+> 
+> Then, $T^{-1}\left(B_0(1)\right)$ contains a ball.
+
+# Deprecated
+
+Here are direct proofs of the four major theorems; the Zabriekos approach is more unified, and these are included for completeness.
  
- Here are direct proofs of the four major theorems. ### Uniform Boundedness Theorem 
+### Uniform Boundedness Theorem 
  
  
 > [!theorem] Uniform Boundedness Theorem

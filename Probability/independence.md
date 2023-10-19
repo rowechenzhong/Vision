@@ -2,12 +2,22 @@
 >A set of events $\{A_\alpha: \alpha\in I\}$ are ==**mutually independent**== if for all finite subsets $J\subset I$,
 >$$\PP\left(\bigcap_{\alpha \in J} A_\alpha \right) = \prod_{\alpha\in J} \PP(A_\alpha)$$
 >
->Sometimes one also talks about independence of *collections* of events, $\{\mathcal{C}_\alpha, \alpha \in I\}$. In this case, it means that all choices of $A_\alpha\in \mathcal{C}_\alpha$ are independent.
+>Sometimes one also talks about independence of *collections* of events, $\{\mathcal{C}_\alpha, \alpha \in I\}$. In this case, it means that all choices of $A_\alpha\in \mathcal{C}_\alpha$ are independent. In particular, one can talk about independence of $\sigma$-algebras.
 >
 >If$\abs{I} = 2$, we write $A \pperp B$ and say $A$ and $B$ are ==**independent**==.
 
 >[!defn] Independent RVs
 >A set of random variables $\{X_\alpha:\alpha\in I\}$ are ==**mutually independent random variables**== [[Measurable functions generate sigma algebras|if their $\sigma$-algebras]] are independent.
+
+>[!problem]
+>For a sequence of real-valued RVs $\{X_n\}_{n\in \NN}$, this is equivalent to
+>$$
+>	\PP(X_1\leq x_1,\dots X_n\leq x_n) = \PP(X_1\leq x_1)\dots \PP(X_n\leq x_n)
+>$$
+>for all $n$ and $x_1,\dots, x_n\in \RR$.
+
+>[!idea] Processes
+>Such a sequence of RVs is often thought of as a process, where the indices index time. The $\sigma$-algebra $\FFF_n = \sigma(X_1,\dots X_n)$ contains those events that depend solely on $X_1, \dots, X_n$, and represents all historical information about the system at time $n$.
 
 # Key example
 
