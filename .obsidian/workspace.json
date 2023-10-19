@@ -4,33 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "cddde4d911af10b5",
+        "id": "5e3f24c548719322",
         "type": "tabs",
         "children": [
           {
-            "id": "7785831215b894d5",
+            "id": "31496155dea4b975",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Fourier/Measure Theoretic Fourier Transform.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c79b18f8badb9502",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "seminorm.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -98,7 +80,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -216,7 +197,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -233,7 +213,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -244,9 +223,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Fourier/Measure Theoretic Fourier Transform.md"
-              }
+              "state": {}
             }
           },
           {
@@ -255,7 +232,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Fourier/Measure Theoretic Fourier Transform.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -370,14 +346,19 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "7785831215b894d5",
+  "active": "31496155dea4b975",
   "lastOpenFiles": [
+    "Vision.md",
+    "seminorm.md",
+    "portal.md",
+    "Untitled.md",
+    "readme.md",
+    "meta/homepage.md",
+    "Fourier/Measure Theoretic Fourier Transform.md",
     "Fourier/Fourier Transform.md",
     "functional/Functional Analysis.md",
     "functional/zabreikos.md",
-    "Untitled.md",
     "functional/hahnbanach.md",
-    "seminorm.md",
     "functional/normed.md",
     "Untitled 2.md",
     "functional/banach.md",
@@ -387,17 +368,12 @@
     "integration/Arithmetic properties of Lebesgue Integral.md",
     "Lie/Lie Groups Homepage.md",
     "functional/operators.md",
-    "Fourier/Measure Theoretic Fourier Transform.md",
     "functional/Review.md",
     "functional/hilbert.md",
     "integration/measure theory function scaffold.md",
     "integration/simple functions.md",
     "Untitled 1.md",
     "Lie/Tangent spaces of Lie groups are Lie Algebras.md",
-    "Lie/ExpLog/Adjoint Problems.md",
-    "Lie/Lie Algebras.md",
-    "Lie/Lie Subalgebras and Ideals.md",
-    "Lie/ExpLog/Exponential Map Problems.md",
     "Lie/ExpLog",
     "Lie/Lie groups",
     "measure/hw/hw2.synctex(busy)",
