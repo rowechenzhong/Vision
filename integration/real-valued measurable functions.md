@@ -34,44 +34,5 @@ The set of all measurable functions from $\Omega$ to $\RR_{\geq 0}$ is sometimes
 > [!solution]- Part 3
 > Suppose $f$ is measurable. Then $\mu\left(f^{-1}((a,\infty)) \Delta g^{-1}((a,\infty))\right) = 0$ for all $a\in \RR$ (because the set in question is a subset of the set $\{x: f(x)\neq g(x)\}$, which has outer measure zero, and thus has measure $0$). Since $f$ is measurable, $g$ is measurable as well. (All sets with outer measure $0$ are measurable). The converse is similar.
 
-The characterization that is most amenable to verifying implementation details is the following.
-
-> [!theorem] Approximation by Simple Functions
-> $f:\Omega \to \RR$ is measurable iff there exists a sequence of [[simple functions]] $f_n$ such that $f_n \to f$ pointwise. If $f\geq 0$, one can choose these $f_n$ such that $f_n\uparrow f$; otherwise one can still ensure $\abs{f_n}\uparrow \abs{f}$.
-> ^sf-approx
-
-> [!proof]- Forward
-> Suppose $f$ is measurable. Then $f^{-1}((a,\infty))$ is measurable for all $a\in \RR$. We use the density of rationals in reals to construct a sequence of simple functions that converge to $f$ pointwise. Let
-> $$
-> A_{n,k} = f^{-1}\left(\left( \frac{k}{2^n}, \frac{k+1}{2^n} \right]\right).
-> $$
-> Then $A_{n,k}$ are disjoint and measurable. Define the simple functions
-> $$
-> f_n = \sum_{\abs{k} \leq n\cdot 2^n} \frac{k}{2^n} \id_{A_{n,k}}.
-> $$
-> (The ugly summation range ensures that each $f_n$ is a finite sum, but in the limit we can access all of $\RR$).
->
-> Fix $x\in \Omega$. By construction, for all $n > f(x)$, $0 < f(x) - f_n(x) < 2^{-n}$. Thus $f_n(x) \to f(x)$ pointwise. If you want $f_n\uparrow f$, truncate the beginning; if you're in the general case, do casework on signage of $f$.
-
-> [!proof]- Backwards
-> On the other hand, suppose $f_n \to f$ pointwise.
-> 1. Then, for any $x \in f^{-1}((a,\infty))$, there exists an $M$ such that $x\in f^{-1}_n((a,\infty))$ for all $n > M$.
-> 2. Then $f^{-1}_n((a,\infty)) \to f^{-1}((a,\infty))$ as sets.
-> 3. In particular, 
-> $$ B_m = \bigcup_{n\geq M} f_n^{-1}((a,\infty)) $$
-> are a sequence of measurable set, thus
-> $$ f^{-1}((a,\infty)) = \bigcap_{m\geq 0} B_m $$
-> is measurable.
-
-This proof is sort of the same as this problem:
->[!problem] Monotone Class Theorem
->Let $(\Omega, \FFF)$ be a measurable space and let $\AAA$ be a $\pi$-system generating $\FFF$. Let $V$ be a vector space of **bounded** functions $f:E\to \RR$ such that:
->- $1\in V$ and $1_A\in V$ for all $A\in \AAA$.
->- For any sequence of **nonnegative** $f_n\in V$, if $f_n\uparrow f$ is also bounded, then $f\in V$.
->Then, $V$ contains every bounded measurable function.
-
->[!solution]-
->The collection $\{A\in \FFF, A_1\in V\}$ is a $\lambda$-system containing $\AAA$, and we thus have all indicators. Then the approximation lemma above kills.
-
-
+The characterization that is most amenable to verifying implementation details is the [[approximation by simple functions]].
 

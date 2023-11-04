@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "5e3f24c548719322",
+        "id": "6d32088bcfc43d33",
         "type": "tabs",
         "children": [
           {
-            "id": "31496155dea4b975",
+            "id": "5089eacc841bfa10",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Root Space Decomposition.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -34,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "seminorm",
+                "query": "radical",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,6 +85,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Root Space Decomposition.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -170,7 +176,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 346.51103591918945
+    "width": 346.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -197,6 +204,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Root Space Decomposition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,6 +221,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Root Space Decomposition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,7 +232,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Root Space Decomposition.md"
+              }
             }
           },
           {
@@ -232,6 +243,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Root Space Decomposition.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -311,7 +323,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 63,
-                  "scale": 0.8152323255408461,
+                  "scale": 1.0836030544960438,
                   "close": true
                 }
               }
@@ -332,8 +344,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 538.5,
-    "collapsed": true
+    "width": 538.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -346,44 +357,44 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "31496155dea4b975",
+  "active": "5089eacc841bfa10",
   "lastOpenFiles": [
-    "Vision.md",
-    "seminorm.md",
-    "portal.md",
-    "Untitled.md",
-    "readme.md",
-    "meta/homepage.md",
-    "Fourier/Measure Theoretic Fourier Transform.md",
-    "Fourier/Fourier Transform.md",
-    "functional/Functional Analysis.md",
-    "functional/zabreikos.md",
-    "functional/hahnbanach.md",
-    "functional/normed.md",
-    "Untitled 2.md",
-    "functional/banach.md",
-    "functional/normed subspaces.md",
-    "integration/Convergence properties of Lebesgue Integral.md",
-    "Probability/Convolution.md",
-    "integration/Arithmetic properties of Lebesgue Integral.md",
-    "Lie/Lie Groups Homepage.md",
-    "functional/operators.md",
-    "functional/Review.md",
-    "functional/hilbert.md",
-    "integration/measure theory function scaffold.md",
-    "integration/simple functions.md",
-    "Untitled 1.md",
-    "Lie/Tangent spaces of Lie groups are Lie Algebras.md",
-    "Lie/ExpLog",
-    "Lie/Lie groups",
-    "measure/hw/hw2.synctex(busy)",
-    "measure/hw/pdflatex9768.fls",
-    "measure/hw/hw2.out",
-    "measure/hw/hw2.log",
-    "measure/hw/hw2.fls",
-    "measure/hw/pdflatex6720.fls",
-    "measure/hw/hw2.fdb_latexmk",
-    "measure/hw/hw2.aux",
+    "Lie/hw/hw4.out",
+    "Lie/hw/hw4.synctex(busy)",
+    "Lie/hw/hw4.log",
+    "Lie/hw/hw4.fls",
+    "Lie/hw/pdflatex23536.fls",
+    "Lie/hw/hw4.fdb_latexmk",
+    "Lie/hw/hw4.aux",
+    "Lie/hw/pdflatex23128.fls",
+    "Lie/hw/pdflatex21232.fls",
+    "Lie/hw/pdflatex7276.fls",
+    "Lie/hw/pdflatex21412.fls",
+    "Toral Subalgebra.md",
+    "Root Space Decomposition.md",
+    "Lie Algebras Homepage.md",
+    "Semisimple Lie Algebras.md",
+    "SL2 Worked example.md",
+    "Jordan Canonical Form.md",
+    "Killing Form.md",
+    "Cartan's Criterion.md",
+    "Lie's Theorem.md",
+    "Engel's Theorem.md",
+    "Weyls Theorem.md",
+    "semisimple.md",
+    "Representation Theory Words.md",
+    "Solvability and Nilpotency.md",
+    "Casimir Element.md",
+    "Lie Algebras and Bilinear Forms.md",
+    "Lie/Lie Algebras.md",
+    "ideals are transitive in semisimple lie algebras.md",
+    "It is a sum of simple ideals.md",
+    "Lie ideal.md",
+    "ideal.md",
+    "Lie/Lie algebra Cat words.md",
+    "Linear Algebra and Lie Algebra.md",
+    "Semisimple means no abelian ideals.md",
+    "Useful Ideals.md",
     "graph.png",
     "Pasted image 20230928144237.png",
     "Pasted image 20230928144229.png",

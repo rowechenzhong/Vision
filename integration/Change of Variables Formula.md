@@ -5,7 +5,7 @@
 > $$ \int_\Omega f(X(\omega)) \der \PP(\omega) = \int_S f(x) \der( X_\sharp \PP)(x).$$
 
 In particular, one can take $(S, \GGG) = (\RR, \BBB)$ and $f(x) = x$; then
-$$ \EE[X] = \int_\RR x \der (X_\sharp \PP)(x).$$
+$$ \EE[X] = \int_\RR x \der (X_\sharp \PP)(x)$$
 as expected.
 
 # Proof

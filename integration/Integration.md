@@ -16,5 +16,9 @@ Next, there is the construction of our integral, along with its basic properties
 5. [[Convergence properties of Lebesgue Integral]]
 6. [[Fubini-Tonelli]]
 
+Here are some things you learned in high school.
+7. [[Fundamental Theorem of Calculus]]
+8. [[Change of Variables of Real functions]]
+
 Finally, here are some results pertinent to probability theory:
-7. [[Change of Variables Formula]]
+9. [[Change of Variables Formula]]

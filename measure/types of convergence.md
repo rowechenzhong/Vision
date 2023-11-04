@@ -1,7 +1,7 @@
 There are $3$ main types of convergence of functions $(\Omega, \FFF, \mu)\to (\RR, \BBB_\RR)$ relevant for our purposes; each implies the next. Given a sequence of functions $f_n$ and another function $f$,
 1. $f_n\to f$ ==**pointwise**== if $f_n(\omega)\to f(\omega)$ for all $\omega$.
 2. $f_n\to f$ ==**with respect to $\mu$ almost everywhere**== if$$\mu\left( \left\{\omega: \lim_{n\to\infty} f_n(\omega) \neq f(\omega)\right\}\right) = 0$$
-3. $f_n\to f$ **==in $\mu$-measure**== if for all $\eps > 0$, 
+3. $f_n\to f$ **==in $\mu$-measure==** if for all $\eps > 0$, 
    $$ \lim_{n\to \infty} \mu\left( \left\{\omega: \abs{f_n(\omega) - f(\omega)} \geq \eps\right\}\right) = 0$$
 In [[Probability]] theory, these are called pointwise, **==almost sure==**, and **==in probability==** convergence.
 
