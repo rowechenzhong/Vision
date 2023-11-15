@@ -16,10 +16,12 @@
     --callout-color: 255, 0, 0;
     --callout-icon: "lucide-help-circle";
 }
-.callout[data-callout="prob"] {
+/* Just don't use this. */
+/* .callout[data-callout="prob"] {
+    --callout-title: "Problem";
     --callout-color: 255, 0, 0;
     --callout-icon: "lucide-help-circle";
-}
+} */
 
 /* Green claim */
 .theme-dark .callout[data-callout="claim"] {

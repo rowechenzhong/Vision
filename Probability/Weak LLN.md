@@ -1,3 +1,7 @@
+---
+aliases:
+  - WLLN
+---
 Take [[Stupid LLN]] and smash it until we get what we want.
 
 >[!theorem] Weak Law of Large Numbers

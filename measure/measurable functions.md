@@ -22,6 +22,8 @@ For example, one needs only verify that the pre-image of $(a, \infty)$ is measur
 > 
 > A (real-valued) measurable function *from* a Borel space is a ==**Borel function**== (so we point from $(E, \BBB(E))\to (\RR, \BBB)$).
 
-[[Measurable functions generate sigma algebras]].
 
-[[pushforward measure|Measurable functions induce measures]].
+Suggested reading:
+- [[Measurable functions generate sigma algebras]].
+- [[pushforward measure|Measurable functions induce measures]].
+- [[Canonical equivalence classes of Measurable functions]]

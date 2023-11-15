@@ -31,7 +31,7 @@ Note that $m(\theta) < \infty$ implies $X$ cannot be really big, but it doesn't 
 >[!proof]- Upper bound
 >Guided by intuition, the key idea is to **tilt the distribution until $S_n\geq na$ is no longer a large deviation event**.
 >
->For example, if our original distribution was the [[Generating Functions#^joint-tilted|joint tilted distribution]] over some $\theta > \theta_a$, then convexity says $\EE_\theta[X] = \kappa'(\theta) > \kappa'(\theta_a) = a$. Then, WLLN says that $\PP_\theta(S_n\geq na) = 1$!
+>For example, if our original distribution was the [[Generating Functions#^joint-tilted|joint tilted distribution]] over some $\theta > \theta_a$, then convexity says $\EE_\theta[X] = \kappa'(\theta) > \kappa'(\theta_a) = a$. Then, [[WLLN]] says that $\PP_\theta(S_n\geq na) = 1$!
 >
 >Following the plan, we write
 >$$\PP\left(S_n\geq na\right) = \EE_\theta\left[\frac{m(\theta)^n}{e^{\theta S_n}}\cdot \id\left\{S_n\geq na\right\}\right]$$
@@ -40,14 +40,3 @@ Note that $m(\theta) < \infty$ implies $X$ cannot be really big, but it doesn't 
 >Ripping through the constants for legitimacy,
 >$$-\lim_{n\to \infty} \frac1n \log\left(\PP\left(S_n \geq na\right)\right) \leq \theta b - \kappa(\theta)$$
 >This is true for all $\theta > \theta_a$ and all $b > \kappa'(\theta)$, so it is true for $\theta = \theta_a$ and $b = \kappa'(\theta_a)$ (because the RHS is a continuous function in $\theta, b$). We win.
-
-
-
-
-
-
-
-
-
-
-

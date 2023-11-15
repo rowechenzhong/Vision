@@ -5,7 +5,9 @@ There are $3$ main types of convergence of functions $(\Omega, \FFF, \mu)\to (\R
    $$ \lim_{n\to \infty} \mu\left( \left\{\omega: \abs{f_n(\omega) - f(\omega)} \geq \eps\right\}\right) = 0$$
 In [[Probability]] theory, these are called pointwise, **==almost sure==**, and **==in probability==** convergence.
 
-Finally, there is convergence in $L^2$ norm, which is what it sounds like. This implies convergence in $\mu$-measure on probability measures.
+Other common types of convergence:
+ - Convergence in $L^2$ norm. This implies convergence in $\mu$-measure on probability measures.
+ - [[Weak Convergence|Convergence in Distribution]].
 
 > [!todo] prove this shit smh
 
@@ -62,3 +64,6 @@ Finally, there is convergence in $L^2$ norm, which is what it sounds like. This 
 >>we have
 >>$$\abs{X_n - X} < 0.01\cdot \left(2^{-k} + 2^{-k} + 2^{-k-1} + \dots\right) < 2^{-k} < \eps$$
 >>as desired.
+
+>[!problem] Convergence in Distribution is pretty good
+>Suppose $X_n\to X$ in distribution. Then, there are random variables $\tilde{X}_n$ defined one a common probability space $(\Omega, \FFF, \PP)$ such that $\tilde{X}$ has the same distribution as $X$, $\tilde{X}_n$ has the same distribution as $X_n$, and $\tilde{X}_n\to \tilde{X}$ almost surely.

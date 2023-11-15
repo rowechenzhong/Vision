@@ -1,3 +1,7 @@
+---
+aliases:
+  - UI
+---
 Let $X$ be an [[constructing the Lebesgue Integral|integrable]] random variable. Set
 $$
 	I_X(\delta) = \sup\left\{\EE[\abs{X}\id_A]: A\in \FFF, \PP(A)\leq \delta\right\}

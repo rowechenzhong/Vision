@@ -5,6 +5,7 @@
 
 >[!idea]
 >If this isn't reminiscent of the [[product topology]], you're actually blind.
+ The main intuition is that a product space should be independent in each of its projections.
 
 We're sometimes interested in the sets
 $$ \Omega_J = \prod_{\alpha \in J} \Omega_\alpha,\qquad \FFF_J = \bigotimes_{\alpha\in J} \FFF_\alpha$$ which are the partial products over subsets $J\subset I$; this will be standard notation.
@@ -13,6 +14,10 @@ $$ \Omega_J = \prod_{\alpha \in J} \Omega_\alpha,\qquad \FFF_J = \bigotimes_{\al
 >It's useful to note that
 >$$ \AAA_0 = \{(\pi_J)^{-1}(E_J) = E_J\times \Omega_{I\setminus J}: \abs{J} < \infty, E_J\subset F_J\}$$
 >is an algebra generating our product $\sigma$-algebra.
+
+# How we want the Product Measure to behave
+
+The main intuition is that a product space should be independent in each of its projections.
 
 > [!definition] Marginals
 > Let $J\subset I$ be finite, and let $\PP$ be a measure on $\Omega$. Then, the ==**finite-dimensional marginal**== (or ==**distribution**==) of $\PP$ on $J$ is the pushforward measure $\PP_J = (\pi_J)_\sharp (\PP)$ on $(\Omega_J, \FFF_J)$. Explicitly,

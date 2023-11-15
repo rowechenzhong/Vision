@@ -25,3 +25,8 @@ Massive amounts of theory:
 - [[Weyls Theorem]]
 - [[SL2 Worked example]]
 - [[Root Space Decomposition]]
+
+# Euclidean Geometry
+For some reason we care about this.
+- [[Root Systems]]
+- 

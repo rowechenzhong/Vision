@@ -49,3 +49,5 @@ And here's a special case of that:
 ## Almost Everywhere
 
 There are actually a few [[types of convergence]]; we have been using the ==**pointwise**== variant. Most of the above theorems hold with the assumptions replaced by **almost everywhere** convergence.
+
+These theorems also hold for [[Conditional Expectation]].

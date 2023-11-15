@@ -5,20 +5,31 @@ This is the [[homepage]] for axiomatic probability theory, which builds off of [
 Foundational concepts in probability:
 1. [[probability objects]]
 2. [[Expectations]]
-3. [[independence]]
-4. [[Basic Inequalities]]
+3. [[Conditional Expectation]] (Advanced, not used until Martingales)
+4. [[independence]]
+5. [[Basic Inequalities]]
 
-A ==**Law of Large Numbers**== is of the following form: if $X, X_i$ are (some set of nice properties) random variables, for which $X_i\to X$ (somehow), the empirical means $\overline{X}_n = \frac1n \sum X_i$ converge to $\EE[X]$ (in some sense). Filling in the blanks of this intuitive statement in different ways yield theorems of differing levels of difficulty.
-5. [[Stupid LLN]]
-6. [[Weak LLN]]
-7. [[Strong LLN]]
+Important, related topics:
+5. [[Measure Theoretic Fourier Transform]]
+6. [[Ergodic Theory]]
+
+A ==**Law of Large Numbers**== is of the following form: if $X, X_i$ are (some set of nice properties) random variables, for which $X_i\to X$ (somehow), the empirical means $\overline{X}_n = \frac1n \sum X_i$ converge to $\EE[X]$ (in some sense). Filling in the blanks of this intuitive statement in different ways yield theorems of differing levels of difficulty. Here are two possible routes:
+**From the ground up:**
+	1. [[Stupid LLN]]
+	2. [[Weak LLN]]
+	3. [[Strong LLN]]
+**Through Ergodic Theory**:
+	1. [[SLLN via Birkhoff and von Neumann]]
 
 ==**Cramer's Theorem**== states that large deviations from the sample average are exponentially unlikely.
 8. [[Generating Functions]]
 9. [[Cramer Introduction]]
 10. [[Cramer]]
 
-The ==**Central Limit Theorem**== states that sample averages converge onto a normal distribution.
+The ==**Central Limit Theorem**== states that sample averages converge onto a normal distribution. It is essentially a direct consequence of Fourier analysis, and can be read immediately afterwards.
 11. [[CLT Introduction]]
-12. [[Convolution]]
-14. 
+12. [[Central Limit Theorem]]
+
+After this sequence, we can begin talking about more advanced topics.
+ - [[Martingales]]
+ - 
