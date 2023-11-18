@@ -1,3 +1,9 @@
+---
+aliases:
+  - Fatou
+  - Monotone Convergence
+  - Dominated Convergence
+---
 # Baby Monotone Convergence
 
 All of the major inequality results in this section are consequences of one theorem.

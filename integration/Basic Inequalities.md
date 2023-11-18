@@ -1,14 +1,18 @@
->[!prob] Markov's Inequality
+---
+aliases:
+  - Markov's Inequality
+---
+>[!problem] Markov's Inequality
 >Let $f$ be a non-negative measurable function and $\lambda \geq 0$; clearly $\lambda\id_{\{f\geq \lambda\}} \leq f$, thus
 >$$
 >	\lambda \mu(f\geq \lambda)\leq \mu(f)
 >$$
 
->[!prob] Chebyshev's Inequality
+>[!problem] Chebyshev's Inequality
 > If $X\in L^2$ is a random variable, show that
 > $$\PP\left(\abs{X - \EE[X]}\geq t\right) \leq \frac{\Var(X)}{t^2}$$
 
-> [!prob] Tail inequality
+> [!problem] Tail inequality
 > Suppose $X\in L^p$. Show that $\PP(\abs{X} \geq \lambda) = O(\lambda^{-p})$.
 
 > [!solution]-

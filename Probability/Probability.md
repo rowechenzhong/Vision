@@ -31,5 +31,5 @@ The ==**Central Limit Theorem**== states that sample averages converge onto a no
 12. [[Central Limit Theorem]]
 
 After this sequence, we can begin talking about more advanced topics.
- - [[Martingales]]
+ - [[Martingale Theory]]
  - 

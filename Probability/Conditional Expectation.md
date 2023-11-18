@@ -4,7 +4,7 @@
 > - $Y$ is integrable.
 > - $\EE[X\id_A] = \EE[Y\id_A]$ for all $A\in \GGG$.
 >   
->   We call $[Y] = \EE(X | \GGG)$ the ==**conditional expectation of $X$ given $\GGG$**==. In the case where $\GGG = \sigma(G)$ for some random variable $G$, we can also write $[Y] = \EE[X | G]$.
+> We call $[Y] = \EE(X | \GGG)$ the ==**conditional expectation of $X$ given $\GGG$**==. In the case where $\GGG = \sigma(G)$ for some random variable $G$, we can also write $[Y] = \EE[X | G]$.
 
 >[!proof] Existence and Uniqueness (Todo)
 

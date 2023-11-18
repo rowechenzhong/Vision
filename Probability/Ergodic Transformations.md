@@ -6,9 +6,11 @@ Let $(E,\mathcal{E}, \mu)$ be a measure space. A measurable $\theta:E\to E$ is a
 $$
 	\mu\circ \theta^{-1} = \mu
 $$
-on $\mathcal{E}$. We say that $\theta$ is ==**ergodic**== if $\mathcal{E}_\theta$ contains only sets of measure $0$ and their complements.
+on $\mathcal{E}$.
 
 Then, given $\theta$, a measurable $A$ is ==**invariant**== if $\theta^{-1}(A) = A$. The set of invariant sets form a $\sigma$-algebra, denoted $\mathcal{E}_\theta$. A measurable function $f$ is invariant if and only if it is $\mathcal{E}_\theta$-measurable.
+
+We say that $\theta$ is ==**ergodic**== if $\mathcal{E}_\theta$ contains only sets of measure $0$ and their complements.
 
 > [!proof]- Verification
 > $E\subset \mathcal{E}_\theta$ because $\theta^{-1}(E) = E$. Suppose $A\in \mathcal{E}_\theta$; then

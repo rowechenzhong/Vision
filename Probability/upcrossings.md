@@ -1,0 +1,3 @@
+Suppose $X$ is a [[Discrete-Time Random Process|random process]]. Fix a $\omega \in \Omega$. Let $a,b \in \RR$ with $a < b$. An ==**upcrossing**== of $[a,b]$ by $X(\omega)$ is an interval of times $\{j, j + 1,\dots, k\}$ such that $X_j(\omega) < a$ and $X_k(\omega) > b$.
+
+We write $U_n[a,b](\omega)$ for the number of *disjoint* upcrossings contained in $\{0,1,\dots n\}$, and write $U_n[a,b]\uparrow U[a,b]$.

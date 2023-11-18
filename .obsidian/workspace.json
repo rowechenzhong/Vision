@@ -4,15 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "2e45b38f15a8d771",
+        "id": "908e90a29ef047ed",
         "type": "tabs",
         "children": [
           {
-            "id": "28995cc76860aa82",
+            "id": "d57d4ef2a31aa73b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Probability/Optional Stopping Theorem.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "27c6fe702006500d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Probability/Discrete-time Martingale.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -80,6 +98,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Probability/Optional Stopping Theorem.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -170,7 +189,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 346.51103591918945
+    "width": 346.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -197,6 +217,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Probability/Optional Stopping Theorem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -213,6 +234,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Probability/Optional Stopping Theorem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,7 +245,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Probability/Optional Stopping Theorem.md"
+              }
             }
           },
           {
@@ -232,6 +256,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "Probability/Optional Stopping Theorem.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -346,45 +371,47 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "28995cc76860aa82",
+  "active": "d57d4ef2a31aa73b",
   "lastOpenFiles": [
-    "graph.png",
-    "Pasted image 20231115165445.png",
+    "Probability/Discrete-time Martingale.md",
+    "Probability/Optional Stopping Theorem.md",
+    "Probability/Martingale Theory.md",
+    "Lie/Killing Form.md",
+    "Lie/hw/hw5.synctex(busy)",
+    "Lie/hw/pdflatex14032.fls",
+    "Lie/hw/hw5.out",
+    "Lie/hw/hw5.log",
+    "Lie/hw/hw5.fls",
+    "Lie/hw/pdflatex18936.fls",
+    "Lie/hw/hw5.fdb_latexmk",
+    "Lie/hw/hw5.aux",
+    "Probability/Doob's Maximal Inequalities.md",
+    "Probability/Doob's Lp inequality.md",
     "readme.md",
+    "Vision.md",
+    "graph.png",
+    "Pasted image 20231116183145.png",
     "Representation/Representation Theory.md",
+    "Representation/irreducible.md",
+    "integration/approximation by simple functions.md",
+    "measure/Borel-Cantelli.md",
+    "Probability/Ergodic Transformations.md",
+    "integration/Convergence properties of Lebesgue Integral.md",
+    "measure/hw/hw5.synctex(busy)",
+    "measure/hw/hw5.log",
+    "measure/Holder's Inequality.md",
+    "Probability/Almost-sure Martingale Convergence Theorem.md",
+    "Probability/Doob's upcrossing inequality.md",
+    "Probability/Discrete-Time Random Process.md",
+    "integration/Basic Inequalities.md",
+    "measure/Uniformly Integrable.md",
+    "integration/L1 Convergence Theorem.md",
+    "Probability/upcrossings.md",
+    "measure/filtration.md",
+    "Probability/Conditional Expectation.md",
+    "Pasted image 20231115165445.png",
     "Lie/Derivation and Adjoint.md",
     "Representation/Representation of Algebras.md",
-    "Lie/semisimple.md",
-    "homotopy/Homotopy Theory.md",
-    "functional/separable.md",
-    "Lie/composition series.md",
-    "Lie/flag.md",
-    "Representation/irreducible.md",
-    "Untitled.md",
-    "Probability/Time Summation.md",
-    "Probability/Stopping Time.md",
-    "measure/Weak Convergence.md",
-    "Lie/Weyls Theorem.md",
-    "Probability/von Neumann's Lp Ergodic Theorem.md",
-    "Lie/Solvability and Nilpotency.md",
-    "functional/seminorm.md",
-    "Lie/Root Systems.md",
-    "Lie/Representation Theory Words.md",
-    "meta/portal.md",
-    "Lie/Nilpotent Representation Lemma.md",
-    "Lie/Toral Subalgebra.md",
-    "Probability/Martingales.md",
-    "integration/mean value theorem.md",
-    "measure/hw/hw4.synctex(busy)",
-    "measure/hw/pdflatex14656.fls",
-    "measure/hw/hw4.out",
-    "measure/hw/hw4.log",
-    "measure/hw/hw4.fls",
-    "measure/hw/pdflatex3424.fls",
-    "measure/hw/hw4.fdb_latexmk",
-    "measure/hw/hw4.aux",
-    "measure/hw/pdflatex176.fls",
-    "measure/hw/pdflatex20108.fls",
     "Pasted image 20230928144237.png",
     "Pasted image 20230928144229.png",
     "Untitled.canvas",
