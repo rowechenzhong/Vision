@@ -7,4 +7,4 @@
 >
 > -   __Inequalities:__ If $f\leq g$ almost everywhere, then $\int_\Omega f \leq \int_\Omega g$.
 >
-> Finally, and most importantly, if $f: [a,b]\to \RR$ is riemann integrable, then it is lebesgue integrable and the integrals match.
+> Finally, and most importantly, if $f: [a,b]\to \RR$ is Riemann integrable, then it is Lebesgue integrable and the integrals match.

@@ -1,6 +1,6 @@
 Here is a basically trivial result:
 
->[!theorem] Optional Stopping Theorem
+>[!theorem] Bounded Optional Stopping Theorem
 > Let $X$ be an adapted integrable [[Discrete-Time Random Process|process]].
 > 
 > The following are equivalent:
@@ -12,6 +12,14 @@ Here is a basically trivial result:
 >     $$\EE[X_T]\leq \EE[X_S].$$
 
 We usually look at $(1) \implies (4)$. For submartingales, $\EE[X_T]\geq \EE[X_S]$, and for martingales $\EE[X_T] = \EE[X_0]$.
+
+Here is a slightly more advanced upgrade, accessible after reading [[Martingale Convergence Theorems]].
+
+> [!theorem] Optional Stopping Theorem
+> Suppose $X$ is a UI martingale. Then it admits an AS and $L^1$ limit, and thus $X_\infty$ is defined everywhere. For **any** stopping times $S,T$, we have $\EE(X_T) = \EE(X_0)$ and
+> $$\EE(X_T | \FFF_S) = X_{S\land T}$$
+
+# Proofs
 
 > [!proof]- (1) $\implies$ (2) \[not bad\]
 > If $X$ is a supermartingale, $S\geq 0$ and $T\leq n$, then

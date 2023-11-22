@@ -10,5 +10,3 @@ We say that $(X_n)_{n\geq 0}$ is ==**adapted to a filtration $(\FFF_n)_{n\geq 0}
 # Adjectives
 
 $X$ is ==**integrable**== if all $X_n$ are. $X$ is defined to be [[Uniformly Integrable]] in the usual sense. $X$ is ==**$L^p$ bounded**== if it is uniformly bounded; $\sup_{n\geq 0} \norm{X_n}_p < \infty$.
-
-By like, [[Holder's Inequality]], $X$ being $L^p$ bounded for $p > 1$ implies $X$ is UI; and if $X$ is UI then it is $L^1$-bounded.

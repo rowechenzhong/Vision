@@ -2,7 +2,7 @@
 aliases:
   - SLLN
 ---
-This is some magic, found [here](https://people.math.umass.edu/~yaoli/ptrl.pdf) Let's squeeze water from stone.
+This is some magic, found [here](https://people.math.umass.edu/~yaoli/ptrl.pdf). Let's squeeze water from stone.
 
 >[!theorem] Strong Law of Large Numbers
 >Let $X, X_k$ be iid with finite mean $\EE[X] = \mu$. Then $\frac{S_n}{n}\to \mu$ **almost surely**.

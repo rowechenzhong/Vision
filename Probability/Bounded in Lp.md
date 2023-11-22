@@ -1,0 +1,1 @@
+For $1\leq p \leq \infty$, $\mathcal{X}$ is ==**bounded in $L^p$**== if $\sup_{X\in \mathcal{X}} \norm{X}_p < \infty$.

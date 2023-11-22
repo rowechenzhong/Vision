@@ -3,13 +3,16 @@ The purpose of this little document is to prove some foundational results about 
 # Definitions 
 
 > [!definition] $L^p$ Norm
-> Let $E$ be a measure space; let $f: E \to \CC$ be a measurable function. For any $1\leq p < \infty$, we define $$ \norm{f}_p = \left( \int_E \abs{f}^p \right)^{1/p} $$ If $p = \infty$, we define $$ \norm{f}_\infty = \inf \{ M \in \RR : \mu(\abs{f(x)} < M) = 0\} $$ 
+> Let $E$ be a measure space; let $f: E \to \CC$ be a measurable function. For any $1\leq p < \infty$, we define $$ \norm{f}_p = \left( \int_E \abs{f}^p \right)^{1/p}. $$ If $p = \infty$, we define $$ \norm{f}_\infty = \inf \{ M \in \RR : \mu(\abs{f(x)} < M) = 0\} $$ 
 
 >[!idea]
 >For bounded continuous functions, $\norm{f}_\infty$ is the usual sup norm. 
 
 > [!idea]
 > When we're doing probability, we usually want $\RR$ instead of $\CC$; everything still works. I basically don't care about $\CC$ unless we're doing Hilbert things.
+
+>[!idea]- Notation
+>If I omit the $p$ subscript, $p = 1$ if we're doing probability and $p = 2$ if we're working in a Hilbert space. I probably don't do this often.
 
 > [!theorem] 
  Holder's inequality and Minkowski's inequality hold for $L^p$ spaces. 

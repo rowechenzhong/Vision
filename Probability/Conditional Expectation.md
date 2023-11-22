@@ -1,3 +1,7 @@
+---
+aliases:
+  - tower property
+---
 >[!definition] Conditional Expectation
 >Let $X$ be an integrable or nonnegative random variable, and let $\GGG\subset \FFF$ be a $\sigma$-algebra. Then, there exists a unique random variable $[Y]$ such that
 > - $Y$ is $\GGG$-measurable.
@@ -26,6 +30,7 @@ We will now show that middle-school mathematics works pretty well.
 > 3. If $X$ is [[independence|independent of]] $\GGG$, then $\EE[X | \GGG] = [\EE[X]]$.
 > 4. If $[X]\geq 0$, then $\EE[X |\GGG]\geq 0$.
 > 5. $\EE[\alpha X + \beta Y | \GGG] = \alpha \EE[X | \GGG] + \beta \EE[X | \GGG]$
+> 6. **(Jensen):** If $c: \RR \to (-\infty, \infty]$ is convex, $\EE[c(X) | \GGG] \geq c\left(\EE[X | \GGG]\right)$.
 
 > [!theorem] Information Properties of Conditional Expectation
 > Some "information" results:
@@ -46,10 +51,7 @@ Please review the [[Convergence properties of Lebesgue Integral]].
 >  2. **Fatou's Lemma:** If $X_n\geq 0$ for all $n$, then $\EE[\lim \inf X_n | \GGG] \leq \lim \inf \EE[X_n | \GGG]$.
 >  3. **Dominated Convergence Theorem:** If $X_n \to X$ and $\abs{X_n} \leq Y$
 
-One more random claim:
-
->[!claim] Conditional Expectations are UI
->If $X\in L^1$, then the set of all $Y = \EE[X | \GGG]$ for $\GGG\subset \FFF$ a sigma algebra is [[Uniformly Integrable]].
+One more random claim: [[Conditional Expectations are UI]].
 
 # Motivating Examples (Todo!)
 

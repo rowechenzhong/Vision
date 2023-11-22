@@ -5,5 +5,6 @@
     "highlight"
   ],
   "theme": "obsidian",
-  "baseFontSize": 22
+  "baseFontSize": 30,
+  "translucency": false
 }

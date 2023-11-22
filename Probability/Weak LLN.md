@@ -18,4 +18,4 @@ Take [[Stupid LLN]] and smash it until we get what we want.
 > [!prob] Easier WLLN
 > Let $X, X_k$ be iid with finite mean $\EE[X] = \mu$. Then $\frac{S_n}{n}\to \mu$ in probability.
 
-(This easier version is obsolete given [[Strong LLN]]).
+(This easier version is obsolete given [[Strong LLN elementary proof]]).

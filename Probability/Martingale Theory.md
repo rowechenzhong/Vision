@@ -1,8 +1,7 @@
-
-I'm very happy. Let's begin.
-
 > [!idea] So there's no confusion
 > $\land$ means minimum, $\lor$ means maximum, $a^- = -\min(a,0)$ is the negative part, $a^+ = \max(a,0)$ is the positive part.
+
+This is the [[homepage]] for Martingale theory. It builds off of [[Probability]].
 
 # Sequences
 
@@ -10,10 +9,12 @@ I'm very happy. Let's begin.
 2. [[Discrete-Time Random Process]]
 3. [[Discrete-time Martingale]]
 4. [[Optional Stopping Theorem]]
-### Doob
-who's this guy and why does he have so many theorems
+
+Who's this Doob guy and why does he have so many theorems
 5. [[Doob's upcrossing inequality]]
 6. [[Doob's Maximal Inequalities]]
-7. [[Doob's Lp inequality]]
-8. [[Almost-sure Martingale Convergence Theorem]]
+7. [[Martingale Convergence Theorems]]
+
+We take a brief break to nuke SLLN.
+8. [[SLLN via Martingales]]
 9. 

@@ -6,3 +6,5 @@ They are meant to be viewed in Obsidian (https://obsidian.md/vision), but they c
 ![Graph of Vision, 11/16/2023](graph.png)
 
 Please remember that these are just notes! They probably contain errors. Email me at rowechen@mit.edu if you find any errors, or if you have any questions or comments.
+
+To begin, check out some [[homepage|homepages]].
