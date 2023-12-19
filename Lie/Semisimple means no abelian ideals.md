@@ -1,1 +1,0 @@
-If you have a nonzero abelian ideal, then its part of the radical. If you have a solvable ideal, then the last term of its series is abelian.

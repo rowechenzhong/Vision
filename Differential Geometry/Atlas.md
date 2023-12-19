@@ -8,4 +8,4 @@ Observations:
 
 The local charts in an atlas can overlap, and they need to agree whenever they do. If $(U, \phi)$ and $(V, \psi)$ are two charts such that $V\cap U \neq \emptyset$, then we have the ==**transition map**==
 $$\phi\circ \psi^{-1} : \psi(U\cap V)\to \phi(U\cap V)$$
-This is a homeomorphism between open subsets in $\RR^n$.
+This is automatically a homeomorphism between open subsets in $\RR^n$. One can impose more properties on the manifold through properties of this transition map.

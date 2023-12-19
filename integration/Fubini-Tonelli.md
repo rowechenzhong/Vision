@@ -1,12 +1,12 @@
 > [!theorem] Fubini-Tonelli
-> Let $(S, \GGG, \lambda)$ and $(T, \HHH, \rho)$ be finite measure spaces, and define $(\Omega, \FFF, \mu) = (S\times T, \GGG \otimes \HHH, \lambda \times \rho)$. Let $f:(\Omega, \FFF)\to \RR$ be measurable. If $f\geq 0$ (**Fubini**) or $f$ is integrable (**Tonelli**), then
+> Let $(S, \GGG, \lambda)$ and $(T, \HHH, \rho)$ be $\sigma$-finite measure spaces, and define $(\Omega, \FFF, \mu) = (S\times T, \GGG \otimes \HHH, \lambda \times \rho)$. Let $f:(\Omega, \FFF)\to \RR$ be measurable. If $f$ is integrable (**Fubini**) or $f\geq 0$ (**Tonelli**), then
 > $$ \int_S \int_T f(x,y) \der \rho(y) \der \lambda(x) = \int_\Omega f\der \mu = \int_T \int_S f(x,y) \der \lambda(x) \der \rho(y).$$
 
 Actually, there's an implicit claim here; if $f(x,y): \Omega\to \RR$ is integrable, then the following are also integrable:
 - for all $x\in S$, $f(x,\bullet):T\to \RR$.
 - $\int_S f(x, y) \der\lambda(x): T\to \RR$.
 
-Anyways, we follow the [[measure theory function scaffold|standard scaffold]].
+Anyways, we follow the [[measure theory function scaffold|standard scaffold]]; this proof works for finite measure spaces.
 
 > [!part]- Indicator functions
 > Multiple steps! First, consider when $f(x,y) = \id_{X\times Y}$ where $X,Y$ are measurable. In this case, the conclusion is clear. Next up, by [[box product measure#^cross-sections-measurable|cross section lemma,]] we know that for all $F\in \FFF$, $F_x = \{y\in T: (x,y)\in F\}$ is measurable in $T$. We essentially repeat the same trick: let $\FFF_0$ be the set of all $F\in \FFF$ such that $\rho(F_x)$ is measurable and

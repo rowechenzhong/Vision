@@ -24,6 +24,6 @@ By abuse of notation, we let the _pre-image_ of a set of real numbers $A$ be den
 ^a89c00
 
 >[!defn] PDF
-> Some random variables admit ==**probability density functions**== $f(x)$ which are nonnegative measurable functions from $(\RR, \BBB_\RR)$ such that for all Borel sets $B$, $\mu(B) = \int_\RR \id(B) f(x)\der x$ under the standard Lebesgue measure.
+> Some random variables admit ==**probability density functions**== $f(x)$ which are nonnegative measurable functions from $(\RR, \BBB_\RR)$ such that for all Borel sets $B$, $\mu_X(B) = \int_\RR \id(B) f(x) \mu(d x)$ under the standard Lebesgue measure $\mu$.
 
-To emphasize, not all RVs admit PDFs; the random variable $X = 0$ does not.
+To emphasize, not all RVs admit PDFs; the random variable $X = 0$ does not. (Advanced:) such a PDF is an example of a [[Probability Density]].

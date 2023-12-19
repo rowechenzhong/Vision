@@ -1,11 +1,12 @@
 This is the [[homepage]] for differential geometry.
 
-Everything is very easy here, so we'll move quickly. All vector spaces are normed over $\RR$. Most things are created purely as setup for [[Lie Groups Homepage]].
+Everything is very easy here, so we'll move quickly. All vector spaces are normed over $\RR$. Most things are created purely as setup for [[Lie/Lie Groups]].
 
 # Sequences
 1. [[Derivative]]
-2. [[implicit function theorem]]
+2. [[implicit function theorem]] (TODO)
 3. [[topological manifolds]]
+4. [[Inverse and Implicit Function Theorems]] (TODO)
 
 ## Smooth Manifolds
 

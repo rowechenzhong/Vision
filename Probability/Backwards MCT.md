@@ -7,7 +7,7 @@ Give me a [[Backwards Filtration]] $\hat{\FFF}_n$.
 >This makes sure you understand the proofs we did in [[Martingale Convergence Theorems]] LOL.
 
 >[!problem]
-> Let $X_i = \EE[Y | \hat\FFF_i]$. Show $X_i$ admits an AS limit.
+> Let $X_i = \EE[Y | \hat\FFF_i]$. Show $X_i$ admit an AS limit.
 
 > [!solution]-
 > Let
@@ -30,4 +30,10 @@ Give me a [[Backwards Filtration]] $\hat{\FFF}_n$.
 
 >[!problem]
 >Show $X_i$ converge to $\EE[Y | \hat\FFF_\infty]$ as desired.
+
+> [!solution]-
+> $X_\infty$ is $\hat\FFF_\infty$-measurable because it is the limit of $\hat\FFF_\infty$-measurable functions, modulo measure $0$.
+> 
+> We just need to show that $\EE[X_\infty\id_A] = \EE[\EE[Y | \hat\FFF_\infty]\id_A]$ for all $A \in \hat\FFF_\infty$. We need to take the limit out of the LHS; the key observation is that we have to pass through $L^1$ and UI to achieve this, because AS convergence is not strong enough. Using $L^1$ convergence, it is clear that
+> $$\EE[X_\infty\id_A] = \lim_{n\to \infty} \EE[X_n\id_A] = \EE[Y\id_A] = \EE[\EE[Y | \hat\FFF_\infty]\id_A]$$
 

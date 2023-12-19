@@ -35,7 +35,7 @@ whenever $T(\omega) < \infty$.
 - If $X_T$ admits an almost-sure limit $X_\infty$, we define $X_T = X_\infty$ on $\{T = \infty\}$ (this will be useful after we obtain the [[Martingale Convergence Theorems]]). 
 - Otherwise... proceed at your own risk.
 
-As expected, $[X^T_n]\to [X_T]$.
+As expected, $[X^T_n]\to [X_T]$ in both cases.
 
 > [!idea]
 > At time $n$, suppose I know that $T$ occurred. Then I know the value of $T = m \leq n$. Thus I also know $X_{T(\omega)}$.

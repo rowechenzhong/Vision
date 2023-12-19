@@ -5,6 +5,12 @@ Let $F:X\to Y$ be a regular map. Now that we have [[Differential|differentials]]
 > - If $dF$ is injective for all $P\in X$, then we call $F$ an ==**immersion**==. Intuitively, $F$ does not have a local kernel; it is locally homeomorphic to its image.
 >   ^submersion-immersion
 
+> [!example] Stupid Examples
+> Let $m < n$ be positive integers. Consider:
+> $$i(x_1,\dots x_m)\to (x_1,\dots, x_m, 0,\dots, 0),\qquad s(x_1,\dots, x_n)\to (x_1,\dots x_m)$$
+> 
+> Then $i$ is an immersion while $s$ is a submersion. This ends up being almost completely general.
+
 >[!problem]  Implicit Function Theorem
 > In full generality-- if $F$ is a submersion then for any $Q\in Y$, $F^{-1}(Q)$ is a manifold of dimension $\dim X - \dim Y$.
 

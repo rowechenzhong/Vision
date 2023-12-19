@@ -1,11 +1,11 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:functional/",
@@ -32,7 +32,7 @@
       "query": "path:\"Differential Geometry\"",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 5429074
       }
     },
     {
@@ -62,6 +62,13 @@
         "a": 1,
         "rgb": 11621088
       }
+    },
+    {
+      "query": "path:\"Lie Algebras/\"",
+      "color": {
+        "a": 1,
+        "rgb": 6736896
+      }
     }
   ],
   "collapse-display": false,
@@ -70,10 +77,10 @@
   "nodeSizeMultiplier": 2.53600999286224,
   "lineSizeMultiplier": 5,
   "collapse-forces": false,
-  "centerStrength": 0.320128479657388,
-  "repelStrength": 15.7673090649536,
+  "centerStrength": 0.194503925767309,
+  "repelStrength": 12.3411848679515,
   "linkStrength": 1,
   "linkDistance": 500,
-  "scale": 0.08062588546760444,
+  "scale": 0.08438043428610337,
   "close": false
 }

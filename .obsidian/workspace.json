@@ -4,32 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "dd508fa7a184c5c9",
+        "id": "2e06aae2ec74138c",
         "type": "tabs",
         "children": [
           {
-            "id": "2141fff52390505a",
+            "id": "15f91a5dd499d747",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Vision.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8f41562986fc4dcd",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -48,7 +34,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MCT",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -179,8 +165,7 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -360,48 +345,48 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "8f41562986fc4dcd",
+  "active": "15f91a5dd499d747",
   "lastOpenFiles": [
+    "Differential Geometry/Tensor Fields/Tensor Field.md",
+    "Lie Algebras/Lie Algebras.md",
+    "Lie Algebras/Lie Algebra.md",
+    "Inverse and Implicit Function Theorems.md",
+    "Lie/Lie Groups.md",
+    "Differential Geometry/k-slicing theorem.md",
+    "homology/Reduced Homology Groups.md",
+    "homology/Introductory Exercises on Singular Homology.md",
+    "homology/Singular Homology.md",
+    "Differential Geometry/Embedding.md",
+    "Differential Geometry/Immersed Submanifold.md",
+    "Lie/LG + Submanifolds.md",
+    "Differential Geometry/implicit function theorem.md",
+    "Differential Geometry/(Weak) Submanifolds.md",
+    "Differential Geometry/Derivative.md",
+    "Differential Geometry/Derivation.md",
+    "Differential Geometry/Differential Geometry.md",
+    "Differential Geometry/topological manifolds.md",
+    "Differential Geometry/Tangent spaces.md",
+    "functional/zabreikos.md",
+    "Differential Geometry/Basic Manifold Exercises.md",
+    "Manifold Pathologies.md",
+    "Differential Geometry/locally homeomorphic.md",
+    "Differential Geometry/Atlas.md",
+    "Lie Algebras/Saturated Sets of weights.md",
     "Vision.md",
-    "Probability/Probability.md",
-    "measure/Measure Theory.md",
-    "measure/Caratheodory extension Theorem.md",
-    "meta/homepage.md",
-    "readme.md",
+    "measure/hw/hw6.synctex(busy)",
+    "measure/hw/pdflatex20236.fls",
+    "measure/hw/hw6.out",
+    "measure/hw/hw6.log",
+    "measure/hw/hw6.fls",
+    "measure/hw/pdflatex1568.fls",
+    "measure/hw/hw6.fdb_latexmk",
+    "measure/hw/hw6.aux",
+    "measure/hw/pdflatex20132.fls",
+    "measure/hw/pdflatex17616.fls",
     "graph.png",
-    "graph.png",
-    "Probability/Martingale Theory.md",
+    "Lie/hw/rootsystems.png",
     "Untitled.canvas",
-    "Probability/SLLN via Martingales.md",
-    "Probability/Kolmogorov's Zero-One Law.md",
-    "SLLN.md",
-    "Probability/Backwards Filtration.md",
-    "homotopy/deck/deck.md",
-    "Topology/locally closed.md",
-    "measure/Lebesgue Measure.md",
-    "Probability/Backwards MCT.md",
-    "Probability/Martingale Convergence Theorems.md",
-    "Probability/Discrete-time Martingale.md",
-    "Probability/Conditional Expectations are UI.md",
-    "Probability/independence.md",
-    "Probability/Doob's upcrossing inequality.md",
-    "Probability/Central Limit Theorem.md",
-    "Probability/Ergodic Theory.md",
-    "integration/Basic Inequalities.md",
-    "Probability/Strong LLN elementary proof.md",
-    "Probability/SLLN via Birkhoff and von Neumann.md",
-    "Probability/Optional Stopping Theorem.md",
-    "Lie/hw/hw5.synctex(busy)",
-    "Lie/hw/pdflatex14032.fls",
-    "Lie/hw/hw5.out",
-    "Lie/hw/hw5.log",
-    "Lie/hw/hw5.fls",
-    "Lie/hw/pdflatex18936.fls",
-    "Lie/hw/hw5.fdb_latexmk",
-    "Lie/hw/hw5.aux",
     "Pasted image 20231116183145.png",
-    "measure/hw/hw5.synctex(busy)",
-    "measure/hw/hw5.log",
     "Pasted image 20231115165445.png",
     "Pasted image 20230928144237.png",
     "Pasted image 20230928144229.png",

@@ -1,7 +1,7 @@
 >[!definition] Manifold
->An ==**$n$-dimensional topological manifold**== is:
+>An ==**$n$-dimensional topological manifold**== $X$ is:
 >1. Hausdorff and has countable base.
->2. $X$ is [[locally homeomorphic]] to $\RR^n$.
+>2. is [[locally homeomorphic]] to $\RR^n$.
 
 If $X = \emptyset$, we declare $X$ to be of any integer dimension; else the dimension is uniquely specified.
 
@@ -16,6 +16,8 @@ If $X = \emptyset$, we declare $X$ to be of any integer dimension; else the dime
 >
 >An $\infty$-sign is not a manifold, because the intersection point is not locally homeomorphic to $\RR$.
 
+See [[Manifold Pathologies]] for non-examples, or the reasons the axioms are important.
+
 >[!idea]
 > Being a manifold of a certain dimension is clearly a **local** property. Also, Hausdorffness and second countability are sanity checks which are inherited by subspaces, so in nearly all cases we only care about local homemorphism.
 
@@ -23,6 +25,6 @@ If $X = \emptyset$, we declare $X$ to be of any integer dimension; else the dime
 1. [[locally homeomorphic|Local chart]]
 2. [[Atlas]]
 3. [[Analytic Manifolds]]
-4. [[Basic Manifold Exercises]]
-5. [[Regular Functions]]
-6. [[Germ]]
+5. [[Basic Manifold Exercises]]
+6. [[Regular Functions]]
+7. [[Germ]]

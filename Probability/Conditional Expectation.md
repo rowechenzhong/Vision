@@ -10,6 +10,9 @@ aliases:
 >   
 > We call $[Y] = \EE(X | \GGG)$ the ==**conditional expectation of $X$ given $\GGG$**==. In the case where $\GGG = \sigma(G)$ for some random variable $G$, we can also write $[Y] = \EE[X | G]$.
 
+>[!idea]
+>You can also just take a conditional expectation with respect to an event $A\in \FFF$: $\EE[X | A] = \EE[X\id_A] / \PP[A]$ if $\PP[A] > 0$ and undefined otherwise.
+
 >[!proof] Existence and Uniqueness (Todo)
 
 >[!idea]

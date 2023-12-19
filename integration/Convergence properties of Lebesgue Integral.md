@@ -11,22 +11,22 @@ All of the major inequality results in this section are consequences of one theo
 > Let $f_n: \Omega \to [0,\infty]$ be a sequence of measurable functions $f_n \uparrow f$. The claim is $$ \int_\Omega f \der \mu = \lim_{n\to \infty} \int_\Omega f_n \der \mu. $$
 
 > [!proof]-
-> Obviously LHS $\geq$ RHS. Fix some simple $0\leq s \leq f$. Let $\Lambda = \{x : s(x) = f(x)\}$; we don't care about these. By definition, we have to show $$ \int_\Omega s \der \mu \leq \lim_{n\to \infty} \int\_\Omega f_n \der \mu. $$ Thus, we should focus on characterizing the sets $B^s_n$ where $$ B^s_n = \{x\in \Omega \mid s(x) \leq f_n(x)\}. $$ We observe that:
+> Obviously LHS $\geq$ RHS. Fix some simple $0\leq s \leq f$. Let $\Lambda = \{x : s(x) = f(x)\}$; we don't care about these. By definition, we have to show $$ \int_\Omega s \der \mu \leq \lim_{n\to \infty} \int_\Omega f_n \der \mu. $$ Thus, we should focus on characterizing the sets $B^s_n$ where $$ B^s_n = \{x\in \Omega \mid s(x) \leq f_n(x)\}. $$ We observe that:
 >
 > -   $f_n$ are nondecreasing, so $B^s_n \subseteq B^s_{n+1}$ for all $n$.
 >
 > -   If $$ s = \sum_{i = 1}^m c_i \chi\left(s^{-1}(c_i)\right), $$ then $$ B^s_k = \bigcup_{i=1}^m \{f_k^{-1}([c_i, \infty])\cap s^{-1}(c_i)\}. $$ Thus each $B^s_k$ is measurable.
 >
-> -   $\bigcup_{k=1}^\infty B^{s,t}_k = \Omega\setminus \Lambda$. After all, such an $x_0$ satisfies $$ f_k(x_0)< s(x_0) $$ \_for all $k$_; the LHS approaches $f(x_0)$, thus equality must be achieved.
+> -   $\bigcup_{k=1}^\infty B^{s,t}_k = \Omega\setminus \Lambda$. After all, such an $x_0$ satisfies $$ f_k(x_0)< s(x_0) $$ _for all $k$_; the LHS approaches $f(x_0)$, thus equality must be achieved.
 >
-> Thus, by the second two points, we find that $$ \int_{\Omega\setminus \Lambda} s \der \mu = \sup_{k\to \infty} \int_{B^s_k} s \der \mu \leq \sup_{k\to \infty} \int\_{\Omega\setminus \Lambda} f_k \der \mu. $$
+> Thus, by the second two points, we find that $$ \int_{\Omega\setminus \Lambda} s \der \mu = \sup_{k\to \infty} \int_{B^s_k} s \der \mu \leq \sup_{k\to \infty} \int_{\Omega\setminus \Lambda} f_k \der \mu. $$
 
 ## Fatou's Lemma
 
 Using the baby monotone convergence theorem, it is straightforward to prove
 
 > [!theorem] Fatou's Lemma
-> Let $f_n: \Omega \to [0,\infty]$ be a sequence of measurable functions. Then $$ \int_\Omega \liminf_{n\to \infty} f_n \der \mu \leq \liminf_{n\to \infty} \int\_\Omega f_n \der \mu. $$
+> Let $f_n: \Omega \to [0,\infty]$ be a sequence of measurable functions. Then $$ \int_\Omega \liminf_{n\to \infty} f_n \der \mu \leq \liminf_{n\to \infty} \int_\Omega f_n \der \mu. $$
 > ^Fatou
 
 > [!problem] Prove it
@@ -54,6 +54,6 @@ And here's a special case of that:
 
 ## Almost Everywhere
 
-There are actually a few [[types of convergence]]; we have been using the ==**pointwise**== variant. Most of the above theorems hold with the assumptions replaced by **almost everywhere** convergence.
+There are actually a few [[types of convergence]]; we have been using the ==**pointwise**== variant. All of the above theorems hold with the assumptions replaced by **almost everywhere** convergence, because integrals are agnostic to measure-0 sets.
 
-These theorems also hold for [[Conditional Expectation]].
+More advanced: These theorems also hold for [[Conditional Expectation]].

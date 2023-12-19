@@ -1,3 +1,21 @@
+# Constructing some Manifolds
+
+> [!problem] Grassmanian
+> Let $Gr_k(\KK^n)$ be the space of $k$-dimensional subspaces of $\KK^n$. Show that $Gr_k(\RR^n)$ is a topological manifold, and write out $\binom{n}{k}$ charts. Show that $Gr_k(\CC^n)$ is a complex manifold (i.e., analytic).
+
+>[!idea] Blunder
+>Here's a misconception I had: the standard basis for [[k-blades]] consists of subspaces with magnitude, but the ray space of $\Lambda^k V$ is too large. $\Lambda^k V$ contains objects that are "sums of subspaces" which cannot be cleanly mapped to a single subspace. 
+>
+>>[!idea]- Excuses
+>>If so, you would expect that the dimension of $Gr_n(\KK^n)$ is $\binom{n}{k} - 1$, but the dimension is really $k(n-k)$.
+>>I was confused by my low-dimensional intuition, because if $k\in \{0,1,n-1, n\}$ this just holds. The smallest nontrivial example is $2$-planes in $4$-space, where the space of rays of $2$-blades is $\binom{4}{2} - 1 = 5$ but there are only $2(4 - 2)$ subspaces.
+
+> [!solution]- 
+> Write down an $n\times k$ matrix, then use reduced column echelon form smh.
+
+
+# Deeper Questions
+
 > [!problem] Products of Manifolds
 > Suppose $X$ is an $m$-dimensional manifold, and $Y$ is an $n$-dimensional manifold. Show that:
 > - $X\times Y$ is an $m + n$-dimensional manifold.
@@ -12,7 +30,6 @@
 >[!solution] Regularity
 >A multivariable function satisfies any of the above regularity conditions iff it does componentwise.
 
-
 >[!problem] Continuous functions yield manifolds
 >Given a continuous function $f: \RR^m\to \RR^n$, the graph of all points $(x, f(x))\subset \RR^{m + n}$ with the induced topology is a smooth $m$-manifold.
 
@@ -20,17 +37,6 @@
 >The conjectured atlas is simply $f$. We need to show this is a homeomorphism. This is actually just true in general; for any continuous $f:X\to Y$, it is true that $\{(x, f(x))\}\subset X\times Y$ is homeomorphic to $X$.
 >
 >
-
->[!problem] Implicit Function
-> Let $f_1,\dots, f_m$ be functions $\RR^n\to \RR$ which are ($C_k$/RA). Let $X\subset \RR_n$ be the set of points $P$ such that $f_i(P)= 0$ for all $i$. Suppose $df_i(P)$ are linearly independent for all such $P$. Use the [[implicit function theorem]] to show that $X$ is a topological manifold of dimension $n-m$ and equip it with a natural ($C_k$/RA) structure. Prove the analogous statement for holomorphic functions $\CC_n\to \CC$.
-
->[!proof]
->You can use the implicit functions to get homeomorphisms to $\RR^n$ on patches; these match up because everything is the desired regularity class and inverses and compositions are closed.
-
-^1292a3
-
->[!todo]
->DO this!!! (better)
 
 >[!problem]
 >Show that any holomorphic function on a connected compact complex Lie group $f:G\to \CC$ is constant.

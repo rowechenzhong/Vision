@@ -9,6 +9,7 @@ This is the [[homepage]] for Martingale theory. It builds off of [[Probability]]
 2. [[Discrete-Time Random Process]]
 3. [[Discrete-time Martingale]]
 4. [[Optional Stopping Theorem]]
+5. [[OST Problems]]
 
 Who's this Doob guy and why does he have so many theorems
 5. [[Doob's upcrossing inequality]]
@@ -17,4 +18,11 @@ Who's this Doob guy and why does he have so many theorems
 
 We take a brief break to nuke SLLN.
 8. [[SLLN via Martingales]]
-9. 
+
+An unrelated theorem. I'm not sure how this is related to anything.
+9. [[Wald's Identities]]
+
+A brief glance at 18.615 before we move on to continuous time.
+11. [[Markov Chain Preliminary Results|Markov Chains]]
+13. [[Markov Chains and Martingales]]
+14. [[Harmonic Functions]]

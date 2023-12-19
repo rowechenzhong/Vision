@@ -14,6 +14,11 @@ Other common types of convergence:
 # Random Problems
 
 >[!problem]
+> Show $f_n\to f$ ae if $$
+> 	\forall \delta>0 \qquad \PP\left(\exists N: \forall m > N, \abs{f_m(\omega) - f(\omega)} > \delta\right) = 0
+> $$
+
+>[!problem]
 >Suppose $X_1, X_2,\cdots$ converge in probability. Show they also converge almost surely along some subsequence.
 
 >[!solution]- Boring
