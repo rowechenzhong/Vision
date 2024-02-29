@@ -1,0 +1,371 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+\usepackage{mathrsfs}
+
+\newcommand{\BBB}{\mathscr{B}}
+
+\title{18.675 Problem Set 3}
+\begin{document}
+\section{}
+\begin{prob*}
+    Let $\mu$ and $\nu$ be probability measures on $(E, \mathscr{E})$ and let
+    $f : E \to [0, R]$ be a measurable function. Suppose that
+    $\nu(A) = \mu(f \id(A))$ for all $A \in \mathscr{E}$. Let
+    $(X_n : n \in \NN)$ be a sequence of independent
+    random variables in $E$ with law $\mu$ and let
+    $(U_n : n \in \NN)$ be a sequence of independent random
+    variables having the uniform law on $[0, 1]$. Set
+    \[
+        T = \min\{n \in \NN : RU_n \leq f(X_n)\}, \quad Y = X_T.
+    \]
+    Show that $Y$ has law $\nu$.
+\end{prob*}
+
+Let $\alpha = \PP(RU_1 > f(X_1))$; note $0\leq \alpha < 1$.
+For any $A\in \mathscr{E}$, observe that
+\begin{align*}
+    \PP(Y\in A) &= \sum_{n = 1}^\infty \PP(X_T\in A, T = n) \\
+    &= \sum_{n = 1}^\infty \PP(X_n\in A, RU_n \le f(X_n), RU_m > f(X_m) \text{ for } m < n) \\
+    &= \sum_{n = 1}^\infty \PP(X_n\in A, RU_n \le f(X_n))\prod_{m < n} \PP(RU_m > f(X_m)) \tag{independence} \\
+    &= \sum_{n = 1}^\infty \PP(X_1\in A, RU_1 \le f(X_1))\alpha^{n-1} \\
+    &= \frac{1}{1-\alpha} \PP(X_1\in A, RU_1 \le f(X_1)) \\
+    &= \frac{\PP(X_1\in A, RU_1 \le f(X_1))}{\PP(RU_1 \le f(X_1))}
+\end{align*}
+Cool. The numerator is just
+\begin{align*}
+    \PP(X_1\in A, RU_1 \le f(X_1)) &= \int_A \int_\RR \mathbf{1}_{\{x : f(x) > u\}}(x, u) \, \frac{1}{R} \, du \, \mu(dx)  \\
+    &= \int_{A} \int_{0}^{f(x)} \frac{1}{R} \, du \, \mu(dx) = \int_{A} \frac{f(x)}{R} \, \mu(dx) = \frac{1}{R}\nu(A)
+\end{align*}
+and the denominator is just
+\begin{align*}
+    \PP(RU_1 \le f(X_1)) &= \int_E \int_\RR \mathbf{1}_{\{x : f(x) > u\}}(x, u) \, \frac{1}{R} \, du \, \mu(dx)  \\
+    &= \int_{E} \int_{0}^{f(x)} \frac{1}{R} \, du \, \mu(dx) \\
+    &= \int_{E} \frac{f(x)}{R} \, \mu(dx) = \frac{1}{R}\int_{E} f(x) \, \mu(dx)  = \frac{1}{R}
+\end{align*}
+as desired.
+
+We implicitly use that the event
+$RU_1 \leq f(X_1)$ is measurable; else the question
+doesn't make sense. This is true, because its complement
+is $RU_1 > f(X_1)$, which is a countable union of
+measurable sets
+\[
+    \bigcup_{q\in \QQ} \{RU_1 > q\} \cap \{f(X_1) > q\}
+\]
+
+% \begin{itemize}
+%     \item $(E,\mathcal{E})$ is some probability space.
+%     \item $f$ is some measurable function bounded by $R$.
+%     \item Using $f$, we create a new probability measure $\nu$ on $(E, \mathcal{E})$,
+%     which scales the probabilities by $A$.
+% \end{itemize}
+\section{}
+% Problem 2. Let (fn : n ∈ N) be a sequence of integrable functions and suppose that fn → f a.e.
+% for some integrable function f. Show that, if ||fn||1 → ||f||1, then ||fn − f||1 → 0 as n → ∞.
+\begin{prob*}
+    Let $(f_n : n \in \NN)$ be a sequence of integrable functions and suppose that
+    $f_n \to f$ a.e. for some integrable function $f$. Show that, if $\norm{f_n}_1 \to \norm{f}_1$,
+    then $\norm{f_n - f}_1 \to 0$ as $n \to \infty$.
+\end{prob*}
+
+Consider $\abs{f_n - f} - \abs{f_n}$. We note that
+\[
+    \abs{\abs{f_n - f} - \abs{f_n}} \leq \abs{f}    
+\]
+for all $n$. By the dominated convergence theorem, we have
+\begin{align*}
+    \lim_{n\to \infty} \int \abs{f_n - f} - \abs{f_n} \, d\mu &= \int \lim_{n\to \infty} \abs{f_n - f} - \abs{f_n} \, d\mu\\
+    &= \int 0 - \abs{f} \, d\mu \\
+    &= -\norm{f}_1
+\end{align*}
+but this quantity is also supposed to be
+\begin{align*}
+    \lim_{n\to \infty} \int \abs{f_n - f} - \abs{f_n} \, d\mu &= \lim_{n\to \infty} \int \abs{f_n - f} \, d\mu - \lim_{n\to \infty} \int \abs{f_n} \, d\mu \\
+    &= \lim_{n\to \infty} \norm{f_n - f}_1 - \lim_{n\to \infty} \norm{f_n}_1 \\
+    &= \lim_{n\to \infty} \norm{f_n - f}_1  - \norm{f}_1
+\end{align*}
+Thus, $\lim_{n\to \infty} \norm{f_n - f}_1 = 0$.
+
+\section{}
+% Problem 3. Let X be a random variable and let 1 ≤ p < ∞. Show that, if X ∈ L
+% p
+% (P),
+% then P[|X| ≥ λ] = O(λ
+% −p
+% ) as λ → ∞. Prove the identity
+% E[|X|
+% p
+% ] = Z ∞
+% 0
+% pλp−1P[|X| ≥ λ]dλ
+% and deduce that, for all q > p, if P[|X| ≥ λ] = O(λ
+% −q
+% ) as λ → ∞, then X ∈ L
+% p
+% (P).
+\begin{prob*}
+    Let $X$ be a random variable and let $1 \leq p < \infty$. Show that, if $X \in L^p(\PP)$,
+    then $\PP[\abs{X} \geq \lambda] = O(\lambda^{-p})$ as $\lambda \to \infty$. Prove the identity
+    \[
+        \EE[\abs{X}^p] = \int_0^\infty p\lambda^{p-1}\PP[\abs{X} \geq \lambda] \, d\lambda
+    \]
+    and deduce that, for all $q > p$, if $\PP[\abs{X} \geq \lambda] = O(\lambda^{-q})$
+    as $\lambda \to \infty$, then $X \in L^p(\PP)$.
+\end{prob*}
+
+Suppose $X\in L^p(\PP)$; then $\PP(\abs{X} \geq \lambda)\cdot \lambda^p \leq \int \abs{X}^p \, d\PP = M < \infty$;
+thus $\PP(\abs{X} \geq \lambda) \leq M\lambda^{-p}$, so $\PP(\abs{X} \geq \lambda) = O(\lambda^{-p})$.
+Now, we prove the identity. We have
+\begin{align*}
+    \EE[\abs{X}^p] &= \int_0^\infty \PP[\abs{X}^p \geq \lambda^p]d(\lambda^p)\\
+    &= \int_0^\infty p\lambda^{p-1} \PP[\abs{X}^p \geq \lambda^p]d\lambda
+\end{align*}
+
+Thus, if $\PP[\abs{X} \geq \lambda] = O(\lambda^{-q})$ as $\lambda \to \infty$, then
+by definition there exists constants $C, \lambda_0 > 1$ such that
+$\PP[\abs{X} \geq \lambda] \leq C\lambda^{-q}$ for all $\lambda \geq \lambda_0$.
+This yields:
+\begin{align*}
+    \EE[\abs{X}^p]
+    &\leq \int_0^{\lambda_0} p\lambda^{p-1} \PP\left[\abs{X}^p \geq \lambda^p\right] \der \lambda
+    + \int_{\lambda_0}^{\infty} p\lambda^{p-1} C\lambda^{-q} \der \lambda\\
+    &\leq \int_0^{\lambda_0} p\lambda^{p-1} \der \lambda + \frac{Cp}{q-p}\lambda_0^{p-q}\\
+    &< \infty
+\end{align*}
+Thus $X\in L^p(\PP)$.
+
+% \begin{align*}
+%     \int_0^\infty p\lambda^{p-1}\PP[\abs{X} \geq \lambda] \, d\lambda
+%     &= \int_0^\infty p\lambda^{p-1}\int_\lambda^\infty d\PP(\abs{X} \geq \lambda) \, d\lambda \\
+%     &= \int_0^\infty \int_0^\infty p\lambda^{p-1}\mathbf{1}_{\{\lambda \leq t\}} \, d\PP(\abs{X} \geq t) \, d\lambda
+% \end{align*}
+
+
+\section{}
+% Problem 4. Show that ||XY ||1 = ||X||1||Y ||1 for independent random variables X and Y . Show
+% further that, if X and Y are also integrable, then E[XY ] = E[X]E[Y ].
+\begin{prob*}
+    Show that $\norm{XY}_1 = \norm{X}_1\norm{Y}_1$ for independent random variables $X$ and $Y$.
+    Show further that, if $X$ and $Y$ are also integrable, then $\EE[XY] = \EE[X]\EE[Y]$.
+\end{prob*}
+
+
+Note that $\norm{X}_1 = \EE[\abs{X}]$, and $\abs{XY} = \abs{X}\abs{Y}$.
+Both parts follow from proposition 3.7.1 in the notes. Observe that proposition
+$3.7.1$ stats $\EE[f(X)f(Y)] = \EE[f(X)]\EE[f(Y)]$ for any \emph{bounded}
+measurable function $f$, but this condition is superfluous; the proof cites
+Fubini's theorem, and Fubini's theorem does not require $f$ to be bounded;
+nonnegative and/or integrable functions work just fine!
+
+\section{}
+% Problem 5. Let (Xn : n ∈ N) be an identically distributed sequence in L
+% 2
+% (P). Show that
+% nP[|X1| > √
+% n] → 0 as n → ∞, for all  > 0. Deduce that n
+% −1/2 maxk≤n |Xk| → 0 in probability.
+\begin{prob*}
+    Let $(X_n : n \in \NN)$ be an identically distributed sequence in $L^2(\PP)$. Show that
+    $n\PP[\abs{X_1} > \eps\sqrt{n}] \to 0$ as $n \to \infty$, for all $\eps > 0$. Deduce that
+    $n^{-1/2} \max_{k \leq n} \abs{X_k} \to 0$ in probability.
+\end{prob*}
+
+Well,
+\begin{align*}
+    \EE[\abs{X}^2] &= \int_0^\infty \PP[\abs{X}^2 \geq n] \, dn \\
+    &= \int_0^\infty \PP[\abs{X} \geq \sqrt{n}] \, dn
+\end{align*}
+If this is to be finite, clearly $n\PP[\abs{X} \geq \sqrt{n}] \to 0$
+as $n \to \infty$. Indeed, the converse is that
+there exist arbitrarily large $n$ such that
+$\PP[\abs{X}\geq \sqrt{n}] \geq \frac{c}{n}$ for some $c > 0$;
+pick some increasing sequence of those numbers $n_1, n_2,\dots$
+such that $n_{i+1}\geq 2n_i$.
+Then, we write:
+\begin{align*}
+    &\geq \sum_i (n_{i+1} - n_i) \frac{c}{n_{i+1}}\\
+    &\geq \sum_i \frac{c}{2}
+\end{align*}
+which is unbounded.
+
+If you let $n = \eps^2 m$ or something, this this
+immediately shows the claim.
+
+The result we wish to show is that, for all $\eps > 0$,
+\[
+    \PP\left[\max_{k \leq n} \abs{X_k} \geq \eps\sqrt{n}\right] \to 0
+\]
+However, by union bound (that is, we add up the measures of a covering),
+we know this is upper-bounded by
+\[
+    \sum_{k\leq n} \PP[\abs{X_k} \geq \eps\sqrt{n}] = n\PP[\abs{X_1} \geq \eps\sqrt{n}] \to 0    
+\]
+thus the result follows.
+
+
+\section{}
+% Problem 6. Let (E, E, µ) be a measure space and let V1 ≤ V2 ≤ . . . be an increasing sequence of
+% closed subspaces of L
+% 2 = L
+% 2
+% (E, E, µ) for f ∈ L
+% 2
+% , denote by fn the orthogonal projection of f on Vn.
+% Show that fn converges in L
+% 2
+% .
+\begin{prob*}
+    Let $(E, \mathscr{E}, \mu)$ be a measure space and let $V_1 \le V_2 \le \cdots$ be an
+    increasing sequence of closed subspaces of $L^2 = L^2(E, \mathscr{E}, \mu)$. For
+    $f \in L^2$, denote by $f_n$ the orthogonal projection of $f$ on $V_n$.
+    Show that $f_n$ converges in $L^2$.
+\end{prob*}
+
+First off, I'm aware that $L^2$ isn't a Hilbert space (the $L^2$ norm is
+a seminorm) but we can do the usual thing of identifying functions that are
+equal almost everywhere; this doesn't change anything in the problem,
+because the $L^2$ norm can't distinguish between functions that are equal
+almost everywhere.
+
+After that, I really don't care what Hilbert space I'm in anymore;
+this is just functional analysis. Recall that on Hilbert
+spaces, orthogonal projections are a thing; for any closed subspace $V\leq E$,
+for any $v\in E$, there exist a unique $u \in V$ and $w \in V^\perp$
+such that $v = u + w$. The projection of $v$ onto $V$ is $u$. This $u$
+is in fact the minimizer
+\[
+    u = \arg\min_{u'\in V} \norm{v - u'}^2    
+\]
+
+Now, here's a claim:
+\begin{claim*}
+    [Projections project through projections]
+    Suppose $W\leq V \leq E$ are a series of closed subspaces of a Hilbert
+    space $E$. Pick some $v\in E$. Let $v_\perp$ be the (unique)
+    projection of $v$ onto $V$, and let $w_\perp$ be the (unique)
+    projection of $v_\perp$ onto $W$. Then $w_\perp$ is also
+    the projection of $v$ onto $W$.
+\end{claim*}
+\begin{proof}
+    Note that by definition, for all $w^*\in W$,
+    $\braket{v_\perp - w^* | v - v_\perp} = 0$
+    because $v_\perp - w^*\in V$; thus the Pythagorean
+    theorem states that
+    \[
+        \norm{v_\perp - w^*}^2 = \norm{v - v_\perp}^2 + \norm{v_\perp - w^*}^2
+    \]
+    In particular,
+    \[
+        \arg\min_{w^*\in W} \norm{v - w^*}^2 = \arg\min_{w^*\in W} \norm{v_\perp - w^*}^2
+    \]
+    and since the minimizer is unique, we have
+    $w_\perp = \arg\min_{w^*\in W} \norm{v - w^*}^2$.
+\end{proof}
+
+By the lemma, the projection of $f_j$ onto
+$V_i$ is $f_i$ for all $i\leq j$. We thus write
+\[
+    f_n = \sum_{i\leq n} f_n - f_{n-1}    
+\]
+For all $n > m$, $f_n - f_{n-1}\in V_n\leq V_m$ and is thus perpendicular
+to $f_m - f_{m-1}$. Thus, by the pythagorean theorem,
+\[
+    \norm{f_n}^2 = \sum_{i\leq n} \norm{f_i - f_{i-1}}^2    
+\]
+Now, $\norm{f_n}^2 \leq \norm{f'}^2 < \infty$ for all $n$;
+thus
+\[
+    \sum_{i\geq 0} \norm{f_i - f_{i-1}}^2 < \infty    
+\]
+This is a Cauchy sequence, so the whole summation converges
+in $L^2$ to some $f'$:
+\[
+    \sum_{i\leq n} f_n - f_{n-1} \to f'
+\]
+Which in general won't be $f$ because $\bigcup V_n$ might
+be strictly smaller than $E$.
+
+\section{}
+% Problem 7. Find a uniformly integrable sequence of random variables (Xn : n ∈ N) such
+% that both Xn → 0 a.s. and E[supn
+% |Xn|] = ∞.
+\begin{prob*}
+    Find a uniformly integrable sequence of random variables $(X_n : n \in \NN)$ such
+    that both $X_n \to 0$ a.s. and $\EE[\sup_n \abs{X_n}] = \infty$.
+\end{prob*}
+All of my random variables are going to be functions of a single
+random variable $X$ which is uniform on $[0,1]$. Then, $X_k$
+will take on the value of $k$ on $(\frac{1}{k+1}, \frac{1}{k})$
+and be $0$ elsewhere. This is uniformly integrable, because
+for any $n\in \NN$,
+\[
+    \sup\left(\EE(\abs{X_k}\id_{\abs{X_k}\geq n}:k\in \NN)\right)
+\]
+is $\frac{1}{n+1}$ achieved by $X_n$; this vanishes as $n\to \infty$.
+
+On the other hand,
+\[
+    \EE[\sup_n \abs{X_n}]\geq \EE[\sup_{n\leq k} \abs{X_n}] = \frac12 + \dots + \frac{1}{k+1} \to \infty
+\]
+Thus $\EE[\sup_n \abs{X_n}] = \infty$.
+\section{}
+% Problem 8. Let (Xn : n ∈ N) be an identically distributed sequence in L
+% 2
+% (P). Show that
+% E[max
+% k≤n
+% |Xk|]/
+% √
+% n → 0 as n → ∞.
+\begin{prob*}
+    Let $(X_n : n \in \NN)$ be an identically distributed sequence in $L^2(\PP)$. Show that
+    $\EE[\max_{k \le n} \abs{X_k}]/\sqrt{n} \to 0$ as $n \to \infty$.
+\end{prob*}
+
+Let the internals be $Y_n = n^{-1/2}\max_{k\leq n} \abs{X_k}$; we wish to show
+$\EE[Y_n] \to 0$. Note that
+\[
+    \EE[\abs{Y_N}^2] = \EE[\frac1n \max_{k\leq n} \abs{X_k}^2] \leq \frac1n \sum_{k\leq n} \EE[\abs{X_k}^2] = \EE[\abs{X_1}^2]
+\]
+
+By Holder's (Cauchy-Schwarz) inequality, $\EE[\abs{Y_N}\id_A]\leq \norm{X}_2 \PP(A)^{1/2}$
+which is finite, thus $\EE[\abs{Y_n}\id_A]\to 0$ uniformly as $\mu(A)\to 0$,
+i.e. $Y_n$ is UI. We also know $Y_n\to 0$ in probability from problem $5$, so
+by theorem $6.2.3$ we know $Y_n\to 0$ in $L^1$, which is exactly what we want.
+
+
+% Recall that
+% \[
+%     \EE[X] = \int_0^\infty \PP[X \geq \lambda] \, d\lambda    
+% \]
+% for any nonnegative random variable $X$ for which the integral converges;
+% let's write
+% \begin{align*}
+%     \frac{1}{\sqrt{n}}\int_0^\infty \PP\left[\max_{k \le n} \abs{X_k} \geq \lambda\right] \, d\lambda
+%     &=\int_0^\infty \PP\left[\max_{k \le n} \abs{X_k} \geq \lambda\right] \, \frac{d\lambda}{\sqrt{n}}\\
+%     &=\int_0^\infty \PP\left[\max_{k \le n} \abs{X_k} \geq \lambda\sqrt{n}\right] \, d\lambda\\
+%     &=\int_0^\infty \PP\left[n^{-1/2}\max_{k \le n} \abs{X_k} \geq \lambda\right] \, d\lambda
+% \end{align*}
+
+% Thus, for all $\eps$, the limit as $n\to \infty$ of the above is
+% \begin{align*}
+%     &\leq \lim \int_0^{\eps} \PP\left[Y_n\geq \lambda\right] \, d\lambda + \int_\eps^\infty \PP\left[Y_n\geq \lambda\right] \, d\lambda\\
+%     &\leq \eps + \lim \int_\eps^\infty \PP\left[Y_n\geq \lambda\right] \, d\lambda
+% \end{align*}
+% But we know that $\PP\left[Y_n\geq \eps\right]\downarrow 0$
+% as a function in $\lambda$ as $n\to \infty$; this is a measurable
+% function which vanishes in the limit, thus by the dominated
+% convergence theorem, the integral vanishes in the limit as well.
+
+% This is true for all $\eps$, thus we conclude.
+
+
+% $n^2\PP\left[\abs{X} > n\right]\to 0$
+% as $n\to \infty$, i.e. for all $n > M$ for some $M > 0$,
+% $\PP\left[\abs{X} > n\right] < \frac{1}{n^2}$.
+
+% Well, clearly then,
+% \begin{align*}
+%     \frac{1}{\sqrt{n}}\EE[\max_{k \le n} \abs{X_k}] &= \frac{1}{\sqrt{n}}
+
+\end{document}

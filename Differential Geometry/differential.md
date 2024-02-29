@@ -8,7 +8,7 @@ To unpack what this is doing: $v$ is an infinitesimal change at $P$. If we pass 
 
 This is *exactly* what you think it is.
 
->[!prob] Chain Rule
+>[!problem] Chain Rule
 >Show that if $F: X\to Y$ and $G:Y\to Z$ are regular maps,
 >$$
 >	d(G\circ F)_P = dG_{F(P)}\circ dF_P

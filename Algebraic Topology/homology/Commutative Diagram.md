@@ -1,0 +1,1 @@
+A ==**commutative diagram**== is pretty hard to draw in obsidian which is quite sad, so we will be doing some scuffed screenshot-inserting.

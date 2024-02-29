@@ -1,0 +1,377 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+
+\title{18.745 Lie Algebra}
+\subtitle{Homework 2}
+\begin{document}
+\maketitle
+
+\begin{prob*}
+    Let $V$ be an $\CC$-vector space of dimension $n$
+    equipped with a nondegenerate skew-symmetric
+    bilinear form $(\bullet,\bullet)$. 
+    \begin{enumerate}
+        \item Prove that $n=2m$ is even.
+        \item There is a basis $\{v_1,\ldots,v_m,w_{-m},\ldots,w_{-1}\}$ of $V$
+            satisfying the following: for any $x,y\in V$ with
+            $x=\sum_{i=1}^m a_iv_i + \sum_{j=-m}^{-1} b_jw_j$ and
+            $y=\sum_{i=1}^m a_i'v_i + \sum_{j=-m}^{-1} b_j'w_j$,
+            \[
+                (x,y) = \sum_{i=1}^m a_ib_i' - \sum_{j=1}^m a_j'b_j.
+            \]
+        \item Let $Sp(2m,\CC)$ be the group of isometries of $(\bullet,\bullet)$.
+            Compute the dimension of $Sp(2m,\CC)$ over $\CC$.
+    \end{enumerate}
+\end{prob*}
+Any bilinear form can be writen as a matrix $A$ such that
+$(x, y) = x^\top A y$. We observe that $A = -A^\top$. Because the multiset of
+eigenvalues are preserved under transpose, we find that $A$ must have
+eigenvalues that come in pairs $(\lambda, -\lambda)$ (after all, there cannot
+be any $0$'s, else the form would be degenerate). 
+
+
+For the second part, we induct. When $m = 0$, there is nothing to prove.
+Suppose the statement is true for $m-1$. Let $V$ be a vector space of dimension
+$2m$ equipped with a nondegenerate skew-symmetric bilinear form $(\bullet,\bullet)$.
+Pick any $v_1\in V$. By non-degeneracy, there exists a $v_2$ such that
+$(v_1, v_2) \neq 0$, which we will fix such that $(v_1, v_2) = 1$.
+Fill out the remaining basis $v_3,\cdots v_n$ arbitrarily.
+We will now perform many basis changes. For all $v_i$, $i > 2$, let
+\[
+    v'_i = v_i - \frac{(v_1, v_i)}{(v_1, v_2)}v_2 \implies (v_1, v'_i) = 0.    
+\]
+Then, let
+\[
+    u_i = v'_i - \frac{(v_2, v'_i)}{(v_2, v_1)}v_1 \implies (v_1, u_i) = (v_2, u_i) = 0.
+\]
+Finally, let $u_1 = v_1 / (v_1, v_2)$ and $u_2 = v_2$ such that:
+\[
+    (u_1, u_i) = \begin{cases}
+        1 & i = 2 \\
+        0 & i \neq 2
+    \end{cases}\qquad\text{and}\qquad
+    (u_2, u_i) = \begin{cases}
+        1 & i = 1 \\
+        0 & i \neq 1
+    \end{cases}.
+\]
+At this point, $Span(u_3,\cdots u_n)$ is a subspace of $V$ of dimension $2m - 2$
+equipped with a nondegenerate skew-symmetric bilinear form $(\bullet,\bullet)$ of its
+own right. By induction, we find a basis $w_1, w_{-1}, \cdots w_{-m}, w_m$ such that
+\[
+    (w_i, w_j) = \begin{cases}
+        1 & i = -j > 0 \\
+        -1 & i = -j < 0 \\
+        0 & i \neq -j
+    \end{cases}.
+\]
+Then, the problem statement follows by linearity.
+
+For the third part, observe that choices of $M\in Sp(2m, \CC)\subset \GL_{2m}(\CC)$
+are equivalent to choices of basis; the question is really asking for
+the number of ways to pick a basis satisfying the above conditions.
+
+We claim the answer of $m(2m + 1)$; we repeat the steps of the above proof.
+\begin{enumerate}
+    \item There are $2m$ dimensions to select the first vector
+    $v_1$ (you can pick anything in $\RR^{2m}$).
+    \item There are $2m - 1$ dimensions to select $v_2$ such
+    that $(v_1, v_2) = 1$. This is clear from the final result;
+    $v_2 = v_1 + \sum_{\beta_i} v_i$ where $\beta_i$ are the coefficients
+    for $i\in \{-m,\dots -2, 1, \dots m\}$.
+\end{enumerate}
+Thus,
+\[
+    (m-1)(2(m-1) + 1) + (2m-1) + 2m = m(2m + 1)    
+\]
+as desired.
+
+\pagebreak
+\begin{prob*}
+    Let $X$ be a real manifold. Show that a vector bundle $E$ of rank $n$ on $X$ with
+    $p:E\to X$ is trivial if and only if it admits sections $s_1,\ldots,s_n$ which form a
+    basis in every fibre $p^{-1}(x)$.
+\end{prob*}
+
+This is pretty stupid. If $E$ is trivial, then there exists a diffeomorphism
+$\phi: E \to X\times \RR^n$ such that $p = \pi_X\circ \phi$ where $\pi_X$ is the
+projection $X\times \RR^n\to X$. Then, the sections $s_i$ are given by
+$s_i(x) = \phi^{-1}(x, e_i)$ where $e_i$ is
+the $i$th standard basis vector in $\RR^n$.
+
+On the other hand, if you have such a collection of sections, then you can
+define a map $\phi: E \to X\times \RR^n$ by
+$\phi(x, \sum_i a_i s_i(x)) = (x, a_1, \dots a_n)$. This is clearly a bijection
+and is smooth since the $s_i$ are smooth. Thus, $E$ is trivial.
+
+\pagebreak
+\begin{prob*}\phantom{A}
+    \begin{enumerate}
+        \item Consider $\SL(2,\RR)$. Show that the image of the exponential mapping for
+            $\SL(2,\RR)$ consists of precisely those matrices $A\in\SL(2,\RR)$ with
+            $\tr(A)>-2$, together with $-I$. Show that the image of the exponential map
+            is not dense in $\SL(2,\RR)$.
+        \item Suppose $G$ is a connected, commutative closed Lie subgroup of $\GL_n$.
+            Show that the exponential map $\exp:\fg\to G$ is surjective.
+        \item The exponential mapping $\exp:\uu(n)\to\UU(n)$ is onto, but not one to one.
+            (Hint: A unitary matrix has an orthonormal basis of eigenvectors)
+    \end{enumerate}
+\end{prob*}
+
+\begin{psec*}
+    [Part 1]
+\end{psec*}
+Recall that the exponential mapping on $\SL(2,\RR)$ coincides with the usual
+matrix exponent. In particular, we will make extensive use of
+\[
+    Be^AB^{-1} = e^{BAB^{-1}}.    
+\]
+for all $B\in \GL(2,\RR)$.
+
+As such, first observe that for some generic
+$A = \begin{pmatrix}a & b \\ c & d\end{pmatrix}$,
+\[
+    \exp\begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix} = \begin{pmatrix}
+        1 + a & b \\
+        c & 1 + d
+    \end{pmatrix} + O(a^2, b^2, c^2, d^2, ab, ac, ad, bc, bd, cd).    
+\]
+thus the desired condition is that the trace is $0$ to
+first order; this agrees with the fact that $\SL(2,\RR)$
+is dimension $3$. The eigenvalues are thus $(\lambda, -\lambda)$
+for $\lambda\in \CC$. Furthermore, the determinant of $A$ is
+pure real, thus $\lambda$ is either pure imaginary or pure real.
+
+Under suitable basis
+change $B$ a la Jordan Canonical Form (over $\CC$),
+any element of $\SL(2, \RR)$ is thus:
+\begin{itemize}
+    \item For all $\lambda\in \RR\cup i\RR$,
+    \[
+        BAB^{-1} = \begin{pmatrix}
+            \lambda & 0 \\
+            0 & -\lambda
+        \end{pmatrix}
+    \]
+    \item If $\lambda = 0$, there is an additional
+    possibility:
+    \[
+        BAB^{-1} = \begin{pmatrix}
+            0 & \kappa \\
+            0 & 0
+        \end{pmatrix}
+    \]
+\end{itemize}
+
+Okay, great. These exponentiate to:
+\begin{itemize}
+    \item
+    \[
+        Be^AB^{-1} = \begin{pmatrix}
+            e^\lambda & 0 \\
+            0 & e^{-\lambda}
+        \end{pmatrix}
+    \]
+    This yields all $e^A$ which have two eigenvectors,
+    whose eigenvalues are of the form $(e^\lambda, e^{-\lambda})$
+    for $\lambda \in \RR$, or $(e^{i\lambda}, e^{-i\lambda})$
+    for $\lambda \in \RR$. This comprises a subset of the
+    \emph{diagonalizable} matrices in $\SL(2,\RR)$; notably
+    exempt are the matrices whose eigenvalues are of the form
+    $(-e^\lambda, -e^{-\lambda})$.
+
+    So this case captures all diagonalizable matrices with
+    $\Tr e^A > -2$, as well as $-I$.
+    \item If we are in the nilpotent case, then
+    \[
+        Be^AB^{-1} = \begin{pmatrix}
+            1 & \kappa \\
+            0 & 1
+        \end{pmatrix}
+    \]
+    These are exactly all non-diagonalizable matrices
+    in $\SL(2,\RR)$, completing the characterization in the problem.
+\end{itemize}
+
+Cool. We now show that this image is not dense in $\SL(2,\RR)$.
+This is basically obvious; consider the matrix
+\[
+    \begin{pmatrix}
+        -2, & 0 \\
+        0, & -\frac12
+    \end{pmatrix}    
+\]
+All matrices in a neighborhood of this matrix will have eigenvalues
+close to $-2$ and $-\frac12$, thus the trace will be close to $-\frac52$,
+which is not in the image of the exponential map.
+
+\begin{psec*}
+    [Part 2]
+\end{psec*}
+
+The exponential map is a local diffeomorphism from a neighborhood
+$\uu\subset \fg$ of $0$ onto a neighborhood of $U\subset G$ of $1$.
+This neighborhood generates $G$, because $G$ is connected. Thus,
+all elements of $G$ can be written
+\[
+    g = \exp(X_1)\cdots \exp(X_n)
+\]
+for some $X_i\in \uu$. However, since $G$ is commutative,
+\[
+    g = \exp(X_1 + \cdots + X_n)
+\]
+and we are done.
+
+% This sounds really nice, but there's a slight problem: we don't
+% know that $g$ can be written as a finite product of exponentials;
+% $\GL_n$ is unbounded, and closed sets
+% are not necessarily compact. Here's the fix: let $G' = G\cap \SL_n$
+% and $\fg' = \fg\cap \sll_n$. $\SL_n$ is actually compact, so the exponential
+% map on $\fg'$ can actually (finitely) generate all of $\SL_n$ (consider the open sets
+% called ``everything that can be generated by $i$
+% elements'' then take a finite subcover). Then, if $G'\not\subset \SL_n$,
+% $\fg'\not\subset \sll_n$. But $\sll_n\oplus \RR = \gl_n$, so there exists
+% some $v$ such that $v \oplus \fg' = \fg$; by dimension counting we find
+% that $G' \times \RR = G$.
+
+\begin{psec*}
+    [Part 3]
+\end{psec*}
+
+Uh, it's not that deep. $\uu(n)\subset \gl_n$ is a real vector space.
+By staring,
+\[
+    \exp(x)\approx 1 + x    
+\]
+thus we must have
+\[
+    1 = (1 + x)(1 + x)^\dagger \approx 1 + x + x^\dagger    
+\]
+thus $x= -x^\dagger$ i.e. $\uu(n)$ consists of precisely
+the anti-Hermitian matrices.
+
+Why is this onto? Well, using the basis-changing strategy from
+before, any anti-Hermitian matrix is of the form
+\[
+    \begin{pmatrix}
+        ia_1 & \dots & 0 \\
+        \vdots & \ddots & \vdots \\
+        0 & \dots & ia_n
+    \end{pmatrix}    
+\]
+where $a_i\in \RR$. Then, these exponentiate to
+\[
+    \begin{pmatrix}
+        e^{ia_1} & \dots & 0 \\
+        \vdots & \ddots & \vdots \\
+        0 & \dots & e^{ia_n}
+    \end{pmatrix}
+\]
+Thus, by basis changing, one can create any matrix
+with eigenvalues of the form $e^{ia_i}$; these are precisely
+the unitary matrices.
+
+On the other hand, clearly $\exp(0) = \exp(2\pi i\cdot I) = I$,
+so the exponential map is not injective.
+
+\pagebreak
+\begin{prob*}
+    Recall from the first pset, there is a homomorphism $\phi:\SU(2)\to\SO(3)$. Compute
+    the Lie algebra homomorphism $d\phi:\su(2)\to\so(3)$ explicitly.
+\end{prob*}
+
+LOL wait just a moment. $\phi$ is just $\Ad: \SU_2\to \GL(\su_2)$ where
+$\su_2\equiv \RR^3$. So if we take an orthonormal basis of $\su_2$ called
+\[
+    \sigma_1 = \frac12 \begin{pmatrix}
+        0 & i \\
+        i & 0
+    \end{pmatrix},\qquad
+    \sigma_2 = \frac12 \begin{pmatrix}
+        0 & 1 \\
+        -1 & 0
+    \end{pmatrix},\qquad
+    \sigma_3 = \frac12 \begin{pmatrix}
+        i & 0 \\
+        0 & -i
+    \end{pmatrix}      
+\]
+this ends up as a subgroup of $\GL(\RR^3)$...
+which happened to end up being $\SO(3)$. (This makes sense, because
+as a an inner product space the norm is $\Tr(AB)$, but this trace
+is preserved under conjugating $A$ and $B$. It's not deep.)
+
+So now, you want me to compute $d \Ad: \su_2\to \gl(\su_2)$, which is going
+to map into $\so_3$. But we know that $d \Ad$ sends $x$ to $[x, \bullet]$
+from class. So I guess I can just compute it...
+\begin{align*}
+    d \Ad(\sigma_1) = [\sigma_1, \bullet] = \begin{pmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 1 \\
+        0 & -1 & 0
+    \end{pmatrix} \\
+    d \Ad(\sigma_2) = [\sigma_2, \bullet] = \begin{pmatrix}
+        0 & 0 & -1 \\
+        0 & 0 & 0 \\
+        1 & 0 & 0
+    \end{pmatrix} \\
+    d \Ad(\sigma_3) = [\sigma_3, \bullet] = \begin{pmatrix}
+        0 & 1 & 0 \\
+        -1 & 0 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix}
+\end{align*}
+So... yeah. That's it.
+
+\pagebreak
+\begin{prob*}
+    Here, $K=\RR$ or $\CC$ and the Lie groups and Lie algebras are defined over $K$.
+    \begin{enumerate}
+        \item If $\phi:\fg_1\to\fg_2$ is a $K$-Lie algebra homomorphism, show that
+            $\kernel\phi$ is an ideal in $\fg_1$.
+        \item Find the kernel of $\ad:\gl_n\to\gl(\gl_n)$.
+        \item Prove that $\gl_n\cong\kernel(\ad) \oplus\sll_n$.
+        \item Find the Lie algebra of the group $PGL_n=\GL_n/Z$ where $Z$ is the center
+            of $\GL_n$.
+    \end{enumerate}
+\end{prob*}
+
+\begin{psec*}
+    [Part 1]
+\end{psec*}
+Let $x\in \kernel \phi$ and $y\in \fg_1$.
+Then, $\phi([x, y]) = [\phi(x), \phi(y)] = 0$, so $[x, y]\in \kernel \phi$.
+
+\begin{psec*}
+    [Part 2]
+\end{psec*}
+$\ad$ is just the map $x\mapsto [x, \bullet]$. Thus, $\kernel \ad$ is the set
+of elements $x$ such that $[x, y] = 0$ for all $y$. This is precisely the center
+of $\gl_n$, which coincides with the word ``center'' in the ring-theoretic sense.
+Well okay fine; if $x$ commutes with the matrix with a $1$ at $(i,i)$ and $0$'s
+everywhere else, we find that the $x$ has $0$'s on all off-diagonal entries.
+Then, if $x$ commutes with a matrix with a $1$ at $(i,j)$ and $0$'s everywhere
+else, we find that $x_{i,i} = x_{j,j}$. Thus, $x$ must be a multiple of the identity;
+these are all clearly part of the center.
+
+\begin{psec*}
+    [Part 3]
+\end{psec*}
+I mean, $\sll_n$ consists of precisely the matrices with trace $0$. $\gl_n$
+consists of all matrices. Thus, $\gl_n = \sll_n \oplus \RR I$, as desired.
+
+\begin{psec*}
+    [Part 4]
+\end{psec*}
+$Z$ consists of constant multiples of the identity; this can be quickly
+seen from analysis similar to part $2$. 
+By the correspondence between the center of a Lie group and its Lie algebra,
+I know that $Z$ consists of precisely those matrices of the form $\alpha \cdot I$
+for $\alpha\in \RR_{\geq 1}$. In the lie algebra case, this corresponds
+to modding out by $\RR \cdot I$, which yields $\sll_n$.
+
+
+\end{document}

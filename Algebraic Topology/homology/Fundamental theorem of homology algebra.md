@@ -1,0 +1,2 @@
+Any two [[Free Resolution|free resolutions]] $C,D$ of $A$ are $\ZZ G$-linearly chain homotopy equivalent. This is like completely obvious, because both are homotopic to the complex$$\dots\to0\to A \to 0\to \dots$$
+This implies that $\ZZ\otimes_{\ZZ G} C\simeq \ZZ \otimes_{\ZZ G} D$ as a chain homotopy, and thus $H_*(\ZZ\otimes_{\ZZ G} C) \cong H_*(\ZZ\otimes_{\ZZ G} D)$.

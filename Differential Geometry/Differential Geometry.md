@@ -6,7 +6,7 @@ Everything is very easy here, so we'll move quickly. All vector spaces are norme
 1. [[Derivative]]
 2. [[implicit function theorem]] (TODO)
 3. [[topological manifolds]]
-4. [[Inverse and Implicit Function Theorems]] (TODO)
+4. [[Inverse Function Theorem]] (TODO)
 
 ## Smooth Manifolds
 
@@ -20,9 +20,10 @@ We set up calculus on manifolds.
 13. [[Differential]]
 
 We explore the varieties of submanifolds.
-1. [[(Weak) Submanifolds]]
-2. [[Embedding]]
-3. [[Immersed Submanifold]]
+1. [[Submersion]]
+2. [[Immersion]]
+3. [[Embedding]]
+4. [[Immersed Submanifold]]
 
 Then we discuss Fiber Bundles.
 5. [[Fiber Bundle]]

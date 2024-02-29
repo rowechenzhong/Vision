@@ -1,3 +1,16 @@
+We are working in a [[banach]] space.
+
+>[!theorem] Implicit Function Theorem
+>Suppose $U\subset V$ and $f:U\to W$ is a smooth map. Suppose for some $x\in U$, $f(x) = y$, $D_xf$ is surjective, and $\ker(D_xf)$ admits a closed complement $C$.
+>
+>Then, there are neighborhoods $0\in U_1\subset \ker(D_x(f))$ and $0\in U_2\subset W$, and diffeomorphisms (charts!) $\phi:U_1\times U_2\to U$ and $\psi:U_2\to W$ such that $\psi p_2 = f\phi$, where $p_2$ is projection onto $U_2$.
+
+WLOG $x = y = 0$; these values don't actually matter anyways. A typical point in $U = \ker(D_xf)\oplus C$ is $k\oplus c$. Note that $C$ is banach.
+
+
+
+TODO: go back and reconcile these several different variants of the same theorem.
+
 >[!theorem]
 >Suppose $f: \RR^{n + m}\to \RR^m$ is a continuously differentiable function. Let $\RR^{n + m}$ have coordinates $(\vec{x}, \vec{y})$. Fix a point $(\vec{a}, \vec{b})$ with $f(\vec{a}, \vec{b}) = \vec{0}$. Consider the portion of the [[Jacobian matrix]] containing the partial derivatives with respect to $\vec{y}$, only. If
 >$$

@@ -1,1 +1,0 @@
-A ==**ring**== is like a field (see [[measure]]) except that it doesn't have to contain $\Omega$. So, we're a family of subsets closed under $A\cup B$ and $A\setminus B$. You don't care about this at all.

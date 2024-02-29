@@ -1,0 +1,603 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+
+% matheoperators for aut and der
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Der}{Der}
+
+\title{18.745 Lie Algebra}
+\subtitle{Homework 3}
+\begin{document}
+% 1.
+% (1) Classify C Lie algebras of dim at most 3, up to isomorphism.
+% (2) Classify real Lie algebras of dim at most 3.
+\section{Classifying Lie algebras of dim at most 3}
+\begin{prob}
+    Classify $\CC$ Lie algebras of dim at most $3$, up to isomorphism.
+\end{prob}
+
+Observe that ``up to isomorphism'' just means ``up to basis change.''
+
+\begin{rcase*}
+    [Dimension $0$]
+\end{rcase*}
+There is only one vector space of dimension $0$, namely $\{0\}$.
+
+\begin{rcase*}
+    [Dimension $1$]
+\end{rcase*}
+There is only one Lie algebra of dimension $1$, $\CC$, and all Lie brakets
+must be $0$ by antisymmetry.
+
+\begin{rcase*}
+    [Dimension $2$]
+\end{rcase*}
+Suppose $L = \spn(x,y)$; then $[L, L] = \spn([x,y])$ has one dimension;
+thus let $0\neq x\in [L,L]$, and pick any $y$ to fill the basis.
+Then, a Lie algebra is completely specified by the value of $\alpha\in \CC$
+of $[x,y] = \alpha x$. There are then two cases: if $\alpha\neq 0$,
+one can scale $y' = y/\alpha$ to make $\alpha = 1$. Otherwise,
+$[x,y] = 0$, and $L$ is abelian.
+
+There are two solutions:
+\begin{enumerate}
+    \item $L$ is abelian.
+    \item $L$ is spanned by $x$ and $y$ with $[x,y] = x$.
+\end{enumerate}
+
+\begin{rcase*}
+    [Dimension $3$, Abelian]
+\end{rcase*}
+There is only one abelian Lie algebra of dimension $3$.
+
+\begin{rcase*}
+    [Dimension $3$, Commutator has dimension $1$]
+\end{rcase*}
+In this case, let $x\in [L,L]$; then the Lie algebra is
+completely specified by the values of $\alpha,\beta,\gamma\in \CC$
+of
+\[
+    [x,y] = \alpha x,\quad [x,z] = \beta x,\quad [y,z] = \gamma x.    
+\]
+I claim I can force either $\alpha = 0$ or $\beta = 0$
+through a basis change. If both are currently nonzero,
+then set $y' = y/\alpha - z/\beta$; then
+\[
+    [x,y'] = [x,y] / \alpha - [x,z]/\beta = 0    
+\]
+
+Okay, so WLOG $\beta = 0$ above. Next, we have four cases:
+\begin{itemize}
+    \item If $\alpha = \gamma = 0$, then $[L,L] = 0$, contradiction.
+    \item If $\alpha \neq 0$ but $\gamma = 0$, then let $y' = y/\alpha$
+    such that the Lie algebra is
+    \[
+        [x,y] = x, \quad [x,z] = 0, \quad [y,z] = 0.    
+    \]
+    \item If $\alpha = 0$ but $\gamma \neq 0$, then let $z' = z/\gamma$
+    such that the Lie algebra is
+    \[
+        [x,y] = 0, \quad [x,z] = 0, \quad [y,z] = x.
+    \]
+    This is distinct from the previous Lie algebra, because $\ad_x = 0$
+    in this algebra whereas $\ad_x \neq 0$ in the previous algebra.
+    \item If $\alpha \neq 0$ and $\gamma \neq 0$, then let $y' = y/\alpha$
+    and $z' = z\alpha/\gamma$ such that the Lie algebra is
+    \[
+        [x,y] = x, \quad [x,z] = 0, \quad [y,z] = x.
+    \]
+    Then let $z' = z + x$ such that the Lie algebra is
+    \[
+        [x,y] = x, \quad [x,z] = 0, \quad [y,z] = 0.
+    \]
+    This is clearly the same as the first case.
+\end{itemize}
+
+So there are two distinct solutions in this case.
+
+\begin{rcase*}
+    [Dimension $3$, Commutator has dimension $2$,
+    the restriction to the commutator is abelian]
+\end{rcase*}
+To write out the case that we're in,
+let $x,y \in [L,L]$ be linearly independent and $z$ be linearly independent
+from $x,y$; we're in the case where
+\[
+    [x,y] = 0, \qquad \ad_z(L) = [L,L]    
+\]
+Well okay, I can perform arbitrary linear transformations
+on $x,y,z$. Linear transformations on $x$ and $y$ will
+conjugate $\ad_z(L)$, adding copies of $x,y$ to $z$ will
+do nothing to $\ad_z$, and scaling $z$ will scale $\ad_z$.
+
+By Jordan canonical form, I can write $\ad_z$ in one of two ways:
+\begin{itemize}
+    \item We have
+    \[
+        \ad_z = \begin{pmatrix}
+            \alpha & 0 \\
+            0 & \beta
+        \end{pmatrix}    
+    \]
+    (We're not writing the $z$-dimension of the domain or range because
+    we know $[z,z] = 0$ and $z\notin [L,L]$). Note neither $\alpha$
+    nor $\beta$ can be zero, because $\ad_z(L) = [L,L]$ exactly.
+
+    Then set $z' = z/\alpha$ to make $\ad_z$
+    of the form
+    \[
+        \begin{pmatrix}
+            1 & 0 \\
+            0 & \beta
+        \end{pmatrix},\qquad \beta \in \CC\setminus \{0\}    
+    \]
+    \item $\ad_z$ is a Jordan block of size $2$.
+    In this case, $\ad_z$ is of the form
+    \[
+        \ad_z = \begin{pmatrix}
+            \alpha & 1 \\
+            0 & \alpha
+        \end{pmatrix}
+    \]
+    Scale $z$ to make the generalized eigenvalue equal
+    to $1$; then after a basis change, $\ad_z$ is of the form
+    \[
+        \ad_z = \begin{pmatrix}
+            1 & 1 \\
+            0 & 1
+        \end{pmatrix}
+    \]
+\end{itemize}
+
+\begin{rcase*}
+    [Dimension $3$, Commutator has dimension $2$,
+    the restriction to the commutator is not abelian]
+\end{rcase*}
+
+To write out the case that we're in, let $x,y \in [L,L]$ be linearly independent
+and $z$ be linearly independent from $x,y$; by the dimension $2$ case,
+WLOG we're in the case where
+\[
+    [x,y] = x, \qquad \ad_z(L) \subset [L,L]
+\]
+The trick now is to notice that this is impossible. Pick any $z$ to fill out
+the basis, such that we can talk about $x$, $y$, and $z$ components.
+We know $y\in [L,L]$, but clearly $x$ and $y$ cannot be
+combined to create a $y$. Thus either $[x,z]$ or $[y,z]$ must contain
+a $y$ component.
+\begin{itemize}
+    \item If $[x,z]$ contains a $y$ component, notice that
+    \[
+        \underbrace{[x, [y,z]] + [y, [z,x]]}_{\in \CC x} + \underbrace{[z, [x,y]]}_{\notin \CC x} = 0
+    \]
+    contradiction.
+    \item If $[y,z]$ contains a $y$ component, notice that
+    \[
+        \underbrace{[x,[y,z]] + [y, [z,x]]}_{\in \CC x} + [z, [x,y]] = 0
+    \]
+    thus $[x,z]\in \CC x$. Scale $z$ such that $[x,y] = [x,z] = x$.
+    The Jacobi identity now reads
+    \[
+        0 = [x, [y,z]] + \underbrace{[y, [z,x]]}_x + \underbrace{[z, [x,y]]}_x = [x, [y,z]]  
+    \]
+    So $[y,z]$ actually cannot contain any $y$ components, contradiction.
+\end{itemize}
+
+% Well... that's awful. What sorts of basis changes would preserve
+% the fact that $[x,y] = x$? Well, first observe that $\spn(x)$ is special;
+% it's precisely $[[L,L], [L,L]]$. So I can only scale $x$.
+% The other thing I can do is shift $y$ by a multiple of $x$,
+% which would preserve $[x,y] = x$. I cannot scale $y$,
+% because this would introduce a multipicative factor into $[x,y] = x$.
+% Thus, I am allowed to perform basis changes of the form
+% \[
+%     \binom{x'}{y'} = \begin{pmatrix}
+%         \alpha & 0 \\
+%         \beta & 1
+%     \end{pmatrix} \binom{x}{y},\qquad \alpha\neq 0
+% \]
+% and none else. Now, I have $[z,x]$ and $[z,y]$ to worry about.
+% By taking $y' = y - [z, y]/[z, x] x$, 
+
+\begin{rcase*}
+    [Dimension $3$, Commutator has dimension $3$]
+\end{rcase*}
+
+In this case, $[L,L] = L$, and all adjoint maps
+have rank $2$. Pick any $x\in L$. If $x$ is nilpotent,
+then because it is rank $2$ we can write
+\[
+    \ad_x = \begin{pmatrix}
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0
+    \end{pmatrix}    
+\]
+in some basis $\{x,y,z\}$. But then we see $[x,y] = x$
+for instance, so $\ad_y(x) = -x$. Either way, I can
+find an $x\in L$ such that $\ad_x$ has an eigenvector
+with nonzero eigenvalue. By scaling, that eigenvector, $y$,
+has eigenvalue $1$.
+
+Then, because we know $[L,L] = L$, $[x,x] = 0$.
+We know $x = [a,b]$ for some $a,b\in L$, so
+if we do some shenanigans:
+\[
+    \ad_{[a,b]} = [\ad_a, \ad_b]
+\]
+Thus $\Tr(\ad_{x}) = 0$ and we know $\ad_x$ has a different eigenvector
+with eigenvalue $-1$ called $z$. So now we've got:
+\[
+    [x,y] = y, \qquad [z,x] = z.    
+\]
+Fine. Now, we apply the Jacobi identity to get
+\[
+    [x, [y,z]] + [y, [z,x]] + [z, [x,y]] = 0\implies [x, [y,z]] = [y,z] + [z,y] = 0
+\]
+Well, the only thing annihilated by $\ad_x$ is $x$ itself,
+so $[y,z] \in \CC x$. This can't be zero, so we might as well
+scale both $y$ and $z$ again such that $[y,z] = x$.
+Then, we have
+\[
+    [x,y] = y, \qquad [z,x] = z, \qquad [y,z] = x.    
+\]
+
+
+
+
+
+\begin{prob}
+    Classify real Lie algebras of dim at most $3$.
+\end{prob}
+
+No modifications need to be made to the $1$, $2$,
+abelian $3$-dimensional, and $3$-dimensional with $\dim [L,L] = 1$
+cases; in those cases I did not use anything involving the algebraic
+completeness of $\CC$ or anything, and the proof remains
+valid over $\RR$.
+
+\begin{rcase*}
+    [Dimension $3$, Commutator has dimension $2$,
+    the restriction to the commutator is abelian]
+\end{rcase*}
+
+To write out the case that we're in,
+let $x,y \in [L,L]$ be linearly independent and $z$ be linearly independent
+from $x,y$; we're in the case where
+\[
+    [x,y] = 0, \qquad \ad_z(L) = [L,L]    
+\]
+Well okay, I can perform arbitrary linear transformations
+on $x,y,z$. Linear transformations on $x$ and $y$ will
+conjugate $\ad_z(L)$, adding copies of $x,y$ to $z$ will
+do nothing to $\ad_z$, and scaling $z$ will scale $\ad_z$.
+
+I can use Jordan
+canonical form, I just need to stay aware that not all (complex)
+basis changes are possible. Remember that $\ad_z(L)$ must have
+rank $2$. There are two possibilities:
+\begin{itemize}
+    \item $L$ is diagonalizable. There are two sub-cases:
+    \begin{itemize}
+        \item Both eigenvalues are real; say $\alpha$ and $\beta$.
+        WLOG $\abs{\alpha} > \abs{\beta}$. We can then scale
+        such that $\alpha = 1$; in this case,
+        $\beta \in [-1, 1]$. To re-iterate:
+        \[
+            [z,x] = x,\qquad [z,y] = \beta y    
+        \]
+        \item Both eigenvalues are complex, in which case
+        they must be conjugate by the characteristic polynomial.
+        Say $\alpha$ and $\conj{\alpha}$. Scale $z$
+        such that they are roots of unity, $e^{i\theta}$
+        and $e^{-i\theta}$. Then, by a change of basis,
+        one can write this as
+        \[
+            \begin{pmatrix}
+                \cos \theta & -\sin \theta \\
+                \sin \theta & \cos \theta
+            \end{pmatrix}    
+        \]
+        i.e.
+        \[
+            [z,x] = x\cos \theta - y\sin \theta,\qquad [z,y] = x\sin \theta + y\cos \theta    
+        \]
+    \end{itemize}
+    \item $L$ is nilpotent with generalized eigenvalue $\alpha\in \RR$
+    (which must be real by e.g. the characteristic polynomial).
+    We scale in the same as before, yielding
+    \[
+        [z,x] = x, \qquad [z,y] = x + y    
+    \]
+\end{itemize}
+
+The above possibilities are exhaustive and disjoint, because $[L,L]$
+is basis-invariant, and as we showed above any possible $\ad_z$
+is some combination of a basis change and scaling.
+
+\begin{rcase*}
+    [Dimension $3$, Commutator has dimension $3$]
+\end{rcase*}
+
+In this case, $[L,L] = L$, and all adjoint maps
+have rank $2$. Following the $\CC$ proof, I can
+find an $x\in L$ such that $\ad_x$ has an eigenvector
+with nonzero eigenvalue $\lambda$.
+
+Then, because we know $[L,L] = L$, $[x,x] = 0$.
+We know $x = [a,b]$ for some $a,b\in L$, so
+if we do some shenanigans:
+\[
+    \ad_{[a,b]} = [\ad_a, \ad_b]
+\]
+Thus $\Tr(\ad_{x}) = 0$ and we know $\ad_x$ has a different eigenvector
+with eigenvalue $-\lambda$ called $z$.
+
+By reality, either $\lambda$ is pure real or pure imaginary.
+\begin{itemize}
+    \item Suppose $\lambda$ is pure real. Then, we can sacle such that $\lambda = 1$;
+    the prior analysis goes through and we end up with
+    \[
+        [x,y] = y, \qquad [z,x] = z,\qquad [y,z] = x.    
+    \]
+    \item Otherwise, suppose $\lambda$ is pure imaginary. Then, we can scale
+    such that $\lambda = i$. By basis change, we can make $\ad_x$
+    of the form
+    \[
+        \ad_z = \begin{pmatrix}
+            0 & -1\\
+            1 & 0
+        \end{pmatrix}
+    \]
+    i.e. $[x,y] = z$ and $[z,x] = y$.
+    Now, we apply the Jacobi identity to get
+    \[
+        [x, [y,z]] + [y, [z,x]] + [z, [x,y]] = 0\implies [x, [y,z]] = 0
+    \]
+    Well, the only thing annihilated by $\ad_x$ is $x$ itself,
+    so $[y,z] \in \RR x$. By identical reasoning to above,
+    I know that the trace of $\ad_y$ is $0$, thus $[y,z] = x$
+    exactly. Then, we have
+    \[
+        [x,y] = z, \qquad [z,x] = y,\qquad [y,z] = x.
+    \]
+\end{itemize}
+
+\section{Automorphisms and derivations}
+
+\begin{prob}
+    Let $G$ be a Lie group with Lie algebra $\fg$. Let
+    \[
+        \Aut(\fg) := \{g \in \GL(\fg) \mid [ga, gb] = g[a, b] \text{ for all } a, b \in \fg\}
+    \]
+    be the algebra of \vocab{automorphisms} of $\fg$. Let
+    \[
+        \Der(\fg) := \{g \in \gl(\fg) \mid [x.a, b] + [a, x.b] = x.[a, b] \text{ for all } a, b \in \fg\}
+    \]
+    be the Lie algebra of derivations of $\fg$.
+    Prove that $\Der(\fg)$ is the Lie algebra of $\Aut(\fg)$.
+\end{prob}
+
+Observe $\Aut(g)$ is a matrix subgroup. Recall that $\exp$ is a local
+homomorphism between a neighborhood of $0\in \gl(\fg)$ and
+an open neighborhood of $1 \in \GL(\fg)$.
+
+Thus, sufficiently small matrices $M\in \gl(\fg)$ iff $\exp(M) \in \GL(\fg)$,
+and we can expand this to second order:
+\begin{align*}
+    [(I+tM+O(t^2))x , (I+tM+O(t^2))y] &= (I+tM+O(t^2))[x,y]\\
+    \implies t\left([Mx,y]+[x,My]\right) + O(t^2) &= t M[x,y]
+\end{align*}
+Taking the derivative at $t=0$ gives $[Mx,y] + [x,My] = M[x,y]$,
+so the space of possible derivatives $f'(0)$ is exactly $\Der$, as desired.
+
+\begin{prob}
+    Show that $g \mapsto \Ad_g$ gives a morphism of Lie groups $G \to \Aut(\fg)$.
+\end{prob}
+
+Recall that any morphism of Lie groups induces a homomorphism of Lie
+algebras via the differential. In this case, consider the homomorphism
+$h\to ghg^{-1}$. Its differential is defined to be $\Ad_g$. So
+of course this is in $\Aut(\fg)$, which is precisely the Lie homomorphisms
+$\fg\to \fg$.
+
+\begin{prob}
+    Show that $x \mapsto \ad_x$ is a morphism of Lie algebras $\fg \to \Der(\fg)$.
+\end{prob}
+
+I mean, we're trying to show
+\[
+    [\ad_xa,b] + [a,\ad_x b] = \ad_x[a,b]
+\]
+but we know $\ad_x = [x, \bullet]$ so this is just the Jacobi identity:
+\[
+    [[x,a],b]+[a,[x,b]] = [x,[a,b]]
+\]
+
+\begin{prob}
+    Show that $\ad(\fg)$ is an ideal in $\Der(\fg)$.
+\end{prob}
+
+
+For any $M\in \Der$, $\ad_x\in \ad(\fg)$, and $y\in \fg$,
+we have
+\[
+    M[x,y] - [x,My] = [Mx,y]
+\]
+because $M$ is a derivation. Thus
+$[\ad_x, M] = Mx\in \ad(\fg)$, as desired.
+
+
+% 3. Let G be a complex connected simply connected Lie group, with Lie algebra g, and let
+% k ⊂ g be a real form of g.
+% (1) Define the R-linear map θ : g → g by θ(x + iy) = x − iy, with x, y ∈ k. Show that
+% θ is an automorphsim of g (considered as a real Lie algebra), and that it can be
+% uniquely lifted to an automorphism θ : G → G of the group G (considered as a real
+% Lie group).
+% (2) Let K = Gθ
+% . Show that K is a real Lie group with Lie algebra k.
+\section{Real forms}
+\begin{prob}
+    Let $G$ be a complex connected simply connected Lie group, with Lie algebra $\fg$, and let
+    $\mathfrak{k} \subset \fg$ be a real form of $\fg$.
+    
+    Define the $\RR$-linear map $\theta : \fg \to \fg$ by $\theta(x + iy) = x - iy$,
+    with $x, y \in \mathfrak{k}$. Show that
+    $\theta$ is an automorphism of $\fg$ (considered as a real Lie algebra), and that it can be
+    uniquely lifted to an automorphism $\theta : G \to G$ of the group $G$ (considered as a real
+    Lie group).
+\end{prob}
+
+$\theta: x+iy \mapsto x-iy$ is clearly $\RR$-linear, and
+\begin{align*}
+    \theta ([a+bi,x+yi] )&= \theta([a,x]) -\theta([b,y]) + \theta(i[b,x]) +  \theta (i[a,y])\\
+    &=[a,x]-[b,y]-i[b,x]-i[a,y]=[a-bi,x-yi]\\
+    &= [\theta(a+bi),\theta(c+di)]
+\end{align*}
+thus $\theta$ is a $\RR$-homomorphism of Lie algebras.
+(We use the fact that $\theta$ fixes $\mathfrak{k}$ and negates $i\mathfrak{k}$).
+
+Since $G$ is simply connected, Lie's second theorem tells us that every
+automorphism of its Lie algebra corresponds bijectively to a unique
+lifting to an automorphism $\Theta: G \mapsto G$. In particular, $\Theta$
+should send $e^{t(a+bi)}$ to $e^{t\theta(a+bi)}$.
+
+Since $\theta$ was a $\mathbb R$-automorphism,
+$\Theta$ is an automorphism of $G$ as a real Lie group.
+    
+\begin{prob}
+    Let $K = G^\theta$. Show that $K$ is a real Lie group with Lie algebra $k$.
+\end{prob}
+
+Since $\Theta$ is an automorphism, the set of fixed points
+$K=G^\Theta$ is a subgroup. $\Theta$ is continuous, thus
+its fixed points form a closed set, hence $K$ is a closed (real) Lie subgroup.
+
+$K$ is fixed by $\Theta$, thus $\mathrm{Lie}(K)$ is fixed by
+$\theta$; the differential of the map $K\to K$ has to map into $\mathrm{Lie}(K)$.
+Thus, $\mathrm{Lie}(K) \subseteq \mathfrak{k}$.
+
+On the other hand, for any $x \in \mathfrak{k}$,
+$e^{tx}$ gets sent to $e^{t\theta(x)} = e^{tx}$
+by $\Theta$, so this path is in $K$.
+Thus $\mathfrak{k} \subseteq \mathrm{Lie}(K)$, and we're done.
+
+% 4. Let M = sl3(R) contains a copy of sl2 in its upper left had 2 × 2 position. Write
+% M as direct sum of irreducible sl2-submodules (M viewed as sl2 module via the adjoint
+% representation).
+\section{Decomposing $\sll_3(\RR)$ into $\sll_2(\RR)$ submodules}
+\begin{prob}
+    Let $M = \sll_3(\RR)$ contains a copy of $\sll_2$ in its upper left had $2 \times 2$ position. Write
+    $M$ as direct sum of irreducible $\sll_2$-submodules ($M$ viewed as $\sll_2$ module via the adjoint
+    representation).
+\end{prob}
+Here you go:
+\[ 
+\left\{\begin{pmatrix}
+    a &  & \\
+     & a & \\
+    & & -2a
+\end{pmatrix}\right\}
+\oplus
+\left\{\begin{pmatrix}
+    a & b & \\
+    c & -a & \\
+    & & 0
+\end{pmatrix}\right\}
+\oplus
+\left\{\begin{pmatrix}
+    0 & 0 & a\\
+    0 & 0 & b\\
+    0 & 0 & 0
+\end{pmatrix}\right\}
+\oplus
+\left\{\begin{pmatrix}
+    0 & 0 & 0\\
+    0 & 0 & 0\\
+    a & b & 0
+\end{pmatrix}\right\}
+\]
+These subspaces are clearly linearly independent. They also
+span $\sll_3$ because of dimension counting: $1 + 3 + 2 + 2 = 8$.
+Now we do commutation with copies of $\mathfrak{sl}_2$
+in the upper left hand corner to show that these are invariant
+and irreducible.
+\begin{enumerate}
+    \item The first subspace commutes with all of $\sll_2$
+    and is thus invariant; it is also one-dimensional and
+    thus irreducible.
+    \item The second subspace is $\sll_2$;
+    recall that $[\sll_2, \sll_2] = \sll_2$
+    so this is irreducible.
+    \item The second subspace is acted upon as
+    \[
+        \begin{pmatrix}
+        M&0\\0&0
+    \end{pmatrix}
+        \begin{pmatrix}
+        0 & 0 & a\\
+        0 & 0 & b\\
+        0 & 0 & 0
+    \end{pmatrix}
+    -\begin{pmatrix}
+        0 & 0 & a\\
+        0 & 0 & b\\
+        0 & 0 & 0
+    \end{pmatrix}\begin{pmatrix}
+            M&0\\0&0
+        \end{pmatrix} =\begin{pmatrix}
+        0 & 0 & a'\\
+        0 & 0 & b'\\
+        0 & 0 & 0
+    \end{pmatrix}
+    \]
+    (Here $M\in \sll_2$ and $M\binom{a}{b} = \binom{a'}{b'}$).
+    There are no eigenvectors of \emph{all of} $\sll_2$, so
+    this is irreducible.
+    \item The fourth subspace is the same as the third.
+\end{enumerate}
+
+\section{Solvable and nilpotent Lie algebras}
+\begin{prob}
+    Let $L$ be a Lie algebra.
+    Prove that $L$ is solvable if and only if $\ad L$ is solvable.
+\end{prob}
+
+Recall that for any two Lie subalgebras of $L$, $K$ and $H$,
+$\ad [K, H] = [\ad K, \ad H]$.
+
+Thus, we can just pull out of the entire derived series:
+\[
+    [[\ad L, \ad L], [\ad L, \ad L]] = [\ad [L,L], \ad [L,L]] = \ad [[L,L], [L,L]]
+\]
+Now, if $\ad L$ is solvable, then $0 = (\ad L)^{(k)} = \ad L^{(k)}$.
+This literally says $[L^{(k)}, L] = 0$, thus $L^{(k + 1)} = 0$.
+
+If $L^{(k)} = 0$, then $(\ad L)^{(k)} = 0$ automatically.
+
+\begin{prob}
+    Prove that $L$ is nilpotent if and only if $\ad L$ is nilpotent.
+\end{prob}
+Similarly, $\ad L^k = (\ad L)^k$. If $(\ad L)^k = 0$, then $\ad L^k = 0$,
+thus $[L, L^k] = 0$, which means $L^{k + 1} = 0$ as desired.
+If $L^k = 0$, then $(\ad L)^k = 0$ done.
+
+\begin{prob}
+    Prove that $L$ is solvable if and only if there exists a chain of subalgebras
+    \[
+        L = L_0 \supset L_1 \supset L_2 \supset \cdots \supset L_k = 0
+    \]
+    such that $L_{i+1}$ is an ideal of $L_i$ and such that each $L_i/L_{i+1}$ is abelian.
+\end{prob}
+
+If $L$ is solvable, then let $L_k = L^{(k)}$;
+in general $L / [L,L]$ is abelian thus we're done.
+
+Now, if $K\subset L$ is an ideal
+such that $L / K$ is abelian, then $[L,L]\subset K$.
+Indeed, for all $x,y\in L$,
+$0 = [x + K, y + K] = [x,y] + K$ thus $[x,y]\in K$.
+
+By induction, if such a chain exists, $L^{(k)}\subset L_k = 0$,
+so we're done.
+\end{document}

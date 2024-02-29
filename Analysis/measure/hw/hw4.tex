@@ -1,0 +1,996 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+\usepackage{mathrsfs}
+
+\newcommand{\BBB}{\mathscr{B}}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\var}{var}
+
+\title{18.675 Problem Set 4}
+\begin{document}
+% PROBLEMS SET 4 FOR 18.675 (FALL 2023)
+% Problem 1. Let X = (X1, . . . , Xn) be a random variable, with all components in L2(P). The
+% covariance matrix var (X) = (ci,j : 1 ≤ i, j ≤ n) of X is defined by ci,j = cov (Xi, Xj ). Show that
+% var(X) is a non-negative definite matrix.
+\section{}
+\begin{prob}
+Let $X = (X_1, \dots, X_n)$ be a random variable,
+with all components in $L^2(P)$. The covariance
+matrix $\var(X) = (c_{i,j} : 1 \leq i, j \leq n)$
+of $X$ is defined by $c_{i,j} = \cov(X_i, X_j)$.
+Show that $\var(X)$ is a non-negative definite matrix.
+\end{prob}
+
+Well, for any particular vector $v = (v_1, \dots, v_n)$,
+we have
+\begin{align*}
+    v^T \var(X) v &= \sum_{i,j} v_i v_j c_{i,j} \\
+    &= \sum_{i,j} v_i v_j \cov(X_i, X_j) \\
+    &= \cov\left( \sum_i v_i X_i, \sum_j v_j X_j \right) \\
+    &= \var\left( \sum_i v_i X_i \right) \\
+    &\geq 0
+\end{align*}
+The third line is true because covariance is linear
+in each random variable; this is clear by starting at the definition.
+The fourth line is true by definition of variance. The
+fifth line is true because squares of real numbers
+are nonnegative, and the integral of a non-negative
+function is non-negative.
+
+
+% Problem 2. For a finite Borel measure μ on R show that, if ∫
+% R |x|kdμ(x) < ∞ for k ∈ N,
+% then the Fourier transform ̂ μ of μ has a kth continuous derivative, which at 0 is given by
+% ̂
+% μ(k)(0) = ik
+% ∫
+% R
+% xkdμ(x).
+\section{}
+\begin{prob}
+For a finite Borel measure $\mu$ on $\RR$ show that,
+if $\int_\RR \abs{x}^k d\mu(x) < \infty$ for $k \in \NN$,
+then the Fourier transform $\hat{\mu}$ of $\mu$ has a
+$k$th continuous derivative, which at $0$ is given by
+\[
+    \hat{\mu}^{(k)}(0) = i^k \int_\RR x^k d\mu(x)
+\]
+\end{prob}
+
+First off, note that on finite measure spaces, $L^p \subset L^q$
+whenever $p \leq q$ by Holder's inequality;
+\begin{align*}
+    \int_\RR \abs{x}^p d\mu(x) &\leq \left(\int_\RR \abs{x}^q d\mu(x)\right)^{p/q} \left(\int_\RR 1 d\mu(x)\right)^{1 - p/q} \\
+    &= \left(\int_\RR \abs{x}^q d\mu(x)\right)^{p/q} \mu(\RR)^{1 - p/q} \\
+    &< \infty
+\end{align*}
+So we also know that $\int_\RR \abs{x}^m d\mu(x) < \infty$ for all $m \leq k$.
+
+% The Fourier transform of $\mu$ is defined as
+% \[
+%     \hat{\mu}(t) = \int_{\RR} e^{itx} d\mu(x)
+% \]
+% for $t \in \RR$.
+
+Now, let's use induction to show that
+\[
+    \hat{\mu}^{(m)}(t) = i^m \int_E x^m e^{itx} d\mu(x)\tag{$\star$}
+\]
+for all $m \leq k$; this clearly suffices (we know $\hat{\mu}^{(m)}$
+is continuous because Fourier transforms are continuous, and we can
+plug in $0$ for the answer).
+The base case is
+\[
+    \hat{\mu}(t) = \int_{\RR} e^{itx} d\mu(x)    
+\]
+which is true by definition.
+
+Let $f_m(t,x) = i^m x^me^{itx}$ be the desired integrand. Let $E = \RR$ for clarity.
+Observe
+\[
+    \frac{\pa}{\pa t} f_m(t,x) = f_{m+1}(t,x).
+\]
+
+For all $m\geq 0$, we satisfy:
+\begin{itemize}
+    \item For all $t$, we can integrate $f_m(t,\bullet)$ over $E$. Indeed,
+    \[
+        \int_E \abs{f_m(t,x)} d\mu(x) \leq \int_E \abs{x}^k d\mu(x) < \infty.
+    \]
+    \item For all $x$, we can differentiate $f_m(\bullet,x)$ with respect
+    to $t$ by construction.
+    \item For all $x\in E$ and all $t\in U$,
+    \[
+        \abs{ \frac{\partial}{\partial t} f_m(t,x) } \leq \abs{f_{k+1}(t,x)}    
+    \]
+    (in fact they are equal) and the RHS is integrable over $E$.
+\end{itemize}
+Thus, theorem $3.5.1$ applies, and we can swap the derivative with
+the integral; for all $m$,
+\begin{align*}
+    \frac{\pa}{\pa t} \hat{\mu}^{(m)}(t) &= \frac{\pa}{\pa t} \int_E f_m(t,x) d\mu(x) \\
+    &= \int_E \frac{\pa}{\pa t} f_m(t,x) d\mu(x) \\
+    &= \int_E i^{m+1} f_{m+1}(t,x) d\mu(x)
+\end{align*}
+as desired.
+
+% Plugging in $t = 0$, we achieve the desired result.
+
+% I guess I should show that $\star$ is continuous. This is kind of obvious;
+% give me some $\eps > 0$. Using the stupid fact that $\abs{e^{i\theta} - 1} < \abs{\theta}$
+% for all $\theta\in \RR$, and letting
+% \[
+%     M = \int_E \abs{x}^m d\mu(x) < \infty    
+% \]
+% I claim that $\delta = \frac{\eps}{M}$ works for continuity. Indeed,
+% for any $t'\in (t-\delta, t+\delta)$,
+% \begin{align*}
+%     \abs{f_m(t,x') - f_m(t,x)} &\leq \abs{\int \left(e^{it'x} - e^{itx}\right) x^m d\mu(x)} \\
+%     &\leq \int \abs{e^{it'x} - e^{itx}} \abs{x}^m d\mu(x) \\
+%     &\leq \int \abs{t' - t} \abs{x}^m d\mu(x) \\
+%     &\leq \abs{t' - t} M \\
+%     &< \eps
+% \end{align*}
+% (alternatively, fourier transforms are automatically continuous...)
+
+% Problem 3.
+% (i) Show that for any real numbers a, b one has ∫ b
+% a eitxdx → 0 as |t| → ∞.
+% (ii) Show that, for any f ∈ L1(R), the Fourier transform
+% ̂
+% f (t) =
+% ∫ ∞
+% −∞
+% eitxf (x)dx
+% tends to 0 as |t| → ∞.
+\section{}
+\begin{prob}
+    Show that for any real numbers $a, b$ one has
+    $\int_a^b e^{itx} dx \to 0$ as $\abs{t} \to \infty$.
+\end{prob}
+
+We can just compute:
+\begin{align*}
+    \abs{\int_a^b e^{itx} dx} &= \abs{\frac{e^{itx}}{it} \bigg|_a^b} \\
+    &= \abs{\frac{e^{itb} - e^{ita}}{it}} \\
+    &= \abs{\frac{e^{itb} - e^{ita}}{t}} \\
+    &\leq \frac{2}{\abs{t}} \to 0
+\end{align*}
+where the $2$ is by triangle inequality or whatever.
+
+\begin{prob}
+    Show that, for any $f \in L^1(\RR)$, the Fourier
+    transform $\hat{f}(t) = \int_{-\infty}^\infty e^{itx} f(x) dx$
+    tends to $0$ as $\abs{t} \to \infty$.
+\end{prob}
+By splitting $f$ into its positive and negative components, WLOG $f$
+is nonnegative and integral $\int_\RR f = M < \infty$.
+By a well-known lemma, there exists an increasing
+sequence of nonnegative, simple functions $f_n$ such that $f_n \to f$ pointwise;
+fix this sequence; by monotone convergence theorem
+or whatever you want,
+\[
+    \int_\RR f(x) - f_n(x) dx\to 0    
+\]
+In particular, for any $\eps$, I can find an $N$
+such that $\int_\RR f(x) - f_N(x) < 0.0001\eps$.
+% Now, for any $\eps$, I will find a $T$ such that if $\abs{t} > T$,
+% then $\abs{\hat{f}(t)} < \eps$.
+
+Then, for \emph{any} $t\in \RR$,
+% Note that $\abs{e^{itx}(f(x) - f_n(x))} = f(x) - f_n(x)\leq f(x)$, thus
+\[
+    \abs{\int_\RR e^{itx}f(x) dx- \int_\RR e^{itx}f_N(x)dx} =\abs{\int_\RR e^{itx}(f(x) - f_N(x))dx} \leq \int_\RR f(x) - f_N(x) dx\leq 0.0001\eps
+\]
+% Well, pick an $N$ such that if $n \geq N$, the RHS is at most $0.0001\eps$.
+Now, look carefully at
+\[
+    f_N = \sum_{k=1}^{K} c_k \id(E_k), \qquad \int_\RR f_N \leq \int_\RR f \implies \sum_k c_k\mu(E_k) \leq M
+\]
+In particular, each $E_k$ has finite, positive measure.
+By Littlewood's first principle, for each $E_k$, there is a finite
+collection of disjoint open intervals
+$U_k = \bigcup_{n = 1}^{N_k}(a_{k,n}, b_{k,n})_{n=1}^{N_k}$ such that
+\[
+    \mu(E_k \Delta U_k) < 0.0001\eps / (K\cdot c_k)
+\]
+I.e. we can approximate $f_N$ with
+\[
+    g_N = \sum_{k=1}^{K} c_k \sum_{n=1}^{N_k} \id(a_{k,n}, b_{k,n})    
+\]
+Great, this means we get the following ridiculous bound:
+\begin{align*}
+    \abs{\int_\RR e^{itx}f_N - \int_\RR e^{itx}g_N}
+    &\leq \abs{\sum_{k = 1}^K\int_\RR e^{itx} c_k \id(E_k) - \sum_{k=1}^K \int_\RR e^{itx} c_k \id(U_k)} \\
+    &\leq \sum_{k = 1}^K\abs{\int_{E_k\setminus U_k} e^{itx}c_k - \int_{U_k\setminus E_k} e^{itx}c_k} \\
+    &\leq \sum_{k = 1}^K\abs{\int_{E_k\setminus U_k} e^{itx}c_k} + \abs{\int_{U_k\setminus E_k} e^{itx}c_k} \\
+    &\leq \sum_{k = 1}^K\abs{\int_{E_k\Delta U_k} e^{itx}c_k} \\
+    &\leq \sum_{k = 1}^K \abs{c_k}\left(\frac{0.0001\eps}{K\cdot c_k}\right) \\
+    &= 0.0001\eps
+\end{align*}
+Finally, note that
+\[
+    \int_\RR e^{itx}g_N = \sum_{k=1}^{K} c_k \sum_{n=1}^{N_k} \int_{a_{k,n}}^{b_{k,n}} e^{itx}    
+\]
+but every term of this summation can be made arbitrarily small by part (i).
+In particular, this whole thing can be made smaller than $0.0001\eps$ in absolute value.
+Observe $0.0001\eps + 0.0001\eps + 0.0001\eps \leq \eps$. Win.
+
+% Problem 4. We say that f ∈ L2(R) is L2-differentiable with L2-derivative Df if
+% ||τhf − f − hDf ||2/h → 0 as h → 0,
+% where τhf (x) = f (x + h). Show that the function f (x) = max (1 − |x|, 0) is L2-differentiable and
+% find its L2-derivative.
+% Suppose that f ∈ L1 ∩ L2 is L2-differentiable. Show that u ̂f (u) ∈ L2. Deduce that f has a
+% continuous version and that ||f ||∞ ≤ C||(1 + |u|) ̂f (u)||2 for some constant C < ∞, to be determined.
+\section{}
+\begin{prob}
+    We say that $f \in L^2(\RR)$ is $L^2$-differentiable
+    with $L^2$-derivative $Df$ if
+    $\norm{\tau_h f - f - hDf}_2/h \to 0$ as $h \to 0$,
+    where $\tau_h f(x) = f(x + h)$. Show that the
+    function $f(x) = \max(1 - \abs{x}, 0)$ is
+    $L^2$-differentiable and find its $L^2$-derivative.
+\end{prob}
+
+Well, we're basically allowed to ignore non-differentiable sets
+of measure $0$. The $L^2$ derivative is
+\[
+    Df = \begin{cases}
+        0 & x < -1\\
+        1 & -1 \leq x < 0\\
+        -1 & 0 \leq x < 1\\
+        0 & x \geq 1
+    \end{cases}    
+\]
+such that for all $\abs{h} < 1$,
+\[
+    \tau_hf - f - hDf = \begin{cases}
+        0 & x < -1-h\\
+        x+1+h & -1-h \leq x < -1 \\
+        0 & -1 \leq x < -h\\
+        -2x-2h & -h \leq x < 0\\
+        0 & 0 \leq x < 1 - h\\
+        x-1+h & 1 - h \leq x < 1\\
+        0 & x \geq 1
+    \end{cases}    
+\]
+Okay, the squared-$L^2$ norm of this thing (all parts
+integrated with usual Riemann integral) is 
+\[
+    \frac{h^3}{3} + 4\cdot \frac{h^3}{3} + \frac{h^3}{3} = 2h^3
+\]
+Thus the $L^2$ norm is $\sqrt{2}h^{3/2}$, and the limit
+is of $\sqrt{2}h^{1/2}$, which vanishes as $h \to 0$. Done.
+
+\begin{prob}
+    % [Extended]
+    Suppose that $f \in L^1 \cap L^2$ is $L^2$-differentiable.
+    Show that $u\hat{f}(u) \in L^2$.
+
+    % In fact, everything works the way you want:
+\end{prob}
+Note that $Df \in L^2$, because
+otherwise the above integral
+is always $\infty$.
+
+% Obviously, the main claim is that
+% \[
+%     \widehat{Df}(u) = iu\hat{f}(u)    
+% \]
+Well... let's just do it! Rewrite:
+\[
+    \frac{\tau_h f - f}{h}\stackrel{\norm{\bullet}_2}{\to} Df
+\]
+% Then, for all $x$,
+% \[
+%     \frac{\tau_h f(x) - f(x)}{h} e^{-iux} \stackrel{\norm{\bullet}_2}{\to}
+%     Df(x) e^{-iux}
+% \]
+(as functions in $u$). We know that the Fourier transform
+(or rather, its extension from $\LL^1\cap \LL^2$ to $\LL^2$)
+is a Hilbert space isomorphism (theorem $7.6.1$),
+so it preserves limits in the $L^2$ norm. Thus,
+\[
+    \int_\RR \frac{\tau_h f(x) - f(x)}{h} e^{iux} dx \stackrel{\norm{\bullet}_2}{\to} [\widehat{Df}]
+\]
+as a function in $u$.
+
+\idea{
+    [Sanity Check]
+    As the main point of this problem is that $[\widehat{Df}]\in \LL^2$,
+    let me talk about it.
+
+    Here, we are defining $[\widehat{Df}]$ as described in $7.6.1$;
+    it is the limit of the fourier transforms of a sequence
+    of functions in $\LL^1\cap \LL^2$ which converge in $\LL^2$.
+    As the Plancherel identity holds for all functions in
+    $\LL^1\cap \LL^2$, we know that this limiting function is
+    also in $\LL^2$.
+}
+
+However, observe that we can explicitly compute the LHS:
+\begin{align*}
+    \int_\RR \frac{\tau_h f(x) - f(x)}{h} e^{iux} dx
+    &= \int_\RR f(x) e^{iux} \frac{e^{-ihu} - 1}{h} dx\\
+    &= \frac{e^{-ihu} - 1}{h} \hat{f}(u)\\
+    &\to -iu\hat{f}(u)
+\end{align*}
+\emph{pointwise}; this works \emph{literally everywhere}.
+Convergence in $L^2$
+implies that there exists a subsequence which converges
+pointwise almost everywhere. Thus, $[\widehat{Df}] = [-iu\hat{f}]$,
+and $u\hat{f}\in L^2$.
+
+% Because $f\in L^1\cap L^2$, the Plancherel theorem applies,
+% and we can write
+% \[
+%     \norm{\hat{f}}_2 = (2\pi)^{d/2}\norm{f}_2
+% \]
+% Thus $\hat{f}$ is automatically in $L^2$.
+
+\begin{prob}
+    Deduce that $f$ has a
+    continuous version and that $\norm{f}_\infty \leq C \norm{(1 + \abs{u})\hat{f}(u)}_2$
+    for some constant $C < \infty$, to be determined.
+\end{prob}
+Well,
+\[
+    [\hat{f}] = \left[\frac{i}{u} \widehat{Df}\right]    
+\]
+We know that $\widehat{Df}\in L^2$, and $\hat{f} \leq \norm{f}_1 < \infty$, thus
+\begin{align*}
+    \int_\RR \abs{\hat{f}(u)}du &= \int_{\abs{u}\leq 1} \abs{\hat{f}(u)} du + \int_{\abs{u}\geq 1}  \abs{\frac{\widehat{Df}(u)}{u}} du\\
+    &\leq \sqrt{\int_{\abs{u}\leq 1} \abs{\hat{f}(u)}^2}\sqrt{\int_{\abs{u}\leq 1} 1} + \sqrt{\int_{\abs{u} \geq 1} \frac{1}{u^2} du}\cdot \sqrt{\int_{\abs{u}\geq 1}\abs{\widehat{Df}(u)}^2 du}\\
+    &\leq \sqrt{2} \norm{\hat{f}}_2 + \sqrt{2}\norm{\widehat{Df}}_2\\
+    &\leq \sqrt{2} \norm{\max{\hat{f}, \widehat{Df}}}_2 + \sqrt{2} \norm{\max{\hat{f}, \widehat{Df}}}_2\\
+    &\leq 2\sqrt{2}\norm{(1 + \abs{u})\hat{f}(u)}_2
+\end{align*}
+Hence $\hat{f}\in L^1$, and the Fourier inversion theorem applies;
+$f$ is a version of the inverse fourier transform of $\hat{f}$.
+
+Thus, $f$ has a continuous version, because the inverse fourier
+transform is continuous (for the same reasons as the fourier transform)
+and $\norm{f}_\infty \leq \norm{\hat{f}}_1 / (2\pi)$ (for the same reasons
+as the fourier transform). So you can pick $C = 100000$ or
+whatever and we're done.
+
+% \idea{
+%     Note that if you split the integral on $\abs{u} < \norm{f}_1^{-1/2}$
+%     instead, you get a $\norm{f}_1^{1/2} + \norm{\widehat{Df}}_2$ bound.
+% }
+
+% $f$ is also essentially-pointwise bounded by $\norm{\hat{f}}_1$.
+
+% Now, the claim is that
+% \[
+%     \norm{f}_\infty \leq C_1\norm{f}_2 + C_2\norm{Df}_2  
+% \]
+% for some $C_1$ and $C_2$. WLOG $f$ is continuous.
+% Scale $f$ such that $\norm{f}_\infty = 1$. Suppose now
+% that $\norm{Df}_2 \leq 1$. We will show that $\norm{f}_2$ has
+% a positive lower bound.
+
+
+% Problem 5. Let (Xn : n ∈ N) be a sequence of random variables in R and let X be another random
+% variable. Show that Xn → X weakly if and only if Xn → X in distribution.
+\section{Portmanteau Theorem}
+\begin{prob}
+    Let $(X_n : n \in \NN)$ be a sequence of random variables
+    in $\RR$ and let $X$ be another random variable.
+    Show that $X_n \to X$ weakly if and only if
+    $X_n \to X$ in distribution.
+\end{prob}
+
+This theorem is famous, important, and also completely tedious.
+
+Nobody cares about your random variables, let $\mu_n$ and $\mu$
+be their laws and we'll talk about those.
+
+\subsection{Upgrading to Metric spaces}
+
+Aiya first let me upgrade ``convergence in distribution" to
+a more general form valid on metric spaces called ``convergence in pineapples"
+so I can work with morally correct objects. The overarching claim for this section:
+
+\begin{claim*}
+    [Convergence in distribution $\iff$ Convergence in pineapples]
+    Recall that a sequence of probability measure $\mu_n$ on $\RR$
+    endowed with cumulative distribution function $F_n$
+    \vocab{converges in distribution} to $\mu$ if
+    \[
+        F_n(x)\to F(x)   
+    \]
+    for all $x$ such that $F$ is continuous.
+
+    On an arbitrary metric space $X$, a sequence of probability measures $\mu_n$
+    on $X$ \vocab{converges in pineapples} to $\mu$ if
+    for all open sets $U\subset X$,
+    \[
+        \lim\inf\mu_n(U) \geq \mu(U)
+    \]
+
+    Then, convergence in distribution $\iff$ convergence in pineapples.
+\end{claim*}
+
+First, let me delete the stupid CDFs from the definition.
+We know $F(x) = \mu((-\infty, x])$,
+and this is clearly already continuous from the right
+(by continuity of measure from above in probability spaces).
+\begin{claim*}
+    I claim that $F(x)$ is continuous at $x$ iff $\mu(\{x\}) = 0$.
+\end{claim*}
+\begin{proof}
+    The lower limit is
+    \[
+        \lim_{\eps\to 0} F(x - \eps) = \lim_{\eps\to 0} \mu((-\infty, x - \eps]) = \mu((-\infty, x)) = F(x) - \mu(\{x\})
+    \]
+    by continuity of measure from below. Thus the lower limit
+    coincides with the upper limit of $F(x)$ iff $\mu(\{x\}) = 0$.
+\end{proof}
+
+Great. Let's show distribution $\implies$ pineapples now.
+
+Recall that any open set $U\subset \RR$ is a \emph{countable}
+disjoint union of open intervals $(a,b)$, and thus the problem reduces
+to the case of a single open interval $(a,b)$.
+
+But this is basically clear... here are four cases.
+\begin{itemize}
+\end{itemize}
+
+
+% Thus, for instance,
+% at least a cocountable number of points are continuous
+% for all $X_n$ and $X$.
+
+\begin{claim*}
+    [Limit Interchange]
+    Suppose you have a double sequence of real numbers $0\leq a_{mn}\leq 1$.
+    Suppose also that $a_{mn}$ is non-decreasing in $m$ and non-decreasing in $n$;
+    for \emph{all} $m \leq m'$ and $n \leq n'$, we have $a_{mn} \leq a_{m'n'}$.
+    Then, we can swap the limits:
+    \[
+        \lim_{n\to \infty}\lim_{m\to \infty} a_{mn} = \lim_{m\to \infty}\lim_{n\to \infty} a_{mn}
+    \]
+\end{claim*}
+\begin{proof}
+    \begin{align*}
+        \lim_{n\to \infty}\lim_{m\to\infty} a_{mn}
+        &= \lim_{n\to \infty} \sup_{m} a_{mn} \\
+        &= \sup_{n} \sup_{m} a_{mn} \\
+        &= \sup_{m} \sup_{n} a_{mn} \\
+        &= \sup_{m} \lim_{n\to \infty} a_{mn} \\
+        &= \lim_{m\to \infty} \lim_{n\to \infty} a_{mn}
+    \end{align*}
+    We were able to set $\lim_n\sup_m = \sup_n\sup_m$
+    because supremums preserve inequalities, and
+    thus $\sup_{m} a_{mn}$ is increasing in $n$.
+\end{proof}
+
+Now, suppose $\mu_n\to \mu$ weakly. Pick some $a$ such that $F(x)$
+is continuous. The first order of business
+is to model two functions: $\id_{a < x}$, and $\id_{a \neq x}$.
+Let:
+\begin{itemize}
+    \item $f_n$ be $1$ on $x\leq a - \frac1n$, $0$ on $x\geq a$, and linear in between.
+    \item $g_n = \min(n\abs{x - a}, 1)$; this forms a $V$-shape near $a$.
+\end{itemize}
+Observe that $f_n$ and $g_n$ are continuous functions bounded between $0$ and $1$
+which are increasing and converges pointwise to $\id_{x \leq a}$
+and $\id_{x\neq a}$, respectively.
+\idea{
+    It might seem odd that we chose to model these instead of $\id_{a\leq x}$
+    and $\id_{a = x}$, but I'm pretty sure we need to pass through the limit
+    interchange lemma above, and I can only do this when things are increasing.
+}
+
+Seeing as this is a rather technical problem, let me justify each step.
+% I guess I should justify these steps.
+% \begin{enumerate}
+%     \item Definition of $F$.
+%     \item Definition of $f_n$.
+%     \item Monotone convergence theorem.
+%     \item Definition of weak convergence.
+%     \item Claim.
+%     \item Monotone convergence theorem.
+%     \item Definition of $f_n$.
+%     \item Definition of $F_m$.
+% \end{enumerate}
+\begin{align*}
+    F(a) - \mu(\{a\}) &= \int \id_{x < a} d\mu \tag{by definition of $F$} \\
+    &= \int \lim_{n\to \infty} f_n d\mu \tag{by definition of $f_n$} \\
+    &= \lim_{n\to \infty} \int f_n d\mu \tag{by monotone convergence theorem} \\
+    &= \lim_{n\to \infty} \lim_{m\to \infty} \int f_n d\mu_m \tag{by definition of weak convergence} \\
+    &= \lim_{m\to \infty} \lim_{n\to \infty} \int f_n d\mu_m \tag{by limit interchange} \\
+    &= \lim_{m\to \infty} \int \lim_{n\to \infty} f_n d\mu_m \tag{by monotone convergence theorem} \\
+    &= \lim_{m\to \infty} \int \id_{x < a} d\mu_m \tag{by definition of $f_n$} \\
+    &= \lim_{m\to \infty} F_m(a) - \mu_m(\{a\}) \tag{by definition of $F_m$} \\
+\end{align*}
+
+Running this exact same calculation on $g_n$ shows
+\[
+    1 - \mu_m(\{a\}) = \lim_{m\to \infty} 1 - \mu_m(\{a\})    
+\]
+Subtracting these two results, we find that $F_m(a)\to F(a)$
+for all $a$ such that $F$ is continuous. This concludes.
+
+\idea{
+    Sheesh, thread the needle.
+}
+
+Now, suppose $X_n \to X$ in distribution. Give me a continuous bounded
+function $f$. I'm going to approximate $f$ by a series of piecewise
+constant functions, using standard real analysis.
+
+\begin{psec*}
+    [Constructing $f_n$]
+    Here's how we construct function $f_n$. First, find some $M_n$
+    such that $\mu(\abs{X} \geq M_n) < \frac{1}{n\norm{f}_\infty}$ (this is possible because
+    $\mu$ is a probability measure).
+
+    Set $f_n = 0$ outside $[-M_n, M_n]$. Second, on $[-M_n, M_n]$,
+    $f$ is continuous, and
+    thus uniformly continuous (by standard results). Let $\eps = \frac{1}{n}$.
+    %  and thus
+    % can be approximated pointwise within $\eps = \frac1n$
+    % by a piecewise constant function $f_n$. This is also a standard
+    % result, but I want to explicitly show it is bounded, so let me
+    % just do it:
+    \begin{itemize}
+        \item $f$ is UC, thus $\forall\eps\exists \delta$
+        such that if $\abs{x - y} < \delta$, then $\abs{f(x) - f(y)} < \eps$.
+        \item Use $\delta$ as a discretization; split $[a,b]$
+        into a finite number of intervals of length at most $\delta$, 
+        taking care to avoid a countable number of points which will
+        be specified shortly.
+        \item In each interval $I_i$, set $f_k(I_i)$ to be an arbtrarily chosen
+        value from $f(I_i)$.
+        \item In particular, $f_k$ is uniformly bounded by
+        the same bounds as $f$.
+    \end{itemize}
+    Then, $\abs{f_n} < \norm{f}_\infty$ everywhere, and $\abs{f(x) - f_n(x)} < \eps$
+    everywhere on $[-M_n, M_n]$.
+\end{psec*}
+
+
+Finally, give me some $\eps$, and I'll find you an $n$ such that
+$\abs{\mu(f) - \mu_m(f)} < \eps$ for all $m > n$.
+
+First, let $k > \frac{0.0001}{\eps}$.
+Find $n$ such that for all $m > n$,
+\begin{itemize}
+    \item $\mu_m((-\infty, M_k])$ is within $0.0001\eps/\norm{f}_\infty$ of $\mu((-\infty, M_k])$.
+    \item $\mu_m((-\infty, -M_k])$ is within $0.0001\eps/\norm{f}_\infty$ of $\mu((-\infty, -M_k])$.
+    \item $\mu_m(f_k) - \mu(f_k) < 0.0001\eps$.
+\end{itemize}
+This is possible because $\mu_m \to \mu$ weakly. (The last line is true
+because $\mu_m(f_k)$ is just the measure of a bunch of intervals).
+
+\idea{
+    [Detail]
+    Okay, we only know $\mu_m((-\infty, x])\to \mu((-\infty, x])$
+    for all $x$ such that $F$ is continuous.
+
+    However:
+    \begin{itemize}
+        \item $F$ is discontinuous at $x$ iff $\mu(\{x\}) > 0$.
+        \item Suppose there existed an uncountable set $S$ such that
+        $\mu(\{x\}) > 0$ for all $x\in S$. Then, one can choose a finite
+        subset of $S$ with arbitrarily large measure (by splitting $S$ into
+        buckets $(\frac1{n+1}, \frac1n)$ and finding a bucket with uncountably many things).
+        This is a contradiction, thus the set of discontinuities is countable.
+        \item But $\RR$ is uncountable.
+    \end{itemize}
+    So the upshot is that if $M_k$ fails, you can just poke it to a slightly
+    larger value for which $F$ is actually continuous, and ignore this problem.
+
+    And actually, the number of discontinous points for all $F_m$ is countable too.
+    So in our definition of $f_k$ above, let's just pick our $I_i$'s to avoid
+    all of these points.
+}
+%     and $\mu((-\infty, -M_k])$,
+% for all $m > n$. 
+% \end{itemize}
+
+Then, for all $m > n$,
+\begin{align*}
+    \abs{\mu_m(f) - \mu_m(f_k)} &\leq \int \abs{f - f_k} \mu_m(dx)\\
+    &\leq \int \abs{f}\id\left((-\infty, -M_k)\cup (M_k, \infty)\right) \mu_m(dx) + \int 0.0001\eps \id\left([-M_k, M_k]\right)\mu_m(dx)\\
+    &\leq \norm{f}_\infty \mu_m((-\infty, -M_k] \cup [M_k, \infty))  + 0.0001\eps\\ % + 0.0001\eps\mu_m((-\infty, M_k]\cup (-M_k, \infty))
+    &\leq \norm{f}_\infty \mu((-\infty, -M_k] \cup [M_k, \infty)) + \norm{f}_\infty \cdot \frac{0.0001\eps}{\norm{f}_\infty} + 0.0001\eps\\
+    % &+ 0.0001\eps\mu_m((-\infty, M_k]\cup (-M_k, \infty)) + 0.0001\eps\\
+    &\leq 0.0001\eps + 0.0001\eps + 0.0001\eps\\
+    &\leq 0.0003\eps 
+\end{align*}
+% Similarly, $\abs{\mu(f) - \mu(f_k)}\leq 0.0003\eps$.
+Similarly,
+\begin{align*}
+    \abs{\mu(f) - \mu(f_k)} &\leq \int \abs{f - f_k} \mu(dx)\\
+    &\leq \int \abs{f}\id\left((-\infty, -M_k)\cup (M_k, \infty)\right) \mu(dx) + \int 0.0001\eps \id\left([-M_k, M_k]\right)\mu(dx)\\
+    &\leq \norm{f}_\infty \mu((-\infty, -M_k] \cup [M_k, \infty))  + 0.0001\eps\\ % + 0.0001\eps\mu_m((-\infty, M_k]\cup (-M_k, \infty))
+    &\leq 0.0001\eps + 0.0001\eps\\
+    &\leq 0.0002\eps
+\end{align*}
+Finally, the difference between $\mu_m(f_k)$ and $\mu(f_k)$ is at most $0.0001\eps$ from before.
+So in total $\abs{\mu_m(f) - \mu(f)} < 0.0006\eps$. Done.
+
+% Thus, each $f_n$ is bounded and converges pointwise to $f$.
+% Now, by dominated convergence theorem,
+% \[
+%     \int f_n d\mu \to \int f d\mu
+% \]
+
+% Problem 6. Let X1, . . . , Xn be independent N (0, 1) random variables. Show that
+% (
+% X,
+% n∑
+% m=1
+% (Xm − X)2
+% )
+% and
+% (
+% Xn
+% √n ,
+% n−1∑
+% m=1
+% X2
+% m
+% )
+% have the same distribution, where X = (X1 + · · · + Xn)/n.
+\section{}
+\begin{prob}
+    Let $X_1, \dots, X_n$ be independent $N(0, 1)$ random variables.
+    Show that
+    % \[
+    %     \left(
+    %         \overline{X}, \frac{1}{n} \sum_{m=1}^n (X_m - \overline{X})^2
+    %     \right)
+    %     \text{ and }
+    %     \left(
+    %         \frac{X_n}{\sqrt{n}}, \frac{1}{n-1} \sum_{m=1}^n X_m^2
+    %     \right)
+    % \]
+    \[
+        \left(\overline{X}, \sum_{m = 1}^n (X_m - \overline{X})^2\right) \text{ and } \left(\frac{X_n}{\sqrt{n}}, \sum_{m=1}^{n-1} X_m^2\right) \tag{$\star$}
+    \]
+    have the same distribution, where $\overline{X} = (X_1 + \dots + X_n)/n$.
+\end{prob}
+
+First of all, here's a completely trivial fact:
+\begin{claim*}
+    If $X,Y:\Omega\to E$ are two random variables which have the same distribution
+    and $f:E\to F$ is a measurable function, then $f(X)$ and $f(Y)$
+    have the same distribution.
+\end{claim*}
+\begin{proof}
+    The definition of having the same distribution is that
+    \[
+        \mu\circ X^{-1} = \mu\circ Y^{-1}
+    \]
+    Then clearly
+    \[
+        \mu\circ (f\circ X)^{-1} = \mu\circ X^{-1}\circ f^{-1} = \mu\circ Y^{-1}\circ f^{-1} = \mu\circ (f\circ Y)^{-1}
+    \]
+\end{proof}
+
+
+Now, let me write down an orthogonal matrix $U$. Actually, I'm only
+going to fill in the bottom row:
+\[
+    U = \begin{pmatrix}
+            ? & \dots & ?\\
+            \vdots & \ddots & \vdots\\
+            ? & \dots & ?\\
+            \frac{1}{\sqrt{n}} & \dots & \frac{1}{\sqrt{n}}
+        \end{pmatrix}  
+\]
+and by e.g. Gram-Schmidt, I can fill in the rest of the matrix
+with an orthonormal basis for the orthogonal
+complement of $\vec{a} = \frac{1}{\sqrt{n}}(1,\dots, 1)^\top$.
+
+% by telling you an orthonormal basis.
+% \begin{itemize}
+%     \item I want $U$ to send $\vec{a} = \frac{1}{\sqrt{n}}(1,\dots, 1)^\top$ to $(0,\dots,0,1)^\top$.
+%     % such that
+%     \item By e.g. Gram-Schmidt, I can find an orthonormal basis
+%     for the orthogonal complement of $\vec{a}$. Pick one arbitrarily.
+%     Send this basis to the remaining $n-1$ standard basis vectors.
+% \end{itemize}
+% This way,
+% \[
+%     \left(U\begin{pmatrix}
+%         x_1\\
+%         \vdots\\
+%         x_n
+%     \end{pmatrix}\right)_n = \frac{x_1 + \dots + x_n}{\sqrt{n}}
+% \]
+% \begin{itemize}
+%     \item I want $U$ to send $(0,\dots,0,1)^\top$ to $\vec{a} = \frac{1}{\sqrt{n}}(1,\dots, 1)^\top$.
+%     \item By e.g. Gram-Schmidt, I can find an orthonormal basis
+%     for the orthogonal complement of $\vec{a}$. Pick one arbitrarily.
+%     Send the remaining $n-1$ standard basis vectors to this basis.
+% \end{itemize}
+
+Great! Consider the function
+\[
+    f:\RR^n \to \RR^2: \begin{pmatrix}
+        x_1\\
+        \vdots\\
+        x_n
+    \end{pmatrix}
+    \to \begin{pmatrix}
+        \frac{x_n}{\sqrt{n}}\\
+        \norm{x}_2^2 - x_n^2
+    \end{pmatrix}    
+\]
+
+It is clear that the RHS of $\star$ is $f(X)$
+where $X\in \RR^n = (X_1, \dots, X_n)^\top$.
+I claim that the LHS is equal to $f(UX)$,
+where $UX$ is a completely legal thing to write down
+(I am composing $U\circ X$ where $U:\RR^n\to \RR^n$).
+
+It suffices to show that (as linear algebra identities)
+\[
+    \sum_{m = 1}^n (X_m - \overline{X})^2 = \norm{UX}_2^2 - (UX)_n^2 = \norm{X}_2^2 - n\overline{X}^2
+\]
+This is basically obvious and left as an exercise. No I'm kidding,
+uh, the LHS is
+\[
+    \sum X_i^2 - 2\overline{X}\sum X_i + \overline{X}^2 \cdot n = \norm{X}_2^2 - n\overline{X}^2
+\]
+lol.
+% No, I'm kidding. Look, the LHS is just the norm-square of
+% \[
+%     Y = \begin{pmatrix}
+%         X_1 - \overline{X}\\
+%         \vdots\\
+%         X_n - \overline{X}
+%     \end{pmatrix}
+%     =
+%     \underbrace{\begin{pmatrix}
+%         \frac{n-1}{n} & -\frac1n & \dots & -\frac1n\\
+%         -\frac1n & \frac{n-1}{n} & \dots & -\frac1n\\
+%         \vdots & \vdots & \ddots & \vdots\\
+%         -\frac1n & -\frac1n & \dots & \frac{n-1}{n}
+%     \end{pmatrix}}_Q
+%     X
+% \]
+% But it's clear that $I_n-Q = P$ is the orthogonal
+% projector onto $\vec{a}$, and thus $Q$ is the orthogonal
+% projector onto the orthogonal complement of $\vec{a}$.
+% And also, $n\overline{X}^2 = \norm{PX}_2^2$. So we're just saying
+% \[
+%     \norm{QX}_2^2 = \norm{X}_2^2 + \norm{PX}_2^2
+% \]
+% but this is just the Pythagorean theorem.
+
+% Okay win!
+By the claim, it suffices to show that
+$UX$ and $X$ have the same distribution.
+But if you stare at their distributions, this is completely obvious:
+\[
+    f_{UX}(\vec{x}) = \frac{1}{(2\pi)^{n/2}} e^{-\frac{1}{2}\norm{U\vec{x}}_2^2} = \frac{1}{(2\pi)^{n/2}} e^{-\frac{1}{2}\norm{\vec{x}}_2^2} = f_X(\vec{x})
+\]
+
+% Note that $U$ is orthogonal so $\norm{UX}_2^2 = \norm{X}_2^2$,
+% and $(UX)_n^2 = \frac{1}{n}\overline{X}$.
+
+
+% By the claim, it suffices to prove that
+% \[
+%     \begin{pmatrix}
+%         X_1 - \overline{X}\\
+%         \vdots\\
+%         X_n - \overline{X}\\
+%         \overline{X}\sqrt{n}
+%     \end{pmatrix}
+%     \text{ and }
+%     \begin{pmatrix}
+%         X_1\\
+%         \vdots\\
+%         X_n
+%     \end{pmatrix}    
+% \]
+% have the same distribution.
+
+% Well, I'll prove that
+% \[
+%     \left(\overline{X}, (X_m - \overline{X})^2\right) \text{ and } \left(\frac{X_n}{\sqrt{n}}, \sum_{m=1}^{n-1} X_m^2\right) 
+% \]
+
+
+% Well, $X = (X_1,\dots, X_n)^\top\in \RR^n$ is a jointy Gaussian random variable.
+% Let $u = \frac1n(1,1,1\dots)^\top$.
+% We can write
+% \[
+%     \EE e^{i \overline{X}} = \EE e^{i \braket{u | X}} = \EE \prod_k e^{iu_kX_k} = e^{-\abs{u}^2/2}
+% \]
+% Thus $\overline{X}$ is $N(0, 1/n)$. Of course, $\frac{X_n}{\sqrt{n}}\sim N(0, 1/n)$
+% as well.
+
+% \begin{prob}
+%     Show that
+%     \[
+%         \sum_{m=1}^n (X_m - \overline{X})^2
+%         \text{ and }
+%         \sum_{m=1}^{n-1} X_m^2
+%     \]
+%     have the same distribution.
+% \end{prob}
+
+% The RHS is the norm-square of an RV with distribution $N(0,I_{n-1})$.
+% The LHS is the norm-square of
+% \[
+%     Y = \begin{pmatrix}
+%         X_1 - \overline{X}\\
+%         \vdots\\
+%         X_n - \overline{X}
+%     \end{pmatrix}
+%     =
+%     \underbrace{\begin{pmatrix}
+%         \frac{n-1}{n} & -\frac1n & \dots & -\frac1n\\
+%         -\frac1n & \frac{n-1}{n} & \dots & -\frac1n\\
+%         \vdots & \vdots & \ddots & \vdots\\
+%         -\frac1n & -\frac1n & \dots & \frac{n-1}{n}
+%     \end{pmatrix}}_V
+%     X
+% \]
+% which is jointly Gaussian (by theorem $8.2.1$ or common sense).
+% Clearly it suffices to show that (in a suitable sense)
+% $Y\sim N(0, I_{n-1})$ as well.
+
+% Please observe that $I - V$ is merely the (orthogonal) projection
+% onto the subspace spanned by $(1,\dots, 1)^\top$; thus $V$
+% is the orthogonal projection onto the $n-1$-dimensional subspace
+% orthogonal to $(1,\dots, 1)^\top$. In particular, $V$ is
+% orthogonally equivalent to any other orthogonal projection on
+% to an $n-1$-dimensional subspace, such as
+% \[
+%     P_{n-1} = \begin{pmatrix}
+%         1 & 0 & \dots & 0 & 0\\
+%         0 & 1 & \dots & 0 & 0\\
+%         \vdots & \vdots & \ddots & \vdots & \vdots\\
+%         0 & 0 & \dots & 1 & 0\\
+%         0 & 0 & \dots & 0 & 0
+%     \end{pmatrix}
+% \]
+
+% From the proof of part $(d)$ in theorem $8.2.1$ (and/or common sense)
+% I know that $\var Y = \EE[V XX^\top V^\top ] = VV^\top$ and $\EE[Y] = 0$.
+% But $V$ is just some projection, thus $VV^\top$ is orthogonally
+% equivalent to some $n-1$ dimensional projection as above.
+% The distributions of Gaussians are fixed by $\var$ and $\EE$,
+% thus $Y$ has the same distribution as
+% \[
+%     P_{n-1}X = \begin{pmatrix}
+%         X_1\\
+%         \vdots\\
+%         X_{n-1}\\
+%         0
+%     \end{pmatrix}
+% \]
+% To be exact, let $Q_{n-1} : \RR^n\to \RR^{n-1}$ be
+% an actual projection matrix.
+% Thus note that $\norm{X} = \norm{Q_{n-1}X}$,
+% and $Q_{n-1}X \sim N(0, I_{n-1})$ as desired.
+
+% Thus, the question is to show that if $X\sim N(0,I_n)$,
+% and $Y\sim N(0, I_{n-1})$, then $n\norm{X}^2$ is distributed
+% the same as $(n-1)\norm{Y}^2$.
+
+% Okay I guess we just have to compute at this point.
+% The distribution of $\norm{X}^2$ is
+
+
+% Then, $Y$ is also joinly Gaussian, with
+% \[
+%     \mu = \EE[Y] = \EE[X] - \left(\frac{\EE[X_1] + \dots + \EE[X_n]}{n}\right)\begin{pmatrix}
+%     1 \\ \vdots \\ 1\end{pmatrix} = 0
+% \]
+% Observe that the RHS is precisely $\frac1n$ of
+% the norm of this random variable.
+
+
+% We know that the distribution of a sum is simply the convolution
+% of the distributions.
+
+
+% Thus, the distribution of $\overline{X}$
+% is
+% \begin{align*}
+
+
+
+% Problem 7. Let (E, E, μ) be a measure space and τ : E → E a measure-preserving transfor-
+% mation. Show that Eτ = {A ∈ E : τ −1(A) = A} is a σ-algebra, and that a measurable function f is
+% Eτ -measurable if and only if it is invariant, that is f ◦ τ = f .
+\section{}
+\begin{prob}
+    Let $(E, \mathcal{E}, \mu)$ be a measure space and
+    $\theta : E \to E$ a measure-preserving transformation.
+    Show that $\mathcal{E}_\theta = \{A \in \mathcal{E} : \theta^{-1}(A) = A\}$
+    is a $\sigma$-algebra.
+\end{prob}
+
+$E\subset \mathcal{E}_\theta$ because $\theta^{-1}(E) = E$. Suppose $A\in \mathcal{E}_\theta$; then
+\[\theta^{-1}(E\setminus A) = \theta^{-1}(E)\setminus \theta^{-1}(A) = E\setminus A\implies E\setminus A\in \mathcal{E}_\theta.\]
+Finally, if $A_1,\dots A_n\in \mathcal{E}_\theta$, then
+\[
+	\theta^{-1}\left(\bigcup_{i} A_i\right) = \bigcup_{i}\theta^{-1}\left(A_i\right) = \bigcup_{i} A_i
+\]
+as desired.
+
+\begin{prob}
+    Show that a measurable function
+    $f$ is $\mathcal{E}_\theta$-measurable if and only if it is invariant,
+    that is $f \circ \theta = f$.
+\end{prob}
+I will assume $f$ points into $\RR$. Otherwise, there are counterexamples;
+the measurability condition can't distinguish between points if the measure
+space isn't ``Hausdorff''.
+
+% Suppose $f$ maps into a space $(F, \mathcal{F})$.
+Suppose $f$ is
+$\mathcal{E}_\theta$-measurable. Then, noting that points are measurable
+in $\RR$,
+$f^{-1}(x)$ is measurable in $\mathcal{E}_\theta$. This implies
+$\theta^{-1}(f^{-1}(x)) = f^{-1}(x)$ for all $x$. Now, give
+me any $x\in E$. I know that $x\in \theta^{-1}(f^{-1}(f(x)))$.
+Thus,
+\[
+    f(\theta(x)) = f(f^{-1}(f(x))) = f(x)    
+\]
+
+On the other hand, suppose $f\circ\theta = f$. Then, for all measurable
+sets $A\subset \RR$, $f^{-1}(A) = \theta^{-1}(f^{-1}(A))$,
+i.e. $f^{-1}(A) \in \mathcal{E}_\theta$.
+
+
+
+% Problem 8. Show that, if θ is an ergodic measure-preserving transformation and f is a θ-invariant
+% function, then there exists a constant c ∈ R such that f = c a.e.
+\section{}
+\begin{prob}
+    Show that, if $\theta$ is an ergodic measure-preserving
+    transformation and $f$ is a $\theta$-invariant
+    function, then there exists a constant $c \in \RR$ such
+    that $f = c$ a.e.
+\end{prob}
+If $E$ has measure $0$, the problem is stupid, because all functions
+are equal almost everywhere. Suppose otherwise.
+
+Observe that for any measurable $A\subset \RR$, $f^{-1}(A)$ is $\theta$-invariant;
+by ergodicity, either $f^{-1}(A)$ or $E\setminus f^{-1}(A)$ has measure $0$.
+
+Now, consider the sets $E_i = f^{-1}([i, i+1))$ for $i\in \ZZ$;
+this is a countable set, thus they cannot \emph{all} have measure $0$.
+Two of them cannot have nonzero measure, else neither of their complements
+would have measure $0$. Thus, exactly
+one of them has nonzero measure; call it $k = i$.
+
+Then, consider the dyadic blocks
+\[
+    E_{n,a} = \left[\frac{a}{2^n} + k, \frac{a+1}{2^n} + k\right), \qquad a = 0, \dots, 2^n - 1
+\]
+These have the property that for all $n$, they partition $[k,k+1)$.
+Thus, by the above reasoning, for each $n$ there is exactly one $a$
+such that $E_{n,a}$ has nonzero measure. Call this $a_n$.
+Clearly $a_{n+1} \in \{2a_n, 2a_n + 1\}$; any other choice would contradict
+the fact that $E\setminus E_{n,a}$ has zero measure.
+
+Thus, we find ourselves with a descending series of blocks
+\[
+    E_{0,a_0} \supset E_{1,a_1} \supset \dots    
+\]
+such that $E\setminus E_{k, a_k}$ has measure $0$. By
+continuity of measure from below,
+\[
+    \mu\left(E\setminus \inf E_{k, a_k}\right) = \lim_{k\to \infty} \mu\left(E\setminus E_{k, a_k}\right) = 0   
+\]
+But clearly $\inf E_{k,a_k}$ is some singleton $\{c\}$ (by definition of the real numbers).
+Thus, $E\setminus f^{-1}(\{c\})$ has measure $0$, and we are done.
+
+
+
+\end{document}

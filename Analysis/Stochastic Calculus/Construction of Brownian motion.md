@@ -1,0 +1,3 @@
+We're trying to create a Gaussian process with covariance matrix $\Gamma:I\times I\to \RR$ sending $t,s\mapsto t\land s$. By the [[Kolmogorov Extension]] theorem, there exists a unique probability measure $\nu$ on the space of continuous paths with finite-dimensional marginals which are compatible with $N(0, \Gamma_{J\times J})$; the restrictions are obviously compatible (for more details, see [[pre-Brownian motion]]). The problem is that for any $\omega$, the path $X_t(\omega)$ might not even be measurable.
+
+We prove [[Kolmogorov's Criterion]], which finishes.

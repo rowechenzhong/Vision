@@ -1,0 +1,496 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+\usepackage{mathrsfs}
+
+\newcommand{\BBB}{\mathscr{B}}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\var}{var}
+
+\title{18.675 Problem Set 6}
+\begin{document}
+% PROBLEMS SET 6 FOR 18.675 (FALL 2023)
+% Problem 1. Let X be a martingale (resp. supermartingale) on some filtered probability space, and
+% let T be an a.s. finte stopping time. Prove that \EE[X_T ] = \EE[X_0] (resp. \EE[X_T ] ≤ \EE[X_0]) if either one
+% of the following conditions holds:
+% (i) The process X is bounded (∃M > 0 : ∀n ≥ 0, |Xn| ≤ M a.s.).
+% (ii) The process X has bounded increments (∃M > 0 : ∀n ≥ 0, |Xn+1 − Xn| ≤ M a.s.) and
+% \EE[T] < ∞.
+\section{}
+\begin{prob*}
+    Let $X$ be a martingale (resp. supermartingale) on some filtered probability space, and
+    let $T$ be an a.s. finte stopping time. Prove that $\EE[X_T ] = \EE[X_0]$ (resp. $\EE[X_T ] \leq \EE[X_0]$) if either one
+    of the following conditions holds:
+    \begin{enumerate}
+        \item The process $X$ is bounded ($\exists M > 0 : \forall n \geq 0, |X_n| \leq M$ a.s.).
+        \item The process $X$ has bounded increments ($\exists M > 0 : \forall n \geq 0, |X_{n+1} - X_n| \leq M$ a.s.) and
+        $\EE[T] < \infty$.
+    \end{enumerate}
+\end{prob*}
+
+The supermartingale case immediately implies the martingale case,
+so we only prove the supermartingale case.
+First off, if $T$ were bounded, then the Bounded Optional Stopping Theorem
+would conclude. In particular, $\EE[X_{T\land n}] \leq \EE[X_0]$ for any
+constant $n\geq 0$. So all we want to show is that $\EE[X_{T\land n}] \to \EE[X_T]$.
+All we have to do is rip through \vocab{Fatou-Lebesgue} by providing an integrable
+function which dominates all $X_{T\land n}$ almost surely.
+
+In the first case, $X_{T\land n}$ is dominated by $M$ almost surely, so we conclude.
+
+In the second case, we need to use the condition $\EE[T] < \infty$ by expanding
+in terms of increments. We know
+\[
+    X_{T\land n} = X_0 + \sum_{t = 0}^{n-1} (X_{t+1} - X_t)\id_{t\leq T}
+\]
+thus
+\begin{align*}
+    \abs{X_{T\land n}} &\leq \abs{X_0} + \sum_{t\geq 0} \abs{X_{t+1} - X_t}\id_{t\leq T}\\
+    &\leq \abs{X_0} + M\sum_{t\geq 0} \id_{t\leq T}\\
+    &\leq \abs{X_0} + M\EE[T] < \infty
+\end{align*}
+The RHS of the top line is independent of $n$, and is our dominating function.
+We conclude.
+
+
+% Problem 2. Let T be an (Fn, n ≥ 0)-stopping time such that for some integer N > 0 and  > 0,
+% \PP[T ≤ N + n | Fn] ≥ , for every n ≥ 0.
+% Show that \EE[T] < ∞.
+\section{}
+\begin{prob*}
+    Let $T$ be an $(\mathscr{F}_n, n \geq 0)$-stopping time such that for some integer $N > 0$ and $\epsilon > 0$,
+    $\PP[T \leq N + n | \mathscr{F}_n] \geq \epsilon$, for every $n \geq 0$.
+    Show that $\EE[T] < \infty$.
+\end{prob*}
+By definition, the condition says that for all measurable $A\in \mathscr{F}_n$,
+\[
+    \PP[A \cap \{T \leq N + n\}] \geq \epsilon \PP[A].
+\]
+Sure, let's pick $A = \{T > n\}$! Then,
+\[
+    \PP[n < T \leq N + n] \geq \epsilon \PP[T > n].
+\]
+Then,
+\begin{align*}
+    \EE[T] &= \sum_{n\geq 0} \PP[T > n]\\
+    &\leq \frac{1}{\eps}\sum_{n\geq 0} \PP[n < T \leq N + n]\\
+    &\leq \frac{1}{\eps}\sum_{0\leq i < N} \sum_{n\geq 0} \PP[n\cdot N + i < T \leq (n+1)\cdot N + i]\\
+    &\leq \frac{1}{\eps}\sum_{0\leq i < N} \PP[i < T]\\
+    &\leq \frac{1}{\eps}\sum_{0\leq i < N} 1 < \infty
+\end{align*}
+
+% Problem 3. Let (Xn, n ≥ 0) be a sequence of [0, 1]-valued random variables, which satisfy
+% the following property. First, X_0 = a a.s. for some a ∈ (0, 1) and for n ≥ 0,
+% P
+% 
+% Xn+1 =
+% Xn
+% 2
+% | Fn
+% 
+% = 1 − Xn = 1 − P
+% 
+% Xn+1 =
+% Xn + 1
+% 2
+% | Fn
+% 
+% ,
+% where Fn = σ(Xk, 0 ≤ k ≤ n). Here, we have denoted \PP[A | G] = \EE[1A | G].
+% (i) Prove that (Xn, n ≥ 0) is a martingale that converges in L
+% p
+% for every p > 1.
+% (ii) Check that \EE[(Xn+1 − Xn)
+% 2
+% ] = \EE[Xn(1 − Xn]/4. Then determine \EE[X∞(1 − X∞)] and deduce
+% the law of X∞.
+\section{}
+\begin{prob*}
+    Let $(X_n, n \geq 0)$ be a sequence of $[0, 1]$-valued random variables, which satisfy
+    the following property. First, $X_0 = a$ a.s. for some $a \in (0, 1)$ and for $n \geq 0$,
+    \[
+        P
+        \left\{
+            X_{n+1} = \frac{X_n}{2} \bigg| \mathscr{F}_n
+        \right\}
+        = 1 - X_n = 1 - P
+        \left\{
+            X_{n+1} = \frac{X_n + 1}{2} \bigg| \mathscr{F}_n
+        \right\},
+    \]
+    where $\mathscr{F}_n = \sigma(X_k, 0 \leq k \leq n)$. Here, we have denoted $\PP[A | G] = \EE[1_A | G]$.
+    \begin{enumerate}
+        \item Prove that $(X_n, n \geq 0)$ is a martingale that converges in $L^p$ for every $p > 1$.
+        \item Check that $\EE[(X_{n+1} - X_n)^2] = \EE[X_n(1 - X_n)]/4$. Then determine $\EE[X_\infty(1 - X_\infty)]$ and deduce
+        the law of $X_\infty$.
+    \end{enumerate}
+\end{prob*}
+
+For the first part, by Doob's Martingale Convergence Theorem, it suffices to show that
+$X_n$ is bounded in $L^p$ for every $p > 1$. But this is clear, since $X_n \in [0, 1]$,
+so $\EE[\abs{X_n}^p] \leq 1$ uniformly in $n$. As a bonus, we know that this limit $X_\infty$
+is also an almost-sure limit, and $X_n = \EE[X_\infty | \mathscr{F}_n]$ almost surely for all $n\geq 0$.
+
+For the second part, we compute
+\begin{align*}
+    \EE[(X_{n+1} - X_n)^2] &= \EE[ \EE[(X_{n+1} - X_n)^2 | \mathscr{F}_n]]\\
+    &= \EE\left[X_n\left(\frac{X_n + 1}{2} - X_n\right)^2 + (1 - X_n)\left(\frac{X_n}{2} - X_n\right)^2\right]\\
+    &= \frac14 \EE[X_n(1 - X_n)^2 + (1-X_n)X_n^2]\\
+    &= \frac14 \EE[X_n(1 - X_n)].
+\end{align*}
+
+Now, we know that $X_n \to X_\infty$ almost surely,
+so by the Dominated Convergence Theorem,
+\[
+    \EE[X_\infty(1 - X_\infty)] = \lim_{n\to \infty} \EE[X_n(1 - X_n)] = 4 \lim_{n\to \infty} \EE[(X_{n+1} - X_n)^2] = 0
+\]
+where the last equality is because $X_n$ converge in $L^2$.
+
+However, $\EE[X_\infty(1-X_\infty)]$ is nonnegative on $[0,1]$, with
+equality at $\{0,1\}$ only. Thus, $X_\infty$ is almost surely $0$ or $1$.
+$X$ is also UI, thus by optional stopping theorem, $\EE[X_\infty] = \EE[X_0] = a$.
+Thus, $\PP(X_\infty = 1) = a$ and $\PP(X_\infty = 0) = 1 - a$.
+
+
+% Problem 4. Let (Xn, n ≥ 0) be a sequence of independent and identically distributed real-valued
+% integrable random variables. We let Sn = X1 + · · · + Xn (with S0 = 0) be the associated random
+% walk and T an (Fn)-stopping time, where Fn = σ(Xk, k ≤ n).
+% (1) Show that if the random variables Xi are non-negative, then
+% \EE[ST ] = \EE[T]\EE[X1].
+% (2) Show that if \EE[T] < ∞, then
+% \EE[ST ] = \EE[T]\EE[X1].
+% (3) Suppose that \EE[X1] = 0 and set Ta = inf{n ≥ 0 : Sn ≥ a}, for some a > 0. Show that
+% \EE[Ta] = ∞.
+% (4) Suppose that \PP[X1 = +1] = 2
+% 3 = 1 − \PP[X1 = −1] and set Ta = inf{n ≥ 0 : Sn ≥ a}, for some
+% a > 0. Find \EE[Ta]. (You cannot assume that \EE[Ta] < ∞.).
+\section{}
+Let $(X_n, n \geq 0)$ be a sequence of independent and identically distributed real-valued
+integrable random variables. We let $S_n = X_1 + \cdots + X_n$ (with $S_0 = 0$) be the associated random
+walk and $T$ an $(\mathscr{F}_n)$-stopping time, where $\mathscr{F}_n = \sigma(X_k, k \leq n)$.
+% \begin{enumerate}
+%     \item Show that if the random variables $X_i$ are non-negative, then
+%     $\EE[S_T] = \EE[T]\EE[X_1]$.
+%     \item Show that if $\EE[T] < \infty$, then
+%     $\EE[S_T] = \EE[T]\EE[X_1]$.
+%     \item Suppose that $\EE[X_1] = 0$ and set $T_a = \inf\{n \geq 0 : S_n \geq a\}$, for some $a > 0$. Show that
+%     $\EE[T_a] = \infty$.
+%     \item Suppose that $\PP[X_1 = +1] = 2/3 = 1 - \PP[X_1 = -1]$ and set $T_a = \inf\{n \geq 0 : S_n \geq a\}$, for some
+%     $a > 0$. Find $\EE[T_a]$. (You cannot assume that $\EE[T_a] < \infty$.).
+% \end{enumerate}
+\begin{prob}
+    Show that if the random variables $X_i$ are non-negative, then
+    $\EE[S_T] = \EE[T]\EE[X_1]$.
+\end{prob}
+
+\idea{
+    [Main idea]
+    This problem is very interesting! The key idea is that $\EE[X_i\id_{T = n}]$ does
+    \emph{not} have to equal $\EE[X_i]\PP(T = n)$, because $T$ is not necessarily
+    independent of $X_i$. However, we notice that postponing $T$ does not change the
+    fact that we wil \emph{eventually} count $X_i$; symbolically, we really care
+    about $\EE[X_i\id_{T\geq i}]$. Flipping this to $\EE[X_i\id_{T < i}]$, we
+    observe that $\{T < i\}$ and $X_i$ really are independent, so we can compute
+    everything.
+}
+
+
+If $\EE[X_1] = 0$, then $X_1 = 0$ almost surely and the problem is a bit stupid;
+assume otherwise. Now, by monotone convergence or whatever,
+\[
+    \EE[S_T] = \sum_{n = 0}^\infty \EE[S_n \id_{T = n}] + \EE[S_\infty \id_{T = \infty}].
+\]
+If $\PP(T = \infty) > 0$, then $\EE[X_1]\EE[T] = \infty$, and the LHS is also $\infty$
+(because $S_\infty$ is also infinite almost surely, if you interpret this to mean
+the almost-sure limit; this guy might also be undefined so whatever). So we can assume
+that $\PP(T = \infty) = 0$. Then, we observe the LHS is just
+\[
+    \sum_{n = 0}^\infty \sum_{i\leq n} \EE[X_i\id_{T = n}]
+\]
+By Fubini's theorem we can interchange the sums.
+\[
+    \sum_{i = 0}^\infty \sum_{n\geq i} \EE[X_i\id_{T = n}]
+\]
+Now, we observe that $\PP(T \geq i) = 1 - \PP(T \leq i - 1)$ which lives in $\mathscr{F}_{i-1}$
+and is thus independent of $X_i$. Thus, we can write
+\[
+    = \sum_{i = 0}^\infty \EE[X_i]\PP(T \geq i) = \EE[X_1]\EE[T]
+\]
+as desired.
+
+\begin{prob}
+    Show that if $\EE[T] < \infty$, then
+    $\EE[S_T] = \EE[T]\EE[X_1]$.
+\end{prob}
+
+First off the fact that $\EE[T]$ exists means that $\PP(T = \infty) = 0$.
+
+Now, we repeat the above proof with $[0, \infty]$ replaced by $\RR$.
+Consider the partial sums
+\[
+    \sum_{n = 0}^m S_n\id_{T = n} \stackrel{m\to \infty}{\longrightarrow} S_T   
+\]
+which converge almost surely. We need to show the expectation of the absolute
+value of the LHS is bounded so we can apply Dominated Convergence.
+
+Of course, this is just the previous problem, because
+\[
+    \EE\left[\abs{\sum_{n = 0}^m S_n\id_{T = n}}\right]\leq \sum_{n = 0}^\infty \EE[\tilde{S}_n\id_{T = n}]\leq \EE[T] \EE[\abs{X_1}] < \infty
+\]
+where $\tilde{S} = \sum_{i = 0}^n \abs{X_i}$; note that $\abs{X_i}$ is integrable if $X_i$
+is.
+
+Great! So we really care about the sum
+\begin{align*}
+    \sum_{n = 0}^\infty \EE[S_n\id_{T = n}]
+    &= \sum_{n = 0}^\infty \sum_{i\leq n} \EE[X_i\id_{T = n}]\\
+    &= \sum_{i = 0}^\infty \sum_{n\geq i} \EE[X_i\id_{T = n}]\\
+    &= \sum_{i = 0}^\infty \EE[X_i]\PP(T \geq i)\\
+    &= \EE[X_1]\EE[T]
+\end{align*}
+by the same arguments as the first time; use Tonelli rather than Fubini.
+\begin{prob}
+    Suppose that $\EE[X_1] = 0$ and set $T_a = \inf\{n \geq 0 : S_n \geq a\}$, for some $a > 0$. Show that
+    $\EE[T_a] = \infty$.
+\end{prob}
+
+Applying the previous problem to $T = T_a$, we observe that if $\EE[T_a] < \infty$
+(such that $T_a < \infty$ almost surely) then $\EE[S_T] = \EE[T_a]\EE[X_1] = 0$.
+However, in this case $S_T \geq a$ almost surely thus $\EE[S_T]\geq a$, contradiction.
+
+Thus $\EE[T_a] = \infty$.
+
+\begin{prob}
+    Suppose that $\PP[X_1 = +1] = 2/3 = 1 - \PP[X_1 = -1]$ and set $T_a = \inf\{n \geq 0 : S_n \geq a\}$, for some
+    $a > 0$. Find $\EE[T_a]$. (You cannot assume that $\EE[T_a] < \infty$.).
+\end{prob}
+
+Well, if we knew that $\EE[T_a] < \infty$,
+then $\EE[S_T] = \EE[T]\EE[X_1] = \frac13 \EE[T]$; of course,
+in this case, $\EE[S_T] = \ceil{a}$,
+so we would find $\EE[T] = 3\ceil{a}$.
+
+Okay, let's just compute an upper bound on $\EE[T_a]$!
+The probability that $T_a$ occurs after timestep $n\gg a$ is the probability
+that at least $\frac12 n - \frac12 a$ of the $X_i$ are $-1$. This binomial sum is
+\[
+    \sum_{k = \frac12 n -\frac12 a}^n \binom{n}{k}
+    \left(\frac13\right)^k \left(\frac23\right)^{n-k} 
+\]
+Now, the claim is that individual terms $\binom{n}{k}
+\left(\frac13\right)^k \left(\frac23\right)^{n-k}$ are decreasing; this is true
+for sufficiently large $n$, because the ratio of successive $\binom{n}{k}$ increases
+by at most $1 + O(\frac{a}{n})$ while the ratio of successive $\left(\frac13\right)^k \left(\frac23\right)^{n-k}$
+is exactly $1/2$.
+
+Thus, this entire sum is bounded above by
+\begin{align*}
+    \left(\frac12 n + \frac12 a\right) \binom{n}{\frac12 n - \frac12 a} \left(\frac13\right)^{\frac12 n - \frac12 a} \left(\frac23\right)^{\frac12 n + \frac12 a}
+    \leq 2^n \cdot \left(\frac29\right)^{n/2}  = \left(\frac{2\sqrt{2}}{3}\right)^n 
+\end{align*}
+where I have dropped subleading terms in $a$.
+
+Okay, fine! Now, recalling $\EE[T] = \sum_{n = 0}^\infty \PP(T > n)$, we can truncate
+a finite prefix and bound the remaining terms by
+\[
+    \sum_{n = k}^\infty \left(\frac{2\sqrt{2}}{3}\right)^n < \infty
+\]
+This concludes.
+
+Alternatively, say something about a Chernoff bound to kill the problem.
+
+
+% Problem 5. Suppose that X1, X2, · · · are independent random variables with
+% \PP[X = +1] = p, \PP[X = −1] = q,
+% where p ∈ (0, 1), q = 1 − p and p 6= q. Suppose that a and b are integers with 0 < a < b. Define
+% Sn = a + X1 + · · · + Xn, T = inf{n : Sn = a or Sn = b}.
+% 1
+% 2 PROBLEMS SET 6 FOR 18.675 (FALL 2023)
+% Let Fn = σ(X1, · · · , Xn). Prove that
+% Mn =
+% 
+% q
+% p
+% Sn
+% and Nn = Sn − n(p − q)
+% define martingales M and N. Deduce the values of \PP[ST = 0] and \EE[T].
+\section{}
+\setcounter{prob*}{4}
+\begin{prob*}
+    Suppose that $X_1, X_2, \cdots$ are independent random variables with
+    $\PP[X = +1] = p, \PP[X = -1] = q$,
+    where $p \in (0, 1)$, $q = 1 - p$ and $p \neq q$. Suppose that $a$ and $b$ are integers with $0 < a < b$. Define
+    $S_n = a + X_1 + \cdots + X_n$, $T = \inf\{n : S_n = 0 \text{ or } S_n = b\}$.
+    Let $\mathscr{F}_n = \sigma(X_1, \cdots , X_n)$. Prove that
+    \[
+        M_n =
+        \left(
+            \frac{q}{p}
+        \right)^{S_n}
+        \qquad
+        \text{and}
+        \qquad
+        N_n = S_n - n(p - q)
+    \]
+    define martingales $M$ and $N$. Deduce the values of $\PP[S_T = 0]$ and $\EE[T]$.
+\end{prob*}
+
+First, we show $M$ and $N$ are martingales. Indeed,
+\begin{align*}
+    \EE[M_{n+1} | \mathscr{F}_n] &= \EE\left[
+        \left(
+            \frac{q}{p}
+        \right)^{S_{n+1}}
+        \bigg|
+        \mathscr{F}_n
+    \right]\\
+    &= \EE\left[
+        \left(
+            \frac{q}{p}
+        \right)^{S_n + X_{n+1}}
+        \bigg|
+        \mathscr{F}_n
+    \right]\\
+    &= \left(\frac{q}{p}\right)^{S_n}
+    \EE\left[
+        \left(
+            \frac{q}{p}
+        \right)^{X_{n+1}}
+        \bigg|
+        \mathscr{F}_n
+    \right]\\
+    &= \left(\frac{q}{p}\right)^{S_n}
+    \left( \frac{p}{q}\cdot \PP[X_{n+1} = -1] + \frac{q}{p}\cdot \PP[X_{n+1} = +1]\right)\\
+    &= M_n
+    \left( \frac{p}{q}\cdot q + \frac{q}{p}\cdot p\right)\\
+    &= M_n
+\end{align*}
+and
+\begin{align*}
+    \EE[N_{n+1} | \mathscr{F}_n] &= \EE\left[
+        S_{n+1} - (n+1)(p - q)
+        \bigg|
+        \mathscr{F}_n
+    \right]\\
+    &= \EE\left[
+        S_n + X_{n+1} - (n+1)(p - q)
+        \bigg|
+        \mathscr{F}_n
+    \right]\\
+    &= S_n - n(p - q) + \EE[X_{n+1}] - (p - q)\\
+    &= N_n
+\end{align*}
+
+
+For $M$, observe that $S_{T\land n}$ is a bounded martingale thus optional
+stopping theorem applies and $\EE[M_T] = \EE[M_0] = \left(\frac{q}{p}\right)^a$. For $N$, by arguments identical
+to $4$d we know $\EE[T] < \infty$, plus the increments are bounded thus
+optional stopping theorem applies and $\EE[N_T] = \EE[N_0] = a$.
+
+On the other hand, we know that $S_T\in \{0, b\}$ almost surely. Thus we can extract
+the probabilities:
+\[
+    \PP(S_T = 0)\cdot \left(\frac{q}{p}\right)^0 + \PP(S_T = b)\cdot \left(\frac{q}{p}\right)^b = \left(\frac{q}{p}\right)^a    
+\]
+and
+\[
+    \PP(S_T = 0) + \PP(S_T = b) = 1
+\]
+thus
+\[
+    \PP(S_T = 0) + (1 - \PP(S_T = 0))\cdot \left(\frac{q}{p}\right)^b = \left(\frac{q}{p}\right)^a    
+\]
+and
+\[
+    \PP(S_T = 0) = \frac{\left(\frac{q}{p}\right)^a - \left(\frac{q}{p}\right)^b}{1 - \left(\frac{q}{p}\right)^b}.
+\]
+We also know
+\[
+    \PP(S_T = 0)\cdot 0 + \PP(S_T = b)\cdot b - \EE[T](p-q) = a  
+\]
+thus
+\[
+    \EE[T] = \frac{\PP(S_T = b)\cdot b + a}{p - q}    
+\]
+
+
+
+% Problem 6. Let f : [0, 1] 7→ R be Lipschitz, that is, suppose that, for some K < ∞ and all
+% x, y ∈ [0, 1]
+% |f(x) − f(y)| ≤ K|x − y|.
+% Denote by fn the simplest piecewise linear function agreeing with f on {k2
+% −n
+% : k = 0, 1, · · · , 2
+% n}.
+% Set Mn = f
+% 0
+% n
+% . Show that Mn converges a.s. and in L
+% 1 and deduce that f is the indefinite integral of
+% a bounded function.
+\section{}
+\begin{prob*}
+    Let $f : [0, 1] \to \RR$ be Lipschitz, that is, suppose that, for some $K < \infty$ and all
+    $x, y \in [0, 1]$
+    \[
+        |f(x) - f(y)| \leq K|x - y|.
+    \]
+    Denote by $f_n$ the simplest piecewise linear function agreeing with $f$ on $\{k2^{-n} : k = 0, 1, \cdots , 2^n\}$.
+    Set $M_n = f_n'$. Show that $M_n$ converges a.s. and in $L^1$ and deduce that $f$ is the indefinite integral of
+    a bounded function.
+\end{prob*}
+To be explicit, on the interval $[k\cdot 2^{-n}, (k + 1)\cdot 2^{-n}]$, $f_n$
+is linear and agrees with $f$ at the endpoints.
+
+% By the Lipschitz condition,
+% \[
+%     \abs{f(x) - f(k\cdot 2^{-n})}\leq K\cdot 2^{-n}    
+% \]
+% and
+% \[
+%     \abs{f(x\cdot 2^{-n}) - M_n(x)}\leq K\cdot 2^{-n}
+% \]
+% thus
+% \[
+%     \abs{f(x) - f_n(x)}\leq 2K\cdot 2^{-n}    
+% \]
+% and $f_n$ converges uniformly to $f$. This immediately implies $M_n$
+
+We claim that there is a Martingale hidden in here. Indeed, let $\Omega = [0,1]$;
+let our filtration be
+\[
+    \mathfrak{F}_n = \sigma(\{[k2^{-n}, (k + 1) 2^{-n}] : k = 0, 1, \cdots , 2^{n-1}\})
+\]
+Then, $M_n$ is $\mathfrak{F}_n$-measurable, and
+\[
+    \EE[M_{n+1} | \mathfrak{F}_n] = \EE[f_{n+1}' | \mathfrak{F}_n] = f_n'    
+\]
+(this is true because it is true on each segment $[k2^{-n}, (k+1)2^{-n}]$).
+
+Thus $M_n$ is a martingale! But it is also bounded by $\pm K$, because $f$ is Lipschitz.
+Thus $M_n$ is $L^1$ bounded and uniformly integrable.
+Thus, by Doob's Martingale Convergence Theorem, $M_n$ converges almost surely
+and in $L^1$ to a limit $M_\infty$, such that $M_n = \EE[M_\infty | \mathfrak{F}_n]$
+almost surely. Clearly $\abs{M_\infty} \leq K$ almost surely.
+
+Now, the claim is that the indefinite integral of $M_\infty$ is $f$, i.e.
+\[
+    f(y) - f(0) = \mu\left(M_\infty \id_{x \leq y}\right)
+\]
+almost everywhere. First let me show this for all dyadic $y = k\cdot 2^{-n}$.
+Indeed,
+\begin{align*}
+    \mu\left(M_\infty \id_{x \leq k\cdot 2^{-n}}\right)
+    &= \sum_{i = 0}^{k-1} \mu\left(M_\infty \id_{i \cdot 2^{-n}\leq x < (i+1)\cdot 2^{-n}}\right)\\
+    &= \sum_{i = 0}^{k-1} \EE\left[\EE[M_\infty | \mathfrak{F}_n] \id_{i \cdot 2^{-n}\leq x < (i+1)\cdot 2^{-n}}\right]\\
+    &= \sum_{i = 0}^{k-1} \EE\left[M_n \id_{i \cdot 2^{-n}\leq x < (i+1)\cdot 2^{-n}}\right]\\
+    &= \sum_{i = 0}^{k-1} f((i+1)\cdot 2^{-n}) - f(i\cdot 2^{-n})\\
+    &= f(k\cdot 2^{-n}) - f(0)
+\end{align*}
+
+
+For general $y$, we can take a dyadic sequence $y_n$ approaching
+$y$ from the left. Then, $\mu(M_\infty \id_{x\leq y}) = \lim \mu(M_\infty \id_{x\leq y_n})$
+by dominated convergence (note that $M_\infty$ is bounded), $\mu(M_\infty \id_{x\leq y_n}) = f(y_n)$
+for all $y_n$ by our construction, and $\lim f(y_n) = f(y)$ by continuity.
+
+\end{document}

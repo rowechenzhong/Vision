@@ -1,0 +1,371 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+
+% matheoperators for aut and der
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Rad}{Rad}
+
+
+\title{18.745 Lie Algebra}
+\subtitle{Homework 4}
+\begin{document}
+\section{Solvable Lie Algebra Representations}
+
+% 1. Let L be a solvable Lie algebra
+% (1) Show that every irreducible representation of L is one dimensional.
+\begin{prob}
+    Let $L$ be a solvable Lie algebra.
+    Show that every irreducible representation of $L$ is one dimensional.
+\end{prob}
+By Lie's theorem, $L$ stabilizes some flag of $V$. Of course, any particular
+element of that flag is a valid subrepresentation; thus $\dim V = 1$.
+
+% (2) Prove or disprove the following statement:
+% Any representation of L is a direct sum of 1 dimensional representations.
+\begin{prob}
+    Prove or disprove the following statement:
+    Any representation of $L$ is a direct sum of 1 dimensional representations.
+\end{prob}
+This is false. Consider the collection of all upper-triangular
+$2\times 2$ matrices
+\[
+    L = \left\{
+        \begin{pmatrix}
+            a & b \\
+            0 & c
+        \end{pmatrix}
+        \mid a, b, c \in \CC
+    \right\}    
+\]
+which is solvable. However, the reprensentation on $\CC^2$
+in the above basis $\{e_1, e_2\}$ is clearly not a direct
+sum of $1$-dimensional representations; the only non trivial
+subspace stabilized by $L$ is $\CC e_1$.
+
+\section{Reductive Lie Algebras}
+% 2. A Lie algebra L for which Rad(L) = Z(L) is called reductive (e.g. L = gln
+% ).
+% (1) If L is reductive, prove that L = Z(L) ⊕ [L, L] and [L, L] is semisimple.
+\begin{prob}
+    A Lie algebra $L$ for which $\Rad(L) = Z(L)$ is called reductive (e.g. $L = \gl_n$).
+    If $L$ is reductive, prove that $L$ is a completely reducible ad $L$-module.
+\end{prob}
+This is actually trivial by Weyl's theorem. First, recall
+that $\ad L$ is defined as the image of the homormorphism
+$\ad:L\to \gl(L)$. This map has kernel precisely $Z(L)$.
+
+Then, $\ad L\cong L / Z(L) = L / \Rad(L)$. $L/\Rad(L)$
+is clearly semisimple; any solvable ideal could be lifted through
+the (abelian, thus solvable $Z(L)$) to a solvable ideal in $L$.
+Thus, Weyl's theorem applies, and $L$ is completely reducible.
+
+\begin{prob}
+    If $L$ is reductive, prove that $L = Z(L) \oplus [L, L]$ and $[L, L]$ is semisimple.
+\end{prob}
+% (2) If L is reductive, prove that L is a completely reducible ad L-module.
+Well, Weyl's theorem already told us that $L$ was reducible.
+Note that $Z(L)$ is clearly a subrepresentation (it gets annihilated).
+Thus, $Z(L)$ admits a complement $W$ in $L$. $W$ is a valid
+subrepresentation, thus $[L,L] = [L,W]\subset W$. In particular,
+$Z(L)\cap [L,L] = 0$.
+
+On the other hand, $\ad L$ is semisimple. Thus, $[\ad L, \ad L] = \ad [LL]$
+is either $0$ or $\ad L$. Well, $[LL]\cap Z(L) = 0$, so if $\ad [LL] = 0$
+we're abelian and the problem is trivial. Otherwise, $\ad [LL] = \ad L$.
+Inspecting the pre-image, we see that $[LL] + Z(L) = L$.
+
+Thus $L = Z(L) \oplus [L,L]$. This means $[LL]\cong L/\Rad(L)$ which
+is semisimple.
+
+% (3) If L is a completely reducible ad L-module, then L is reductive.
+\begin{prob}
+    If $L$ is a completely reducible ad $L$-module, then $L$ is reductive.
+\end{prob}
+Well, in this case, $L = Z(L) \oplus L_1 \oplus \dots L_n$
+where each $L_i$ is an irreducible subspace stabilized by $\ad L$--
+this means that each $L_i$ is an ideal -- and the irreducibility
+means that they are all simple ideals. Thus $L$ is the direct
+sum of its center and a semisimple part, which is in fact
+another characterization of reducible Lie algebras.
+
+Now, $Z(L)\subset \Rad(L)$ of course. Consider if $\Rad(L)\cap L_i$
+was nonzero. Then $\Rad(L)\cap L_i$
+would be a solvable ideal. $L_i$ was supposed to be simple,
+so this says $L_i$ is solvable. However, solvable ideals
+contain nonzero abelian ideals (the last term in the derived series),
+which is a contradiction because $L_i$ was supposed to be simple.
+
+\section{Maximal Toral Subalgebras}
+% 3. Let L be a semisimple Lie algebra. Let H be a maximal toral subalgebra.
+% (1) Show that H is self-normalizing, that is, H = NL(H).
+\begin{prob}
+    Let $L$ be a semisimple Lie algebra. Let $H$ be a maximal toral subalgebra.
+    Show that $H$ is self-normalizing, that is, $H = N_L(H)$.
+\end{prob}
+
+First off, $N_L(H) = \{x\in L \mid [x,H] \subset H\}$; $H$ is a subalgebra
+thus $H\subset N_L(H)$. Next, suppose $[x,H]\subset H$. We can write
+$x$ using the root space decomposition as
+\[
+    x = x_0 + \sum_{\alpha\in \Phi} x_\alpha    
+\]
+which gets sent by $h$ to
+\[
+    \sum_{\alpha\in \Phi} \alpha(h) x_\alpha    
+\]
+In order for this to be in $H$, $x_\alpha = 0$ for
+all $\alpha\in \Phi$. Thus $x\in H$.
+
+
+% (3) Show that there exists h ∈ H such that CL(h) = H.
+\begin{prob}
+    Show that there exists $h \in H$ such that $C_L(h) = H$.
+\end{prob}
+
+Recall $C_L(h) = \{x\in L\mid [x,h] = 0\}$.
+
+This occurs for all $h$ such that $\alpha(h) \neq 0$
+for all $\alpha\in \Phi$. These clearly exist,
+because for a fixed $\alpha$, the kernel of $\alpha$
+is at most $\dim H - 1$ dimensional; there a finite
+number of $\alpha$ in total, and these cannot cover
+all of $H$.
+% Pick a basis of $H^*$ consisting
+% of roots $\alpha$. Then, in the corresponding basis
+% for $H$, pick an element containing terms which are
+% all linearly independent over $\QQ$.
+
+% (2) If h ∈ H, prove that CL(h) is reductive.
+\begin{prob}
+    If $h \in H$, prove that $C_L(h)$ is reductive.
+\end{prob}
+$C_L(h)$ is precisely the direct sum of the root spaces
+corresponding to the roots $\alpha$ such that $\alpha(h) = 0$;
+call these roots $\Phi_h = \{\alpha\in\Phi\mid\alpha(h)=0\}$.
+\[
+    C_L(h) = H\oplus \bigoplus_{\alpha \in \Phi_h} L_\alpha
+\]
+\begin{claim*}
+We claim that
+\[
+  Z(C_L(h)) = \{x\in H\mid \alpha(x) = 0, \forall\alpha\in\Phi_h\}
+\]
+\end{claim*}
+\begin{proof}
+If $x\in H$ and $\alpha(x) = 0$
+for all $\alpha\in\Phi_h$, then for
+all $\beta \in \Phi_h$, for all $y\in L_\beta$,
+$[x, y] = \beta(x)y = 0$. Of course, $L_\beta$
+span $C_L(h)$, thus $x\in Z(C_L(h))$.
+
+\begin{psec*}
+    First, we show $Z(C_L(h))\subset H$.
+    Indeed, pick an arbitrary
+    \[
+        x= x_0+ \sum_{\alpha\in\Phi_h} x_{\alpha} \in Z(C_L(h))
+    \]
+    From the previous part, we can find a $h'\in H\subset C_L(h)$
+    such that $\alpha(h') \neq 0$ for all $\alpha\in\Phi_h$.
+    Then
+    \[
+        [h',x] = \sum_{\alpha\in\Phi_h} \alpha(h')x_{\alpha}
+    \]
+    This is supposed to equal $0$, thus $x_\alpha$ are all $0$,
+    thus $x\in H$.
+\end{psec*}
+
+Now that we know $Z(C_L(h))\subset H$, it's actually easy.
+For all $\alpha \in \Phi_h$, let's
+pick a nonzero $x_\alpha \in L_\alpha$.
+Then $[x,x_\alpha] = \alpha(x)x_\alpha$.
+This is also supposed to be $0$, thus $\alpha(x) = 0$.
+\end{proof}
+
+Cool, let's finish the problem.
+Clearly $Z(C_L(h))$ is a solvable ideal of $C_L(h)$;
+we want to show it is a maximal solvable ideal.
+
+\begin{claim*}
+    $\Rad(C_L(h))\subset H$.
+\end{claim*}
+\begin{psec*}
+    This sort of works the same way as before.
+    
+    Pick an arbitrary $x\in \Rad(C_L(h))$ %\setminus Z(C_L(h))$.
+    Pick some $h'\in H$ such that the values $(\alpha(h'): \alpha\in \Phi_h)$
+    are all distinct and nonzero (you can do this, because the hyperplane of $h$
+    such that $\alpha(h) = \alpha'(h)$ is at most $\dim H -1$ dimensional, and the finitely
+    many combinations of these cannot fill $H$). So,
+    \[
+        [h',x] = \sum\limits_{\alpha\in\Phi_h} \alpha(h')x_{\alpha} \in\Rad(C_L(h))
+    \]
+
+    We can go ahead and iterate this $\abs{\Phi_h}$ times, and use the Vandermonde matrix trick
+    to get that all the components $x, x_{\alpha}$ are in $\Rad(C_L(h))$.
+    
+    If there is a $\alpha\in\Phi_h$ such that $x_{\alpha}\neq 0$,
+    then
+    \[
+        h_{\alpha} = [x_{\alpha},y_{\alpha}], \qquad y_{\alpha} = -\frac12[h_{\alpha}, y_{\alpha}]
+    \]
+    are both in $\Rad(C_L(h))$ as well (because $\Rad(C_L(h))$ is an ideal of $C_L(h)\supset H$).
+    So $S_\alpha\subset \Rad(C_L(h))$, but this guy is definitely not solvable.
+\end{psec*}
+
+Great, this is easy now. Pick a $x \in \Rad(C_L(h))\setminus Z(C_L(h))$.
+There is a $\alpha\in\Phi_h$ such that $\alpha(x) \neq 0$. Then
+\[
+    [x,x_{\alpha}] = \alpha(x)x_{\alpha}, \qquad [x, y_{\alpha}] = -\alpha(x)y_{\alpha}
+\]
+are both in $\Rad(C_L(h))$ as well. So $S_{\alpha}\subset \Rad(C_L(h))$,
+but this guy is definitely not solvable.
+
+\section{Killing Form}
+% 4. Let B : sln × sln → C be a bilinear form defined by B(x, y) = Tr (xy).
+% (1) Prove that B is nondenerate.
+\begin{prob}
+    Let $B : \sll_n \times \sll_n \to \CC$ be a bilinear form defined by $B(x, y) = \tr(xy)$.
+    Prove that $B$ is nondegenerate.
+\end{prob}
+% This is really dumb. Tracing $x$ against the matrix $e_{ij}$
+% for $i\neq j$ (so we remain in $\sll_n$)
+% just picks out the $(i,j)$-th entry of the matrix; if all
+% of these are zero, then $x$ must be diagonal. Then, tracing
+% against $e_{ii} - e_{11}$ shows that the $(i,i)$-th entry
+% of the matrix is equal to the $(1,1)$-th entry.
+% This is true for all $i$, thus $x$ must be a multiple
+% of the identity, but $\sll_n$ consists of traceless
+% matrices, thus $x$ would be $0$.
+
+For any $x$, you can pick $y = x^\dagger$ to be the conjugate transpose of $x$.
+Then,
+\[
+    B(x,y) = \tr(x x^\dagger) = \sum_{i,j} x_{ij} \overline{x_{ij}} = \sum_{i,j} |x_{ij}|^2    
+\]
+thus $x_{ij} = 0$ for all $i,j$. Thus $x = 0$.
+
+
+% (2) Prove that the Killing form κ and B are proportional to each other. More precisely,
+% prove that
+% κ(x, y) = 2nB(x, y)
+\begin{prob}
+    Prove that the Killing form $\kappa$ and $B$ are proportional to each other. More precisely,
+    prove that
+    \[
+        \kappa(x, y) = 2nB(x, y)
+    \]
+\end{prob}
+
+The map $\ad_x \ad_y$ sends $t$ to $xyt - xty - ytx + tyx$, i.e. it is the tensor
+\[
+    (xy\otimes I - x\otimes y + I\otimes xy - y\otimes x)    
+\]
+This has trace
+\[
+    n\Tr(xy) - \Tr(x)\Tr(y) - \Tr(y)\Tr(x) + n\Tr(xy) = 2n\Tr(xy) = 2nB(x,y)   
+\]
+because $\Tr(x) = \Tr(y) = 0$.
+
+% Well, we can simply begin bashing. I will use Einstein notation.
+% $B$ is a $\binom{2}{2}$ tensor called contraction:
+% \[
+%     B(M,N) = M^\nu_\mu N^\mu_\nu
+% \]
+
+% The Killing form is $\kappa(x,y) = \tr(\ad x \ad y)$.
+% Note that
+% \[
+%     \ad x(K)^\nu_\eta = (\ad x)^{\nu \mu}_{\rho \eta} K^\rho_\mu    
+% \]
+% where
+% \[
+%     (\ad x)^{\nu \mu}_{\rho \eta} = x^\nu_\rho \delta^\mu_\eta - \delta^\nu_\rho x^\mu_\eta   
+% \]
+% Thus, the whole contraction for the killing form is
+% \begin{align*}
+%     &(x^\nu_\rho \delta^\mu_\eta - \delta^\nu_\rho x^\mu_\eta)(y^\rho_\nu \delta^\eta_\mu - \delta^\rho_\nu y^\eta_\mu)\\
+%     =&\delta^\eta_\eta (x^\nu_\rho y^\rho_\nu + x^\nu_\rho y^\rho_\nu) - (x^\nu_\nu y^\eta_\eta + x^\eta_\eta y^\nu_\nu)\\
+%     =&2n x^\nu_\rho y^\rho_\nu\\
+%     =&2nB(x,y)
+% \end{align*}
+% This is simply
+% \[
+%     \kappa^{\mu\nu}_{\rho\sigma} = \tr(\ad^\mu_\rho \ad^\nu_\sigma)    
+% \]
+
+% Let $\eps^i_j$ denote the matrix sending $e_j$ to $e_i$
+% (and all else $0$); these form a basis for $\End V$. It suffices
+% to show that the two forms are equal on this basis.
+
+
+% \begin{center}
+%     \begin{tikzpicture}
+%         \draw[thick] (0,0) -- (10,0);
+%     \end{tikzpicture}
+% \end{center}
+
+% I also want to do this problem in a way that isn't a mundane computation.
+
+% \begin{claim*}
+%     $\sll_n$ is simple.
+% \end{claim*}
+
+% \begin{claim*}
+%     Let $L$ be a simple Lie algebra, and suppose $\beta$
+%     and $\gamma$ are two symmetric associative nondegenerate
+%     bilinear forms on $L$. Then $\beta$ and $\gamma$
+%     are proportional. 
+% \end{claim*}
+
+
+
+
+\section{Root Systems}
+% 5. Let Φ be a root system in a real vector space E with Weyl group Φ.
+% (1) Let E
+% ′ ⊂ E be a subspace. If a reflection σα leaves E
+% ′
+% invariant, prove that either
+% α ∈ E
+% ′ or else E
+% ′ ⊂ Pα where Pα is the hyperplane orthogonal to α.
+\begin{prob}
+    Let $\Phi$ be a root system in a real vector space $E$ with Weyl group $W$.
+    Let $E' \subset E$ be a subspace. If a reflection $\sigma_\alpha$ leaves $E'$ invariant, prove that either
+    $\alpha \in E'$ or else $E' \subset P_\alpha$ where $P_\alpha$ is the hyperplane orthogonal to $\alpha$.
+\end{prob}
+For any $\beta \in E'$, note that $\sigma_\alpha(\beta) = \beta - \braket{\beta | \alpha}\alpha\in E'$,
+so either $\braket{\beta | \alpha} = 0$ or $\alpha\in E'$. Thus, $\alpha\not\in E'$,
+then $\braket{\alpha|E'} = 0$ i.e. $E'\subset P_\alpha$.
+% (2) Prove that Φ∨
+% is also a root system in E, whose Weyl group is naturally isomorphic
+% to W.
+\begin{prob}
+    Prove that $\Phi^\vee$ is also a root system in $E$, whose Weyl group is naturally isomorphic
+    to $W$.
+\end{prob}
+Obviously $\Phi^\vee$ is finite, doesn't contain $0$, spans $E$, and for any $a^\vee\in \Phi^\vee$,
+the only scalar multiple of $a^\vee$ in $\Phi^\vee$ is $-a^\vee$ itself, and $\braket{\beta^\vee | \alpha^\vee} = \braket{\alpha | \beta}\in \ZZ$.
+Also,
+for any $\alpha^\vee\in \Phi^\vee$,
+\[
+    \sigma_{\alpha^\vee}(\beta^\vee) = \beta^\vee - \braket{\beta^\vee | \alpha^\vee}\alpha^\vee = \frac{2\beta}{(\beta, \beta)} - \frac{4(\beta, \alpha)}{(\beta,\beta)(\alpha,\alpha)}\alpha = \left(\sigma_\alpha(\beta)\right)^\vee
+\]
+thus we're closed under reflections. So $\Phi^\vee$ is a root system.
+Its Weyl group is just generated by reflections about hyperplanes $P_\alpha = P_{\alpha^\vee}$,
+but these are literally the same reflections as in $W$, so of course they're isomorphic.
+% (3) Let Aut(Φ) be the group of all isomorphisms of Φ onto itself. Prove that W is a
+% normal subgroup of Aut(Φ).
+\begin{prob}
+    Let $\Aut(\Phi)$ be the group of all isomorphisms of $\Phi$ onto itself. Prove that $W$ is a
+    normal subgroup of $\Aut(\Phi)$.
+\end{prob}
+Well, for all $\phi \in \Aut(\Phi)$, and any $\beta\in E$,
+\[
+    \phi\sigma_\alpha \phi^{-1}(\phi(\beta)) = \phi(\beta) - \braket{\beta | \alpha}\phi(\alpha) 
+\]
+so $\phi\sigma_\alpha \phi^{-1}$ is an automorphism fixing $\phi(P_\alpha)$
+and flipping $\phi(\alpha)$, i.e. it's just $\sigma_{\phi(\alpha)}\in W$.
+
+\end{document}

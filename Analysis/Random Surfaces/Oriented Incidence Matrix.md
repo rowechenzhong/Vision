@@ -1,0 +1,1 @@
+Consider the $E\times V$ matrix containing mostly zeros and entries of $\pm 1$ representing a directed graph, $K$. Then $K^\top K$ should be the Laplacian matrix. Lol?

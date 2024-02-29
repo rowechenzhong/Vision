@@ -1,0 +1,1 @@
+Let $\Omega$ be a (topological) metric space with Borel $\sigma$-field $\FFF$. $(\Omega, \FFF, \mu)$ is ==**inner regular**== if the measure of any set can be approximated from within by compact subsets.

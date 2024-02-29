@@ -1,0 +1,232 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Rad}{Rad}
+
+% sp
+\DeclareMathOperator{\spp}{\mathfrak{sp}}
+
+\author{Rowechen Zhong (Collaborator: Isaac Zhu)}
+\title{18.745 Lie Algebra}
+\subtitle{Homework 7}
+\begin{document}
+% 18.745: Homework 7
+% Due 11:59pm Wednesday Dec 13
+% In the following, let L be a semisimple Lie algebra. Let Φ be a root system with respect
+% to a CSA H. Fix a base ∆ = {α1, · · · , αℓ} and n+ =
+% P
+% α∈Φ+ Lα.
+
+% 1. Let {λ1, · · · , λℓ} be the fundamental dominant weights. Show how to construct an arbitrary V (λ), λ ∈ Λ
+% + as a direct summand in a suitable tensor product of V (λ1), · · · , V (λℓ).
+\section{Representation Decomposition}
+
+In the following, let $L$ be a semisimple Lie algebra. Let $\Phi$ be a root system with respect to a CSA $H$. Fix a base $\Delta = \{\alpha_1, \dots, \alpha_\ell\}$ and $\mathfrak{n}_+ = \sum_{\alpha \in \Phi_+} L_\alpha$.
+
+\begin{prob*}
+Let $\{\lambda_1, \dots, \lambda_\ell\}$ be the fundamental dominant weights. Show how to construct an arbitrary $V(\lambda), \lambda \in \Lambda_+$ as a direct summand in a suitable tensor product of $V(\lambda_1), \dots, V(\lambda_\ell)$.
+\end{prob*}
+
+This is pretty clear. Suppose $\lambda = \sum a_i \lambda_i$. Then let $V = V(\lambda_1)^{\otimes a_1} \otimes \cdots \otimes V(\lambda_\ell)^{\otimes a_\ell}$. The highest weight vector of $V$ is $v = v_1 \otimes \cdots \otimes v_\ell$ where $v_i$ is the highest weight vector of $V(\lambda_i)$; the weight is exactly
+\[
+    \lambda_1 + \cdots + \lambda_\ell = \sum a_i \lambda_i = \lambda.    
+\]
+(this is clear, because if you act $v$ with an element $h$ of the CSA, then $h$ acts on each $v_i$ by $\lambda_i(h)$, so the total weight is $\sum \lambda_i(h) = \lambda(h)$). Thus $V(\lambda)$ is a direct summand of $V$.
+
+% 2. Let 1 ≤ k ≤ n. Consider the k-th exterior power representation W = ΛkC
+% n of sln(C).
+% Let {⃗e1, · · · , ⃗en} be the standard basis of C
+% n
+% . Let H be the standard CSA (which consists
+% of diagonal matrices) and take the standard ∆ ⊂ Φ
+% + ⊂ Φ.
+% (1) Compute all weights of W and describe the corresponding weight spaces.
+% (2) Show that W contains a unique vector ⃗w such that n+ ⃗w = 0, namely ⃗v = ⃗e1 ∧⃗e2 ∧
+% · · · ∧ ⃗ek, and deduce from this that W is irreducible.
+% (3) Find the highest weight of W.
+
+\section{Exterior Power Representation}
+\begin{prob*}
+Let $1 \leq k \leq n$. Consider the $k$-th exterior power representation $W = \Lambda^k \CC^n$ of $\sll(n, \CC)$. Let $\{\vec{e}_1, \dots, \vec{e}_n\}$ be the standard basis of $\CC^n$. Let $H$ be the standard CSA (which consists of diagonal matrices) and take the standard $\Delta \subset \Phi_+ \subset \Phi$.
+\begin{enumerate}
+    \item Compute all weights of $W$ and describe the corresponding weight spaces.
+    \item Show that $W$ contains a unique vector $\vec{w}$ such that $\mathfrak{n}_+ \vec{w} = 0$, namely $\vec{v} = \vec{e}_1 \wedge \vec{e}_2 \wedge \cdots \wedge \vec{e}_k$, and deduce from this that $W$ is irreducible.
+    \item Find the highest weight of $W$.
+\end{enumerate}
+\end{prob*}
+
+Let $L = \sll(n, \CC)$, the traceless matrices. The root space lives in $E$, $\RR^n$ modulo $\sum e_i = 0$. The root basis is $\{e_i - e_{i+1}\}$ corresponding to diagonal elements $(M^i)_{jk} = \delta_{jk}\left(\delta_{j,i} - \delta_{j,i+1}\right)$ for $1 \leq i < n$.
+
+The weights of basis vector $\vec{e}_i\in \CC^n$ is precisely $e_i\in E$ (using different letters to avoid confusion). A basis for $W$ is
+\[
+    \vec{e}_i \equiv \vec{e}_{i_1} \wedge \cdots \wedge \vec{e}_{i_k}    
+\]
+with $1 \leq i_1 < \cdots < i_k \leq n$. The weight of this basis vector is exactly $e_{i_1} + \cdots + e_{i_k}$. Thus the weights of $W$ are exactly the sums of $k$-element subsets of $\{\vec{e}_1, \dots, \vec{e}_n\}$. Each weight space has dimension one and contains exactly the vector above.
+
+
+Next, observe $\mathfrak{n}_+ v = 0$ iff $L_\alpha v = 0$ for all $\alpha \in \Phi_+$. We can explicitly write the positive root spaces in our root system; under the basis above, they are exactly the matrices
+\[
+    (A^{ij})_{kl} = \delta_{k,i}\delta_{l,j}
+\]
+with $i < j$. The basis is precisely when $j = i + 1$. We will now consider a general element expressed as
+\[
+    \sum_{i} c_i \vec{e}_{i}  
+\]
+where the index $i$ ranges over all $k$-element increasing subsequences of $\{1, \dots, n\}$. These subsets can be partially ordered by $i \succ j$ iff there exists $k$ with $i_k > j_k$. Suppose $\mathfrak{n}_+ v = 0$, but $v\neq 0$. Pick any maximimal $i$ with nonzero $c_i$. Suppose $i\neq (1, \dots, k)$.
+Then,
+\[
+    A^{ki_k} A^{(k-1)(i_k - 1)}\dots A^{i_1 1}\left(\sum_{i} c_i \vec{e}_i\right) = 0.
+\]
+because the sequence of $A$'s is nonempty because $i\neq (1,\dots, k)$.
+However, observe that the LHS annihilates any $\vec{e}_j$ for $j\neq i$ by inspection. Thus the LHS is exactly $c_i \vec{e}_{(1,\dots k)}\neq 0$. Thus, $A$ must be empty, and we have the desired.
+
+The highest weight is just $f_1 + \cdots + f_k$.
+
+% 3. Let λ ∈ Λ
+% +. Prove that the dimension of the irreducible module V (λ) is given by
+% dim V (λ) = Y
+% α∈Φ+
+% ⟨λ + δ, α⟩
+% ⟨δ, α⟩
+\section{Dimension of Irreducible Modules}
+\begin{prob*}
+Let $\lambda \in \Lambda_+$. Prove that the dimension of the irreducible module $V(\lambda)$ is given by
+\[
+    \dim V(\lambda) = \prod_{\alpha \in \Phi_+} \frac{\langle \lambda + \delta, \alpha \rangle}{\langle \delta, \alpha \rangle}
+\]
+\end{prob*}
+
+This is the corollary on page $139$ of Humphrey's; the proof is provided there also. The basic idea is to cite Harish-Chandra, leading to Kostant's multiplicities theorem. Then we convolve to get Weyl's theorem, which quickly yields the desired result. Given the amount of information it is necessary to cite, I will not reproduce the proof here.
+
+% 4. Let L = sp6
+% (1) Consider the adjoint representation ad : sp6 → gl(L). Prove that it is an irreducible
+% representation.
+% (2) Find the maximal weight and describe a maximal vector in L.
+\section{Adjoint Representation of $\spp(6, \CC)$}
+\begin{prob*}
+Let $L = \spp(6, \CC)$.
+\begin{enumerate}
+    \item Consider the adjoint representation $\ad : \spp(6, \CC) \to \gl(L)$. Prove that it is an irreducible representation.
+    \item Find the maximal weight and describe a maximal vector in $L$.
+\end{enumerate}
+\end{prob*}
+
+The weight space of the adjoint representation is exactly the root space plus the origin (corresponding to the CSA). This root space is exactly $C_3$, but this Dynkin diagram is connected, so the adjoint representation is irreducible. (This proof shows all simple Lie algebras have irreducible adjoint representations.)
+
+For the second part, we compute some things specific to $\spp(2n, \CC)$, $n = 3$. This consists of the block matrices
+\[
+    \begin{pmatrix}
+        A & B \\
+        C & -A^T
+    \end{pmatrix}
+\]
+where $B$ and $C$ are symmetric; it is $n(2n + 1) = 21$-dimensional.
+% The CSA consists of the diagonal matrices
+% \[
+%     \begin{pmatrix}
+%         D & 0 \\
+%         0 & -D
+%     \end{pmatrix}
+% \]
+% where $D$ is diagonal; it is $n = 3$ dimensional.
+
+We now write out the CSA and root space decomposition, which is essentially a trivial but tedious computation. In the below, I will write out only the general cases. The CSA consists of
+\[
+    H_1 = \left(
+        \begin{array}{ccc|ccc}
+            1 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            \hline
+            0 & 0 & 0 & -1 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0    
+        \end{array}
+    \right), \dots
+\]
+(3 total). The root spaces of the form $(1,-1,0)$ look like
+\[
+    X_{1,2} = \left(
+        \begin{array}{ccc|ccc}
+            0 & 1 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            \hline
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & -1 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0    
+        \end{array}
+    \right), \dots
+\]
+(6 total). The root spaces of the form $(1,1,0)$ look like
+\[
+    Y_{1,2} = \left(
+        \begin{array}{ccc|ccc}
+            0 & 0 & 0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            \hline
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0    
+        \end{array}
+    \right)
+\]
+(3 total, and their transposes $Y^\top_{i,j}$ yield the $(-1,-1,0)$ root spaces). The root spaces of the form $(2,0,0)$ look like
+\[
+    Z_1 = \left(
+        \begin{array}{ccc|ccc}
+            0 & 0 & 0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            \hline
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 & 0 & 0
+        \end{array}
+    \right), \dots
+\]
+(3 total, and their transposes $Z^\top_i$ yield the $(-2,0,0)$ root spaces).
+
+Thus the root system is exactly $\{\pm 2e_i, \pm e_i \pm e_j\}$ for $1\leq i < j\leq n = 3$. The Cartan matrix of $C_3$ is
+\[
+    \begin{pmatrix}
+        2 & -1 & 0 \\
+        -1 & 2 & -1 \\
+        0 & -2 & 2
+    \end{pmatrix},   
+\]
+and the root system looks like
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{c3.png}
+\end{center}
+We pick a basis $\{e_1 - e_2, e_2 - e_3, 2e_3\}$ (shown in red) of $L$. Then, a maximal weight (which is the same as a maximal root) is $\alpha = 2e_1$ (shown in blue); it is the unique maximum under the partial order $\alpha \leq \beta$ if $\beta - \alpha$ is a nonnegative linear combination of positive roots. It corresponds to a block of the form $Z_i$.
+
+% 5. Suppose L is simple. Show that the universal Casimir element cL is in the center Z of
+% the universal enveloping algebra U(L).
+% 1
+\section{Universal Casimir Element}
+\begin{prob*}
+Suppose $L$ is simple. Show that the universal Casimir element $c_L$ is in the center $Z$ of the universal enveloping algebra $U(L)$.
+\end{prob*}
+
+Recall that the universal Casimir element is
+\[
+    c_L = \sum_{i=1}^n x_i\otimes y_i \in U(L),
+\]
+where $\{x_i\}$ is a basis of $L$ and $\{y_i\}$ is the dual basis under the Killing form. Compute:
+\begin{align*}
+    [c_L, z]
+    &= \sum_{i=1}^n [x_i \otimes y_i, z]\\
+    &= \sum_{i=1}^n x_i\otimes [y_i, z] + [x_i, z]\otimes y_i
+\end{align*}
+Contract the second tensor element against any $x_j$ using $B$.
+\begin{align*}
+    &= \sum_{i=1}^n x_i\otimes B([y_i, z], x_j) + [x_i, z]\otimes B(y_i, x_j)\\
+    &= \sum_{i=1}^n x_i\otimes B(y_i, [z, x_j]) + [x_j, z]
+\end{align*}
+Letting $w = [x_j, z]$, we observe that this is true for all $w = x_k$ thus we conclude.
+
+\end{document}

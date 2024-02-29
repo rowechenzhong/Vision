@@ -1,0 +1,623 @@
+\documentclass[11pt, headheight=30pt]{scrartcl}
+\usepackage[white, nologo, hw]{darkWhite}
+\usepackage{mathrsfs}
+
+\newcommand{\BBB}{\mathscr{B}}
+
+\title{18.675 Problem Set 2}
+\begin{document}
+\section{Sequence of Events}
+\begin{prob}
+    Let $(A_n : n \in \NN)$ be a sequence of events,
+    with $\PP[A_n] = 1/n^2$ for all $n$. Set
+    $X_n = n^2 1_{A_n} - 1$ and set $\conj{X}_n = (X_1 + \cdots + X_n)/n$.
+    Show that $\EE[\conj{X}_n] = 0$ for all $n$, but $\conj{X}_n \to -1$ almost surely
+    as $n \to \infty$.
+\end{prob}
+
+For any particular $n$, by linearity,
+\begin{align*}
+    \EE[\conj{X}_n] &= \EE\left[\frac{X_1 + \cdots + X_n}{n}\right]\\
+    &= \frac{\EE[X_1] + \cdots + \EE[X_n]}{n}\\
+    &= 0
+\end{align*}
+
+By, say upper-bounding a suffix by $\int_1^\infty \frac{1}{x^2}$, we see that
+\[
+    \sum_n \PP[X_n] = \sum_n \frac{1}{n^2} < \infty    
+\]
+Thus, by Borel-Cantelli, $A_n$ occurs finitely often almost surely; in
+this case, suppose that $A_n$ never occurs for $n \geq N$. Then
+$X_n = -1$ for all $n\geq N$, so clearly $\conj{X}_n\to -1$.
+
+\section{Zeta Function}
+\begin{prob}
+    The zeta function is defined for $s > 1$ by $\zeta(s) = \sum_{n=1}^\infty n^{-s}$.
+    Let $X$ and $Y$ be independent random variables with
+    $\PP[X = n] = \PP[Y = n] = n^{-s}/\zeta(s)$.
+    Write $A_n$ for the event that $n$ divides $X$. Show that the events
+    $(A_p : p \text{ prime})$ are independent
+    and deduce Euler's formula
+    \[
+        \frac{1}{\zeta(s)} = \prod_p \left(1 - \frac{1}{p^s}\right).
+    \]
+\end{prob}
+\begin{claim*}
+    $\PP[A_n] = \frac{1}{n^s}$ for all $n\in \NN$.
+\end{claim*}
+\begin{proof}
+    Fix any $p\in \NN$. $A_p$ is the disjoint union
+    of a countable number of events called $X = np$ for all $n\in \NN$;
+    as such, it is literally
+    \begin{align*}
+        \PP[A_p] &= \sum_{n\geq 1} \PP[X = np]\\
+        &= \frac{1}{\zeta(s)}\sum_{n\geq 1} \frac{1}{(np)^s}\\
+        &= \frac{1}{p^s}\frac{1}{\zeta(s)}\sum_{n\geq 1} \frac{1}{n^s}\\
+        &= \frac{1}{p^s}
+    \end{align*}
+\end{proof}
+
+We sort the primes $p_1 < p_2 < \cdots$.
+
+\begin{claim*}
+    Given $X$ as above, define the random variables
+    $P_i$ as the largest factor of $p_i$ dividing $X$
+    (these are measurable functions from $\NN$ to $\ZZ_{\geq 0}$
+    because integers literally have discrete measure).
+    Then, the random variables $P_i$ are independent.
+\end{claim*}
+\begin{proof} 
+Fix a sequence of positive integers $n_i$; I show that
+\[
+    A_{p_i^{n_i}} = \{P_i \geq n_i\}
+\]
+are independent.
+
+Fix a finite set of distinct primes $\{p_i: i\in I\}$. Then,
+\[
+    A_M = \bigcap_{i\in I} A_{p_i^{n_i}}
+\]
+where
+\[
+    M = \prod_{i\in I} p_i^{n_i}    
+\]
+Observe that
+\[
+    \PP[A_M] = \frac{1}{M^s} = \prod_i \frac{1}{p_i^s} = \prod_i \PP[A_{p_i}]    
+\]
+Note that $A_{p^n}$ implies $A_{p^m}$ for $m\leq n$. Thus, the above calculation
+proves the claim.
+\end{proof}
+
+Now, we want to compute $\PP(X = 1)$. By elementary number theory,
+we know $\{X = 1\} = \bigcap \{P_i = 0\}$.
+Measures are continuous from above, thus
+\begin{align*}
+    \PP(X = 1) &= \lim_{m\to\infty} \PP(P_i = 0 \text{ for all } i\leq m)\\
+    &= \lim_{m\to \infty} \prod_{i=1}^m \left(1 - \PP(A_i)\right)\\
+    &= \prod_{i=1}^\infty \left(1 - \frac{1}{p_i^s}\right)
+\end{align*}
+as desired.
+
+\begin{prob}
+    Show also that $\PP[X \text{ is square free}] = 1/\zeta(2s)$.
+    Write $H$ for the highest common factor of $X$ and
+    $Y$. Show finally that $\PP[H = n] = n^{-2s}/\zeta(2s)$.
+\end{prob}
+Observe that the $A_{p^2}$ are independent
+for all prime $p$ by the same argument as before. Then, the probability
+that you are squarefree is precisely the countable intersection of the events
+$A_{p^2}^c$, which (by identical reasoning) is
+\[
+    \prod_p \left(1 - \frac{1}{(p^2)^s}\right) = \prod_p \left(1 - \frac{1}{p^{2s}}\right) = \frac{1}{\zeta(2s)}    
+\]
+
+Finally, we have two independent random variables $X$ and $Y$,
+which induce prime-factorization random variables $P_i$ and $Q_i$.
+All of $\{P_i\}\cup \{Q_i\}$ are mutually independent random variables,
+because $P_i$ and $Q_i$ are functions of $X$ and $Y$, which are independent.
+
+We've got to figure out the probability that $\gcd(X, Y) = n$.
+Let
+\[
+    n = \prod_{i=1}^k p_i^{n_i}    
+\]
+be the prime factorization of $n$. Then, we require $\min(P_i, Q_i) = n_i$.
+We now do the standard trick; this is a countable intersection
+of events called ``$\min(P_i, Q_i) = n_i$ for all $i\leq m$'' which
+are all independent, so we can go directly to the limit.
+
+Alright! So what's $\PP(\min(P_i, Q_i) = n_i)$? Well, this is
+\begin{align*}
+    \PP(P_i = n_i, Q_i\geq n_i) \sqcup \PP(P_i > n_i, Q_i = n_i) &= \PP(P_i = n_i)\PP(Q_i \geq n_i) + \PP(P_i > n_i)\PP(Q_i = n_i)\\
+    &= \left(\frac{1}{p_i^{n_i}} - \frac{1}{p_i^{n_i + 1}}\right)\cdot \frac{1}{p_i^{n_i}} + \frac{1}{p_i^{n_i + 1}}\cdot \left(\frac{1}{p_i^{n_i}} - \frac{1}{p_i^{n_i + 1}}\right)\\
+    &= \left(\frac{1}{p_i^{n_i}} - \frac{1}{p_i^{n_i + 1}}\right)\left(\frac{1}{p_i^{n_i}} + \frac{1}{p_i^{n_i + 1}}\right)\\
+    &= \frac{1}{p_i^{2n_i}}\left(1 - \frac{1}{p_i^{2}}\right)
+\end{align*}
+Thus, the infinite product is
+\begin{align*}
+    \prod_{i=1}^\infty \frac{1}{p_i^{2n_i}}\left(1 - \frac{1}{p_i^{2}}\right) &= \prod_{i=1}^\infty \frac{1}{p_i^{2n_i}}\prod_{i=1}^\infty \left(1 - \frac{1}{p_i^{2}}\right)\\
+    &= \frac{1}{n^{2s}}\prod_{i=1}^\infty \left(1 - \frac{1}{p_i^{2}}\right)\\
+    &= \frac{1}{n^{2s}}\frac{1}{\zeta(2s)}
+\end{align*}
+(I was allowed to split the first infinite product because all of the terms are $<1$).
+
+\section{Cantor Set}
+\begin{prob}
+    Let $C_n$ denote the $n$th approximation to the Cantor set $C$:
+    thus $C_0 = [0, 1]$,
+    $C_1 = [0, 1/3] \cup [2/3, 1]$,
+    $C_2 = [0, 1/9] \cup [2/9, 1/3] \cup [2/3, 7/9] \cup [8/9, 1]$,
+    etc. and $C = \bigcap_n C_n$.
+    Denote by $F_n$ the distribution function of a random variable uniformly distributed on $C_n$.
+    
+    Show that $C$ has Lebesgue measure $0$.
+\end{prob}
+Let $A_n\subset \{0,1,\dots 3^n-1\}$ consists of all numbers whose ternary
+expansion contains no $1$s, in order; there are $2^n$ of these.
+Then,
+\[
+    C_n = \{[x\cdot 3^{-n}, (x + 1)\cdot 3^{-n}] : x\in A_n\}    
+\]
+
+It's pretty clear that $C_i$ has a Lebesgue measure of
+$\left(\frac23\right)^i\to 0$, and $C_i\downarrow C$,
+thus $C$ has measure $0$.
+
+\begin{claim*}
+    [Full Characterization of $F_n$]
+    By definition, $F_n(x)$ is the measure of $C_n\cap [0,x]$, divided
+    by the measure of $C_n$. This is:
+    \begin{align*}
+        &\mu(C_n)^{-1}\left(\mu\left(C_n\cap \left([0,3^{-n}\cdot a]\cup [3^{-n}\cdot a, 3^{-n}\cdot a + 3^{-n}\cdot d]\right)\right)\right)\\
+        =&2^{-n}\left(\mu\left(\{[x, x + 1] : x\in A_n\}\cap \left([0,a] \cup [a, a + d]\right)\right)\right)
+    \end{align*}
+    Let $b = \abs{\{x : x\in A_n, x\leq a - 1\}}$ be the measure
+    of the first intersection.
+    Then, there's two cases
+    \begin{itemize}
+        \item If $a\notin A_n$, this is $2^{-n}b$.
+        \item If $a\in A_n$, this is $2^{-n}\left(b + d\right)$
+    \end{itemize}
+    where $a = \floor{3^nx}$ and $d = \{3^nx\}$.
+
+    % The full statement of $F_n(x)$: let $a = \floor{3^nx}$ be the first
+    % $n$ digits of the ternary representation of $x$, and let $d = \{3^nx\}$
+    % be the trailing stuff after that.
+    % \begin{itemize}
+    %     \item If $a$ contains any $1$'s, then find the first instance of a $1$,
+    %     and set that equal to $2$. Replace all subsequent digits with $0$.
+    %     Then set $d' = 0$. For example:
+    %     \[
+    %         a = 2202210212_3 \rightarrow a' = 2202220000_3
+    %     \]
+    %     Else, set $a' = a$ and $d' = d$.
+    %     \item Now, $a'$ contains all $0$'s and $1$'s. Replace all $2$'s with $1$'s,
+    %     and let this be the binary representation of $b$. For example:
+    %     \[
+    %         \rightarrow b = 110110000_2    
+    %     \]
+    %     \item $f(x) = (b + d')\cdot 2^{-n}$.
+    % \end{itemize}
+\end{claim*}
+
+\begin{prob}
+    For all $x \in [0, 1]$, the limit $F(x) = \lim_{n \to \infty} F_n(x)$ exists.
+\end{prob}
+% I challenge myself to write up this problem as straightforwardly as possible.
+% I really don't care about measure theory at all for this part; $C_n$ is a collection
+% of closed intervals, and $F_n(x)$, as the integral of the indicator on $[0,x]\cap C_n$ over $C_n$,
+% is simply a piecewise linear function. Let's start by completely characterizing $F_n$
+% as succinctly as possible.
+
+% Now, draw the points $\left(\frac{A_i}{3^n}, \frac{i}{2^n}\right)$
+% for all integers $0\leq i \leq 2^n$. Connect these points with lines.
+% Done.
+
+% Then, $C_n$ is the set of all numbers $x\in [0,1]$ such that
+% \[
+%     \floor{3^nx} \in A_n
+% \]
+% Let $k:[0,1]\to A_n$ send $x$ to the largest element of $A_n$ which is no greater than $3^nx$.
+
+% Let $f: A_n\to \{0,\dots, 2^n - 1\}$ simply send the element of $A_n$ to its binary
+% representation (replacing $2$'s with $1$'s; this just indexes them).
+
+% Now, to utterly trivialize this problem, let's write down an explicit form for $C_n$. Here it is:
+% \begin{itemize}
+%     \item If $\floor{3^n} x \notin A_n$, then $F_n(x) = (f(k(x)) + 1) / 2^n$.
+%     \item If $\floor{3^n} x \in A_n$, then $F_n(x) = (f(k(x)) + 3^n\cdot x - k(x))/2^n$.
+% \end{itemize}
+
+% Okay.
+
+Okay, fine! I claim that $\abs{F_{n + 1} - F_n} \leq 2^{1-n}$ uniformly.
+For all $x$, let's track the progress of $x$ through the above steps.
+\begin{itemize}
+    \item Let $a_n = \floor{3^nx}, d_n = \{3^nx\}$, $a_{n+1} = \floor{3^{n+1}x}$, $d_{n+1} = \{3^{n+1}x\}$.
+    \item Consider
+    \[
+        b_{n+1} = \abs{\{x: x\in A_{n+1}, x < a_{n+1}\}}  
+    \]
+    We know $3a_n\leq a_{n+1}\leq 3a_n + 2$, thus this set
+    contains
+    \[
+        \{3x: x\in A_n, x < a_n\}\cup \{3x + 2: x\in A_n, x < a_n\}
+    \]
+    and is a subset of
+    \[
+        \{3x: x\in A_n, x < a_n + 1\}\cup \{3x + 2: x\in A_n, x < a_n + 1\}
+    \]
+    In particular, $2b_n\leq b_{n+1}\leq 2b_n + 2$.
+    \item We also perform the idiotic bounds $0\leq d_{n+1}, d_n \leq 1$.
+    \item Okay. Now you can just subtract.
+\end{itemize}
+
+This probably kills the remaining parts. For part (ii),
+we just showed that
+\[
+    \abs{F_n(x) - F_{n+1}(x)} < 2^{-n}
+\]
+for all $x$, so the limit exists.
+
+\begin{prob}
+    The function $F$ is continuous on $[0, 1]$, with $F(0) = 0$ and $F(1) = 1$.
+\end{prob}
+We just showed that $F_n$
+was uniformly Cauchy convergent, so it is
+also uniformly convergent. A uniformly convergent
+series of continuous functions is continuous, so $F$ is continuous.
+
+Also, $F_n(0)$ is always $0$,
+and $F_n(1)$ is always $1$, so it's not deep.
+
+\begin{prob}
+    For almost all $x \in [0, 1]$, $F$ is differentiable at $x$ with $F'(x) = 0$.
+\end{prob}
+For all $x\notin C$, there exists
+some $i$ such that $x\notin C_i$. Of course, if $x\notin C_i$,
+then it is $\notin C_j$ for all $j\geq i$.
+Then, $F_j$ is locally constant at $x$, for all $j\geq i$.
+thus $F$ too will be locally constant at $x$,
+and has derivative $0$. 
+
+
+\section{Normal Distribution}
+\begin{prob}
+    Show that, for all non-negative measurable functions $f$ on $[0, \infty)$,
+    the function
+    $(x, y) \mapsto f(|(x, y)|)$ is measurable on $\RR^2$.
+\end{prob}
+
+$\phi: (x,y)\to \abs{(x,y)}$ is measurable since it is
+continuous, and composition of measurable functions is
+measurable, thus $g = f\circ \phi$ is measurable.
+
+\begin{prob}
+Show (without using the Jacobian formula)
+\[
+    \int_{\RR^2} f(|(x, y)|)dxdy = 2\pi \int_0^\infty rf(r)dr.
+\]
+\end{prob}
+
+Now, we're going to prove the statement for
+indicator functions of the form $f = 1_{[0, r]}$. Then, the LHS is
+\begin{align*}
+    \int_{\RR^2} 1_{[0, r]}(|(x, y)|)dxdy &= \int_{\RR^2} 1_{B_r(0)}((x, y))dxdy\\
+    &= \pi r^2
+\end{align*}
+(This is true because this is just a Riemann integral, which coincides
+with the Lebesgue integral). The RHS is
+\begin{align*}
+    2\pi \int_0^\infty rf(r)dr &= 2\pi \int_0^r rdr\\
+    &= \pi r^2
+\end{align*}
+as desired.
+
+Let $g_n = f_n\circ \phi$. Then, $g_n\uparrow g$ are
+a series of simple functions as well. By the above results,
+\[
+    \int_{\RR^2} g_n dxdy = 2\pi \int_0^\infty rg_n(r)dr    
+\]
+thus by the monotone convergence theorem, we conclude.
+This immediately implies the same result for arbitrary
+indicator functions $1_A$, since $[0,r]$ is a $\pi$-system
+which generates the Borel $\sigma$-algebra on $[0,\infty)$.
+
+By linearity, this in turn implies the same result for arbitrary
+simple functions.
+
+Now, there exists some sequence of simple functions $f_n$ such that
+$f_n\uparrow f$. Let $g_n = f_n\circ \phi$. Then, $g_n\uparrow g$ are
+a series of simple functions as well (a simple function is a finite linear
+combination of indicators on measurable sets, each of which is pulled back
+through $\phi$ to a measurable set).
+
+By the above results,
+\[
+    \int_{\RR^2} g_n dxdy = 2\pi \int_0^\infty rg_n(r)dr    
+\]
+thus by the monotone convergence theorem, we conclude.
+
+\begin{prob}
+    Hence show that $(2\pi)^{-1/2} e^{-x^2/2}$ is a probability measure.
+\end{prob}
+
+We simply plug $f(x) = (2\pi)^{-1} e^{-x^2/2}$ into this formula.
+The RHS is
+\[
+    \int_0^\infty re^{-r^2/2}dr = \int_0^\infty e^{-u}du = 1
+\]
+The LHS is
+\begin{align*}
+    \int_{\RR^2} f(|(x, y)|)dxdy &= \int_{\RR^2} (2\pi)^{-1} e^{-\frac{x^2 + y^2}{2}}dxdy\\
+    &= \left(\int_\RR (2\pi)^{-1/2} e^{-\frac{x^2}{2}}dx\right)\left(\int_\RR (2\pi)^{-1/2} e^{-\frac{y^2}{2}}dy\right)\\
+    &= \left(\int_\RR (2\pi)^{-1/2} e^{-\frac{x^2}{2}}dx\right)^2
+\end{align*}
+Thus $\int_\RR (2\pi)^{-1/2} e^{-\frac{x^2}{2}}dx = 1$, as desired.
+(It clearly can't be $-1$).
+
+% (by the standard dyadic argument), which in turn
+% can be decomposed as a sum of indicators:
+% \[
+%     f_n = \sum_{i = 1}^{k_n} a_{n,i} 1_{A_{n,i}}    
+% \]
+
+% wait what this is stupid
+% Each of these indicator functions can be pulled back through $\phi$
+% into a measurable set, yielding the function
+% \[
+%     g_n = \sum_{i = 1}^{k_n} a_{n,i} 1_{\phi^{-1}(A_{n,i})}    
+% \]
+% Observe
+% \begin{align*}
+%     g_n(x,y)    &= \sum_{i = 1}^{k_n} a_{n,i} 1_{\phi^{-1}(A_{n,i})}(x,y)\\
+%                 &= \sum_{i = 1}^{k_n} a_{n,i} 1_{A_{n,i}}(\abs{(x,y)})\\
+%                 &= f_n(\abs{(x,y)})
+% \end{align*}
+% Thus $g_n\uparrow f\circ \phi = g$.
+
+
+\section{Random Variables}
+\begin{prob}
+    Let $X$ be a non-negative integer-valued random variable.
+    Show that
+    \[
+        \EE[X] = \sum_{n=1}^\infty \PP[X \geq n].
+    \]
+\end{prob}
+Consider the sequence of simple functions
+\[
+    X_i = \sum_{n=1}^i 1_{\{X\geq n\}}  
+\]
+Then, $X_i\uparrow X$, thus $\mu(X_i)\to \mu(X)$.
+In particular,
+% \[
+%     \EE[X] = \lim_{i\to \infty} \EE[X_i] = \lim_{i\to \infty} \sum_{n=1}^i \PP[X\geq n] = \sum_{n=1}^\infty \PP[X\geq n]
+% \]
+\begin{align*}
+    \EE[X] &= \lim_{i\to \infty} \EE[X_i]\\
+    &= \lim_{i\to \infty} \sum_{n=1}^i \PP[X\geq n]\\
+    &= \sum_{n=1}^\infty \PP[X\geq n]
+\end{align*}
+
+\begin{prob}
+    Deduce that, if $\EE[X] = \infty$ and $X_1, X_2, \ldots$
+    is a sequence of independent random variables with the
+    same distribution as $X$, then, almost surely,
+    $\limsup_{n \to \infty}(X_n/n) \geq 1$,
+    and moreover $\limsup_{n \to \infty}(X_n/n) = \infty$.
+\end{prob}
+
+Pick any $k \in \NN$.
+\begin{align*}
+    \infty &= \EE[X]\\
+    &= \sum_{n=1}^\infty \PP[X\geq n]\\
+    &= \sum_{n = 1}^\infty \PP[X\geq kn]\\
+    &= \sum_{n = 1}^\infty \PP[X_n\geq kn]
+\end{align*}
+where the third equality is because $\PP[X\geq n]$
+is non-increasing in $n$, and thus e.g.
+\[
+    \PP[X\geq kn] + \cdots + \PP[X\geq kn + (k-1)] \leq k\PP[X\geq kn]    
+\]
+but a sum is infinite iff all its tails are infinite, and
+we don't care about the multiplicative factor of $k$.
+
+Since the $X_n$ are independent, the second Borel-Cantelli lemma
+implies that $\PP[X_n\geq kn \text{ i.o.}] = 1$.
+In particular, $\frac{X_n}{n} \geq k$ infinitely often,
+thus $\limsup_{n\to \infty} \frac{X_n}{n} \geq k$.
+But this is true for all $k$, so $\limsup_{n\to \infty} \frac{X_n}{n} = \infty$.
+
+\begin{prob}
+    Now suppose that $Y_1, Y_2, \ldots$ is any sequence of
+    independent identically distributed random variables with
+    $\EE[Y_1] = \infty$. Show that, almost surely,
+    $\limsup_{n \to \infty}(|Y_n|/n) = \infty$.
+\end{prob}
+
+Let's let $Z_i = \ceil{\abs{Y_i}}$. Note $\EE[\ceil{\abs{Y_i}}] \geq \EE[Y_n] = \infty$,
+and $\ceil{\abs{Y_i}}$ is non-negative, thus by the previous problem,
+for all $k\in \NN$,
+$\limsup_{n\to \infty} \frac{Z_n}{n} \geq k$
+almost surely.
+
+Now, $\abs{Y_n}$ differs from $\ceil{\abs{Y_n}}$
+by at most $1$, thus $\abs{Y_n}\geq nk - 1\geq n(k-1)$ infinitely often.
+This holds for all $k$, so $\limsup_{n\to \infty} \frac{\abs{Y_n}}{n} = \infty$.
+
+\begin{prob}
+    Show $\limsup_{n \to \infty}(|Y_1 + \cdots + Y_n|/n) = \infty$.
+\end{prob}
+
+Suppose FSOC that $\limsup_{n \to \infty}(|Y_1 + \cdots + Y_n|/n) = k < \infty$.
+Then, there exists $N > 100$ such that for all $n > N$,
+\[
+    -nk \leq Y_1 + \cdots + Y_n \leq nk,\qquad -(n+1)k \leq Y_1 + \cdots + Y_{n+1} \leq (n+1)k
+\]
+In particular, $\abs{Y_{n+1}} \leq (2n + 1)k$ for all $n > N$.
+
+However, we just showed $\abs{Y_n}\geq 100kn$ infinitely often,
+so this is a contradiction.
+
+\section{Bloody Integrals}
+\begin{prob}
+    Show that as $n \to \infty$,
+    \[
+        \int_0^\infty \frac{\sin(e^x)}{1 + nx^2}dx \to 0
+    \]
+\end{prob}
+
+Consider
+\[
+    f_n(x) = \frac{\sin(e^x)}{1 + nx^2}
+\]
+Then $f_n\to f$ almost everywhere (in fact, for all $x > 0$).
+In addition, $\abs{f(x)} \leq \frac{1}{1 + x^2}$ for all $n,x$.
+Note that $g$ is integrable, since its antiderivative
+is $\arctan(x)$ or something, and integrates to $\pi/2$.
+
+Thus, the Dominated Convergence Theorem applies, showing
+\[
+    \mu(f_n) \to \mu(f) = 0    
+\]
+
+\begin{prob}
+    Show that as $n \to \infty$,
+    \[
+        \int_1^0 \frac{n \cos(x)}{1 + n^2x^{3/2}}dx \to 0.    
+    \]
+\end{prob}
+
+Consider
+\[
+    f_n(x) = \frac{n \cos(x)}{1 + n^2x^{3/2}}
+\]
+Then $f_n\to f$ almost everywhere (in fact, for all $x > 0$).
+We can bound this by
+\[
+    \frac{\abs{n\cos x}}{1 + n^2x^{3/2}} = \frac{\abs{\cos x}}{n^{-1} + nx^{3/2}} \leq \frac{1}{2x^{3/4}}
+\]
+where we used AM-GM in the denominator. However,
+\[
+    \int_0^1 \frac{x^{-3/4}}{2}dx = 2x^{1/4}\bigg|_0^1 = 2 < \infty
+\]
+Thus, the Dominated Convergence Theorem applies, showing
+\[
+    \mu(f_n) \to \mu(f) = 0
+\]
+
+\section{Pushforward Measure}
+\begin{prob}
+    Let $(E, E)$ and $(G, G)$ be measurable spaces and let $f : E \to G$ be a measurable function. Given a measure $\mu$ on $(E, E)$, consider the image measure $\nu = \mu \circ f^{-1}$ on $(G, G)$.
+    Show that $\nu(g) = \mu(g \circ f)$ for all non-negative measurable functions $g$ on $G$.
+\end{prob}
+
+Start with indicator functions. If $g = 1_A$ for some $A\in G$,
+then
+\begin{align*}
+    \nu(g) &= \nu(1_A)\\
+    &= \mu(f^{-1}(A))\\
+    &= \mu(g\circ f)
+\end{align*}
+By linearity, this holds for all simple functions.
+
+Then, if $g_n\uparrow g$ is a sequence of simple functions,
+then $\nu(g_n)\uparrow \nu(g)$ are a sequence of simple functions,
+and $\mu(g_n\circ f)\uparrow \mu(g\circ f)$ are a sequence of simple functions.
+Thus, by the monotone convergence theorem,
+\[
+    \nu(g) = \lim_{n\to \infty} \nu(g_n) = \lim_{n\to \infty} \mu(g_n\circ f) = \mu(g\circ f)    
+\]
+
+\section{Independence}
+\begin{prob}
+    Let $X_1, \ldots , X_n$ be random variables with density functions $f_1, \ldots , f_n$ respectively.
+    Suppose that the $\RR^n$-valued random variable $X = (X_1, \ldots , X_n)$ also has a density function $f$. Show
+    that $X_1, \ldots , X_n$ are independent if and only if
+    \[
+        f(x_1, \ldots , x_n) = f(x_1) \cdots f(x_n) \quad \text{a.e.}
+    \]
+\end{prob}
+For the backwards direction, we simply integrate! Pick
+any tuple $(y_1, \dots, y_n)$. We know
+that $f(x_1, \dots, x_n) = f(x_1)\cdots f(x_n)$ almost everywhere,
+thus
+\begin{align*}
+    \PP[X_1\leq y_1, \dots, X_n\leq y_n] &= \int_{x_i\leq y_i} f(x_1, \dots, x_n)dx_1\cdots dx_n\\
+    &= \int_{\RR^n} f(x_1)\cdots f(x_n)dx_1\cdots dx_n
+    &= \prod_{i=1}^n \int_{x_i\leq y_i} f(x_i)dx_i\\
+    &= \prod_{i=1}^n \PP[X_i\leq y_i]
+\end{align*}
+showing independence.
+
+In the other direction, we already know independence, and that
+density functions exist \emph{at all}. So we just want to establish
+that $f(x_1, \dots, x_n) = f(x_1)\cdots f(x_n)$ is in fact a density
+function for $X$, at which point it is the unique density function
+up to measure-$0$ sets.
+
+\idea{
+    [Density functions are unique]
+    Pick ground space $(E, \mathcal{E}, \mu)$. %(in the problem, $(\RR, \BBB, \mu)$).
+    Suppose we have two density functions $f:E\to \RR$ and $f':E\to \RR$ of
+    a measure which differ on a positive-measure set (in $\mu$).
+    
+    This positive-measure set is the countable union of
+    sets of the form $f^{-1}((a, \infty))\cup f'^{-1}((-\infty, a))$
+    for $a\in \QQ$. Thus at least one such set has nonzero measure;
+    suppose it is $A = f^{-1}((a, \infty))\cup f'^{-1}((-\infty, a))$.
+
+    Then, $\int_A f \der \mu > a\mu(E)$ and $\int_A f'(x) \der \mu < a\mu(E)$.
+    But these are both supposed to be equal to $\nu(A)$, which is a contradiction.
+}
+
+% that
+% for all tuples $(y_1, \dots, y_n)$,
+% \[
+%     \PP[X_1\leq y_1, \dots, X_n\leq y_n] = \prod_{i=1}^n \PP[X_i\leq y_i]
+% \]
+% We also know, by definition of density functions,
+% that for all non-negative Borel functions $g$ on $\RR$,
+% \[
+%     \EE[g(X_i)] = \int_\RR g(x)f_i(x)dx
+% \]
+
+Well okay, this is not deep. We're going to start with boxes and work up
+from there; consider any box $A = A_1\times \cdots \times A_n$ where
+each dimension is measurable. Then,
+\begin{align*}
+    \int_{A_1\times \cdots \times A_n} f(x_1, \dots, x_n)dx_1\cdots dx_n
+    &= \int_{A_1\times \cdots \times A_n} f(x_1)\cdots f(x_n)dx_1\cdots dx_n\\
+    &= \prod_{i=1}^n \int_{A_i} f(x_i)dx_i\\
+    &= \prod_{i=1}^n \PP[X_i\in A_i]\\
+    &= \PP[X\in A]
+\end{align*}
+Now, the collection of measurable sets $B$ such that
+\[
+    \int_B f(x_1, \dots, x_n)dx_1\cdots dx_n = \PP[X\in B]
+\]
+forms a $\lambda$-system, because:
+\begin{itemize}
+    \item $E$ is a box, so the above holds.
+    \item If $B_1\subset B_2$, then
+    \begin{align*}
+        \int_{B_2\setminus B_1} f(x_1, \dots, x_n)dx_1\cdots dx_n &= \int_{B_2} f(x_1, \dots, x_n)dx_1\cdots dx_n - \int_{B_1} f(x_1, \dots, x_n)dx_1\cdots dx_n\\
+        &= \int_{B_2} f(x_1)\cdots f(x_n)dx_1\cdots dx_n - \int_{B_1} f(x_1)\cdots f(x_n)dx_1\cdots dx_n\\
+        &= \int_{B_2\setminus B_1} f(x_1, \dots, x_n)dx_1\cdots dx_n
+    \end{align*}
+    \item If $B_i\uparrow B$, then by the monotone convergence theorem,
+    \begin{align*}
+        \int_{B} f(x_1, \dots, x_n)dx_1\cdots dx_n &= \lim_{i\to \infty} \int_{B_i} f(x_1, \dots, x_n)dx_1\cdots dx_n\\
+        &= \lim_{i\to \infty} \int_{B_i} f(x_1)\cdots f(x_n)dx_1\cdots dx_n\\
+        &= \int_{B} f(x_1)\cdots f(x_n)dx_1\cdots dx_n
+    \end{align*}
+\end{itemize}
+
+It also contains all boxes, thus by the $\pi$-$\lambda$ theorem,
+it contains all measurable sets (this is how the product measure
+is defined in the first place).
+
+
+\end{document}

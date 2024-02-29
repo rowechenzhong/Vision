@@ -69,6 +69,13 @@
         "a": 1,
         "rgb": 6736896
       }
+    },
+    {
+      "query": "path:homology/ ",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
     }
   ],
   "collapse-display": false,
@@ -81,6 +88,6 @@
   "repelStrength": 12.3411848679515,
   "linkStrength": 1,
   "linkDistance": 500,
-  "scale": 0.08438043428610337,
+  "scale": 0.10097525490128577,
   "close": false
 }

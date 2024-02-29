@@ -1,0 +1,1 @@
+For any [[Dominant Weights|fundamental dominant weight]] $\lambda$, the character $\chi_\lambda$ of the irreducible finite-dimensional representation $L_\lambda$ is$$\chi_\lambda = \frac{\sum_{w\in W} (-1)^{\ell(w)}e^{w(\lambda + \rho)}}{\Delta},\qquad \Delta = \sum_{w\in W}(-1)^{\ell(w)} e^{w\rho}.$$

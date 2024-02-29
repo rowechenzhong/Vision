@@ -3,12 +3,11 @@
 
 This is stronger than being an [[Immersed Submanifold]].
 
-
 >[!example]
 >The distinction between and immersion and an embedding is that embeddings cannot intersect themselves; they must remain globally separated. Immersions, on the other hand, are totally fine; you can immerse a Klein bottle in $\RR^3$, but there's no way embed it.
 
 >[!example] Non-example
->An interesting counterexample is the immersion of $\RR$ in $S_1^2$ via $x\to (e^{ix},e^{ix\sqrt{2}})$. This is an immersion, but its not an embedding because it is not a homeomorphism.
+>An interesting counterexample is the immersion of $\RR$ in $S_1^2$ via $x\to (e^{ix},e^{ix\sqrt{2}})$. This is an [[Immersed Submanifold]], but its not an embedding because it is not a homeomorphism.
 
 # Intrinsic Definition
 

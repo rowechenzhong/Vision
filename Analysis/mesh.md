@@ -1,0 +1,1 @@
+The ==**mesh**== of a partition $X = \bigcup X_i$ is $\sup_i \abs{X_i}$, for some suitable definition of $\abs{\bullet}$. For instance, in measure theory, $\abs{\bullet}$ is usually taken to be the measure of the set.

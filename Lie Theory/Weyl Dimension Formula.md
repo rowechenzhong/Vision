@@ -1,0 +1,1 @@
+By taking a suitable limit of the [[Weyl Character Formula]], we obtain$$\dim L_\lambda = \prod_{\alpha\in R_+} \frac{(\alpha, \lambda + \rho)}{(\alpha, \rho)}.$$

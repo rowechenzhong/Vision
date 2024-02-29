@@ -1,12 +1,17 @@
 >[!theorem] Intrinsic Definition ($k$-slicing theorem)
 >Let $Y$ be an $n$-dimensional manifold, and let $k$ be an integer such that $0\leq k\leq n$. A $k$-dimensional [[Embedding|embedded submanifold]] of $Y$ is a subset $X\subset Y$ such that for every point $p \in X$ there exists an [[atlas|chart]] $(U, \phi)$ such that $\phi(X\cap U)$ is the intersection of a $k$-dimensional [[plane]] with $\phi(U)$.
 >
->In this case, the pairs $(X\cap U, \phi_{X\cap U})$ form an atlas for the structure on $X$.
+>In this case, $X$ is a manifold under the subspace topology from $Y$, and the pairs $(X\cap U, \phi_{X\cap U})$ form an atlas for the structure on $X$.
 
->[!claim] A lemma
->Suppose $F:X\to Y$ embeds $X$ into $Y$. Then, $X$ is open in its closure. This is called being [[locally closed]].
+%% >[!claim] A lemma
+>Suppose $X\subset Y$ is endowed with the subspace topology, and $f:X\to Z$ is a continuous map under said subspace topology. Then, $X$ is [[locally closed]].
 
->[!proof]- Boring but instructive
+This is actually really stupid. $f:X\to Z$ is a continuous map, thus the pre-image of $Z$, $X$ itself, must be an open set. Loading. %%
+
+>[!claim]
+> Suppose $F:X\to Y$ embeds $X$ into $Y$. Then, $X$ is open in its closure. This is called being [[locally closed]].
+
+>[!proof]- Some cap
 >For each point $x\in F(X)$, there is a neighborhood $U$ in $Y$ such that $U\cap F(X) = U\cap C$ for some closed set $C$ in $Y$.
 >
 >Proof: take a chart of $x$ (in $Y$!!) called $(V, \phi)$. We now consider $V\cap F(X)$; this is an open set in the $F(X)$-topology, thus it is homeomorphically mapped to an open neighborhood of $x$ in the $X$ topology. I can thus find a chart of $x$ in the $X$ topology, say $(U', \psi)$, which lies completely inside $F^{-1}(V)$. We now further assert that the closure of $U'$ (in the $X$ topology) lies completely inside $F^{-1}(V)$; this is trivial because $U'$ is homeomorphic to $\RR^n$.
