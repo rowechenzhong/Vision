@@ -15,5 +15,13 @@ If you restrict to a finite subset, you can get *finite-dimensional distribution
 $$\mu_{t_1,\dots,t_n}(A) = \PP\left((X_{t_1},\dots, X_{t_n})\in A\right),\qquad A\in \BBB(\RR^n)$$
 We call all such laws ==**finite-dimensional distributions**== of a continuous or cadlag process. By definition the cylinder sets are a generating $\pi$-system, thus they determined uniquely the law of $X$.
 
-# Other topics
-See [[Continuous Time Filtration]], [[Adapted Continuous-Time Processes]], and [[Continuous Time Stopping Times]]
+# Other Topics
+From here, you should learn about
+- [[Continuous Time Filtration]]
+- [[Adapted Continuous-Time Processes]]
+- [[Continuous Time Stopping Times]]
+- [[Elementary Properties of Continuous Stopping Times]]
+- [[Elementary Stopping Time Constructions]]
+- [[Index Progressive Process at Stopping Time]]
+
+Make sure you have all of the [[Continuous Stopping Time Intuition]]!

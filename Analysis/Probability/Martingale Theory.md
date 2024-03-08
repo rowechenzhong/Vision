@@ -13,7 +13,7 @@ This is the [[homepage]] for Martingale theory. It builds off of [[Probability]]
 
 Who's this Doob guy and why does he have so many theorems
 5. [[Doob's upcrossing inequality]]
-6. [[Doob's Maximal Inequalities]]
+6. [[Discrete Doob's Maximal Inequalities]]
 7. [[Martingale Convergence Theorems]]
 
 We take a brief break to nuke SLLN.

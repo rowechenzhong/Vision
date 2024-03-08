@@ -2,4 +2,4 @@ An *adapted* ($\FFF_t$-measurable at time $t$) *integrable* (such that the expec
 $$\EE[X_t | \FFF_s] = [X_s]$$
 Ditto for ==**continuous/cadlag martingales**==, corresponding ==**sub/super-martingales**==, etc.
 
-See [[basic properties of CTMs]] and [[examples of CTMs]].
+See [[basic properties of CTMs]] and [[Independent Increments]].

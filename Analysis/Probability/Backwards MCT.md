@@ -14,7 +14,7 @@ Give me a [[Backwards Filtration]] $\hat{\FFF}_n$.
 > $$\Omega_\infty = \{\lim\inf \abs{X_n} < \infty\},\qquad \Omega_{a,b} = \{U[a,b] < \infty\}$$
 > for $a<b\in \QQ$. Then, let
 > $$\Omega_0 = \Omega_\infty \cap \bigcap_{a < b\in \QQ} \Omega_{a,b}$$
-> Observe that $X_n(\omega)$ converges iff $\omega \in \Omega_0$. Observe that for all prefixes, $\{X_{n-k}\}_{k = 1}^n$ is a martingale, thus taking the supremum, [[Doob's Maximal Inequalities|Doob]] applies verbatim. Thus by [[Convergence properties of Lebesgue Integral|Fatou]] and [[Doob's upcrossing inequality|Doob]],
+> Observe that $X_n(\omega)$ converges iff $\omega \in \Omega_0$. Observe that for all prefixes, $\{X_{n-k}\}_{k = 1}^n$ is a martingale, thus taking the supremum, [[Discrete Doob's Maximal Inequalities|Doob]] applies verbatim. Thus by [[Convergence properties of Lebesgue Integral|Fatou]] and [[Doob's upcrossing inequality|Doob]],
 > $$\EE[\lim\inf \abs{X_n}] \leq \lim\inf \EE\abs{X_n},\qquad (b-a)\EE[(U[a,b])] \leq \abs{a} + \sup_{n\geq 0} \EE\abs{X_n}$$
 > But $\EE[\abs{X_n}]\leq \EE[\EE[\abs{Y} | \hat\FFF_n]] = \EE[\abs{Y}]<\infty$. 
 > 

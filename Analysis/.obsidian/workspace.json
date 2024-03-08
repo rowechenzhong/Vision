@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f3acaaead46409f9",
+        "id": "a4f49d5113383618",
         "type": "tabs",
         "children": [
           {
-            "id": "e751553901dae813",
+            "id": "ad4c3346e8cefa95",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic properties of Brownian Motion.md",
+                "file": "Probability/Doob's upcrossing inequality.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "strong markov",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,7 +72,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Basic properties of Brownian Motion.md",
+                "file": "Probability/Doob's upcrossing inequality.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -210,7 +210,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Basic properties of Brownian Motion.md",
+                "file": "Probability/Doob's upcrossing inequality.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -227,7 +227,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Basic properties of Brownian Motion.md",
+                "file": "Probability/Doob's upcrossing inequality.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Basic properties of Brownian Motion.md"
+                "file": "Probability/Doob's upcrossing inequality.md"
               }
             }
           },
@@ -249,7 +249,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Basic properties of Brownian Motion.md",
+                "file": "Probability/Doob's upcrossing inequality.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -387,44 +387,44 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "e751553901dae813",
+  "active": "ad4c3346e8cefa95",
   "lastOpenFiles": [
-    "Stochastic Calculus/hw/2.synctex(busy)",
-    "Stochastic Calculus/hw/pdflatex14272.fls",
+    "Untitled 2.md",
+    "Probability/Doob's upcrossing inequality.md",
+    "Probability/Optional Stopping Theorem.md",
+    "Probability/upcrossings.md",
+    "Discrete Doob's Lp Inequalities.md",
+    "Probability/Discrete Doob's Maximal Inequalities.md",
+    "Square Integrable Martingale.md",
+    "Stochastic Calculus/Importing Doob Theorems to Continuous Time.md",
+    "Stochastic Calculus/Random Processes in Continuous Time.md",
+    "Stochastic Calculus/Martingales in Continuous Time.md",
+    "basic properties of CTMs.md",
+    "Independent Increments.md",
+    "Poisson Process.md",
+    "Stochastic Calculus/examples of CTMs.md",
+    "Stochastic Calculus/Continuous Random Process Definitions.md",
+    "Elementary Stopping Time Constructions.md",
+    "Continuous Time Stopping Times.md",
+    "Stochastic Calculus/Elementary Properties of Continuous Stopping Times.md",
+    "Index Progressive Process at Stopping Time.md",
+    "Adapted Continuous-Time Processes.md",
+    "Continuous Stopping Time Intuition.md",
+    "Stochastic Calculus/RPCT intuition.md",
+    "Stochastic Calculus/Importing Optional stopping to Continuous Time.md",
+    "Probability/Kolmogorov's Zero-One Law.md",
+    "Stochastic Calculus/hw/pdflatex10300.fls",
     "Stochastic Calculus/hw/2.out",
+    "Stochastic Calculus/hw/2.synctex(busy)",
     "Stochastic Calculus/hw/2.log",
     "Stochastic Calculus/hw/2.fls",
-    "Stochastic Calculus/hw/pdflatex13416.fls",
+    "Stochastic Calculus/hw/pdflatex19184.fls",
     "Stochastic Calculus/hw/2.fdb_latexmk",
     "Stochastic Calculus/hw/2.aux",
-    "Stochastic Calculus/hw/pdflatex3656.fls",
-    "Stochastic Calculus/hw/pdflatex19104.fls",
-    "Stochastic Calculus/hw/pdflatex16816.fls",
-    "measure/product/Kolmogorov Extension.md",
-    "Kolmogorov Extension Notes.md",
-    "measure/Lebesgue Measure.md",
-    "measure/measure.md",
-    "measure/Measure Theory.md",
-    "Compact Class Bootstrap.md",
-    "measure/pre-measure.md",
-    "measure/semi-algebra.md",
-    "measure/semialgebra extension.md",
-    "measure/inner regular.md",
-    "compact class.md",
-    "measure/Borel Measure.md",
-    "measure/measurable space.md",
-    "Probability/ring.md",
-    "measure/pi lambda system.md",
-    "measure/vitali.md",
-    "measure/product/Ionescu-Tulcea.md",
-    "Stochastic Calculus/Construction of Brownian motion.md",
-    "measure/Standard Measure Construction.md",
-    "net.md",
-    "directed set.md",
-    "Adapted Continuous-Time Processes.md",
-    "Stochastic Calculus/Kolmogorov's Criterion.md",
-    "Continuous Time Filtration.md",
-    "Untitled 1.md",
+    "Stochastic Calculus/hw/pdflatex7936.fls",
+    "Stochastic Calculus/hw/pdflatex11564.fls",
+    "measure/Borel-Cantelli.md",
+    "Basic properties of Brownian Motion.md",
     "Algebraic Topology/homotopy/images/homotopy.png",
     "Algebraic Topology/homology/Exact Sequence.png",
     "Algebraic Topology/homology/Chain Map.png",
