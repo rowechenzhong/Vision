@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vision.md",
+                "file": "readme.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -72,7 +72,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Vision.md",
+                "file": "readme.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -190,7 +190,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vision.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +207,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Vision.md",
+                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,7 +219,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Vision.md"
+                "file": "readme.md"
               }
             }
           },
@@ -229,7 +229,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Vision.md",
+                "file": "readme.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -349,8 +349,8 @@
   "active": "76bf5185af574c30",
   "lastOpenFiles": [
     "graph.png",
-    "readme.md",
     "Vision.md",
+    "readme.md",
     "Lie Theory/Immersion.md",
     "Untitled.md",
     "Lie Theory/LG LA Dictionary.md",
