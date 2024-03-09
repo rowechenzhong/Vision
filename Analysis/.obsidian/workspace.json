@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Probability/Doob's upcrossing inequality.md",
+                "file": "Adapted Continuous-Time Processes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -72,7 +72,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Probability/Doob's upcrossing inequality.md",
+                "file": "Adapted Continuous-Time Processes.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -179,7 +179,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -210,7 +211,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability/Doob's upcrossing inequality.md",
+                "file": "Adapted Continuous-Time Processes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -227,7 +228,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Probability/Doob's upcrossing inequality.md",
+                "file": "Adapted Continuous-Time Processes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +240,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Probability/Doob's upcrossing inequality.md"
+                "file": "Adapted Continuous-Time Processes.md"
               }
             }
           },
@@ -249,7 +250,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Probability/Doob's upcrossing inequality.md",
+                "file": "Adapted Continuous-Time Processes.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -389,8 +390,8 @@
   },
   "active": "ad4c3346e8cefa95",
   "lastOpenFiles": [
-    "Untitled 2.md",
     "Probability/Doob's upcrossing inequality.md",
+    "Untitled 2.md",
     "Probability/Optional Stopping Theorem.md",
     "Probability/upcrossings.md",
     "Discrete Doob's Lp Inequalities.md",

@@ -1,6 +1,9 @@
 ---
+
 aliases: []
 ---
+$\require{physics}\newcommand{\cbrt}[1]{\sqrt[3]{#1}}\newcommand{\sgn}{\text{sgn}}\newcommand{\ii}[1]{\textit{#1}}\newcommand{\eps}{\varepsilon}\newcommand{\EE}{\mathbb E}\newcommand{\PP}{\mathbb P}\newcommand{\Var}{\mathrm{Var}}\newcommand{\Cov}{\mathrm{Cov}}\newcommand{\pperp}{\perp\kern-6pt\perp}\newcommand{\LL}{\mathcal{L}}\newcommand{\pa}{\partial}\newcommand{\AAA}{\mathscr{A}}\newcommand{\BBB}{\mathscr{B}}\newcommand{\FFF}{\mathscr{F}}\newcommand{\GGG}{\mathscr{G}}\newcommand{\HHH}{\mathscr{H}}\newcommand{\Ff}{\mathcal{F}}\newcommand{\Gg}{\mathcal{G}}\newcommand{\Hh}{\mathcal{H}}\DeclareMathOperator{\ess}{ess}\newcommand{\CC}{\mathbb C}\newcommand{\FF}{\mathbb F}\newcommand{\NN}{\mathbb N}\newcommand{\QQ}{\mathbb Q}\newcommand{\RR}{\mathbb R}\newcommand{\ZZ}{\mathbb Z}\newcommand{\KK}{\mathbb K}\newcommand{\SSS}{\mathbb S}\newcommand{\II}{\mathbb I}\newcommand{\conj}[1]{\overline{#1}}\DeclareMathOperator{\cis}{cis}\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}\DeclareMathOperator*{\range}{range}\DeclareMathOperator*{\nul}{null}\DeclareMathOperator*{\Tr}{Tr}\DeclareMathOperator*{\tr}{Tr}\newcommand{\id}{1\!\!1}\newcommand{\Id}{1\!\!1}\newcommand{\der}{\ \mathrm {d}}\newcommand{\Zc}[1]{\ZZ / #1 \ZZ}\newcommand{\Zm}[1]{\left(\ZZ / #1 \ZZ\right)^\times}\DeclareMathOperator{\Hom}{Hom}\DeclareMathOperator{\End}{End}\newcommand{\GL}{\mathbb{GL}}\newcommand{\SL}{\mathbb{SL}}\newcommand{\SO}{\mathbb{SO}}\newcommand{\OO}{\mathbb{O}}\newcommand{\SU}{\mathbb{SU}}\newcommand{\U}{\mathbb{U}}\newcommand{\gl}{\mathfrak{gl}}\newcommand{\sl}{\mathfrak{sl}}\newcommand{\so}{\mathfrak{so}}\newcommand{\su}{\mathfrak{su}}\newcommand{\uu}{\mathfrak{u}}\newcommand{\fg}{\mathfrak{g}}\newcommand{\hh}{\mathfrak{h}}\DeclareMathOperator{\Ad}{Ad}\DeclareMathOperator{\ad}{ad}\DeclareMathOperator{\Rad}{Rad}\DeclareMathOperator{\im}{im}\renewcommand{\BB}{\mathcal{B}}\newcommand{\HH}{\mathcal{H}}\DeclareMathOperator{\Lie}{Lie}\DeclareMathOperator{\Mat}{Mat}$
+
 We now generalize the notion of a deck transformation to arbitrary actions on a space. 
 > [!definition] Action
 An ==**action**== of a group $G$ on a space $Y$ is simply a homomorphism $\rho: G\to Homeo(Y)$; think representation theory. We want $\rho$ to have the \"discreteness\" characteristic of deck transformations. Each $y \in Y$ should have a neighborhood $U$ such that $g_1(U)\cap g_2(U) \neq \emptyset$ implies $g_1 = g_2$ (In particular, $\rho$ is injective.) Such actions will be called ==**covering space actions**==. 
@@ -73,7 +76,4 @@ Suppose $Y$ is pc, lpc, and simply-connected. Let $G_1$ and $G_2$ be subgroups o
 
 
 > [!solution] 
-If $Y/G_1$ and $Y/G_2$ are homotopic, so $$ G_1 \cong \pi_1(Y/G_1) / \pi_1(Y) \cong \pi_1(Y/G_2) / \pi_1(Y) \cong G_2 $$ On the other hand, the map $p_2 g$ sends $y$ to $gG_1 y$, and thus factors through $p_1$ to yield $g_Y: Y/G_1 \to Y/G_2$ sending $G_1 y$ to $gG_1 y$. Repeating the opposite direction, this is a homeomorphism. 
-
-
-
+If $Y/G_1$ and $Y/G_2$ are homotopic, so $$ G_1 \cong \pi_1(Y/G_1) / \pi_1(Y) \cong \pi_1(Y/G_2) / \pi_1(Y) \cong G_2 $$ On the other hand, the map $p_2 g$ sends $y$ to $gG_1 y$, and thus factors through $p_1$ to yield $g_Y: Y/G_1 \to Y/G_2$ sending $G_1 y$ to $gG_1 y$. Repeating the opposite direction, this is a homeomorphism.
