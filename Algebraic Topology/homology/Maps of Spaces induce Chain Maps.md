@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - induced map
   - induced maps

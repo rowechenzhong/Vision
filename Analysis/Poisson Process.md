@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Poisson
   - Poisson distribution

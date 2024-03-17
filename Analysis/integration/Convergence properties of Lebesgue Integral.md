@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Fatou
   - Monotone Convergence

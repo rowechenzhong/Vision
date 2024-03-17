@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - borel $\sigma$-algebras
 ---

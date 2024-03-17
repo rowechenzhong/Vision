@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - simplicies
   - simplex

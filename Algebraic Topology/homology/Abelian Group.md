@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - free abelian group
 ---

@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - independent
 ---

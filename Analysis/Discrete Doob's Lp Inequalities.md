@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Lp Inequalities
 ---

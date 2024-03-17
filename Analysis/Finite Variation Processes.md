@@ -73,4 +73,3 @@ The relation between FVP and IP is not deep. If $A$ is an FVP, then $V_t = \int_
 
 >[!claim] Associativity
 >If $H,K$ are progressive and the quantities are defined, then $K\cdot (H\cdot A) = (KH)\cdot A$.
-

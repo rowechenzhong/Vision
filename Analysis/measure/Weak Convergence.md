@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Convergence in Distribution
   - converges weakly

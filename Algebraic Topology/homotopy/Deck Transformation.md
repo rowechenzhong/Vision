@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Covering group
   - covering group

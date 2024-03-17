@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Doob's Maximal Inequalities
   - Doob

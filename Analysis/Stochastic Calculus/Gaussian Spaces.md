@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - centered Gaussian space
 ---

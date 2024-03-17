@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Blumenthal 0-1 law
 ---

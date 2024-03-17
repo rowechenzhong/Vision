@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - regular covering space
   - regular

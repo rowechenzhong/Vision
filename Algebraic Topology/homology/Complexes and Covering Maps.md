@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - covering maps and homology
 ---

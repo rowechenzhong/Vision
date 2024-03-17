@@ -1,5 +1,4 @@
 ---
-
 aliases:
   - Kolmogorov's Continuity Theorem
 ---
