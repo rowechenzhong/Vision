@@ -4,6 +4,7 @@ aliases:
   - independent
 ---
 
+
 >[!definition] Independent
 >A set of events $\{A_\alpha: \alpha\in I\}$ are ==**mutually independent**== if for all finite subsets $J\subset I$,
 >$$\PP\left(\bigcap_{\alpha \in J} A_\alpha \right) = \prod_{\alpha\in J} \PP(A_\alpha)$$

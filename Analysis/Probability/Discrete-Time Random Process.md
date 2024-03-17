@@ -4,6 +4,7 @@ aliases:
   - random process
 ---
 
+
 A ==**random process**== is simply a sequence of random variables $X = (X_n)_{n\geq 0}$ over the same state space $(\Omega, \FFF, \PP)$. This induces a natural [[filtration]]
 $$\FFF_n^X = \sigma(X_0,\dots, X_n)$$
 representing knowledge of $X$ at causal time $n$.

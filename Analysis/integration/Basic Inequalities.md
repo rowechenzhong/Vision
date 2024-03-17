@@ -4,6 +4,7 @@ aliases:
   - Markov's Inequality
 ---
 
+
 >[!problem] Markov's Inequality
 >Let $f$ be a non-negative measurable function and $\lambda \geq 0$; clearly $\lambda\id_{\{f\geq \lambda\}} \leq f$, thus
 >$$

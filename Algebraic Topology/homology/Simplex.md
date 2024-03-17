@@ -5,6 +5,7 @@ aliases:
   - simplex
 ---
 
+
 >[!idea]- Ignore
 >
 > > [!definition] The $n$-simplex

@@ -6,6 +6,6 @@ For any $\lambda\in \hh^*$, not necessarily integral, one can find a largest pro
 
 # Construction and Intuition
 
-Given a lie algebra $\fg$, I can split it into the positive and negative weight spaces (with respect to some polarization), $\fg = \mathfrak{n}_- \oplus \hh\oplus \mathfrak{n}_+$. When I consider the universal enveloping algebra, by the PBW theorem I can always rearrange the terms to lie in the order $\mathfrak{n}_-, \hh, \mathfrak{n}_+$, thus I can write
+Given a lie algebra $\fg$, I can split it into the positive and negative weight spaces (with respect to some polarization), $\fg = \mathfrak{n}_- \oplus \hh\oplus \mathfrak{n}_+$. When I consider the [[Universal Enveloping Algebra]], by the PBW theorem I can always rearrange the terms to lie in the order $\mathfrak{n}_-, \hh, \mathfrak{n}_+$, thus I can write
 $$U(\fg) = U(\mathfrak{n}_-)\otimes U(\hh) \otimes U(\mathfrak{n}_+).$$
 We can write a one-dimensional algebra $\CC_\lambda$ on which $U(\hh)$ and $U(\mathfrak{n}_+)$ act as $h(\lambda)$ and $0$ respectively; then $$M_\lambda = U(\fg)\otimes_{U(\hh\oplus \mathfrak{n}_+)} \CC_\lambda$$ is what we desire. As a vector space, it is simply $U(\mathfrak{n}_-)v_\lambda$.

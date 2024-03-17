@@ -4,6 +4,7 @@ aliases:
   - UI
 ---
 
+
 >[!idea] A quick preview
 >In the future, one will almost always prove $3$ versions of theorems: one for almost-sure, one for $L^1$, and one for $L^p$. UI connect AS and $L^1$.
 

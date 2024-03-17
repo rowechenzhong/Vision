@@ -4,6 +4,7 @@ aliases:
   - KET
 ---
 
+
 These are an extended set of notes on the [[Kolmogorov Extension]] theorem, in an attempt to gain a deeper understanding.
 
 # The Extension Problem

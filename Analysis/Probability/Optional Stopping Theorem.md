@@ -5,6 +5,7 @@ aliases:
   - BOST
 ---
 
+
 Here is a basically trivial result:
 
 >[!theorem] Bounded Optional Stopping Theorem

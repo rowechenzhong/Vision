@@ -5,6 +5,7 @@ aliases:
   - characters
 ---
 
+
 The ==**character**== of a lie group, is defined, initially, exactly the same as that of a finite-dimensional representation $V$:$$\chi_V(g) = \Tr\big\vert_V(g).$$However, in the case of interest (semisimple lie algebras), we can say a lot about this character. In particular, fix a CSA $\hh\subset \fg$ and $h\in \hh$. Then,$$\chi_V(h) \equiv \chi_V(e^h) = \sum_{\mu\in P} \dim V[\mu] e^{\mu(h)}$$where $P$ is the weight lattice. By a massive abuse of notation, we then write$$\chi_V = \sum_{\mu \in P} \dim V[\mu] e^\mu,$$where $e^\mu$ is the analytic function on $\hh$ mapping $h\mapsto e^{\mu(h)}$. 
 
 >[!idea] More abuse

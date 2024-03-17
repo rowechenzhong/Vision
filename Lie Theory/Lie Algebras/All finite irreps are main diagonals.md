@@ -4,6 +4,7 @@ aliases:
   - main diagonal
 ---
 
+
 >[!idea]
 >This is a really intuitive result if you remember the [[Clebsh-Gordan]] story from quantum mechanics (or just generally have a feel for how $L_\lambda$ looks). Its not strictly related, but it feels really natural.
 

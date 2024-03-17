@@ -4,6 +4,7 @@ aliases:
   - Markov Chains
 ---
 
+
 While discussing Markov chains, $E$ will forever be a countable set. Then, measures $\mu$ on $E$ are precisely given by their values on singletons sets $\mu_x = \mu(\{x\})$, and the integral of a function can be written as a "contraction"
 $$\mu(f) = \mu \cdot f = \sum_{x \in E} \mu_x f(x).$$
 Keeping in this linear algebra mindset, a ==**transition matrix**== on $E$ is a matrix $P = (p_{xy}, x, y \in E)$ such that each row is a probability distribution on $E$. That is, $p_{xy} \geq 0$ for all $x, y \in E$ and $\sum_{y \in E} p_{xy} = 1$ for all $x \in E$. Let $(\FFF_{n})_{n \in \NN}$ be a filtration on a probability space $(E, \mathcal{E}, \PP)$.  See [[Linear Algebra Intuition for Markov Chains]].

@@ -4,6 +4,7 @@ aliases:
   - Birkhoff
 ---
 
+
 >[!theorem] Birkhoff
 > Suppose $(E,\mathcal{E}, \mu)$ is $\sigma$-finite, and $f$ is integrable on $E$. Then, there exists an invariant function $\bar{f}$ , with $\mu(\abs{\bar{f}}) < \mu(\abs{f})$, such that $S_n(f) / n \to \bar{f}$ a.e. as $n\to \infty$.
 

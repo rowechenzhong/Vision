@@ -4,16 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "74bf50b3017a5247",
+        "id": "45e7919850459d10",
         "type": "tabs",
         "children": [
           {
-            "id": "76bf5185af574c30",
+            "id": "53c0f1a79dc44663",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "Lie Theory/Clifford Algebra Construction.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a1d6fbc67ea1bf9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lie Theory/Bn.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "XD",
+                "query": "contraction",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,7 +85,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "readme.md",
+                "file": "Lie Theory/Clifford Algebra Construction.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -158,12 +171,12 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 346.51103591918945
+    "width": 346.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -190,7 +203,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "Lie Theory/Clifford Algebra Construction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +220,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "readme.md",
+                "file": "Lie Theory/Clifford Algebra Construction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,7 +232,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "readme.md"
+                "file": "Lie Theory/Clifford Algebra Construction.md"
               }
             }
           },
@@ -229,7 +242,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "readme.md",
+                "file": "Lie Theory/Clifford Algebra Construction.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -346,44 +359,45 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "76bf5185af574c30",
+  "active": "53c0f1a79dc44663",
   "lastOpenFiles": [
-    "graph.png",
-    "Vision.md",
-    "readme.md",
-    "Lie Theory/Immersion.md",
-    "Untitled.md",
-    "Lie Theory/LG LA Dictionary.md",
-    "Lie Theory/Lie Algebras/GLn/Representations of SL.md",
-    "Lie Theory/Fundamental Theorems of Lie Theory.md",
-    "Algebraic.md",
-    "Analysis/integration/Integration.md",
-    "Analysis/functional/banach.md",
-    "Lie Theory/Lie Algebras/A story of Liers.md",
+    "Lie Theory/hw/hw5.synctex(busy)",
+    "Lie Theory/hw/pdflatex20884.fls",
+    "Lie Theory/hw/hw5.out",
+    "Lie Theory/hw/hw5.log",
+    "Lie Theory/hw/hw5.fls",
+    "Lie Theory/hw/pdflatex13992.fls",
+    "Lie Theory/hw/hw5.fdb_latexmk",
+    "Lie Theory/hw/hw5.aux",
+    "Lie Theory/hw/pdflatex16812.fls",
+    "Lie Theory/hw/pdflatex10496.fls",
+    "Lie Theory/Bn.md",
+    "Lie Theory/Dn.md",
+    "Lie Theory/Clifford Algebra Construction.md",
     "Lie Theory/Lie Algebras/Lie Algebras Homepage.md",
-    "Analysis/Probability/Probability.md",
-    "Algebraic Topology/Point Set/point-set results on covering spaces.md",
-    "Analysis/Random Surfaces/Kirchoff's Theorem.md",
+    "Simple Lie Algebra Data Page.md",
+    "Lie Theory/Lie Algebras/Core/Lie Algebra.md",
+    "Classification of Irreducible Root Systems.md",
+    "Lie Theory/Lie Algebras/Root Systems/Root Systems.md",
+    "Lie Theory/Bn",
+    "Analysis/Probability/Radon-Nikodym.md",
+    "Continuous Local Martingales.md",
+    "Analysis/Stochastic Calculus/Stochastic Calculus Homepage.md",
+    "Analysis/Finite Variation Processes.md",
     "meta/homepage.md",
-    "Algebraic Topology/homotopy/Homotopy Theory.md",
-    "Lie Theory/Lie/Lie Groups.md",
-    "Lie Theory/Lie Algebras/Representation Theory/Intuitive rephrasing with Physics.md",
-    "Analysis/Random Surfaces/Random Surfaces.md",
-    "Analysis/Random Surfaces/Gaussian process.md",
-    "Analysis/Random Surfaces/Discrete Notation.md",
-    "Analysis/Random Surfaces/Laplacian matrix.md",
-    "Analysis/Random Surfaces/Uniform Spanning Tree.md",
-    "Analysis/Random Surfaces/Conditioned Random Walks.md",
-    "Analysis/measure/hw/hw1.out",
-    "Analysis/measure/hw/hw1.synctex(busy)",
-    "Analysis/measure/hw/hw1.log",
-    "Analysis/measure/hw/hw1.fls",
-    "Analysis/measure/hw/pdflatex336.fls",
-    "Analysis/measure/hw/hw1.synctex.gz",
-    "Analysis/measure/hw/hw1.pdf",
-    "Analysis/measure/hw/pdflatex15708.fls",
-    "Analysis/Random Surfaces/preamble.sty",
-    "Lie Theory/Lie/hw/hw4.synctex(busy)",
+    "Untitled.md",
+    "story about Clifford Algebras.md",
+    "Finite Variation Processes.md",
+    "Analysis/Radon-Nikodym.md",
+    "Lie Theory/deformation.md",
+    "Lie Theory/filtered algebra.md",
+    "Lie Theory/Minuscule Weights.md",
+    "Lie Theory/Universal Enveloping Algebra.md",
+    "so_{2n}.md",
+    "Universal Enveloping Algebra.md",
+    "Minuscule Weights.md",
+    "filtered algebra.md",
+    "graph.png",
     "Algebraic Topology/homology/Exact Sequence.png",
     "Algebraic Topology/homotopy/images/homotopy.png",
     "Algebraic Topology/homology/Chain Map.png",

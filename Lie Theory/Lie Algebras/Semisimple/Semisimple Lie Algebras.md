@@ -5,6 +5,7 @@ aliases:
 ---
 
 
+
 $L$ is called ==**semi-simple**== iff:
 - It has no solvable ideals.
 - If [[Radical|$\Rad L = 0$]].

@@ -4,6 +4,7 @@ aliases:
   - Kolmogorov's Continuity Theorem
 ---
 
+
 Kolmogorov's Criterion is fundamental. Let $X:[0,\infty)\times \Omega\to S$ be a stochastic process on some complete metric space.
 
 > [!theorem] Kolmogorov's Continuity Theorem

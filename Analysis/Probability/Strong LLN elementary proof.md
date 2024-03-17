@@ -4,6 +4,7 @@ aliases:
   - SLLN
 ---
 
+
 This is some magic, found [here](https://people.math.umass.edu/~yaoli/ptrl.pdf). Let's squeeze water from stone.
 
 >[!theorem] Strong Law of Large Numbers

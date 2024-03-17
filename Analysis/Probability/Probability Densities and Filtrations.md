@@ -4,6 +4,7 @@ aliases:
   - Filtrations and PDFs
 ---
 
+
 Let $(\FFF_n)_{n\geq 0}$ be a [[filtration]] on $\FFF$. Assume $\FFF = \FFF_\infty$ for simplicity. Let $(X_n)_{n\geq 0}$ be an adapted random process with $X_n\geq 0$ and $\EE[X_n] = 1$ for all $n$.
 
 Then, for each $n$, one defines a probability measure on $\FFF_n$:

@@ -4,6 +4,7 @@ aliases:
   - UI bridge
 ---
 
+
 > [!idea]
 > This is somewhat important, actually. It turns out that the quickest way to get $L^1$-convergence results often passes through UI.
 

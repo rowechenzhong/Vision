@@ -7,22 +7,6 @@
       "key": "."
     }
   ],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "ArrowLeft"
-    }
-  ],
-  "app:toggle-right-sidebar": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "ArrowRight"
-    }
-  ],
   "workspace:split-vertical": [
     {
       "modifiers": [
@@ -46,6 +30,23 @@
         "Shift"
       ],
       "key": "G"
+    }
+  ],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "command-palette:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
     }
   ]
 }

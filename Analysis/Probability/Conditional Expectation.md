@@ -4,6 +4,7 @@ aliases:
   - tower property
 ---
 
+
 >[!definition] Conditional Expectation
 >Let $X$ be an integrable or nonnegative random variable, and let $\GGG\subset \FFF$ be a $\sigma$-algebra. Then, there exists a unique random variable $[Y]$ such that
 > - $Y$ is $\GGG$-measurable.

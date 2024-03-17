@@ -12,5 +12,5 @@ A ==**probability density function**== is a special case of this. If $f$ is the 
 
 Advanced:
 - [[Probability Densities and Filtrations]]
-- The [[Radon-Nikodym Derivatives]] generalize this to arbitrary ranges (not deep).
-- The [[Radon-Nikodym Theorem]] characterizes the existence of probability densities.
+- The [[Analysis/Probability/Radon-Nikodym]] generalize this to arbitrary ranges (not deep).
+- The [[Analysis/Probability/Radon-Nikodym|Radon-Nikodym Theorem]] characterizes the existence of probability densities.

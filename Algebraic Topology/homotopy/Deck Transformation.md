@@ -5,6 +5,7 @@ aliases:
   - covering group
 ---
 
+
 > [!definition] Deck Transformation
 A ==**deck transformation**== is a homeomorphism $\phi: \tilde{X}\to \tilde{X}$ such that $p\circ \phi = p$. 
 

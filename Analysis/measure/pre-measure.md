@@ -6,6 +6,7 @@ aliases:
   - pre-measures
 ---
 
+
 > [!definition] Pre-Measure
 > A [[pre-measure]] on an [[measurable space#^algebra|algebra]] or [[semi-algebra]] $\AAA_0$ is a function $\mu_0: \AAA_0 \to [0,\infty]$ such that $\mu_0(\emptyset) = 0$ and $\mu_0$ is countably additive -- if $A_1,\cdots \in \AAA_0$ are disjoint, and $\bigsqcup A_i \in \AAA_0$, then
 >

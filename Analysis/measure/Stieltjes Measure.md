@@ -1,3 +1,6 @@
+>[!idea] Note for Experts
+>The main takeaway is that monotone non-decreasing right-continuous functions $g:[0,T]\to \RR_+$ are in bijection with finite positive measures $\theta$ on $[0,T]$. This is really deep, because it implies that right-continuous functions have measure-theoretic regularity, not topological regularity, which lends credence to the ubiquity of right-continuous functions in [[Stochastic Calculus Homepage|stochastic calculus]].
+
 Now that we've shown how to construct a _uniform_ distribution over the real line, we can try to make some modifications. Specifically, instead of letting $\mu((a,b]) = b - a$ for all $a,b$ we can let $\mu((a,b]) = F(b) - F(a)$ for some function $F$. This $F$ is then required to satisfy two properties:
 
 1. For any $a < b$, we know $\mu((0, a])\leq \mu((0,b])$. Thus $F(b)\geq F(a)$, and $F$ must be ==**nondecreasing**==.

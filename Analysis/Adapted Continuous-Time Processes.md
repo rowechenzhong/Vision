@@ -5,6 +5,7 @@ aliases:
   - progressive
 ---
 
+
 A random process $(X_t)_{t\geq 0}$ is ==**adapted**== if for every $t\geq 0$, $X_t$ is $\FFF_t$-measurable. It is ==**measurable**== if the mapping $(\omega, s)\mapsto X_s(\omega)$ on $\Omega\times [0,\infty)$ is measurable on $\FFF\otimes \BBB([0,\infty))$.
 
 A random process is ==**progressive**== if for every $t\geq 0$, the mapping $(\omega,s)\mapsto X_s(\omega)$ is measurable for the $\sigma$-field $\FFF_t\otimes \BBB([0,t])$.

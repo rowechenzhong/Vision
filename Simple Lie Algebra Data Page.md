@@ -1,0 +1,3 @@
+Each [[Root Systems]] a la [[Classification of Irreducible Root Systems]] will have their own data page. These will be created as needed in my psets :P, we need to compute a lot of things with Weyl dimension formula...
+- [[Bn]]
+- [[Dn]]

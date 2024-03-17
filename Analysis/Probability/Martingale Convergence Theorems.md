@@ -4,6 +4,7 @@ aliases:
   - MCT
 ---
 
+
 > [!theorem] AS MCT
 > Let $X$ be an $L^1$-bounded supermartingale. Then, there exists an integrable $\FFF_\infty$-measurable random variable $X_\infty$ such that $X_n\to X_\infty$ almost surely as $n\to \infty$.
 

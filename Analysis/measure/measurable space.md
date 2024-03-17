@@ -4,6 +4,7 @@ aliases:
   - sigma algebra
 ---
 
+
 > [!definition] Measurable Space and $\sigma$-algebra
 > A ==**measurable space**== is a set $\Omega$ together with a non-empty collection $\AAA$ of subsets of $\Omega$.
 > 

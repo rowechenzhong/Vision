@@ -9,7 +9,7 @@ This is the [[homepage]] for random processes in continuous time, which covers t
 
 # Brownian Motion
 1. [[Brownian Motion]].
-2. Side quest: constructing Brownian motion. An alternative method can be found in your first pset in 676, which proceeds as $G([0,t])$ as usual, but instead of citing [[Kolmogorov's Criterion]] we manually compute our case in $L^2$.
+2. Side quest: constructing Brownian motion. An alternative method can be found in your first pset in 676, which proceeds as $G([0,t])$ as usual, but instead of citing [[Kolmogorov's Criterion]] we manually compute convergence in $L^2$.
 	1. [[Gaussian Spaces]]
 	2. [[Gaussian White Noise]]
 	4. [[pre-Brownian motion]]
@@ -19,4 +19,3 @@ This is the [[homepage]] for random processes in continuous time, which covers t
 4. [[Brownian Motion with Filtration]]
 5. [[Wiener's Theorem]]
 7. [[Martingales on Brownian Motion]]
-8.
