@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "45e7919850459d10",
+        "id": "f0d02d1cef5560b8",
         "type": "tabs",
         "children": [
           {
-            "id": "53c0f1a79dc44663",
+            "id": "91dfbf4dbf19a04b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Lie Theory/Clifford Algebra Construction.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a1d6fbc67ea1bf9b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lie Theory/Bn.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -171,12 +158,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 346.51103591918945,
-    "collapsed": true
+    "width": 346.51103591918945
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -359,36 +346,37 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "53c0f1a79dc44663",
+  "active": "91dfbf4dbf19a04b",
   "lastOpenFiles": [
+    "Lie Theory/Clifford Algebra Construction.md",
+    "Lie Theory/Clifford Algebras intuition.md",
+    "Lie Theory/deformation.md",
+    "Analysis/Continuous Local Martingales.md",
+    "Analysis/Stochastic Calculus/Stochastic Calculus Homepage.md",
     "Lie Theory/Bn.md",
     "Lie Theory/hw/hw5.synctex(busy)",
-    "Lie Theory/hw/pdflatex21656.fls",
+    "Lie Theory/hw/pdflatex5152.fls",
     "Lie Theory/hw/hw5.out",
     "Lie Theory/hw/hw5.log",
     "Lie Theory/hw/hw5.fls",
-    "Lie Theory/hw/pdflatex20832.fls",
+    "Lie Theory/hw/pdflatex20228.fls",
     "Lie Theory/hw/hw5.fdb_latexmk",
     "Lie Theory/hw/hw5.aux",
-    "Lie Theory/hw/pdflatex19092.fls",
-    "Lie Theory/hw/pdflatex16668.fls",
-    "Lie Theory/Clifford Algebra Construction.md",
+    "Lie Theory/hw/pdflatex22416.fls",
+    "Lie Theory/hw/pdflatex20276.fls",
+    "Lie Theory/Simple Lie Algebra Data Page.md",
     "Lie Theory/Dn.md",
+    "Lie Theory/Classification of Irreducible Root Systems.md",
+    "graph.png",
     "Lie Theory/Lie Algebras/Lie Algebras Homepage.md",
-    "Simple Lie Algebra Data Page.md",
     "Lie Theory/Lie Algebras/Core/Lie Algebra.md",
-    "Classification of Irreducible Root Systems.md",
     "Lie Theory/Lie Algebras/Root Systems/Root Systems.md",
     "Analysis/Probability/Radon-Nikodym.md",
-    "Continuous Local Martingales.md",
-    "Analysis/Stochastic Calculus/Stochastic Calculus Homepage.md",
     "Analysis/Finite Variation Processes.md",
     "meta/homepage.md",
     "Untitled.md",
-    "story about Clifford Algebras.md",
     "Finite Variation Processes.md",
     "Analysis/Radon-Nikodym.md",
-    "Lie Theory/deformation.md",
     "Lie Theory/filtered algebra.md",
     "Lie Theory/Minuscule Weights.md",
     "Lie Theory/Universal Enveloping Algebra.md",
@@ -396,7 +384,6 @@
     "Universal Enveloping Algebra.md",
     "Minuscule Weights.md",
     "filtered algebra.md",
-    "graph.png",
     "Algebraic Topology/homology/Exact Sequence.png",
     "Algebraic Topology/homotopy/images/homotopy.png",
     "Algebraic Topology/homology/Chain Map.png",

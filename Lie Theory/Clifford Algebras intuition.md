@@ -1,4 +1,4 @@
-Let's drop some intuition.
+Let's drop some intuition about why a Clifford algebra is constructed the way it is. (WIP?)
 
 Suppose I have a finite-dimensional $V$ with inner product, and consider the space of tensors on $V$. I will perform a long computation inside $T V$, which might involve lots of tensor products (no contractions though!), but at the end of the day, all I want to know is what the ==**full trace**== of my object is.
 
