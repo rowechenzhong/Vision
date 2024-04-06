@@ -2,8 +2,6 @@
 aliases:
   - centered Gaussian space
 ---
-
-
 >[!definition] (Centered) Gaussian Space
 >This is a closed linear subspace of $L^2$ containing **only gaussian variables**.
 

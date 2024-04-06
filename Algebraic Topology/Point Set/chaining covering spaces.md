@@ -2,9 +2,6 @@
 aliases:
   - chaining lemma
 ---
-
-
-
 > [!example] Chaining Covering Spaces
  Given maps $p:X\to Y$ and $q:Y\to Z$, suppose both $q$ and $p\circ q$ are covering maps. If $Z$ is ==*locally connected*==, then $p$ is a covering map. 
 

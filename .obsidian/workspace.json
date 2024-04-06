@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebraic Topology/homology/Chain Homotopy.md",
+                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -72,7 +72,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Algebraic Topology/homology/Chain Homotopy.md",
+                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -190,7 +190,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebraic Topology/homology/Chain Homotopy.md",
+                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +207,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebraic Topology/homology/Chain Homotopy.md",
+                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,7 +219,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebraic Topology/homology/Chain Homotopy.md"
+                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md"
               }
             }
           },
@@ -229,7 +229,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Algebraic Topology/homology/Chain Homotopy.md",
+                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -348,6 +348,7 @@
   },
   "active": "b3bdc88767508767",
   "lastOpenFiles": [
+    "Algebraic Topology/homology/Chain Homotopy.md",
     "Analysis/Stochastic Calculus/Convergence Properties of the Stochastic Integral.md",
     "Analysis/Stochastic Calculus/Continuous Semimartingale.md",
     "Analysis/Stochastic Calculus/continuous mapping theorem.md",
@@ -383,7 +384,6 @@
     "Lie Theory/hw/pdflatex17592.fls",
     "Infinitesimal Shorthand.md",
     "Analysis/Continuous Local Martingales.md",
-    "Convergence Properties of the Stochastic Integral.md",
     "graph.png",
     "Algebraic Topology/homology/Exact Sequence.png",
     "Algebraic Topology/homotopy/images/homotopy.png",

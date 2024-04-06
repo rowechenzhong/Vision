@@ -3,8 +3,6 @@ aliases:
   - simplicies
   - simplex
 ---
-
-
 >[!idea]- Ignore
 >
 > > [!definition] The $n$-simplex

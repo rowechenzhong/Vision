@@ -3,8 +3,6 @@ aliases:
   - regular covering space
   - regular
 ---
-
-
 > [!definition] Regular Covering Space
 > A covering space $p: \tilde{X}\to X$ is ==**regular**== if for each $x\in X$, and each $\{\tilde{x}_0, \tilde{x}_1\}\in p^{-1}(x)$, there exists a deck transformation sending $\tilde{x}_0$ to $\tilde{x}_1$. Such a covering space is also called a ==**normal**== covering space. This is because a covering space is normal iff $H = p_*(\pi_1(\tilde{X}, \tilde{x}_0))$ is a normal subgroup of $\pi_1(X, x_0)$! 
 

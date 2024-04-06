@@ -1,8 +1,6 @@
 ---
 aliases:
 ---
-
-
 >[!idea] Fundamental idea of Measure Theory
 >Measure theory cannot detect measure $0$ sets. No integral and no convergence theorem will ever require or provide a statement about a measure $0$ set.
 

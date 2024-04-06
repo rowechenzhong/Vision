@@ -3,7 +3,6 @@ aliases:
   - Radon-Nikodym Theorem
   - Radon-Nikodym Derivatives
 ---
-
 > [!definition] Radon-Nikodym Derivative
 > Let $\mu$ and $\nu$ be two $\sigma$-finite measures on $(X, \mathcal{F})$. If there exists a measurable function $f: X \to \mathbb{R}$ such that
 >

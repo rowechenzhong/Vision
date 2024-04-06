@@ -1,7 +1,6 @@
 ---
 aliases: []
 ---
-
 >[!theorem] Banach Fixed-point
 >Let $(X,d)$ be a non-empty complete metric space. Any [[contraction mapping]] $T$ admits a unique fixed point $x^*\in T$.
 

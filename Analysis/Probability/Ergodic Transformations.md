@@ -2,8 +2,6 @@
 aliases:
   - measure-preserving transformation
 ---
-
-
 Let $(E,\mathcal{E}, \mu)$ be a measure space. A measurable $\theta:E\to E$ is a ==**measure-preserving transformation**== if
 $$
 	\mu\circ \theta^{-1} = \mu

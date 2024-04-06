@@ -3,8 +3,6 @@ aliases:
   - induced map
   - induced maps
 ---
-
-
 A map $\phi:X\to Y$ induces a [[Chain Map]] on their corresponding [[Chain Complexes]] via $f_n:C_n\to D_n$ sending $\sigma\to \phi\circ \sigma$.
 
 This is a chain map, because$$

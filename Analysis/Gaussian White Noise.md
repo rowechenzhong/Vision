@@ -2,8 +2,6 @@
 aliases:
   - GWN
 ---
-
-
 >[!definition] Gaussian White Noise
 >Let $(E,\GGG)$ be a measurable space. Let $\mu$ be a $\sigma$-finite measure. A ==**Gaussian White Noise**== with ==**intensity**== $\mu$ is an isometry $G$ from $L^2(E,\GGG,\mu)$ into a [[Gaussian Spaces|centered Gaussian space]] $H$:$$\EE[G(f)G(g)] = \int fg d\mu,\qquad f,g\in H\subset L^2(E,\GGG,\mu).$$
 

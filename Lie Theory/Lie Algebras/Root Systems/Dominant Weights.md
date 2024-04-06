@@ -4,8 +4,6 @@ aliases:
   - fundamental dominant weight
   - dominant integral weight
 ---
-
-
 Fix some base $\Delta  = \{\alpha_1,\dots, \alpha_i\} \subset \Phi$. Then, a weight $\lambda$ is ==**dominant**== if all $\braket{\lambda | \alpha}$ are nonnegative, ==**integral**== if all $\braket{\lambda | \alpha}$ are integers, and ==**strongly dominant**== if all such integers are positive. Let $\Lambda^+$ be all the set of all dominant weights.
 
 >[!idea]

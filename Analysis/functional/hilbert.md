@@ -4,8 +4,6 @@ aliases:
   - parseval
   - orthonormal basis
 ---
-
-
 # Importing Theory 
 
 Alright, this is what we've all been waiting for. It's time to learn how to do quantum physics correctly! For reference, let's restate the definition of the inner product that we know and love. 

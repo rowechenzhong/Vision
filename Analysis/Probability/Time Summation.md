@@ -2,8 +2,6 @@
 aliases:
   - Maximal ergodic lemma
 ---
-
-
 Suppose $f$ is measurable on $(E,\mathcal{E}, \mu)$. I would like to understand the long-term statistical behavior of $f$ as its inputs are moved under [[Ergodic Transformations|measure-preserving transformation]] $\theta$ (not necessarily ergodic!)
 
 >[!defn] Time summation

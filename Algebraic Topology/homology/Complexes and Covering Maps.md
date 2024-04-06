@@ -2,8 +2,6 @@
 aliases:
   - covering maps and homology
 ---
-
-
 Let $\pi: \tilde{X}\to X$ be a [[Regular Covering Spaces|regular]] covering map, with [[Deck Transformation|covering group]] $G$.
 
 >[!claim]

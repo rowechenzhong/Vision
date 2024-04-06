@@ -1,8 +1,6 @@
 ---
 aliases: []
 ---
-
-
 We now generalize the notion of a deck transformation to arbitrary actions on a space. 
 > [!definition] Action
 An ==**action**== of a group $G$ on a space $Y$ is simply a homomorphism $\rho: G\to Homeo(Y)$; think representation theory. We want $\rho$ to have the \"discreteness\" characteristic of deck transformations. Each $y \in Y$ should have a neighborhood $U$ such that $g_1(U)\cap g_2(U) \neq \emptyset$ implies $g_1 = g_2$ (In particular, $\rho$ is injective.) Such actions will be called ==**covering space actions**==. 

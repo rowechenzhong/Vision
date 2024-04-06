@@ -3,8 +3,6 @@ aliases:
   - Doob's Maximal Inequalities
   - Doob
 ---
-
-
 The process $X^*_n = \sup_{k\leq n} \abs{X_k}$ is a good measure of regularity. Set $X^* = \sup_{n\geq 0}\abs{X_n}$. These guys are just increasing envelopes bounding $X$, and can themselves be bounded. All of these are, philosophically, an extension of [[Basic Inequalities|Markov's Inequality]] to the Martingale case. See also the closely related [[Discrete Doob's Lp Inequalities|Lp Inequalities]].
 
 There are three variants of this which apply to subtlely different situations.

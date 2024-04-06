@@ -2,8 +2,6 @@
 aliases:
   - Lp Inequalities
 ---
-
-
 Also see [[Discrete Doob's Maximal Inequalities|Doob]]. Let $X^*_n = \sup_{k\leq n} \abs{X_k}$, and set $X^* = \sup_{n\geq 0}\abs{X_n}$. 
 
 >[!theorem] $L^p$ Inequalities
