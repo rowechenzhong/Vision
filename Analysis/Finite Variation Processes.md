@@ -2,6 +2,9 @@
 aliases:
   - Signed Measure
   - signed measure
+  - FVP
+  - IP
+  - Increasing Process
 ---
 # Functions with Finite Variation
 
@@ -35,18 +38,25 @@ In particular, $\mu$ cannot have [[atom|atoms]]; conversely, any non-atomic $\mu
 >[!idea]
 > The intuition here is that integrating against a (possibly signed) measure with no atoms behaves basically the same as Lebesgue integration, because $\int_X g d\nu = \int_X gf d\mu$ when $g$ is $\nu$-measurable.
 
+In fact, $t\mapsto \int_0^t f(s)da(s)$ is a finite variation process; your signed measure assigns $\int_0^t \id_A f(s)da(s)$ to Borel sets $A$. Alternatively, your Radon-Nikodym derivative is $f \frac{da}{dt}$. Apparently, the correct notation is $\mu'(ds) = f(s)\mu(ds)$.
+
 >[!claim] Triangle Inequality
 >$$\abs{\int_0^T f(s)da(s)}\leq \int_0^T \abs{f(s)} \abs{da(s)}.$$
 
 > [!claim] FVP Integration over continuous functions looks like Reimann Integration
-> For any sequence $0 = t_0^n < \dots < t^n_{p_n} = t$ of subdivisions whose [[mesh]] tends to $0$,
-> $$\int_0^t \abs{da(s)}=\lim_{n\to \infty} \sum_{i = 1}^{p_n} \abs{a\left(t_i^n\right) - a\left(t_{i-1}^n\right)}.$$
-> For any continuous $f:[0,T],\to \RR$,$$\int_0^t f(s)da(s)=\lim_{n\to \infty} \sum_{i = 1}^{p_n} f\left(t^n_{i-1}\right)\left(a\left(t_i^n\right) - a\left(t_{i-1}^n\right)\right).$$
+>Pick a mesh.$$\int_0^t\abs{da(s)} = \lim\sum \abs{\Delta a}.$$For any continuous $f:[0,T]\to \RR$,$$\int_0^t f(s)da(s) = \lim\sum f\Delta a.$$ 
+> 
+>>[!idea]- Expand
+>> For any sequence $0 = t_0^n < \dots < t^n_{p_n} = t$ of subdivisions whose [[mesh]] tends to $0$,
+>> $$\int_0^t \abs{da(s)}=\lim_{n\to \infty} \sum_{i = 1}^{p_n} \abs{a\left(t_i^n\right) - a\left(t_{i-1}^n\right)}.$$
+>> For any continuous $f:[0,T]\to \RR$,$$\int_0^t f(s)da(s)=\lim_{n\to \infty} \sum_{i = 1}^{p_n} f\left(t^n_{i-1}\right)\left(a\left(t_i^n\right) - a\left(t_{i-1}^n\right)\right).$$
 
 # Finite Variation Processes
 
 >[!definition] Finite Variation Process, Increasing Process
->A ==**finite variation process**== is an adapted process whose sample paths have FV on $\RR_+$. A FVP with nondecreasing sample paths is called an ==**increasing process**==.
+>A ==**finite variation process**== is an adapted process whose sample paths have FV on $\RR_+$. A FVP $A$ with nondecreasing sample paths is called an ==**increasing process**==.
+
+Note that any IP admits a limit in $[0,\infty]$, $A_\infty$.
 
 >[!idea]
 >One can make extensions to the cases where $A_0\neq 0$ or $A$ is merely cadlag, but we do not do so in the sequel. This book is very nice in that way!
@@ -54,8 +64,7 @@ In particular, $\mu$ cannot have [[atom|atoms]]; conversely, any non-atomic $\mu
 The relation between FVP and IP is not deep. If $A$ is an FVP, then $V_t = \int_0^t \abs{d A_s}$ is IP. Then, $A_t = \frac12\left(V_t + A_t\right) - \frac12\left(V_t - A_t\right)$, so you are FVP iff you are the difference of two IPs.
 
 >[!definition] Integration against FVPs!
->Let $A$ be FVP and let $H$ be progressive. $H$ is ==**integrable wrt $A$**== if
->$$\forall t geq 0, \forall \omega \in \Omega, \int_0^t \abs{H_s(\omega)} \abs{dA_s(\omega)} < \infty.$$
+>Let $A$ be FVP and let $H$ be progressive. $H$ is ==**integrable wrt $A$**== if$$\forall t \geq 0, \forall \omega \in \Omega, \int_0^t \abs{H_s(\omega)} \abs{dA_s(\omega)} < \infty.$$
 >In other words, $H$ is path-integrable wrt $A$ on all $[0,t]$.
 >
 >Then, the process $H\cdot A$ is defined by

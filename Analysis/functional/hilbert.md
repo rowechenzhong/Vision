@@ -103,10 +103,15 @@ The theorem follows by definition, from the finite case. In particular, we are g
 >[!idea] Notation
 > From now on, $\HH$ denotes a Hilbert Space.
 
-There is exactly one nontrivial example of a separable Hilbert space: 
+We know one nontrivial example of a separable Hilbert space:
 
 > [!example] $L^2(E)$
  Let $E$ be some measure space. Then $L^2(E)$, the space of measurable functions $f:E\to \CC$ with $\int_E \abs{f}^2 < \infty$ modulo measure $0$, is a Hilbert Space with inner product $$ \braket{f,g} = \int_E f\conj{g} $$ If $E = \NN$, we find $\ell^2$. If $\abs{E} < \infty$, we find the finite-dimensional inner product spaces we know and love. 
+
+>[!idea] [measure theory - When is $L^2(X)$ separable? - MathOverflow](https://mathoverflow.net/questions/42310/when-is-l2x-separable)
+>A master chef claims that $L^2(E)$ is separable iff $E$ is a disjoint union of:
+>- Countably many points
+>- The standard Borel space.
 
  Over Hilbert spaces, orthonormal bases behave in the nicest way possible:
  

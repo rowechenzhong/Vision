@@ -33,6 +33,7 @@ This proof is sort of the same as this problem:
 >Let $(\Omega, \FFF)$ be a measurable space and let $\AAA$ be a $\pi$-system generating $\FFF$. Let $V$ be a vector space of **bounded** functions $f:E\to \RR$ such that:
 >- $1\in V$ and $1_A\in V$ for all $A\in \AAA$.
 >- For any sequence of **nonnegative** $f_n\in V$, if $f_n\uparrow f$ is also bounded, then $f\in V$.
+>
 >Then, $V$ contains every bounded measurable function.
 
 >[!solution]-

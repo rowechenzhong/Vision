@@ -4,8 +4,6 @@ aliases:
   - Monotone Convergence
   - Dominated Convergence
 ---
-
-
 # Baby Monotone Convergence
 
 All of the major inequality results in this section are consequences of one theorem.
@@ -54,8 +52,10 @@ And here's a special case of that:
 > Let $f_n: \Omega \to \RR$ be a sequence of measurable functions such that $\lim_n f_n = f$ exists. Suppose that there exists an absolutely integrable bound on these functions, $g:\Omega\to \RR$, for which $\abs{f_n} \leq g$ for all $n$. Then, $$ \int_\Omega f \der \mu = \lim_{n\to \infty} \int_\Omega f_n \der \mu. $$
 > ^Dominated-Convergence
 
+We usually say $g$ ==**dominates**== $(f_n)$ in these cases.
+
 ## Almost Everywhere
 
 There are actually a few [[types of convergence]]; we have been using the ==**pointwise**== variant. All of the above theorems hold with the assumptions replaced by **almost everywhere** convergence, because integrals are agnostic to measure-0 sets.
 
-More advanced: These theorems also hold for [[Conditional Expectation]].
+More advanced: These theorems also hold verbatim for [[Conditional Expectation]].

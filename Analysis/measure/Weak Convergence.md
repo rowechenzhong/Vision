@@ -4,8 +4,6 @@ aliases:
   - converges weakly
   - in distribution
 ---
-
-
 Suppose $\mu$ is a [[Borel Measure|Borel Probability Measure]] on a metric space $E$. Let $\mu_n$ be a sequence of such measures. Then, ==**$\mu_n$ converges weakly to $\mu$**== if $\mu_n(f)\to \mu(f)$ for all continuous bounded $f$.
 
 > [!claim] Portmanteau

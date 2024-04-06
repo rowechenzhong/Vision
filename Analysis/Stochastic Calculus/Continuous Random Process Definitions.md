@@ -5,8 +5,7 @@ We will be discussing families of random variables $(X_t)_{t\geq 0}$.
 
 Then, a continuous random process can be considered as a random variable in $C([0, \infty), \RR)$ via $X(\omega) = \left(t\mapsto X_t(\omega): t\geq 0\right)$. Similarly, a cadlag random process is an RV in $D([0, \infty), \RR)$.
 
->[!idea] Borel Measure for a natural metrizable topology
->The $C([0,\infty),\RR)$ measure inherited from $\left.\BBB_R^{\otimes I}\right\vert_{C(t)}$ is equal to the metrizable topology of uniform convergence on compact time intervals; this is easily verified.
+See [[UCP Topology of Continuous Random Processes]]
 
 > [!idea]- Initial thoughts on the $\sigma$-algebra
 > So, $\{x: x_t = 0\}$ is in the $\sigma$-algebra. If we're working with continuous or cadlag functions, then we can pinpoint $x$ on all values just by looking at a countable subset (e.g. $\{x_t: t\in \QQ\}$). So for any continuous/cadlag $f:\RR\to \RR$, $\{x: (\forall a\leq t \leq b\quad x_t = f(t)\}$ sounds like a measurable set. Ditto for $\{x: f \leq x \leq g\}$, or things like that. The exact details can be computed later.

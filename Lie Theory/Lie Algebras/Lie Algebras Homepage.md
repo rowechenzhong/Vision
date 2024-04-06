@@ -53,3 +53,10 @@ Young Tablueax, the things you saw at the end of QFT2, they're all here. We real
 Todo: discuss $B_n, C_n, D_n$ representations.
 
 - [[Clifford Algebra Construction]]
+
+# Integration on Lie Groups
+
+See latex notes on differential geometry for a review of differential forms et al. Remember the representation theory of finite groups, with the characters and stuff? Yeah, let's run it back.
+
+- [[Haar measure for Lie Groups]]
+- [[Representations of Compact Lie Groups]]

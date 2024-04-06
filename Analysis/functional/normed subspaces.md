@@ -37,7 +37,7 @@ Let $V$ be a normed vector space as usual, and let $W$ be a *closed* subspace of
 Let's verify this works; its a little tedious to be honest. 
 
 > [!idea] 
-When I saw this, I desperately wanted the \"arginf\" $w$ to be unique, defined, and actually just the projection onto the $W$-subspace, as is the case in a finite-dimensional inner product space. This is complete bullshit, and is a wake-up call of the level of generality we're at. Don't worry, things should get much better later when we restrict to Hilbert spaces.
+When I saw this, I desperately wanted the \"arginf\" $w$ to be unique, defined, and actually just the projection onto the $W$-subspace, as is the case in a finite-dimensional inner product space. This is complete cap, and is a wake-up call of the level of generality we're at. Don't worry, things should get much better later when we restrict to Hilbert spaces.
 
 >[!problem] Easy part
 >Show $\norm{\bullet}$ is positive semidefinite and homogenous.

@@ -1,3 +1,7 @@
+---
+aliases:
+  - Dynkin's Theorem
+---
 > [!definition] Pi system
 > A ==**pi system**== on $\Omega$ is a collection of subsets that is closed under finite intersections.
 
@@ -34,15 +38,20 @@ The main idea is that these two definitions neatly partition the definition of a
 > > 1. $\Omega$ lies in both.
 > > 2. If $A \subset B$ lie in both, then $B\setminus A$ lies in both.
 > > 3. If $A_1, A_2, \dots$ lie in both, then $A_1 \cup A_2 \cup \dots$ lie in both.
-> >    To prove the theorem, let $\LL$ be the smallest $\lambda$-system containing $\mathcal{P}$, which can be obtained as the intersection of all $\lambda$-systems containing $\mathcal{P}$ (via Zorn's Lemma for instance). We will show that $\LL$ is a $\pi$-system, as this would show it is a $\sigma$-field.
+> 
+> To prove the theorem, let $\LL$ be the smallest $\lambda$-system containing $\mathcal{P}$, which can be obtained as the intersection of all $\lambda$-systems containing $\mathcal{P}$ (via Zorn's Lemma for instance). We will show that $\LL$ is a $\pi$-system, as this would show it is a $\sigma$-field.
 >
-> The trick now is to fix a $A\in \LL$ and let
->
+> The trick is to let
 > $$
->   \LL_A = \{ B\in \LL | A\cap B \in \LL\}
+>   \LL' = \{ B\in \LL | A\cap B \in \LL \text{ for all $A\in \mathcal{P}$}\}
 > $$
->
-> It is clear that $\LL_A$ is a $\lambda$-algebra; thus $\LL_A = \LL$! This is precisely the desired.
+> It is clear that $\LL'$ is a $\lambda$-algebra. It is also clear that $\LL\subset \mathcal{P}$. Thus $\LL' = \LL$! Then, let
+> $$
+>   \LL'' = \{ B\in \LL | A\cap B \in \LL \text{ for all $A\in \LL$}\}
+> $$
+> Then, $\mathcal{P}\subset \LL''$ because $\LL = \LL'$. Thus $\LL'' = \LL$ as desired.
 
 > [!idea]
 > Measure-theoretic proofs are difficult because we don’t have a closed form for all measurable subsets. Instead, we must first verify that a certain subset $\mathcal{P}$ has a property $\LL$ that we want. Then, Dynkin booststraps the results from $\mathcal{P}$ to its $\sigma$-algebra.
+
+A related theorem: [[Monotone Class Theorem]] (for sets).

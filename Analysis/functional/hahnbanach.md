@@ -105,8 +105,9 @@
  ## Transposes 
  
  Do mathematicians actually call these things adjoints??? Ouch lmao. 
+ 
 > [!definition] Transpose
- \label{defn:transpose} Let $T: V\to W$ be a bounded linear map. Then, the ==**transpose**== of $T$ is the map $T^\top: W'\to V'$ defined via $$ T^\top(f) = f\circ T $$ We claim $\norm{T^\top} = \norm{T}$, and in particular $T^\top$ is bounded. 
+ Let $T: V\to W$ be a bounded linear map. Then, the ==**transpose**== of $T$ is the map $T^\top: W'\to V'$ defined via $$ T^\top(f) = f\circ T $$ We claim $\norm{T^\top} = \norm{T}$, and in particular $T^\top$ is bounded. 
 
  
 > [!proof] 

@@ -2,8 +2,6 @@
 aliases:
   - WLLN
 ---
-
-
 Take [[Stupid LLN]] and smash it until we get what we want.
 
 >[!theorem] Weak Law of Large Numbers
@@ -15,7 +13,7 @@ Take [[Stupid LLN]] and smash it until we get what we want.
 > 2. $$ \frac{1}{b_n^2} \sum_{k = 1}^n \EE\left( X^2_{n,k} \id\left\{\abs{X_{n,k}} \leq b_n\right\}\right) = \frac{1}{n} \EE\left(X^2\id\left\{\abs{X}\leq n\right\}\right)$$
 >    Let $Y_n = X_n \id\left\{\abs{X}\leq n\right\}$; then this is
 >    $$\frac{1}{n}\int_0^{n^2} \PP\left(\abs{Y_n} \geq \sqrt{t}\right)\der t = \frac1n \int_0^n \PP\left(\abs{Y_n} \geq y\right)\cdot 2y\der y$$
->    Upper bound this shit to $\frac{2}{n}\int_0^n \PP\left(\abs{X}\geq y\right)\cdot y\der y \to 0$ and win.
+>    Upper bound this to $\frac{2}{n}\int_0^n \PP\left(\abs{X}\geq y\right)\cdot y\der y \to 0$ and win.
 
 >[!problem] Easier WLLN
 > Let $X, X_k$ be iid with finite mean $\EE[X] = \mu$. Then $\frac{S_n}{n}\to \mu$ in probability.

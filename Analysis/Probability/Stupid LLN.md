@@ -19,7 +19,7 @@ In this section, we'll be making extensive use of $L^2$ geometry to get some fac
 > showing $L^2$ convergence. Chebyshev is the same:
 > $$\PP(\abs{S_n - \EE[S_n]}\geq n\eps) \leq \frac{\Var\left(S_n\right)}{n^2 \eps^2}\leq \frac{C}{n \eps^2}\to 0$$
 
-Okay, one more time with the $L^2$ bullshit. I've got a triangular array of $Y_{n,k}$ over $n\geq k$; let $T_n = \sum_{k = 1}^n Y_{n,k}$. We assume that, for fixed $n$, $Y_{n,k}$ are **independent**.
+Okay, one more time with the $L^2$ stuff. I've got a triangular array of $Y_{n,k}$ over $n\geq k$; let $T_n = \sum_{k = 1}^n Y_{n,k}$. We assume that, for fixed $n$, $Y_{n,k}$ are **independent**.
 
 > [!claim] WL for triangular Array
 > Suppose there is a sequence $b_n \to \infty$ such that
@@ -44,7 +44,7 @@ Now, we're not assuming $X_{n,k} \in L^2$ anymore; the training wheels are off. 
 >> $$\PP(S_n\neq T_n) \leq \sum_{k = 1}^n \PP\left(X_{n,k} \neq T_{n,k}\right) = \sum_{k = 1}^n \PP\left( \abs{X_{n,k}} > b_n\right)\to 0$$
 > ^stupid-lln
 
-These assumptions are literally just some interfacing bullshit to make the previous claim relevant.
+These assumptions are just some interfacing to make the previous claim relevant.
 
 >[!proof]- Some cap
 > If  $\PP(S_n\neq T_n) \leq \sum_{k = 1}^n \PP\left(X_{n,k} \neq T_{n,k}\right) = \sum_{k = 1}^n \PP\left( \abs{X_{n,k}} > b_n\right)$ which vanishes; thus the conclusion holds iff

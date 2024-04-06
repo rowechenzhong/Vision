@@ -36,7 +36,7 @@ Observe that our function acts on *equivalence classes* of loops. To show that t
 
 
 > [!idea] 
-There is an additional nice property we might want this function to have: if $p$ in $X$ gets sent to $f\circ p$, and I have another loop $q'$ in $\tilde{X}$ which is homotopic to $f\circ p$, then there should exist some loop $q$ in $X$, homotopic to $p$, such that $f\circ q = q'$. In other words, you might want $$ f([p]) = [f\circ p] $$ *as sets*. Unfortunately, this is bullshit; let $Y$ be the interval, and let $f$ be the constant map to $0$. The good thing about *covering maps* (which we'll get to in a bit!) is that they *do* have this property. 
+There is an additional nice property we might want this function to have: if $p$ in $X$ gets sent to $f\circ p$, and I have another loop $q'$ in $\tilde{X}$ which is homotopic to $f\circ p$, then there should exist some loop $q$ in $X$, homotopic to $p$, such that $f\circ q = q'$. In other words, you might want $$ f([p]) = [f\circ p] $$ *as sets*. Unfortunately, this is cap; let $Y$ be the interval, and let $f$ be the constant map to $0$. The good thing about *covering maps* (which we'll get to in a bit!) is that they *do* have this property. 
 
 
 > [!theorem] Homotopic Maps and Homomorphism behave identically

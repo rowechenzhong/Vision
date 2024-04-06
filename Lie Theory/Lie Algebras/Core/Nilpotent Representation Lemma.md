@@ -10,7 +10,7 @@ This is clear, because left and right translation by $x$ (sending $y\to xy$ and 
 The converse is clearly not true; $1\in \gl(\CC^n)$ is ad-nilpotent yet not nilpotent.
 
 >[!idea]
->Nilpotent linear transformations admit an eigenvector (no shit).
+>Nilpotent linear transformations admit an eigenvector (they have a kernel).
 
 > [!proof]- Long, tedious
 > We use induction on $\dim L$; $\dim L = 0$ is clear.

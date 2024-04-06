@@ -34,7 +34,6 @@ Next, we will _construct_ the most important measure spaces, starting with the r
 4. [[Caratheodory Extension Theorem]]
 5. [[More examples of measures]]
 
-
 From here, one can study integration over measures, which is a large subject.
 
 6. [[Integration]]

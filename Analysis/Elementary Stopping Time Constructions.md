@@ -1,3 +1,7 @@
+---
+aliases:
+  - collision times
+---
 >[!claim] Oracle
 >Here's a silly construction. Suppose $T$ is an ST, and $S$ is an $\FFF_T$-measurable RV such that $S\geq T$. In other words, $S$ always happens after $T$, but you know when $S$ happens the moment $T$ happens. Then of course $S$ is also an ST.
 
