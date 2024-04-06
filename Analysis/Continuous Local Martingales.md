@@ -61,4 +61,3 @@ If $M_0$ is not zero, we can still say $M$ is a CLM if $M_t - M_0$ is. These $T_
 > &\leq \EE\left[\left(\sup_{1\leq i\leq p} \abs{N_{t_i} - N_{t_{i-1}}}\right) \underbrace{\sum_{1\leq i\leq p} \abs{N_{t_i} - N_{t_{i-1}}}}_{\leq n}\right]\\
 > & \leq n \EE\left[\sup_{1\leq i\leq p} \abs{N_{t_i} - N_{t_{i-1}}}\right]
 > \end{align*}$$ By continuity of sample paths, we know that the inner function should vanish along any decreasing mesh; $N$ is bounded, thus it is dominated and $\lim_{k\to \infty} \EE\left[\dots\right] = 0$. Thus $\EE[N_t^2] = 0$ and $M_{t\land \tau_n} \equiv 0$ AS. This is true for all $n$, and $\tau_n\uparrow \infty$, thus $M_t\equiv 0$ a.s.
-

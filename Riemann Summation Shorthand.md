@@ -13,4 +13,3 @@ The above statement is thus written in the suggestive form:
 
 >[!idea] Shorthand
 > Pick a mesh. For any continuous $f:[0,T]\to \RR$,$$\int_0^t f(s)da(s) = \lim\sum f\Delta a.$$
-

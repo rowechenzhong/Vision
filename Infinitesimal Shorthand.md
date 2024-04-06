@@ -10,4 +10,4 @@ Thus, we write $dX = dX'$ if $\int_0^t dX = \int_0^t dX'$, i.e. $X_t - X_0 = X'_
 
 # CLM Intuition
 
-We would like to say that $M$ is a CLM iff $\EE[dM] = 0$. Let's 
+We would like to say that $M$ is a CLM iff $\EE[dM] = 0$. Let's

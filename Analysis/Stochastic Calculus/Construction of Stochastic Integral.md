@@ -101,4 +101,4 @@ Finally, let $X = M + A$. We want $H\cdot X = H\cdot X + H\cdot A$, which means 
 Let's focus our attention on ==**locally bounded progressive process**==, which are a progressive process $H$ such that$$\forall t\geq 0,\qquad\sup_{s\leq t} \abs{H_s} < \infty$$almost surely. Then, LBPPs are integrable, because
 $$\forall t \geq 0, \forall \omega \in \Omega, \int_0^t \abs{H_s(\omega)} \abs{dA_s(\omega)} \leq \sup_{s\leq t} \abs{H}_s \int_0^t \abs{dA_s(\omega)}< \infty.$$Similarly, LBPP $\subset L^2_{\text{loc}}(M)$.
 
->[!idea] Continuous adapted processes are automatically LBPP. 
+>[!idea] Continuous adapted processes are automatically LBPP.
