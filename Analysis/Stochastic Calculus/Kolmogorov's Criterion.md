@@ -7,7 +7,6 @@ Kolmogorov's Criterion is fundamental. Let $X:[0,\infty)\times \Omega\to S$ be a
 > [!theorem] Kolmogorov's Continuity Theorem
 > Suppose there exist positive constants $\alpha, \beta, K$ such that for all $0\leq s,t$, $$\EE[d(X_t, X_s)^\alpha] \leq K\abs{t - s}^{1 + \beta}.$$ There, there exists a continuous modification $\tilde{X}$ of $X$ which is [[Types of Continuity|locally $\gamma$-Holder-continuous]] for every $\gamma < \beta/\alpha$.
 
-
 >[!idea] Kolmogorov's Criterion, informal
 >Let $I$ be dense in $[0,1]$, e.g. $\QQ$. Specify a random process $\xi: I\to \RR$. If $\xi$ is [[Types of Continuity|Holder-continuous]], then there is some continuous modification $X:[0,1]\to \RR$ which is Holder-continuous.
 

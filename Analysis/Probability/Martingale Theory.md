@@ -22,7 +22,5 @@ We take a brief break to nuke SLLN.
 An unrelated theorem. I'm not sure how this is related to anything.
 9. [[Wald's Identities]]
 
-A brief glance at 18.615 before we move on to continuous time.
-11. [[Markov Chain Preliminary Results|Markov Chains]]
-13. [[Markov Chains and Martingales]]
-14. [[Harmonic Functions]]
+A brief glance at 18.615: (this is generalized in the theory of [[Markov Processes Homepage|markov processes]]).
+11. [[Markov Chain on Countable State Spaces]]

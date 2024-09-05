@@ -1,0 +1,1 @@
+A silly matrix thing, ch 1 problem 10 from UAG, key idea is that homogenous polynomials form a vector space.

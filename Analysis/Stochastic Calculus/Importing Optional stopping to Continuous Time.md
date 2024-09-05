@@ -12,7 +12,6 @@ See the discrete [[Optional Stopping Theorem]].
 > 4. For all bounded stopping times $T$, $X_T$ is integrable and
 >    $$\EE[X_T] = \EE[X_0].$$
 
-
 > [!theorem] Optional Stopping Theorem
-> Suppose $X$ is a UI martingale. Then it admits an AS and $L^1$ limit, and thus $X_\infty$ is defined everywhere. For **any** stopping times $S,T$, we have $\EE(X_T) = \EE(X_0)$ and
+> Suppose $X$ is a UI martingale with right-continuous sample paths. Then it admits an AS and $L^1$ limit, and thus $X_\infty$ is defined everywhere. For **any** stopping times $S,T$, we have $\EE(X_T) = \EE(X_0)$ and
 > $$\EE(X_T | \FFF_S) = X_{S\land T}$$

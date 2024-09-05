@@ -32,4 +32,4 @@ aliases:
 >$$\lim_{n\to \infty} \sum_{j\leq k_n} G(A^n_j)^2 \stackrel{L^2}{\to} \mu(A).$$
 
 >[!proof]- Second Moment Method
-> Please observe that the LHS is a random variable, while the RHS is (a priori) a constant! For any $n$, $\{G(A_i^n)\}_i$ are independent, and $\EE[G(A_j^n)^2] = \mu(A_j^n)$. Then$$\EE\left[\left(\sum_{j\leq k_n} G(A^n_j)^2 - \mu(A)\right)^2\right] = 2\sum_{j\leq k_n} \mu(A^n_j)^2$$because if $X\sim N(0,\sigma^2)$, $\Var(X^2) = 2\sigma^4$. The RHS vanishes because it is bounded by $\left(\sup_j \mu(A_j^n)\right)\mu(A)$.
+> Please observe that the LHS is a random variable, while the RHS is a constant! For any $n$, $\{G(A_i^n)\}_i$ are independent, and $\EE[G(A_j^n)^2] = \mu(A_j^n)$. Then$$\EE\left[\left(\sum_{j\leq k_n} G(A^n_j)^2 - \mu(A)\right)^2\right] = 2\sum_{j\leq k_n} \mu(A^n_j)^2$$because if $X\sim N(0,\sigma^2)$, $\Var(X^2) = 2\sigma^4$. The RHS vanishes because it is bounded by $\left(\sup_j \mu(A_j^n)\right)\mu(A)$.

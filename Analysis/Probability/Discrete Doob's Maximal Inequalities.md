@@ -31,11 +31,11 @@ There are three variants of this which apply to subtlely different situations.
 # Weak Forms
 
 >[!thm] Wikipedia Maximal Inequality
->Let $X$ be a submartingale (not necessarily non-negative). Let $E = \max_{1\leq i\leq n}X_i \geq \lambda$. For all $\lambda \geq 0$,
+>Let $X$ be a submartingale (not necessarily non-negative). For all $\lambda \geq 0$, let $E = \max_{1\leq i\leq n}X_i \geq \lambda$. 
 >$$\lambda \PP\left(E\right)\leq \EE[X_n\id_E] \leq \EE[X_n^+]$$
 
 >[!proof]- Easy
->Let $E_i$ be the event $i =\inf\{i: X_i \geq \lambda\}$ and $E = \bigcup E_i$ be the desired. Then,$$\begin{align*}\lambda \PP(E) &= \lambda \sum \PP(E_i)\leq \sum \EE[X_i\id_{E_i}]\\&\leq \sum \EE[X_n\id_{E_i}] = \EE[X_n\id_E]\leq \EE[X_n^+]\end{align*}$$as desired.
+>Let $E_i$ be the event $i =\inf\{j: X_j \geq \lambda\}$ and $E = \bigcup E_i$ be the desired. Then,$$\begin{align*}\lambda \PP(E) &= \lambda \sum \PP(E_i)\leq \sum \EE[X_i\id_{E_i}]\\&\leq \sum \EE[X_n\id_{E_i}] = \EE[X_n\id_E]\leq \EE[X_n^+]\end{align*}$$as desired.
 
 >[!theorem] 675 Maximal Inequalities
 >Let $X$ be a martingale or non-negative submartingale. Then, for all $\lambda \geq 0$,

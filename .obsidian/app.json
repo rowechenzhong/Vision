@@ -8,5 +8,6 @@
     "downscalePercent": 70
   },
   "promptDelete": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "newFileLocation": "current"
 }

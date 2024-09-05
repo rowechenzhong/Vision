@@ -8,17 +8,30 @@ This is obvious.
 >[!claim] Less simple Markov Property
 >Actually, $(B_{s+t} - B_s)_{t\geq 0}$ is a standard BM independent of $\FFF_{s+}$.
 
-This is because $B_{s+t} - B_s = \lim_{\eps\to 0} B_{s+t+\eps} - B_{s+\eps}$ by continuity, and limits preserve independence (which is obvious by considering the sigma algebras or something).
+>[!proof]- By continuity, plus details.
+> By continuity, $B_{s+t} - B_s = \lim_{\eps\to 0} B_{s+t+\eps} - B_{s+\eps}$ pointwise. The claim is thus that limits preserve independence. This is basically true, but you have to be careful to talk about the measure-$0$ events. Observe that$$
+> \{B_{s+t} - B_s \in (a,b)\}\subset \lim_{\eps\to 0} \{B_{s+t+\eps} - B_{s+\eps} \in (a,b)\}\subset \lim_{\eps\to 0} \{B_{s+t+\eps} - B_{s+\eps} \in [a,b]\}\subset \{B_{s+t} - B_s\in [a,b]\}.
+> $$But the LHS and the RHS have the same measure. Thus, for any $A\in \FFF_{s+}$,$$\PP(B_{s+t} - B_s\in (a,b), A) = \lim_{\eps\to 0} \PP\left(B_{s+t+\eps} - B_{s+\eps}\in (a,b), A\right) = \lim_{\eps\to 0} \PP\left(B_{s+t+\eps} - B_{s+\eps}\right)\PP(A) = \PP\left(B_{s+t} - B_s\in (a,b)\right)\PP(A).$$This concludes.
 
 > [!theorem] Blumenthal
 > Suppose $A\in \FFF^X_{0+}$. Then $\PP(A)\in \{0,1\}$.
 
-Indeed, $A\in \sigma(B_t: t\geq 0)\pperp \FFF_{0+}$, thus just like [[Kolmogorov's Zero-One Law]] you win.
+We just showed $\FFF_{0+}\pperp \sigma(B_t: t>0)$. By continuity, this $\sigma$-algebra is the same as $\sigma(B_t: t\geq 0)$.
+
+> [!proof]- Really?
+> The functions $f_n = B_{\frac1n}$ are $\FFF_{0+}$-measurable. Thus their limit is as well. But by path-continuity, this limit is just $B_0$. Thus $\{B_0\in A\}$ is $\FFF_{0+}$-measurable for all $A$.
+
+But $\FFF_{0+} = \bigcap_\eps \FFF_{\eps}\subset \sigma(B_t: t \geq 0)$, so $\FFF_{0+} \pperp \FFF_{0+}$, thus just like [[Kolmogorov's Zero-One Law]] you win.
 
 >[!claim] Strong Markov Property
->For any [[Stopping Time]] $T$ with $\PP(t < \infty) > 0$, set $B_t^{(T)} = \id_{T < \infty}(B_{T+t} - B_T)_{t\geq 0}$. Under the probability measure $\PP(\bullet | T < \infty)$, $B_t^{(T)}$ is a standard Brownian motion $\pperp \FFF_T$.
+>For any [[Stopping Time]] $T$ with $\PP(T < \infty) > 0$, set $B_t^{(T)} = \id_{T < \infty}(B_{T+t} - B_T)_{t\geq 0}$. Under the probability measure $\PP(\bullet | T < \infty)$, $B_t^{(T)}$ is a standard Brownian motion $\pperp \FFF_T$.
 
-> [!proof] Dyadic on $T$ to make it countable, then remember definitions.
+> [!proof]- Dyadic on $T$ to make it countable. (Sketch)
+> First take $T < \infty$ everywhere. Take $T^k = 2^{-k}\ceil{2^k T}\geq T$ and $B^{(T,k)}_t = B_{T^k+t} - B_{T^k}$. It is immediate that $B^{(T,k)}_t$ are BM $\pperp \FFF_T$. They converge path-wise pointwise to $B^{(T)}_t$, and arguments similar to the less simple MP above conclude.
+> 
+> The $0 < \PP(T < \infty) < 1$ modification is harmless.
+
+These are generalized to arbitrary Markov processes [[Strong Markov Property|here]].
 
 # Example Applications
 

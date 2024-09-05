@@ -59,3 +59,7 @@ We usually say $g$ ==**dominates**== $(f_n)$ in these cases.
 There are actually a few [[types of convergence]]; we have been using the ==**pointwise**== variant. All of the above theorems hold with the assumptions replaced by **almost everywhere** convergence, because integrals are agnostic to measure-0 sets.
 
 More advanced: These theorems also hold verbatim for [[Conditional Expectation]].
+
+# Changing Measure (Advanced)
+
+Perhaps one has a sequence of measures $\mu_n$, and one is interested in how integrals with respect to these measures converge. One should then look at [this mathoverflow page](https://mathoverflow.net/questions/406712/dominated-convergence-theorem-when-the-measure-space-also-varies-with-n). The easiest example is when there is some common $\lambda$ against which all $\mu_n$ are absolutely continuous, such that the [[Analysis/Probability/Radon-Nikodym|Radon-Nikodym]] derivatives $\varphi_n = \frac{d\mu_n}{d\lambda}$ each exist. So you can just figure out if the sequence of measurable functions $f_n\varphi_n$ converge. If $\varphi_n$ converge $\lambda$-almost-surely (which would hold if say, $\mu_n$ converged [[Convergence of Measures|set-wise]]), and you also dominate the whole expression, you can apply the dominated convergence theorem above to conclude.

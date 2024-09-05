@@ -10,12 +10,13 @@ Just by bilinear properties,
 - $\braket{M,N}$ is the unique FVP such that $MN - \braket{M,N}$ is a CLM.
 - Given a mesh on $[0,t]$,$$\braket{M,N}_t = \lim\sum \Delta M \Delta N = \lim_{n\to \infty} \sum \left(M_{t_i^n} - M_{t_{i-1}^n}\right)\left(N_{t_i^n} - N_{t_{i-1}^n}\right)$$in probability.
 - For every $T$, $\braket{M^T,N^T} = \braket{M^T,N} = \braket{M,N}^T$.
-- If $M,N$ are continuous martingales bounded in $L^2$, $MN - \braket{M,N}$ is UI.
+- If $M,N$ are continuous martingales bounded in $L^2$, $MN - \braket{M,N}$ is a UI martingale.
 	- $\braket{M,N}_\infty$ exists in AS+$L^1$.
 	- $\EE[M_\infty N_\infty] = \EE[M_0N_0] + \EE[\braket{M,N}_\infty]$.
 - Two CLMs are ==**orthogonal**== if $\braket{M,N} = 0$ (iff $MN$ is a CLM).
 	- If orthogonal $M,N$ are bounded in $L^2$, $M_SN_S$ is the UI martingale, and OST applies.
 	- Independent BMs are orthogonal. Indeed, $\frac{B + B'}{\sqrt{2}}$ is also a BM, so compute.
+- Computational claim again: the natural sequence of random signed measures $$\mu_n = \sum_i \left(X_{t_i} - X_{t_{i-1}}\right)\left(Y_{t_i} - Y_{t_{i-1}}\right) \delta_{\{t_{i-1}\}}.$$converge [[Random Measure|weakly in probability]] to $\mu$, the signed measure corresponding to $\braket{X,Y}$.
 
 And of course, we have to drop the Cauchy-Schwarz.
 
@@ -41,3 +42,103 @@ And of course, we have to drop the Cauchy-Schwarz.
 > \sum_i \lambda_i \mu_i \int_{A_i} \abs{d\braket{M,N}_s} \leq \left(\sum_i \lambda_i^2 \int_{A_i}d\braket{M,M}_s\right)^{1/2}\left(\sum_i \mu_i^2 \int_{A_i}d\braket{N,N}_s\right)^{1/2}.
 > $$
 > Finally, every non-negative Borel function is a monotone increasing limit of simple functions with bounded support ([[approximation by simple functions]]) thus [[Convergence properties of Lebesgue Integral|Monotone Convergence]] concludes.
+> 
+
+
+
+# Some Computations
+
+These computations were used for my 676 final project. Recorded here.
+
+>[!claim]
+For a subdivision $\Delta$ of $[0,t]$ and $\lambda\in [0,1]$, we set $t_i^\lambda = t_i + \lambda(t_{i+1} - t_i)$. Let $X = M+A$ and $Y = N+B$ be two CSMs while $H$ is adapted, and let $\abs{X}, \abs{Y},\abs{H}$ all be bounded by a constant $M$. We let $$K^\lambda_\Delta = \sum_i H_{t_i} \left\{\left(X_{t_i^\lambda} - X_{t_i}\right)\left(Y_{t_i^\lambda} - Y_{t_i}\right) - \braket{X,Y}_{t_i}^{t^\lambda_i}\right\}.$$We now wish to show that
+> $$
+> \lim_{\abs{\Delta}\to 0} \sup_\lambda \EE\left[\left(K^\lambda_\Delta\right)^2\right] = 0
+> $$
+
+Observe the problem reduces to the case $X = Y$ a CLM (and thus martingale), because polarization works.
+
+In these circumstances, $M = X^2 - \braket{X,X}$ is a UI martingale. Then, for $i < j$,$$
+\EE\left[H_{t_j}\left\{\left(X_{t_j^\lambda} - X_{t_j}\right)^2 - \braket{X,X}_{t_j}^{t^\lambda_j}\right\}\bigg\vert \FFF_{t_j}\right] = 0 \implies \EE\left[H_{t_i}\left\{\left(X_{t_i^\lambda} - X_{t_i}\right)^2 - \braket{X,X}_{t_i}^{t^\lambda_i}\right\}H_{t_j}\left\{\left(X_{t_j^\lambda} - X_{t_j}\right)^2 - \braket{X,X}_{t_j}^{t^\lambda_j}\right\}\right] = 0
+$$
+Hence, we are left to bound$$
+\EE\left[\sum_i \left\{\underbrace{H_{t_i}\left\{\left(X_{t_i^\lambda} - X_{t_i}\right)^2 - \braket{X,X}_{t_i}^{t^\lambda_i}\right\}}_{\delta_i}\right\}^2\right].
+$$
+First let's show that this guy is even finite. This turns out to be really really annoying.
+
+>[!proof]- This is actually really annoying, and I really could not find a faster way to do this despite being stuck on this problem for a week.
+> First off, we drop the $H_{t_i}$ because its bounded by $M$.
+> We have:
+> $$
+> \underbrace{\sum_i \left(X_{t_i^\lambda} - X_{t_i}\right)^4}_\star \leq \left(\sup_i \left(X_{t_i^\lambda} - X_{t_i}\right)^2\right)\sum_i\left(X_{t_i^\lambda} - X_{t_i}\right)^2 \leq (2M)^2\sum_i\left(X_{t_i^\lambda} - X_{t_i}\right)^2
+> $$
+> Then,
+> $$
+> \EE\left[\sum_i\left(X_{t_i^\lambda} - X_{t_i}\right)^2\right] \leq \EE\left[\sum_i\left(X_{t_i^\lambda} - X_{t_i}\right)^2 + \left(X_{t_{i+1}} - X_{t_i^\lambda}\right)^2\right] = \EE\left[X_t^2 - X_0^2\right] < \infty
+> $$
+> Thus, $\star$ has finite expectation.
+> 
+> The next term is trivial:
+> $$
+> \EE\left[\sum_i \left(X_{t_i^\lambda} - X_{t_i}\right)^2\braket{X,X}_{t_i}^{t^\lambda_i}\right] \leq \EE\left[(2M)^2 \sum_i \braket{X,X}_{t_i}^{t^\lambda_i} \right] \leq (2M)^2 \EE\left[\braket{X,X}_t\right] < \infty
+> $$
+> 
+> The last term is actually annoying. As far as I can tell, here's the fastest way to do this:
+> $$
+> \EE\left[\sum_i \left(\braket{X,X}_{t_i}^{t_i^\lambda}\right)^2\right]\leq \EE\left[\left(\sum_i \braket{X,X}_{t_i}^{t_i^\lambda}\right)^2\right]\leq \EE\left[\braket{X,X}_t^2\right] \lesssim M^4
+> $$
+> where the last inequality is up to a universal constant via the [[The BDG Inequalities|BDG inequalities]].
+
+Now, we use a Cauchy-Schwarz type trick, which would yield a really elegant solution if merely showing the answer was finite wasn't so terribly difficult.$$
+\EE\left[\sum_i \delta_i^2\right]^2 \leq \EE\left[(\sup_i \delta_i)\sum_i \delta_i \right]^2 \leq \EE\left[\left(\sup_i \delta_i\right)^2\right]\EE\left[\left(\sum_i \delta_i\right)^2 \right] = \EE\left[\left(\sup_i \delta_i\right)^2\right]\EE\left[\sum_i \delta_i^2 \right]
+$$
+Thus, we find that $\EE\left[\sum_i \delta_i^2\right]\leq \EE\left[\left(\sup_i \delta_i\right)^2\right]$. This guy is finite (because it's less than $\sum_i \delta_i^2$, which we've shown is finite). Also, $X$ and $\braket{X,X}$ are continuous functions on a compact interval, hence this guy vanishes identically -- in words, for any $\eps > 0$, there exists a $\eta$ such that for all $\alpha < \eta$, $\abs{\left(X^{t+\alpha}_t\right)^2 - \braket{X,X}^{t_i^\lambda}_{t_i}}\leq \eps$. Hence, the supremum over $\lambda$ and the $\abs{\Delta}\to 0$ limits work automatically.
+
+> [!claim]
+> If $\lambda = 1$, then
+> $$
+> \lim_{\abs{\Delta}\to 0}  \sum_i H_i \left(X_{t^\lambda_i} - X_{t_i}\right)\left(Y_{t^\lambda_i} - Y_{t_i}\right) = \lambda \int_0^t H_sd\braket{X,Y}_s
+> $$
+> in $L^2$.
+
+This should be trivial. We just showed that the LHS approaches$$
+\sum_i H_{t_i}\left\{\braket{X,Y}_{t_i}^{t_{i+1}}\right\}
+$$in $L^2$, so we just want to evaluate$$
+\EE\left[\left\{\sum_i H_{t_i}\left\{\braket{X,Y}_{t_i}^{t_{i+1}}\right\} - \int_0^t H_sd\braket{X,Y}_s\right\}^2\right]
+$$
+We forever denote $[s] = \sup \{t_i \leq s\}$. This is just $\int_0^t \left(H_{[s]} - H_s \right)d\braket{X,Y}_s$. We apply dominated convergence theorem $\omega$-wise, so this vanishes for each $\omega$. We then apply dominated convergence theorem on this function of $\omega$, which also vanishes. So we're done.
+
+> [!claim]
+> If $d\braket{X,Y}$ is AC with respect to Lebesgue measure, then
+> $$
+> \lim_{\abs{\Delta}\to 0}  \sum_i H_i \left(X_{t^\lambda_i} - X_{t_i}\right)\left(Y_{t^\lambda_i} - Y_{t_i}\right) = \lambda \int_0^t H_sd\braket{X,Y}_s
+> $$
+> uniformly in $L^2$.
+
+Combining the previous two sections, we want to show
+$$
+\EE\left[\left\{\sum_i H_{t_i}\left\{\braket{X,Y}_{t_i}^{t^\lambda_i} - \lambda \braket{X,Y}_{t_i}^{t_i+1}\right\}\right\}^2\right]
+$$
+vanishes. Note that $\braket{X,Y}$, being absolutely continuous with respect to Lebesgue measure, is differentiable almost everywhere.
+
+Delete $H_{t_i}$ and polarize. Now $\braket{X,X}$ is increasing. So what. Is this just facts. What's happening. It's continuous. Help. What the fuck. It's uniformly continuous.
+
+For all $\delta$, exists $\eps$ such that uniformly on $[0,t]$, for all $\abs{r - s} < \eps$, $\abs{\braket{X,Y}_r^s} < \delta$.
+o
+
+Following the problem, we write down the [[Radon-Nikodym]] derivative $A_s$. We then want to compute something like$$
+\EE\left[\left\{\sum_i\int_0^t H_{[s]} \frac{\braket{X,Y}_{[s]}^{[s]^\lambda}}{\braket{X,Y}_{[s]}^{[s] + 1}} - \lambda H_sA_s ds\right\}^2\right]
+$$
+So now we're really integrating a function which looks like
+
+
+>[!claim] A completely unrelated and trivial claim
+>Suppose $F$ is $C^1$ on $\RR$. Prove that
+>$$
+>\lim_{n\to \infty} \sum_\Delta \left(F(X_{t_{i+1}}) - F(X_{t_i})\right)^2 = \int_0^t F'(X_s)^2 d\braket{X,X}_s
+>$$
+>in probability.
+
+Indeed, $F$ has *uniformly continuous* derivative $F'$ on $[-K,K]$, hence by Taylor,$$
+= \sum_\Delta F'(X_{t_i^\alpha})^2 (X_{t_{i+1}} - X_{t_i})^2
+$$Now, by uniform continuity of $X_{t^\alpha_i}$, we know that for any $\eps$ and $\delta$, there is some $\abs{\Delta}$ such that for any smaller $\Delta$, with probability $\geq 1 - \delta$, the entire error term is at most $\sum_\Delta \eps (X_{t_i+1} - X_{t_i})^2\to 0$. So we conclude.

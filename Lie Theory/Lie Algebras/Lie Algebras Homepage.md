@@ -11,6 +11,12 @@ This can be learned independently from [[Lie/Lie Groups]].
 
 - [[Lie Algebra]]
 # Enumerating the Lie Algebras
+
+When enumerating the operators over a vector space, we diagonalize and discuss eigenvalues.
+
+When enumerating the lie algebras (which are just $(2,1)$ tensors!), we want to diagonalize somehow. The way is called a Cartan Subalgebra.
+
+- [[Cartan Subalgebra]]
 - [[Representation Theory Words]]
 - [[Casimir Element]]
 - [[Weyls Theorem]]
@@ -60,3 +66,13 @@ See latex notes on differential geometry for a review of differential forms et a
 
 - [[Haar measure for Lie Groups]]
 - [[Representations of Compact Lie Groups]]
+
+# All about Real Forms
+
+Up until now, we have worked solely over the field $\CC$. In order to say things about $\RR$, we follow the usual algebraic strategy. First, we'll discuss in full generality of Galois extensions of fields $L$ over $K$; then we'll specialize to real forms.
+
+# Topology of Lie Groups and Homogenous Spaces
+
+Uh oh :) Let's see if my [[Homology Theory]] self-studying is useful at all.
+
+- [[Chevalley-Eilenberg Complex]]

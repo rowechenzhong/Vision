@@ -1,0 +1,1 @@
+Two metrics on a set determine the same topology iff they have the same convergent sequences.

@@ -28,3 +28,10 @@ We explore the varieties of submanifolds.
 Then we discuss Fiber Bundles.
 5. [[Fiber Bundle]]
 6. [[Tensor Fields]]
+
+# Pseudo-Riemannian Geometry Crash-Course
+
+1. [[Reminders on Riemannian manifolds]] except they're not reminders because I don't understand anything.
+2. [[Reminders on Orthonormal Frame Bundles]] oh hey I guess these are just bundle bois. (This was for [[Stochastic Differential Geometry]])
+3. [[affine connection, what are Levi and Civita waffling bout, plus RCT]]
+4. [[Cartan's Magic Formula]]

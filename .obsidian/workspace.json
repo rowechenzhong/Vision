@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "12517ae436217a7c",
+        "id": "b6803fcd2a931d7a",
         "type": "tabs",
         "children": [
           {
-            "id": "b3bdc88767508767",
+            "id": "c372018a6cdda1ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
+                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "continuous mapping",
+                "query": "triangle",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,7 +72,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
+                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -158,12 +158,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 346.51103591918945,
-    "collapsed": true
+    "width": 346.51103591918945
   },
   "right": {
     "id": "70876c55eafe561d",
@@ -190,7 +190,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
+                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +207,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
+                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -219,7 +219,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md"
+                "file": "Probabilistic Method/Lovasz Local Lemma.md"
               }
             }
           },
@@ -229,7 +229,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Analysis/measure/Canonical equivalence classes of Measurable functions.md",
+                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -346,44 +346,46 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "b3bdc88767508767",
+  "active": "c372018a6cdda1ca",
   "lastOpenFiles": [
-    "Algebraic Topology/homology/Chain Homotopy.md",
-    "Analysis/Stochastic Calculus/Convergence Properties of the Stochastic Integral.md",
-    "Analysis/Stochastic Calculus/Continuous Semimartingale.md",
-    "Analysis/Stochastic Calculus/continuous mapping theorem.md",
-    "Analysis/Stochastic Calculus/Construction of Stochastic Integral.md",
-    "Analysis/Stochastic Calculus/Brownian Motion in nD.md",
-    "Analysis/Stochastic Calculus/Braket of Continuous Local Martingales.md",
-    "Analysis/Stochastic Calculus/Arzela-Ascoli.md",
-    "Ito Formula.md",
-    "Construction of Stochastic Integral.md",
-    "Lie Theory/hw/hw6.synctex(busy)",
-    "Lie Theory/hw/pdflatex7028.fls",
-    "Lie Theory/hw/hw6.out",
-    "Lie Theory/hw/hw6.log",
-    "Lie Theory/hw/hw6.fls",
-    "Lie Theory/hw/pdflatex17440.fls",
-    "Lie Theory/hw/hw6.fdb_latexmk",
-    "Lie Theory/hw/hw6.aux",
-    "Analysis/Finite Variation Processes.md",
-    "Quadratic Variation of Continuous Local Martingales.md",
-    "Analysis/Stochastic Calculus/Stochastic Calculus Homepage.md",
-    "Continuous Semimartingale.md",
-    "Braket of Continuous Local Martingales.md",
-    "Random Measure.md",
-    "Transition Kernels.md",
-    "Analysis/measure/Measure Theory.md",
-    "Random Measures.md",
-    "Analysis/Probability/Probability.md",
-    "continuous mapping theorem.md",
-    "Analysis/integration/Convergence properties of Lebesgue Integral.md",
+    "Probabilistic Method/Untitled.md",
+    "Probabilistic Method/Lovasz Local Lemma.md",
+    "Probabilistic Method/Initial Examples.md",
+    "Probabilistic Method/Probabilistic Method.md",
+    "Probabilistic Method/Elementary Definitions.md",
+    "Representation/Representation of Algebras.md",
+    "Differential Geometry/topological manifolds.md",
+    "Differential Geometry/Manifold Pathologies.md",
+    "Differential Geometry/locally closed.md",
+    "Probabilistic Method",
+    "Probabilistic Method/Variance and Covariance.md",
+    "meta/homepage.md",
+    "Analysis/measure/Weak Convergence.md",
     "Analysis/measure/types of convergence.md",
-    "Representations of Compact Lie Groups.md",
-    "Lie Theory/hw/pdflatex4612.fls",
-    "Lie Theory/hw/pdflatex17592.fls",
-    "Infinitesimal Shorthand.md",
-    "Analysis/Continuous Local Martingales.md",
+    "meta/Untitled 1.md",
+    "meta/Untitled.md",
+    "Analysis/functional/Functional Analysis.md",
+    "Algebraic Geometry/Algebraic Geometry.md",
+    "Algebraic Topology/homotopy/Homotopy Theory.md",
+    "Algebraic Topology/cohomology/Cohomology Theory.md",
+    "Algebraic Topology/homology/Homology Theory.md",
+    "readme.md",
+    "Lie Theory/Lie Algebras/Lie Algebras Homepage.md",
+    "Lie Theory/Lie/Lie Groups.md",
+    "Algebraic Geometry/Plane Curves.md",
+    "Algebraic Geometry/Affine varieties and the Nullstellensatz.md",
+    "Algebraic Geometry/Genus Waffle.md",
+    "Algebraic Geometry",
+    "Analysis/Stochastic Calculus/Final Project/stratonovich.synctex(busy)",
+    "Analysis/Stochastic Calculus/Final Project/pdflatex23912.fls",
+    "Analysis/Stochastic Calculus/Final Project/stratonovich.blg",
+    "Analysis/Stochastic Calculus/Final Project/stratonovich.out",
+    "Analysis/Stochastic Calculus/Final Project/stratonovich.log",
+    "Analysis/Stochastic Calculus/Final Project/stratonovich.fls",
+    "Analysis/Stochastic Calculus/Final Project/pdflatex10528.fls",
+    "Analysis/Stochastic Calculus/Final Project/stratonovich.fdb_latexmk",
+    "Analysis/Pasted image 20240422144120.png",
+    "Pasted image 20240407223632.png",
     "graph.png",
     "Algebraic Topology/homology/Exact Sequence.png",
     "Algebraic Topology/homotopy/images/homotopy.png",
@@ -392,7 +394,6 @@
     "Algebraic Topology/homology/Chain Complex.png",
     "Lie Theory/Lie/hw/Root_vectors_b3_c3-d3.png",
     "Lie Theory/Lie/hw/rootsystems.png",
-    "Lie Theory/Lie/hw/G2.png",
     "Untitled.canvas"
   ]
 }

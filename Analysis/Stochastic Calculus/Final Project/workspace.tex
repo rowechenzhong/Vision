@@ -1,0 +1,518 @@
+\documentclass{scrartcl}
+\usepackage{darkwhite}
+
+\title{Stratonovich's Theory}
+\subtitle{18.676 Spring 2024}
+\date{Spring 2024}
+
+\begin{document}
+
+\maketitle
+
+% (1.33) Exercise. All the processes considered below are bounded. For a subdivision L1 = (ti) of [0, t] and A E [0, 1], we set t/' = ti + A (ti+! - ti). 
+% 10 ) If X = M + A, Y = N + B are two cont. semimarts. and H is a continuous 
+% adapted process, set 
+% K~ = LHti {(Xtt - Xti) (Ytt - Yti ) - (X, Y):t}. 
+% i 
+% Prove that 
+% lim sup E [(K~)2] = 0. 
+% 1L1140 A 
+% 20 ) If A = 1 or if d (X, Y) is absolutely continuous with respect to the Lebesgue 
+% measure, then 
+% lim'" Ht(Xtl. - Xt.) (Ytl. - Yt.) = A t Hsd(X, Y)s 
+% 1L1140 L:-t " ' , ' Jo , 
+% in the L 2-sense. In the second case, the convergence is uniform in A. 
+% 30 ) If F is a C1-function on JR, prove that 
+% P-lim L(F(Xti+J-F(Xti ))2 = t F'(Xs)2d(X,X)s'
+
+
+% (2.18) Exercise. Let X and Y be two continuous semimartingales. For a subdivision .1 of [0, t], a function f E C I (JR) and a probability measure fL on [0, 1], we 
+% define 
+% 144 Chapter IV. Stochastic Integration 
+% 1°) Prove that 
+% lim S~ = t f(Xs)dYs + Ii t f'(Xs)d(X, Y)s 
+% 1.11---+0 10 10 
+% in probability, with Ii = fOI S df.L(s). For f.L = 01/2 and f(x) = x, this limit 
+% is called the Stratonovich integral of X against Y. For f.L = 00, we get the Ito 
+% stochastic integral of f(X) against Y. Observe that this is the only integral for 
+% which the resulting process is a local martingale when Y is a local martingale. 
+% [Hint: Use Exercise (1.33).] 
+% For f.L = 01, the limit is called the backward integral. 
+% 2°) If we set 
+% S~ = L (Yt;+1 - Yt;} t f (Xt;+S(I;+I-I;)) df.L(s) 
+% i ~ 
+% and if d (X, Y) is absolutely continuous with respect to the Lebesgue measure, 
+% then S~ has the same limit as S~ in probability whenever 1.11 -+ O. 
+% 3°) If OJ = Li fi (XI, ... , Xd) dXi is a closed differential form of class C I on 
+% an open set U of]R.d and X = (Xl, ... , Xd ) a vector semimartingale with values 
+% in U (i.e. P[3t : Xt (j. U] = 0) then 
+% 1 --~ 11 i 1" 1t afi i j W - ~ fi(Xs)dX, + - ~ -(Xs)d(X , X )s 
+% X(O,t) i=1 0 2 i,j 0 aXj 
+% where X(O, t) is the continuous path (Xs(w), 0.::: s .::: t). We recall that the integral 
+% of a closed form OJ along a continuous but not necessarily differentiable path 
+% y : [0, t] -+ ]R.d is defined as n(y(t» - n(y(O» where n is a function such that 
+% dn = OJ in a string of balls which covers y. 
+% 4°) If B is the planar BM, express as a stochastic integral the area swept by 
+% the line segment joining 0 to the point Bs , as s varies from 0 to t. 
+
+
+% (3.15) Exercise. If X and Yare two continuous semimartingales, denote by 
+% fot Xs odYs 
+% the Stratonovich integral defined in Exercise (2.18). Prove that if F E C3 (lRd , lR) 
+% and X = (Xl, ... , Xd ) is a vector semimartingale, then 
+% it aF . F(Xt ) = F(Xo) + ~ -(Xs) 0 dX!
+
+
+% (2.19) Exercise. We retain the notation of Exercise (2.18) in Chap. IV. 
+% * 
+% 1°) Let F be a holomorphic function in an open subset U of <C and i.V the 
+% differential form F(z)dz. If Z is a conf. loco mart. such that P[3t ::::: ° : Zt ¢:. 
+% U] = 0, then 
+% ( i.V = t F(Zs)dZs = t F(Zs) 0 dZs a.s., 
+% 1z(o.l) 10 10 
+% where 0 stands for the Stratonovich integral. 
+% 2°) In the situation of Theorem (2.11), we have 
+% et - eo = ( i.V 
+% 1z(o.l) 
+% with i.V = (x 2 + lri (xdy - ydx) = Im(dz/z). 
+% 3°) In the same situation, let St be the area swept by the segment [0, Zu], ° :::: u :::: t (see Exercise (2.18) in Chap. IV). Prove that there is a linear BM 
+% 8 independent of p such that St = 8 At where At = ~ f~ p; d S. Another proof is 
+% given in Exercise (3.10) Chap. IX which removes the condition a i= 0.
+
+8.1.4. Exercises.
+Exercise 8.1.8. In this exercise we will describe Itˆo’s approach to extending the validity of (8.1.6).
+(i) The first step is to give another description of Stratonovich integrals.
+Namely, given X, Y ∈ S(P; R), show that the Stratonovich integral of Y
+with respect to X over the interval [0, T] is almost surely equal to
+(*) lim
+N→∞
+2
+XN −1
+m=0
+Y
+
+(m+1)T
+2N
+
++ Y
+ mT
+2N
+
+2
+
+X
+
+(m + 1)T
+2N
+
+− X
+
+mT
+2N
+ .
+Thus, even if Y is not a semimartingale, we will say that Y : [0, T] × Ω −→
+R is Stratonvich integrable on [0, T] with respect to X if the limit in (*)
+exists in P-measure, in which case we will use R T
+0
+Y (t) ◦ dX(t) to denote this
+limit. It must be emphasized that the definition here is “T by T” and not
+simultaneous for all T’s in an interval.
+(ii) Given an X ∈ S(P; R) and a T > 0, set Xˇ T
+(t) = X
+
+(T − t)
++
+
+, and
+suppose that
+Xˇ T
+(t), FˇT
+t
+, P
+
+is a semimartingale relative to some filtration
+{FˇT
+t
+: t ≥ 0}. Given a Y : [0, T] × Ω −→ R with the properties that
+Y (· , ω) ∈ C
+
+[0, T]; R
+
+for P-almost every ω and that ω Y (t, ω) is Ft ∩FˇT
+t
+for each t ∈ [0, T], show that Y is Stratonovich integrable on [0, T] with
+respect to X. In fact, show that
+Z T
+0
+Y (t) ◦ dX(t) = 1
+2
+Z T
+0
+Y (t) dX(t) −
+1
+2
+Z T
+0
+Y (t) dXˇ T
+(t),
+where each of the integrals on the right is the taken in the sense of Itˆo .
+(iii) Let
+β(t), Ft, P
+
+be an R
+n-valued Brownian motion. Given T ∈
+(0,∞), set βˇT
+(t) = β
+
+(T − t)
++
+
+, FˇT
+t = σ
+
+{βˇT
+(τ ) : τ ∈ [0, t]}
+
+, and
+show that, for each ξ ∈ R
+n,
+
+(ξ, βˇT
+(t))Rn , FˇT
+t
+, P
+
+is a semimartingale with
+hβˇT
+, βˇT
+i(t) = t ∧ T and bounded variation part t −
+R t
+0
+βˇT
+τ
+T −τ
+dτ . In particular, show that, for each ξ ∈ R
+n and g ∈ C(R
+n; R), t g
+
+β(t)
+
+is
+Stratonovich integrable on [0, T] with respect to t
+
+ξ, β(t)
+
+Rn . Further, if
+{gn}∞
+1 ⊆ C(R
+n; R) and gn −→ g uniformly on compacts, show that
+Z T
+0
+gn
+
+β(t)
+
+◦ d
+
+ξ, β(t)
+
+Rn −→ Z T
+0
+g
+
+β(t)
+
+◦ d
+
+ξ, β(t)
+
+Rn
+in P-measure.
+(iv) Continuing with the notation in (iii), show that
+f
+
+β(T)
+
+− f(0)) = Xn
+i=1
+Z T
+0
+∂if
+
+β
+228 8 Stratonovich’s Theory
+for every f ∈ C
+1
+(R
+n; R). In keeping with the comment at the end of (i), it
+is important to recognize that although this form of Itˆo ’s formula holds for
+all continuously differentiable functions, it is, in many ways less useful than
+forms which we obtained previously. In particular, when f is no better than
+once differentiable, the right hand side is defined only up to a P-null set for
+each T and not for all T’s simultaneously.
+(v) Let
+β(t), Ft, P
+
+be an R-valued Brownian motion, show that, for each
+T ∈ (0,∞), t sgn
+β(t)
+
+is Stratonovich integrable on [0, T] with respect
+to β, and arrive at
+
+β(T)
+
+ =
+Z T
+0
+sgn
+β(t)
+
+◦ dβ(t).
+After comparing this with the result in (6.1.7), conclude that the local time
+`(T, 0) of β at 0 satisfies
+Z T
+0
+|β(t)|
+t
+dt − `(T, 0) −
+
+β(T)
+
+ =
+Z T
+0
+sgn
+β(T − t)
+
+dMˇ T
+(t),
+where Mˇ T
+is the martingale part of βˇT
+. In particular, the expression on the
+left hand side is a centered Gaussian random variable with variance T.
+Exercise 8.1.9. Itˆo’s formula proves that f ◦ Z ∈ S(P; R) whenever Z =
+(Z1, . . . , Zn) ∈ S(P; R)
+n and f ∈ C
+2
+(R
+n; R). On the other hand, as Tanaka’s
+treatment (cf. §6.1) of local time makes clear, it is not always necessary
+to know that f has two continuous derivatives. Indeed, both (6.1.3) and
+(6.1.7) provide examples in which the composition of a martingale with a
+continuous function leads to a continuous semimartingale even though the
+derivative of the function is discontinuous. More generally, as a corollary
+of the Doob-Meyer Decomposition Theorem (alluded to at the beginning of
+§ 7.1) one can show that f ◦Z will be a continuous semimartingale whenever
+Z ∈ Mloc(P; R
+n) and f is a continuous, convex function. Here is a more
+pedestrian approach to this result.
+(i) Following Tanaka’s procedure, prove that f ◦ Z ∈ S(P; R) whenever
+Z ∈ S(P; R)
+n and f ∈ C
+1
+(R
+n; R) is convex. That is, if Mi denotes the
+martingale part of Zi
+, show that
+f
+
+Z(t)
+
+−
+Xn
+i=1
+Z t
+0
+∂if
+
+Z(τ )
+
+dMi(τ )
+is the bounded variation part of 
+Hint: Begin by showing that when A(t) ≡
+hZi
+, Zj i(t)
+
+1≤i,j≤n
+, A(t)−A(s)
+is P-almost surely non-negative definite for all 0 ≤ s ≤ t, and conclude that
+if f ∈ C
+2
+(R
+n; R) is convex then
+t
+Xn
+i,j=1
+Z t
+0
+∂i∂jf
+
+Z(τ )
+
+hZi
+, Zj i(dτ )
+is P-almost surely non-decreasing.
+(ii) By taking advantage of more refined properties of convex functions,
+see if you can prove that f ◦ Z ∈ S(P; R) when f is a continuous, convex
+function.
+Exercise 8.1.10. If one goes back to the original way in which we described
+Stratonovich in terms of Riemann integration, it becomes clear that the only
+reason why we needed Y to be a semimartingale is that we needed to know
+that
+X
+m≤2N t
+
+∆N
+mY
+∆N
+mX
+
+converges in P-probability to a continuous function of locally bounded variation uniformly for t in compacts.
+(i) Let Z =
+
+Z1, . . . , Zn
+
+∈ S(P; R)
+n, and set Y = f ◦ Z, where f ∈
+C
+1
+(R
+n; R). Show that, for any X ∈ S(P; R),
+X
+m≤2N t
+
+∆N
+mY
+∆N
+mX
+
+−→ Xn
+i=1
+Z t
+0
+∂if
+
+Z(τ )
+
+hZi
+, Xi(dτ )
+in P-probability uniformly for t compacts.
+(ii) Continuing with the notation in (i), show that
+Z t
+0
+Y (τ ) ◦ dX(τ ) ≡ lim
+N→∞ Z t
+0
+Y
+N (τ ) dXN (τ )
+=
+Z t
+0
+Y (τ ) dX(τ ) + 1
+2
+Xn
+i=1
+Z t
+0
+∂if
+
+Z(τ )
+
+hZi
+, Xi(dτ ),
+where the convergence is in P-probability uniformly for t in compacts.
+(iii) Show that (8.1.6) continues to hold for f ∈ C
+2
+(R
+n; R) when the integral on the right hand side is interpreted using the extension of Stratonovich
+integration develope
+Exercise 8.1.11. Let X, Y ∈ S(P; R). In connection with Remark 8.1.7,
+it is interesting to examine whether it is sufficient to mollify only X when
+defining the Stratonovich integral of Y with respect to X.
+(i) Show R 1
+0
+Y ([τ ]N ) dXN (τ ) tends in P-probability to R 1
+0
+Y (τ ) dX(τ ).
+(ii) Define ψN (t) = 1 − 2
+N (t − [t]N ), set ZN (t) = R t
+0
+ψN (τ ) dY (τ ), and
+show that
+Z 1
+0
+Y (τ ) dXN (τ ) −
+Z 1
+0
+Y ([τ ]N ) dXN (τ ) =
+2
+XN −1
+m=0
+
+∆N
+mX
+∆N
+mZN
+
+.
+(iii) Show that
+2
+XN −1
+m=0
+
+∆N
+mX
+∆N
+mZN
+
+−
+Z 1
+0
+ψN (t)hX, Y i(dt) −→ 0 in P-probability.
+(iv) Show that for any Lebesgue integrable function α : [0, 1] −→ R,
+R 1
+0
+ψN (τ )α(τ ) dτ tends to 1
+2
+R 1
+0
+α(τ ) dτ .
+(v) Under the condition that hX, Y i(dt) = β(t) dt, where β : [0,∞) ×
+Ω −→ [0,∞) is a progressively measurable function, use the preceding to see
+that R 1
+0
+Y (τ ) dXN (τ ) tends in P-probability to R 1
+0
+Y (τ ) ◦ dX(τ ).
+Exercise 8.1.12. One place where Stratonovich’s theory really comes into
+its own is when it comes to computing the determinant of the solution
+to a linear stochastic differential equation. Namely, suppose that A =
+((Aij ))1≤i,j≤n ∈ S
+P; Hom(R
+n; R
+n)
+
+(i.e., Aij ∈ S(P; R) for each 1 ≤ i, j ≤
+n), and assume that X ∈ S
+P; Hom(R
+n; R
+n)
+
+satisfies dX(t) = X(t) ◦ dA(t)
+in sense that
+dXij (t) = Xn
+k=1
+Xik(t) ◦ dAkj (t) for all 1 ≤ i, j ≤ n.
+Show that
+det
+X(t)
+
+= det
+X(0)
+e
+Trace
+A(t)−
+
+
+\end{document}

@@ -1,3 +1,7 @@
+---
+aliases:
+  - Singular Complex
+---
 A ==**singular $n$-simplex**== in a space $X$ is a continuous map $\Delta^n\to X$. We define $C_n(X)$ as the space of $n$-chains as usual, and define the boundary map by restricting to faces;$$\pa_n(\sigma) = \sum_i (-1)^i \sigma\vert_{[v_0,\dots, \hat{v_i},\dots, v_n]}.$$The ==**singular homology group**== is thus $H_n(X) = \ker \pa_n / \im \pa_{n+1}$.
 
 It will turn out that the singular homology groups coincide with the [[Simplicial Homology]] groups for $\Delta$-complexes, but for now we make a more crude observation:

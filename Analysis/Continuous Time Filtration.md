@@ -1,3 +1,7 @@
+---
+aliases:
+  - usual conditions
+---
 # Continuous-time filtration
 
 Very soon, we will care that $(\Omega, \FFF, \PP)$ is endowed with a ==**continuous-time filtration**==, which is just a [[filtration]] indexed with real numbers: $\FFF_s\subseteq \FFF_t\subseteq \FFF$ for $s \leq t$, and $\FFF_\infty = \sigma(\FFF_t: t\geq 0)$. These correspond to information as usual.

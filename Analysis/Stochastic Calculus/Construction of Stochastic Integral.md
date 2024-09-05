@@ -28,6 +28,9 @@ Let $\Hh^2$ be the space of all **continuous** martingales which are **bounded i
 
 Okay, that's the differential. Given some $M\in \Hh^2$, what's allowed to be in the integrand? Well, let $L^2(M) = L^2(\Omega \times \RR_+, \PPP, dP d\braket{M,M}_s)$ where the measure assigns$$\EE\left[\int_0^\infty \id_A(\omega,s) d\braket{M,M}_s\right]$$to the set $A\in \PPP$. This is the set of [[Adapted Continuous-Time Processes|progressive]] processes such that$$\EE\left[\int_0^\infty H_s^2 d\braket{M,M}_s\right] < \infty.$$modulo $H_s = 0$ $d\braket{M,M}$ a.e. a.s., and has an inner product $(\bullet,\bullet)_{L^2(M)}$ and norm $\norm{H}_{L^2(M)}$.
 
+>[!example]
+>If $M$ is Brownian motion (say, stopped at time $t$ so we're bounded in $L^2$), then $L^2(M)$ is just $\EE\left[\norm{H(\omega)}_2^2\right] < \infty$.
+
 We now identify a set of ==**elementary processes**==, which are more or less exactly what you expect:
 
 >[!definition] Elementary Processes
@@ -40,7 +43,7 @@ The collection of (equivalence classes of) elementary processes forms a linear s
 >[!claim] $\mathscr{E}$ is dense in $\Hh$.
 
 > [!proof]- Proof ideas are sort of interesting
-> Let $X_t = \int_0^t K_u d\braket{M,M}_u$. The key idea is that for all $\FFF_s$ measurable $F$, applying orthogonality to $H_r(\omega) = F(\omega)\id_{(s,t]}(r)$ yields $\EE[F(X_t - X_s)] = 0$. Thus $X$ is a martingale, but it is also an FVP, thus it vanishses.
+> Let $X_t = \int_0^t K_u d\braket{M,M}_u$. The key idea is that for all $\FFF_s$-measurable $F$, applying orthogonality to $H_r(\omega) = F(\omega)\id_{(s,t]}(r)$ yields $\EE[F(X_t - X_s)] = 0$. Thus $X$ is a martingale, but it is also an FVP, thus it vanishses.
 
 ### Stochastic Integral for Elementary Processes
 
@@ -84,21 +87,40 @@ Notation: $(\id_{[0,T]})_s(\omega) = \id_{0\leq s\leq T(\omega)}$.
 
 # Local Martingales
 
-This time, let $M$ be a CLM. We let $L^2(M) = L^2(\Omega \times \RR_+, \PPP, dP d\braket{M,M}_s)$ again, consisting of progressive processes $H$ such that$$\EE\left[\int_0^\infty H_s^2d\braket{M,M}_s\right] < \infty.$$This should strike you as odd though, because recall that this approximately corresponds to a $\EE[\braket{M,M}_\infty] < \infty$ condition, which implies a true martingale in $L^2$ -- it's too strong. Correspondingly, let $L^2_{\text{loc}}(M)$ be the collection of progressive processes $H$ such that, with probability $1$, for all $t\geq 0$, $$\int_0^t H_s^2d\braket{M,M}_s < \infty.$$
+This time, let $M$ be a CLM. We let $L^2(M) = L^2(\Omega \times \RR_+, \PPP, dP d\braket{M,M}_s)$ again, consisting of progressive processes $H$ such that$$\EE\left[\int_0^\infty H_s^2d\braket{M,M}_s\right] < \infty.$$
+>[!idea] Strength
+This should strike you as odd though, because this is a $\EE[\braket{H\cdot M,H\cdot M}_\infty] < \infty$ condition, which implies a true martingale bounded in $L^2$ -- it's too strong. Changing the $\infty$ to a $t$ would also be too strong, because it corresponds to $H\cdot M$ being a true martingale bounded in $L^2$.
+
+Correspondingly, let $L^2_{\text{loc}}(M)$ be the collection of progressive processes $H$ such that, with probability $1$, for all $t\geq 0$, $$\int_0^t H_s^2d\braket{M,M}_s < \infty.$$
+>[!example]
+>If $M$ is Brownian motion, then $L^2_{\text{loc}}(M)$ says $\norm{H(\omega)}_2^2 < \infty$ almost surely.
+
 Here is the extension, plus all of our claims from before.
 
 > [!claim] Stochastic Integral Extension
 > One can extend the definition of the stochastic integral to $(H,M)\mapsto H\cdot M$ on $L^2_{\text{loc}}(M)\times \text{CLM}\to \text{CLM}$ such that:
 > - For $M,H$ in $\Hh\times L^2(M)$, it coincides with our old definition.
 > - $H\cdot M$ is the unique CLM starting from $0$ such that for every CLM $N$, $\braket{H\cdot M, N} = H\cdot \braket{M,N}$.
-> - If $H\in L^2_{\text{loc}}(M)$ and $K$ is progressive, then $K\in L^2_{\text{loc}}(H\cdot M)$ iff $HK\in L^2_{\text{loc}}(M)$. Then, $H\cdot (K\cdot M) = HK\cdot M$.> 
+> - If $H\in L^2_{\text{loc}}(M)$ and $K$ is progressive, then $K\in L^2_{\text{loc}}(H\cdot M)$ iff $KH\in L^2_{\text{loc}}(M)$. Then, $K\cdot (H\cdot M) = KH\cdot M$.
 > - If $T$ is a stopping time, $\left(\id_{[0,T]} H\right)\cdot M = (H\cdot M)^T = H\cdot M^T$.
 
 # Continuous Semi-martingales
 
-Finally, let $X = M + A$. We want $H\cdot X = H\cdot X + H\cdot A$, which means we must restrict our integrand to $L^2_{\text{loc}}(M)\cap L^1(A)$.
+Finally, let $X = M + A$. We want $H\cdot X = H\cdot M + H\cdot A$, which means we must restrict our integrand to $L^2_{\text{loc}}(M)\cap L^1(A)$.
 
-Let's focus our attention on ==**locally bounded progressive process**==, which are a progressive process $H$ such that$$\forall t\geq 0,\qquad\sup_{s\leq t} \abs{H_s} < \infty$$almost surely. Then, LBPPs are integrable, because
-$$\forall t \geq 0, \forall \omega \in \Omega, \int_0^t \abs{H_s(\omega)} \abs{dA_s(\omega)} \leq \sup_{s\leq t} \abs{H}_s \int_0^t \abs{dA_s(\omega)}< \infty.$$Similarly, LBPP $\subset L^2_{\text{loc}}(M)$.
+Let's focus our attention on ==**locally bounded progressive process**==, which are a progressive process $H$ such that$$\forall t\geq 0,\qquad\sup_{s\leq t} \abs{H_s} < \infty$$almost surely. Then, LBPPs are integrable with respect to all FVPs, and thus all CSMs! Indeed, $$\forall t \geq 0, \forall \omega \in \Omega, \int_0^t \abs{H_s(\omega)} \abs{dA_s(\omega)} \leq \sup_{s\leq t} \abs{H}_s \int_0^t \abs{dA_s(\omega)}< \infty.$$Similarly, LBPP $\subset L^2_{\text{loc}}(M)$.$$\forall t\geq 0, \forall \omega \in \Omega, \int_0^t H_s(\omega)^2 d\braket{M,M}_s\leq \sup_{s\leq t}\abs{H}_s^2 \int_0^t d\braket{M,M}_s < \infty$$
 
 >[!idea] Continuous adapted processes are automatically LBPP.
+
+>[!definition] Stochastic Integral
+>Given a CSM $X$ and an LBPP $H$, $H\cdot X = H\cdot M + H\cdot A$ is a CSM.
+
+>[!claim] Elementary Properties
+>- $(H,X)\mapsto H\cdot X$ is bilinear.
+>- $H\cdot (K\cdot X) = (HK)\cdot X$ if $H,K$ are LBPP
+>- For any stopping time $T$, $(H\cdot X)^T = H\id_{[0,T]}\cdot X = H\cdot X^T$.
+
+> [!claim] Behavior on Elementary Processes
+> Given $H_s(\omega) = \sum_{i = 0}^{p-1} H_{(i)}(\omega) \id_{(t_i,t_{i+1}]}(s)$,
+> 
+> $$(H\cdot X)_t = \sum_{i = 0}^{p-1} H_{(i)}\left(X_{t_{i+1}\land t} - X_{t_i\land t}\right)$$

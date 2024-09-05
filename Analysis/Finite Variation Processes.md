@@ -30,15 +30,21 @@ Then, we define $\abs{\mu} = \mu_+ + \mu_-$, and observe $\frac{d\mu}{d\abs{\mu}
 
 In particular, $\mu$ cannot have [[atom|atoms]]; conversely, any non-atomic $\mu$ yields an FVP. There will not generically be an associated signed measure for $a:\RR_+\to \RR$ because of $\infty - \infty$; however, there is a unique $\sigma$-finite (positive) measure whose restriction is the total variation measure.
 
+>[!idea] Source of confusion
+>I managed to convince myself that the measures associated with FVPs were [[absolutely continuous]]. This is false, even though we require that all FVPs are continuous! Notably, any nondecreasing function is an FVP, and there exist continuous nondecreasing functions which are have derivative $0$ almost everywhere, like that cantor set construction.
+>
+>Thus, *not all FVPs are of the form $a(t) = \int_0^t f(t)dt$ for some measurable $f(t)$*. This is still reasonable intuition to have.
+>
+>>[!idea]- The mistake I made
+>>$t\mapsto \mu([0,t])$ is continuous iff $\mu(\{t\}) = 0$ for all singletons. But the singletons do *not* generate the null sets -- they only encompass countable sets -- and uncountable null sets exist e.g. the dyadics.
+
+
 # Integration against FVs
 
 >[!definition] Integration against FVs!
 > Start with the case of $a:[0,T]\to \RR$. If $f:[0,T]\to \RR$ is integrable under $\abs{\mu}$, we define$$\int_0^T f(s)da(s) = \int_{[0,T]} f(s)\mu(ds),\qquad \int_0^T f(s)\abs{da(s)} = \int_{[0,T]} f(s)\abs{\mu}(ds),$$and one can define $\int_0^t f(s)da(s)$ for $t < T$ in the obvious way. This can be extended to $a:\RR_+\to \RR$ in the obvious way.
 
->[!idea]
-> The intuition here is that integrating against a (possibly signed) measure with no atoms behaves basically the same as Lebesgue integration, because $\int_X g d\nu = \int_X gf d\mu$ when $g$ is $\nu$-measurable.
-
-In fact, $t\mapsto \int_0^t f(s)da(s)$ is a finite variation process; your signed measure assigns $\int_0^t \id_A f(s)da(s)$ to Borel sets $A$. Alternatively, your Radon-Nikodym derivative is $f \frac{da}{dt}$. Apparently, the correct notation is $\mu'(ds) = f(s)\mu(ds)$.
+In fact, $t\mapsto \int_0^t f(s)da(s)$ is a finite variation process; your signed measure assigns $\int_0^t \id_A f(s)da(s)$ to Borel sets $A$, which can be written $\mu'(ds) = f(s)\mu(ds)$.
 
 >[!claim] Triangle Inequality
 >$$\abs{\int_0^T f(s)da(s)}\leq \int_0^T \abs{f(s)} \abs{da(s)}.$$

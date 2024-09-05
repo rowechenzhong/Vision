@@ -14,6 +14,13 @@ Here are an important class of [[Martingales in Continuous Time|CTMs]]. We say t
 
 >[!example] GWN Martingales
 > More generally, for any $f\in L^2(\RR_+, \BBB, dt)$, centered Gaussians $Z_t = \int_0^t f(s)dB_s$ have independent increments, thus$$\int_0^t f(s)dB_s,\qquad \left(\int_0^t f(s)dB_s\right) - \int_0^t f(s)^2ds,\qquad \exp\left(\theta\int_0^t f(s)dB_s - \frac{\theta^2}{2}\int_0^t f(s)^2ds\right)$$
-> are all Poisson processes.
+> are all martingales.
+
+> [!idea]- After you've read about the stochastic integral
+> These are continuous (admit continuous modifications)! Indeed, $f(s)\in L^2(\RR_+, \BBB, dt)$ is the (deterministic) progressive process $f_s = f(s)$. This satisfies $\EE\left[\int_0^\infty f(s)^2 d\braket{B,B}_s\right] = \int_0^\infty f(s)^2ds < \infty$, thus $f\in L^2(B)\subset L^2_{\text{loc}}(B)$. Then, the stochastic integral with respect to the continuous martingale $B$ yields a continuous random process, which is a priori a continuous local martingale, but of we just showed $\EE[\braket{f\cdot B, f\cdot B}_\infty] < \infty$, thus $f\cdot B$ is a true martingale bounded in $L^2$.
+> 
+> Notably, $\EE[(f\cdot B)_t] = 0$, and $\EE[(f\cdot B)_t^2] = \EE[\braket{f\cdot B, f\cdot B}_t] = \EE\left[\left(f^2\cdot \braket{B,B}\right)_t\right] = \int_0^t f(s)^2 ds$. (You already knew that though, because the theory of [[Gaussian Spaces]] told you that $\int_0^t \bullet dB_s\equiv G(\bullet)$ was an isometry from $L^2(\RR_+,\BBB,dt)$ to the Gaussian space $\subset L^2(\Omega,\FFF,\PP)$).
+> 
+> Ito's formula doesn't really help you get the $\EE[e^{\theta (f\cdot B)_t}]$; instead use your brain cells and observe this is a Laplace transform of a Gaussian.
 
 The [[Poisson Process]] is another example of a process, this time discrete-valued, which has independent increments. This creates its own class of martingales.

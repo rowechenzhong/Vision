@@ -3,8 +3,9 @@ This is the [[homepage]] for Homology Theory.
 # Main Sequence
 
 ### Initial Attempts
-1. [[Simplicial Homology]]
-2. [[Singular Homology]]
+1. [[What is Homology|What is Homology?]]
+2. [[Simplicial Homology]]
+3. [[Singular Homology]]
 
 ### A bunch of algebra
 3. [[Commutative Diagram]]
@@ -31,4 +32,4 @@ This is the [[homepage]] for Homology Theory.
 
 ### Mayer-Vietoris Sequence
 12. [[Mayer-Vietoris Sequence]]
-13.
+13. 

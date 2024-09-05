@@ -8,6 +8,9 @@ aliases:
 > [!idea] This is obvious
 > Suppose you do not converge. Then, you contain an unbounded amount of [[upcrossings]]. This motivates us to perform strong bounds using the [[Doob's upcrossing inequality]], which turns out to kill immediately.
 
+>[!idea] This is weak
+>$X_\infty$ doesn't have to be in $L^1$, so things like $\EE[X_\infty]$ don't make sense yet.
+
 >[!proof]-
 > Let
 > $$\Omega_\infty = \{\lim\inf \abs{X_n} < \infty\},\qquad \Omega_{a,b} = \{U[a,b] < \infty\}$$
@@ -22,7 +25,8 @@ aliases:
 Now, we use the [[L1 Convergence Theorem|UI bridge]] for the first (important) time.
 
 > [!theorem] $L^1$ MCT
-> Suppose $X$ is a UI martingale. Then, there exists $X_\infty \in L^1(\FFF_\infty)$ such that $X_n\to X_\infty$ almost surely and in $L^1$. $X_n = \EE(X_\infty | \FFF_n)$ almost surely for all $n\geq 0$.
+> Suppose $X$ is a UI martingale. Then, there exists $X_\infty \in L^1(\FFF_\infty)$ such that $X_n\to X_\infty$ almost surely and in $L^1$.
+> Then, $X_n = \EE(X_\infty | \FFF_n)$ almost surely for all $n\geq 0$.
 
 > [!idea]- We expect $X_\infty$ to look like this. Think, don't read this.
 > As a random process adapted to a filtration, $X$ branches like a tree; we pretend the tree terminates and has leaves. But if you know all the leaves, you also know all nodes of the tree; they're exactly the expected value over the sub-tree. It's completely unsurprising that this works to create martingales as well.
@@ -63,6 +67,11 @@ The $L^p$ case looks almost identical, for $p\in (1, \infty)$.
 > [!theorem] $L^p$ MCT
 > Suppose $X$ is $L^p$ bounded. Then, there exists $X_\infty \in L^p(\FFF_\infty)$ such that $X_n\to X_\infty$ almost surely and in $L^p$. $X_n = \EE(X_\infty | \FFF_n)$ almost surely for all $n\geq 0$.
 
-> [!proof] Todo (Use AS MCT and Doob's Lp inequality)
+>[!proof]-
+>By Doob, $X^*\in L^p$. Then $\EE[\abs{X_t - X_\infty}^p]$ is dominated by e.g. $\EE[(2X^*)^p]$ thus DCT works and $X_t\to X_\infty$ in $L^p$. Then $X_n = \EE[X_\infty | \FFF_n]$ because conditional expectation is convex for $L^p$.
+
+
+
+
 
 Also see the [[Backwards MCT]].

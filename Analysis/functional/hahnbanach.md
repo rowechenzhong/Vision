@@ -5,12 +5,18 @@
  $V' = \BB(V, F)$ is the ==**dual space**== of $V$, containing ==**functionals**== on $V$. 
 
  Of course, if $F$ is complete (e.g. $\RR, \CC$) then $V'$ is a Banach space. This dual *sort of* works like you would expect. Let's prove a main theorem on this dual space. Here's the objective: 
+ 
 > [!theorem] Han-Banach Theorem
  Let $M\subset V$ be a subspace. If $u:M\to \CC$ is a bounded linear functional, then there exists a bounded linear functional $U:V\to \CC$ such that $U(t) = u(t)$ for all $t\in M$ and $\norm{U} = \norm{u}$. 
 
- ## Simplified Problem 
+## Simplified Problem 
  
- First, we should demonstrate that we can extend a bounded linear functional by just one element, in the real case. \begin{claim*} Let $V$ be a normed $\RR$ vector space, and let $M$ be a subspace. Let $u:M\to \RR$ be a bounded linear functional. Then, if $x\notin M$, let $M' = M + \RR x$. Then, there exists a function $u': M'\to \RR$ such that $u'(t) = u(t)$ for all $t\in M$ and $\norm{u'} = \norm{u}$. \end{claim*} 
+ First, we should demonstrate that we can extend a bounded linear functional by just one element, in the real case. 
+ 
+ >[!claim]
+ >Let $V$ be a normed $\RR$ vector space, and let $M$ be a subspace. Let $u:M\to \RR$ be a bounded linear functional. Then, if $x\notin M$, let $M' = M + \RR x$. Then, there exists a function $u': M'\to \RR$ such that $u'(t) = u(t)$ for all $t\in M$ and $\norm{u'} = \norm{u}$. 
+
+ 
 > [!proof] 
  If your bounding constant is $0$, then $u' = 0$ works. Otherwise, divide by that constant such that $\norm{u} = 1$. Now, any extension is uniquely determined by $\lambda = u(x)$; we simply require that for all $t\in M$, $$ \abs{u(t) - \lambda} \leq \norm{t - x} $$ This is now incredibly straightforward; we're solving for $\lambda \in \RR$, and we can break the absolute value into two cases. For all $t_1, t_2$ in $M$, we require that $$ u(t_1) - \norm{t_1 - x}\leq \lambda \leq u(t_2) + \norm{t_2 - x} $$ Taking the supremum of the lower bound and the infimum of the upper bound, we just have to show $$ u(t_1) - \norm{t_1 - x} \leq u(t_2) + \norm{t_2 - x} $$ for all $t_1, t_2\in M$. But this is just triangle inequality: $$ u(t_1) - u(t_2) = u(t_1 - t_2) \leq \norm{t_1 - t_2} \leq \norm{t_1 - x} + \norm{t_2 - x} $$ 
 
@@ -18,37 +24,35 @@
 > [!idea] 
  If you attempt to repeat this proof directly in the complex setting, the problem is there are \"a lot of ways for $\abs{u(t) + \lambda}$ to be large.\" In retrospect, looking at the complex case now appears *more* not less daunting; the space of acceptable $u(t)$ is some convex region in $\CC$, bounded by lines. Perhaps Helly's theorem yields a direct proof?
 
- ## Successor Case 
+## Successor Case 
  
- \begin{claim*} Let $V$ be a normed $\CC$ vector space, and let $M$ be a subspace. Let $u:M\to \CC$ be a bounded linear functional. Then, if $x\notin M$, let $M' = M + \CC x$. Then, there exists a function $u': M'\to \CC$ such that $u'(t) = u(t)$ for all $t\in M$ and $\norm{u'} = \norm{u}$. \end{claim*} 
-> [!proof] 
- The basic claim is that **any complex vector space can be regarded as a real vector space.** First, let $w(t) = \frac{1}{2}(u(t) + \conj{u(t)})$; use the real case to find a real functional $w'(t) : M + \RR x \to \RR$ such that $w'(t + ax) \leq \norm{t + ax}_V$ for all $a\in \RR$. Repeat this computation to find a real functional $w\": M + \RR x + \RR (ix)\to \RR$ such that $w\"(t + ax + b(ix)) \leq \norm{t + ax + b(ix)}_V$ for all $a, b\in \RR$. We're not quite done-- $w\"$ is some properly bounded continuous extension, but it might not even be linear in the complex sense! The fix: $$ u'(t + (a + bi) x) = w\"(t + ax + b(ix)) - iw\"(it - bx + a(ix))\forall a, b\in \RR $$ To check that this is linear in the complex sense, it suffices to check scaling by $i$, which can be done manually. Then, we have to check that $u'$ is bounded properly. This is true; there is some argument $\theta$ such that $$ \norm{u'(t + cx)} = \Re e^{i\theta} u'(t + cx) = w\"(e^{i\theta}t + e^{i\theta}cx)\leq \norm{t + cx}_V $$ 
+ >[!claim]
+ >Let $V$ be a normed $\CC$ vector space, and let $M$ be a subspace. Let $u:M\to \CC$ be a bounded linear functional. Then, if $x\notin M$, let $M' = M + \CC x$. Then, there exists a function $u': M'\to \CC$ such that $u'(t) = u(t)$ for all $t\in M$ and $\norm{u'} = \norm{u}$. 
+ 
+>[!proof] 
+>  The basic claim is that **any complex vector space can be regarded as a real vector space.** First, let $w(t) = \frac{1}{2}(u(t) + \conj{u(t)})$; use the real case to find a real functional $w'(t) : M + \RR x \to \RR$ such that $w'(t + ax) \leq \norm{t + ax}_V$ for all $a\in \RR$. Repeat this computation to find a real functional $w\": M + \RR x + \RR (ix)\to \RR$ such that $w\"(t + ax + b(ix)) \leq \norm{t + ax + b(ix)}_V$ for all $a, b\in \RR$. We're not quite done-- $w\"$ is some properly bounded continuous extension, but it might not even be linear in the complex sense! The fix: $$ u'(t + (a + bi) x) = w\"(t + ax + b(ix)) - iw\"(it - bx + a(ix))\forall a, b\in \RR $$ To check that this is linear in the complex sense, it suffices to check scaling by $i$, which can be done manually. Then, we have to check that $u'$ is bounded properly. This is true; there is some argument $\theta$ such that $$ \norm{u'(t + cx)} = \Re e^{i\theta} u'(t + cx) = w\"(e^{i\theta}t + e^{i\theta}cx)\leq \norm{t + cx}_V $$ 
 
- ## General Case 
+## General Case 
  
- It's Zorn time. Let $E$ be the poset containing *all* extensions of $u$, which are ordered pairs $(v,N)$ containing a function $v$ and a subspace $N$, ordered such that $(v_1, N_1) \leq (v_2, N_2)$ if $v_1 = v_2$ on $N_1$ and $N_1\subset N_2$. For any chain $C = \{v_i, N_i\}_{i\in I}$ in this poset, the maximal element is $(v, N)$, where: 
- 
- 
- 
+It's Zorn time. Let $E$ be the poset containing *all* extensions of $u$, which are ordered pairs $(v,N)$ containing a function $v$ and a subspace $N$, ordered such that $(v_1, N_1) \leq (v_2, N_2)$ if $v_1 = v_2$ on $N_1$ and $N_1\subset N_2$. For any chain $C = \{v_i, N_i\}_{i\in I}$ in this poset, the maximal element is $(v, N)$, where: 
  -  $N = \bigcup_{i\in I} N_i$. 
- 
  -  $v$ is a function defined on $N$; pick any $x\in N_i\subset N$. Then, $v(x) = v_i(x)$. This is well-defined because for all $N_i, N_j\subset M$ such that $x\in N_i$ and $x\in N_j$, $v_i(x) = v_j(x)$. 
  
- Yay, take a maximal element $(v,M)$ of the whole thing. If $M\neq V$, use the successor case to kill. ## Corollaries 
- 
+ Yay, take a maximal element $(v,M)$ of the whole thing. If $M\neq V$, use the successor case to kill.
+
+## Corollaries 
  
 > [!problem] 
  For any normed space $V$ and element $\norm{v} = 1$, there is a continuous linear functional $f:V\to \CC$ sch that $f(v) = 1$ and $\norm{f} = 1$. 
-
  
 > [!solution] 
  Well, I can certainly define this on $\CC v$; Hahn-Banach rips this functional through the whole space. 
 
  Alright, we're now going to check whether or not duality is an involution, like its supposed to be. The ==**double dual**== is $V\"$. 
+ 
 > [!theorem] Duality
  Let $v\in V$, and let $T_v: V'\to \CC$ via $T_v(v') = v'(v)$. Then, the map $T: V\to V\"$ via $v\to T_v$ is isometric (and thus injective). 
 
- 
 > [!proof] 
  This is clearly linear; its just a contraction. It's also bounded because $$ \sup_{\norm{v} = 1} \norm{T(v)} = \sup_{\norm{v} = 1} \norm{T_v} = \sup_{\norm{v} = 1}\sup_{\norm{v'} = 1} \norm{T_v(v')} \leq \sup_{\norm{v} = 1}\sup_{\norm{v'} = 1} \norm{v'}\norm{v} = 1 $$ (lol). Okay, but we want this to be equality, not just bounded. We need to show that for all $\norm{v} = 1$ there actually exists a $\norm{v'} = 1$ such $v'(v) = 1$. This was precisely the above corollary. 
 

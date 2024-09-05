@@ -1,0 +1,1 @@
+$\nu$ is ==**absolutely continuous**== with respect to $\mu$ if for all measurable $A$, $\mu(A) = 0\implies \nu(A) = 0$. The [[Analysis/Probability/Radon-Nikodym|Radon-Nikodym]] theorem states that this holds iff $\frac{d\nu}{d\mu}$ exists.

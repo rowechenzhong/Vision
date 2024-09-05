@@ -4,13 +4,16 @@ aliases:
   - converges weakly
   - in distribution
 ---
+>[!idea]
+>Unfortunately the below results do not immediately work for signed measures (in particular, there's obviously no reason that the inequalities shown should hold).
+
 Suppose $\mu$ is a [[Borel Measure|Borel Probability Measure]] on a metric space $E$. Let $\mu_n$ be a sequence of such measures. Then, ==**$\mu_n$ converges weakly to $\mu$**== if $\mu_n(f)\to \mu(f)$ for all continuous bounded $f$.
 
 > [!claim] Portmanteau
 > The following are equivalent.
 > 1. $\mu_n\to \mu$ weakly.
 > 2. $\lim\sup_n \mu_n(C) \leq \mu(C)$ for all closed sets $C$.
-> 3. $\lim\inf_n \mu(G)\geq \mu(G)$ for all open sets $G$.
+> 3. $\lim\inf_n \mu_n(G)\geq \mu(G)$ for all open sets $G$.
 > 4. $\lim_n \mu_n(A) = \mu(A)$ for all Borel sets $A$ such that $\mu(\pa A) = 0$.
 
 Over $\RR$ specifically, we can connect to the CDF.

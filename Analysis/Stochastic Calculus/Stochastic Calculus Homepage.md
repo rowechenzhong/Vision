@@ -1,10 +1,17 @@
-This is the [[homepage]] for Stochastic Calculus. 
+---
+aliases:
+  - stochastic calculus
+---
+This is the [[homepage]] for Stochastic Calculus. Our objective is to define the Stochastic Integral and show how to use it.
+
+This can be learned independently from [[Markov Processes Homepage|markov processes]].
 
 # Main Sequence
 ### Prerequisites
 1. [[Probability]]
 2. In particular, [[Random Processes in Continuous Time]].
-3. We never really talked about this in elementary probability: [[Transition Kernels]]
+3. See also [[A Gaussian Universe]].
+4. We never really talked about this in elementary probability: [[Transition Kernels]]
 
 ### Continuous Semi-martingales
 
@@ -27,5 +34,19 @@ For more intuition on CLMs, see [[Infinitesimal Shorthand]].
 - [[Discretization Property of the Stochastic Integral]]
 - The celebrated [[Ito Formula]]
 
+### Applications
 Let's play some games!
-- [[Brownian Motion in nD]]
+- [[Exponential CLM]]
+- [[Product Rule]]
+- [[Braket Chain Rule]]
+- [[Harmonic Function of Brownian Motion in nD]]
+- [[Levy's Characterization of Brownian Motion]]
+- [[Continuous Martingales are Time-Changed Brownian Motion]]
+- [[Brownian Motion is Conformally Invariant]]
+- [[The BDG Inequalities]]
+- [[Martingales are Stochastic Integrals]]
+
+A rather tricky but important game:
+- [[Girsanov's Theorem]]
+- [[Cameron-Martin Formula|Cameron-Martin]]
+- [[Hitting times for BM with drift]]
