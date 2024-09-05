@@ -80,4 +80,3 @@ Here is a slightly more advanced upgrade, accessible after reading [[Martingale 
 > Thus, we just need to show things converge properly. We know $X^{S\land T}_n\to X_{S\land T}$ AS and $X^T_n\to X_T$ AS already, but this isn't enough to show the LHS converges; we need $L^1$ strength.
 > 
 > Well, it would suffice to show $X^T_n$ were UI. This is true, because BOST says $$X_{T\land n} = \EE[X_n | \FFF_{T\land n}] = \EE[X_\infty | \FFF_{T\land n}].$$ and [[Conditional Expectations are UI]]. So we're done.
-

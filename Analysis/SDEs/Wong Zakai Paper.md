@@ -83,4 +83,3 @@ $$
 > \int_a^b \psi(x(t), t)dx(t) + \int_a^b \left(\frac{\pa F}{\pa t}\right)(x(t), t)dt + \frac12 \int_a^b \frac{\pa \psi}{\pa \eta}d\braket{\psi(x(t), t), x(t)}
 > $$
 > Plugging in $\star$, we conclude.
-

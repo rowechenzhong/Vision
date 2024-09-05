@@ -37,4 +37,3 @@ Recall that if $\EE\left[\braket{M,M}_\infty\right] < \infty$, then $M\in \Hh^2$
 > - If $\EE\left[\left(\int_0^\infty H_s^2 d\braket{M,M}_s\right)^{1/2}\right] <\infty$, then $H\cdot M$ is a true UI martingale.
 > - If $\EE\left[\int_0^t H_s^2 d\braket{M,M}_s\right] <\infty$ for all $t$, then $H\cdot M$ is a true martingale with $(H\cdot M)_t\in L^2$.
 > - If $\EE\left[\int_0^\infty H_s^2 d\braket{M,M}_s\right] <\infty$, then $H\cdot M$ is a true martingale bounded in $L^2$.
-

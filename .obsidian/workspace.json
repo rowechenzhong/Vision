@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b6803fcd2a931d7a",
+        "id": "e277f273d5d387cc",
         "type": "tabs",
         "children": [
           {
-            "id": "c372018a6cdda1ca",
+            "id": "60d50fc38c685e95",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Probabilistic Method/Lovasz Local Lemma.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -72,7 +67,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -190,7 +184,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,7 +200,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -218,9 +210,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Probabilistic Method/Lovasz Local Lemma.md"
-              }
+              "state": {}
             }
           },
           {
@@ -229,7 +219,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Probabilistic Method/Lovasz Local Lemma.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -346,10 +335,11 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "c372018a6cdda1ca",
+  "active": "60d50fc38c685e95",
   "lastOpenFiles": [
-    "Probabilistic Method/Untitled.md",
+    "Differential Geometry/Atlas.md",
     "Probabilistic Method/Lovasz Local Lemma.md",
+    "Probabilistic Method/Untitled.md",
     "Probabilistic Method/Initial Examples.md",
     "Probabilistic Method/Probabilistic Method.md",
     "Probabilistic Method/Elementary Definitions.md",
@@ -374,7 +364,6 @@
     "Lie Theory/Lie/Lie Groups.md",
     "Algebraic Geometry/Plane Curves.md",
     "Algebraic Geometry/Affine varieties and the Nullstellensatz.md",
-    "Algebraic Geometry/Genus Waffle.md",
     "Algebraic Geometry",
     "Analysis/Stochastic Calculus/Final Project/stratonovich.synctex(busy)",
     "Analysis/Stochastic Calculus/Final Project/pdflatex23912.fls",

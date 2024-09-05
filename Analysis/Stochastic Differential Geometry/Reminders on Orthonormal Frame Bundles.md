@@ -2,4 +2,4 @@ Let $O(M)$ be the set of $(d+1)$-tuples $(x, e_1,e_2,\dots, e_d)$ where $x\in M$
 
 These form a bundle of orthonormal frames; $\pi:O(M)\to M$, add smoothness conditions, serve warm.
 
-Note that $O(d)$ acts on $O(M)$ pointwise. 
+Note that $O(d)$ acts on $O(M)$ pointwise.

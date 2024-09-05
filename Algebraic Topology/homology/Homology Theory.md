@@ -32,4 +32,4 @@ This is the [[homepage]] for Homology Theory.
 
 ### Mayer-Vietoris Sequence
 12. [[Mayer-Vietoris Sequence]]
-13. 
+13.

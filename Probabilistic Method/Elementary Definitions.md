@@ -21,4 +21,3 @@
 >Consider a bipartite graph $G$ where $U = \{1, 2\}$ and $W = \{A, B, C\}$, and $E = \{(1, A), (1, B), (2, B), (2, C)\}$.
 >- Here, the vertices $1$ and $2$ could represent different types of workers, while $A, B,$ and $C$ represent tasks. 
 >- The edges show which workers can perform which tasks. For example, worker $1$ can do tasks $A$ and $B$, while worker $2$ can do tasks $B$ and $C$.
-

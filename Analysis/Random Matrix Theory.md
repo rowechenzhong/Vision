@@ -15,4 +15,3 @@ As $t_N\to \infty$ with $t_N/N\to 0$, let $S_N(s,x) = \frac{1}{2t_n} \abs{\{j: x
 Then, there is a limit of expectations of $S_N(s,x)$.
 
 She's cooking some waffles.
-

@@ -45,7 +45,4 @@ By JCF (over $\CC$, but if you repeat the proof you get that you can do this on 
 >>[!idea]- Bash confirmation
 >But its $p$-th power is...? Do I agree with this nonsense LOL. $\sum_{\text{tuple}} \zeta^{-k\sum} \alpha_{i_1}\dots \alpha_{i_p}$. Oh, I might agree with this? Gets sent to $\sum_{\text{tuple}} \zeta^{-k \sum} \alpha_{i_1 + 1}\dots \alpha_{i_p + 1}$... which is yeah the same thing XD okay what a legend.
 > 
-> 
-
-
-
+>

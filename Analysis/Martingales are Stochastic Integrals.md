@@ -41,6 +41,3 @@ To this end, we will use the powerful [[Exponential CLM]], which are really stro
 
 > [!proof]- Sketch
 > We use orthogonality as always: if $Z\in L^2$ such that $\EE\left[Z\exp\left(\dots\right)\right] = 0$, then the statement immediately shows the Fourier transform of the complex-valued measure $\mu(F) = \EE[Z \id_F(B_{t_1}, B_{t_2} - B_{t_1}\dots)]$ is identically zero. Thus $\mu = 0$. Thus $\EE[Z\id_A] = 0$ for all $A\in \sigma(B_{t_1},\dots, B_{t_n})$, and monotone class finishes (note that $\FFF$ is complete).
-
-
-
