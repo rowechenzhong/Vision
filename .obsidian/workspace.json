@@ -1,0 +1,416 @@
+{
+  "main": {
+    "id": "3d8cba015e6da59a",
+    "type": "split",
+    "children": [
+      {
+        "id": "1dec8510e4241070",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e765c333f451a575",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2ad0b5e52e91f6e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9863417c8bc923f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72d8a553ad6548b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "fuck",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e365932afb4eaf8d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "21141a58abd69b3c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d0fbb4b873e16de1",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Linguistics/Phonology.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [
+                    {
+                      "query": "path:functional/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:homotopy/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:Lie/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Differential Geometry\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431378
+                      }
+                    },
+                    {
+                      "query": "path:\"Tensor Fields/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:measure/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    },
+                    {
+                      "query": "path:integration/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5395168
+                      }
+                    },
+                    {
+                      "query": "path:Probability/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11621088
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1.23745454545455,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.6423430687510112,
+                  "close": false
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of Phonology"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 346.51103591918945
+  },
+  "right": {
+    "id": "70876c55eafe561d",
+    "type": "split",
+    "children": [
+      {
+        "id": "37214656731dd7da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d8e401727da66b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c8338d49929b48a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Linguistics/Phonology.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Phonology"
+            }
+          },
+          {
+            "id": "4b7bba97d42829f2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Linguistics/Phonology.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Phonology"
+            }
+          },
+          {
+            "id": "b6656c33aadbb00c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Linguistics/Phonology.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Phonology"
+            }
+          },
+          {
+            "id": "22e3b88618a3b7a8",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Linguistics/Phonology.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 2,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [
+                    {
+                      "query": "path:functional/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:homotopy/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:Lie/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Differential Geometry\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431378
+                      }
+                    },
+                    {
+                      "query": "path:\"Tensor Fields/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:measure/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    },
+                    {
+                      "query": "path:integration/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5395168
+                      }
+                    },
+                    {
+                      "query": "path:Probability/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11621088
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1.58654545454545,
+                  "lineSizeMultiplier": 3.37854545454545,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 63,
+                  "scale": 1.2537187148017672,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of Phonology"
+            }
+          },
+          {
+            "id": "e149fd2ef76ec771",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 538.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "e765c333f451a575",
+  "lastOpenFiles": [
+    "Economics/Economics Homepage.md",
+    "Economics/Marriage Problems.md",
+    "Economics/Housing.md",
+    "Economics/Vickrey-Clarke-Groves Mechanism.md",
+    "Lean4/Basic Syntax.md",
+    "Economics/First 6 Lectures.md",
+    "graph.png",
+    "Economics/Pasted image 20241006151457.png",
+    "Economics/Pasted image 20240923152645.png",
+    "Economics/Pasted image 20240916152110.png",
+    "Economics/Pasted image 20240915214130.png",
+    "Economics/Pasted image 20240914213011.png",
+    "Economics/Pasted image 20240914213016.png",
+    "Economics/Pasted image 20240914215149.png",
+    "Economics/Pasted image 20241022150015.png",
+    "Economics/Pasted image 20241009131103.png",
+    "meta/homepage.md",
+    "Probabilistic Method/Initial Examples.md",
+    "Untitled.md",
+    "Analysis/Stochastic Differential Geometry/Stochastic Differential Geometry.md",
+    "Linguistics/Morphology.md",
+    "Algebraic Geometry/Idea dump.md",
+    "Algebraic Topology/homology/homotopic maps induce homotopic chain maps.md",
+    "Probabilistic Method/Elementary Definitions.md",
+    "Analysis/Stochastic Calculus/Braket of Continuous Local Martingales.md",
+    "Algebraic Geometry/Basic Number Theory Blitz.md",
+    "Economics/hw/14.19/hw4.synctex(busy)",
+    "Economics/hw/14.19/pdflatex3764.fls",
+    "Economics/hw/14.19/hw4.out",
+    "Economics/hw/14.19/hw4.log",
+    "Economics/hw/14.19/hw4.fls",
+    "Economics/hw/14.19/pdflatex10652.fls",
+    "Economics/hw/14.19/hw4.fdb_latexmk",
+    "Economics/hw/14.19/hw4.aux",
+    "Economics/hw/14.19/pdflatex18416.fls",
+    "Economics/hw/14.19/pdflatex3248.fls",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "Economics/Mas Colel and Whinston and Green.md",
+    "Economics/Pathak_Sonmez_Unver.md",
+    "Economics/What is Economics.md",
+    "Linguistics/Tomasz notes HW 6.md",
+    "Linguistics/Tomasz notes.md",
+    "Linguistics/Vowels.md",
+    "Linguistics/Obstruents.md",
+    "Linguistics/Consonants.md",
+    "Untitled.canvas"
+  ]
+}

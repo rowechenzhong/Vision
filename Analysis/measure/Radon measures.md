@@ -1,0 +1,1 @@
+Take a [[Borel Measure]]. In the case that $\mu(K) < \infty$ for all compact sets $K$, then $\mu$ is called a ==**Radon**== measure.

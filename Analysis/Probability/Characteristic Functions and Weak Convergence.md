@@ -1,0 +1,3 @@
+Let $(\mu_n: n\in \NN), \mu$ be a sequence of probability measures in $\RR^d$, with characteristic functions $(\phi_n: n\in \NN)$ and $\phi$. Then, $\mu_n\to \mu$ weakly iff $\phi_n\to \phi$ pointwise.
+
+Sometimes, it is not clear that a characteristic function corresponds to any probability measure at all. Levy's continuity theorem states that if $\mu_n$ have characteristic functions $\phi_n$ which converge pointwise to $\phi$, for some $\phi$ is **continuous at 0**, then $\phi$ is the characteristic function of a probability measure $\mu$.

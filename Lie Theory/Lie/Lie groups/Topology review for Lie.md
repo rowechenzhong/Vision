@@ -1,0 +1,1 @@
+In these notes, compactness includes a Hausdorff hypothesis.

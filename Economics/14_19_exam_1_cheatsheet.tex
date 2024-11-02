@@ -1,0 +1,228 @@
+\documentclass[10pt]{scrartcl}
+\usepackage{savetrees}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\vocab}[1]{\textbf{\color{blue} #1}}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\pa}{\partial}
+\newcommand{\der}{\text{d}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\renewcommand{\section}[1]{\begin{center}\textbf{\color{red}#1}\end{center}}
+\renewcommand{\subsection}[1]{
+    
+\noindent \textbf{\color{red} $\star$ #1}}
+
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+
+\DeclareMathOperator*{\argmin}{argmin \ }
+\DeclareMathOperator*{\argmax}{argmax \ }
+
+\title{14.19 Cheatsheet}
+\author{Rowechen Zhong}
+\date{}
+\begin{document}
+\maketitle
+\begin{multicols*}{2}
+    \section{Welfare Theorem}
+    \vocab{First Welfare Theorem}: Competitive equilibrium is Pareto optimal.
+    Assumptions:
+    1. No externalities 2. Perfect competition 3. Perfect Information 4. Rational Agents
+    \vocab{Second Welfare Theorem}: Any Pareto optimal allocation can be achieved
+    by a competitive equilibrium with lump-sum transfers.
+    
+    \section{Coase and Pareto}
+    A \vocab{competitive equilibrium} is a price and allocation pair $(p, x)$ such that
+    individuals maximize their utility given prices and prices clear markets
+    (demand = supply)
+    An allocation $x$ is \vocab{Pareto optimal} if there is no other allocation $x'$
+    such that one of the consumers is made strictly better off without hurting
+    the other consumer.
+    \vocab{Market failure} is When the competitive provision is not Pareto optimal.
+    
+    \vocab{Coase}: if property rights are clearly specified and there are no transaction costs,
+    bargaining will lead to an efficient outcome no matter how the rights are
+    allocated
+
+    \section{Arrow's Theorem}
+    \vocab{Universal Domain}: Admits all of $\Pi^n$.
+    \vocab{Pareto Efficiency:} $\forall a\neq b$ if all $a \succ_i b$ then $a\succ b$.
+    \vocab{Independence of Irrelevant Alternatives:}
+    $a\succ b$ is a function of $\left(a\succ_i b\right)_i$ only.
+
+    \vocab{Arrow's Theorem}: If $n\geq 3$, UD, PE, and IIA,
+    then the only social welfare function is a dictatorship.
+    \section{Social Choice Functions and Mechanisms}
+    We now introduce a new formalism.
+    Central planner would like to choose an alternative in $A$.
+    Each agent $i$ has type $t_i \in T_i$.
+    The type of an agent is private information.
+    Each agent $i$ gets utility $u_i(t_i, A)$ if alternative $A$ is chosen.
+    Refer to $t = (t_i)_i \in \times_i T_i \equiv T$
+    as the \vocab{state of the world}, unknown by the central planner.
+    A \vocab{social choice function} (SCF) is $f: T \to A$,
+    which the planner would like to implement.
+
+    A \vocab{mechanism} is a pair $(M, \phi)$ where
+    $M = (M_i)_i$ is a message space and
+    $\phi: \times_i M_i \to A$ is a function.
+    Each agent $i$ submits a message $m_i \in M_i$.
+    The outcome of the mechanism is $\phi(m)$.
+    A mechanism \vocab{implements} $f$ if for all $t$,
+    there exists a \textbf{NASH EQUILIBRIUM} $m$ such that
+    $\phi(m) = f(t)$; one can also say
+    "implements in dominant strategies," which is strictly stronger.
+
+    If each message space satisfies $M_i = T_i$,
+    then we refer to $\phi$ as a \vocab{direct mechanism};
+    the set of messages a player can send is simply their set of possible types.
+    A direct mechanism $\phi$ is \vocab{incentive compatible} if for all $t \in T$,
+    $t$ is a \textbf{NASH EQUILIBRIUM} of the mechanism game.
+
+
+    \vocab{Weakly-dominant strategy}: weakly dominant independent of deviations
+    by other players; strictly stronger than Nash equilibrium.
+
+    \vocab{Strategy Proof}: if it is weakly-dominant-strategy incentive-compatible;
+    revealing your type is a weakly dominant equilibrium (robust against deviations by
+    yourself AND OTHER AGENTS). Typical examples of SP mechanisms are:
+    \begin{itemize}
+        \item a majority vote between two alternatives;
+        \item a second-price auction when participants have quasilinear utility;
+        \item a VCG mechanism when participants have quasilinear utility.
+    \end{itemize}
+    Typical examples of mechanisms that are not SP are:
+    \begin{itemize}
+        \item any deterministic non-dictatorial election between three or more alternatives;
+        \item a first-price auction.
+    \end{itemize}
+
+    In particular, not that SP is not the same as BNIC (Bayesian Nash Incentive Compatible).
+
+    \vocab{Revelation Principle}: Any SCF which can be implemented by a Bayesian-Nash
+    equilibrium can also be implemented by a BNIC mechanism. Any SCF which can be
+    implemented in dominant-strategies can also be implemented by a SP mechanism.
+
+    \vocab{Pareto Efficient} if for any state of the world, it chooses a social outcome
+    such that there exists no other social outcome that would
+    make everybody weakly better off and at least one agent strictly better off.
+    \vocab{Dictatorial} if there exists an agent $i$ such that for all
+    states $t \in T$, $\phi(t)$ is the top social alternative of $i$ when his type is $t_i$.
+
+    \vocab{Gibbard-Satterthwaite Theorem}: If $|A| \geq 3$ is finite and types of agents
+    are such that the utility functions represent \emph{all strict preference rankings} on $A$,
+    then any Pareto-efficient and strategy-proof mechanism is necessarily dictatorial.
+
+    Notably, utilities which allow for indifference
+    between alternatives are not covered by this theorem.
+
+    \section{Vickrey-Clarke-Groves Mechanism}
+    The Vickrey-Clarke-Groves (VCG) mechanism is a method for achieving efficient outcomes in social choice problems where participants have private information about their preferences. The mechanism ensures that individuals truthfully report their preferences, leading to a socially efficient outcome. Here's how the VCG mechanism works, with key equations:
+    \begin{enumerate}
+        \item \vocab{Social Choice Setting}
+        - Let there be a set of agents \( N = \{1, 2, \dots, n\} \).
+        - Let \( D \) represent the set of possible social outcomes (or decisions).
+        - Each agent \( i \in N \) has a private type \( t_i \), which determines their utility function \( v_i(t_i, d) \), where \( d \in D \) is the social outcome.
+
+        \item \vocab{Efficient Outcome****}
+        The goal of the mechanism is to choose a social outcome \( d \in D \) that maximizes the total utility (social welfare) of all agents. The efficient decision \( d^*(t) \) is the one that maximizes the sum of the utilities of all agents:
+        \[
+        d^*(t) = \arg \max_{d \in D} \sum_{i=1}^{n} v_i(t_i, d)
+        \]
+        where \( t = (t_1, t_2, \dots, t_n) \) is the vector of agents' types.
+
+        \item \vocab{Transfers (Payments)}
+        Each agent receives a monetary transfer designed to incentivize truthful reporting of their preferences. The transfer for agent \( i \) is determined as follows:
+        \[
+        y_i(t) = \sum_{j \neq i} v_j(t_j, d^*(t)) - \sum_{j \neq i} v_j(t_j, d^*(t_{-i}))
+        \]
+        where:
+        - \( d^*(t) \) is the efficient outcome when all agents' types are reported.
+        - \( d^*(t_{-i}) \) is the efficient outcome when agent \( i \) is excluded from the decision-making process (i.e., \( t_{-i} = (t_1, t_2, \dots, t_{i-1}, t_{i+1}, \dots, t_n) \)).
+        - The transfer \( y_i(t) \) represents the difference in the welfare of the other agents when agent \( i \) is included versus when agent \( i \) is excluded. This is called the \vocab{marginal contribution} of agent \( i \) to society.
+
+        \item \vocab{Individual Utility}
+        The utility that agent \( i \) derives from participating in the mechanism is:
+        \[
+        u_i(t_i, t) = v_i(t_i, d^*(t)) + y_i(t)
+        \]
+        This utility consists of two parts: the direct utility from the chosen outcome \( d^*(t) \), and the transfer \( y_i(t) \).
+
+        \item \vocab{Truthful Reporting as a Dominant Strategy}
+        In the VCG mechanism, truthful reporting of an agent's type \( t_i \) maximizes their utility, as their payment \( y_i \) is designed to account for their contribution to the overall welfare. Thus, truth-telling is a \vocab{dominant strategy} for each agent.
+    \end{enumerate}
+    The mechanism is \vocab{efficient} because it is strategy-proof (it is not GTO
+    to deviate from telling the truth if nobody else deviates) and conditioned on
+    truth-telling it selects the utilitarian alternative (trivially).
+
+    \vocab{Groves}: Adding some $x_i(t_{-i})$ to the transfer rule $y_i$ does not
+    affect the efficiency of VCG; hence all of these are strategy-proof.
+    \vocab{Holmstrom-Green-Laffont}: If $d:T\to A$ is efficient, $(d,y)$ is
+    strategy-proof, and all type spaces are complete, then the transfer rule must be
+    VCG (plus constants).
+
+    \section{Housing Market}
+    \begin{enumerate}
+        \item \vocab{Housing Market} (Shapley - Scarf, 1974):
+        \[
+        \langle I, H, \succ, \mu \rangle
+        \]
+        where:
+        $\bullet$ \( I \): set of agents.
+        $\bullet$ \( H \): set of houses with \( |H| = |I| \).
+        $\bullet$ \( \succ \): list of strict preferences over houses.
+        $\bullet$ \( \mu \): initial endowment matching.
+        $\bullet$ \vocab{Pareto Efficiency}: Matching \( \mu \) is Pareto efficient if there is no matching \( \nu \) such that:
+        \[
+        \mu(i) \succeq_i \nu(i) \quad \forall i \in I, \quad \text{and} \quad \mu(i) \succ_i \nu(i) \quad \text{for some } i \in I
+        \]
+        
+        \item \vocab{Efficiency Equilibrium}: A matching $\mu$ is efficient if there
+        exists a price vectors $\pi$ such that $\forall i,j$ $\mu(j) \prec_i \mu(i)$
+        implies $p(\mu(j)) > p(\mu(i))$ i.e. nobody can afford a better house.
+        
+        A \vocab{competitive equilibrium}
+        is just an efficient matching $\nu$ which respects the initial endowment;
+        $p(\nu(i)) = p(\mu(i))$ for all $i$.
+
+        \item \vocab{Core of the Housing Market}:
+        A matching \( \eta \) is in the core if there is no coalition \( T \subseteq I \) and matching \( \nu\neq \mu \) such that:
+        \[
+        \nu(i) \in \{h_i\}_{i \in T}, \quad \nu(i) \succeq_i \eta(i) \quad \forall i \in T
+        \]
+        i.e. a subset which can weakly improve through internal collusion.
+        (If we only consider subsets of size 1, then this is called \vocab{individually rational}).
+
+        \item \vocab{Gale’s Top Trading Cycles (TTC) Algorithm}:
+        $\bullet$ Agents point to the owner of their favorite house.
+        $\bullet$ A cycle is formed, and each agent in the cycle is assigned their most preferred house.
+        $\bullet$ This process is repeated until all agents are assigned a house.
+
+        \item \vocab{Core Properties}:
+        $\bullet$ The outcome of Gale’s TTC algorithm is the unique matching in the core.
+        $\bullet$ This matching is the unique competitive allocation; there exists
+        a price vector $\pi$ that supports this outcome and respetcs the initial endowment.
+        $\bullet$ A direct mechanism is
+        \vocab{strategy-proof} if truth-telling is a dominant strategy. Core is SP.
+
+        \item \vocab{Ma 1994}: Core is the only mechanism which is PE, IR, and SP.
+
+        \item \vocab{Serial Dictatorship}:
+        A serial dictatorship mechanism \( \phi_f \) assigns houses based on a priority ordering \( f \). The agent with highest priority gets their top choice, followed by others in sequence:
+        \[
+        \phi_f[ \succ ] = \mu.
+        \]
+        SD is obviously PE and SP.
+    \end{enumerate}
+
+\end{multicols*}
+\end{document}

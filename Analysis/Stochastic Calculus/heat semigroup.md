@@ -1,0 +1,2 @@
+> [!definition] Heat Semigroup
+> $(P_t)_{t\geq 0}$ is an endomorphism on functions on $\RR^d\to \RR$ sending $P_0f = f$ and$$P_t f(x) = \int_{\RR^d} p(t,x,y) f(y)dy$$where $p(t,x,y) = (2\pi t)^{-d/2} e^{-(x-y)^2 / (2t)}$. It is a monoid as the name suggests.

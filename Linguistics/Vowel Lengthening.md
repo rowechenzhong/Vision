@@ -1,0 +1,1 @@
+This is denoted by "ː" which is two triangles facing each other. Compare the [i] sound in "read" to "redo."

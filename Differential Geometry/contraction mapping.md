@@ -1,0 +1,1 @@
+Let $(X,d)$ be a metric space. A map $T:X\to X$ is a ==**$q$-contraction mapping**== on $X$ if there exists $q\in [0,1)$ such that $d(T(x), T(y)) \leq qd(x,y)$ for all $x,y\in X$.

@@ -1,0 +1,2 @@
+> [!example] Infinity Norm
+One can define a norm on vector space $C_\infty(X)$ via $$ \norm{f}_\infty = \sup_{x \in X} \abs{f(x)}. $$ This is called the ==**infinity norm**==. (One should verify that this is a norm.) Then, a sequence of functions converge in this norm iff they converge uniformly.

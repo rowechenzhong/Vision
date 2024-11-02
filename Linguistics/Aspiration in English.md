@@ -1,0 +1,1 @@
+English voiceless stops are aspirated when they occur at the beginning of a syllable that is word-initial or that is stressed.

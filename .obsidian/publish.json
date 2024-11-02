@@ -1,0 +1,11 @@
+{
+  "siteId": "7a34628d99605cdb3f16ea6fca9c7bb5",
+  "host": "publish-01.obsidian.md",
+  "included": [],
+  "excluded": [
+    "Lie Theory/Lie/hw",
+    "Analysis/measure/hw",
+    "Analysis/Stochastic Calculus/hw",
+    "Lie Theory/hw"
+  ]
+}

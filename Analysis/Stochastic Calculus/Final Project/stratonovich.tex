@@ -1,0 +1,561 @@
+% \documentclass[10pt]{scrartcl}
+% \usepackage[left=1in,
+% right=1in,
+% top=1in,
+% bottom=3in,
+% footskip=0.25in,
+%   ,showframe% <- only to show the page layout
+% ]{geometry}
+\documentclass{scrartcl}
+\usepackage[prune]{darkwhite}
+
+
+\title{Stratonovich's Theory}
+\subtitle{18.676 Spring 2024}
+\date{Spring 2024}
+
+\begin{document}
+
+\maketitle
+
+In this paper, we argue on an complete filtered probability space $\left(\Omega, \left(\FFF_t\right)_{t\geq 0}, \PP\right)$. As usual, we identify $\PP$-indistinguishable processes. We define finite variation processes (FVPs), continuous local martingales (CLMs), and continuous semimartingales (CSMs) as in \cite{LeGall}. All processes are forever $(\FFF_t)$-measurable and continuous. For any locally bounded progress process (LBPP) $H$, we define the stochastic integral of $H$ with respect to a CSM $X$, $H\cdot X$, as in \cite{LeGall}.
+% Given any CSM $Z$, we denote the (unique) FVP and CLM portions as $A_Z$ and $M_Z$.
+
+\section{Stratonovich Integrals}
+
+The purpose of this paper is to discuss the various properties and applications of the Stratonovich integral.
+
+\begin{defn}
+    [Stratonovich Integral]
+    Given two continuous semimartingales with decompositions $X = M_X + A_X$ and $Y = M_Y + A_Y$, and a $C^1$ function $f$, we define the \vocab{Stratonovich integral} of $f(Y)$ with respect to $X$ as
+    \[
+        (f(Y)\circ X)_t \equiv \int_0^t f(Y_s) \circ dX_s = \int_0^t f(Y_s) dX_s + \frac{1}{2} \int_0^t f'(Y_s) d\braket{Y, X}_s.
+    \]
+    This has CLM and FVP components
+    \[
+        \int_0^t f(Y_s) dA_X + \frac{1}{2} \int_0^t f'(Y_s) d\braket{Y, X}_s,\qquad \int_0^t f(Y_s) dM_X.
+    \]
+    We make the obvious generalization when $X$ takes values in $\RR^d$, $f\in C^1\left(\RR^d; \RR^n\right)$, and $Y$ takes values in $\RR^n$.
+\end{defn}
+
+CSMs are not closed under $C^1$ functions, hence this definition is not redundant. We immediately observe the possibly surprising fact that the Stratonovich integral with respect to a continuous local martingale is not necessarily itself a CLM. This distinction is important, and we will return to it often. We also observe that compared to the Ito integral, our integrand must satisfy more regularity conditions than a generic locally bounded progressive process. This is less of a concern, as this class is more than enough to discuss practical cases of interest (solutions to stochastic differential equations, etc.).
+
+Throughout the first half of this paper, we will visit ways of obtaining Stratonovich objects as the limit of pathwise-ordinary objects. This means that for any fixed $\omega$, the object in question is a bona fide deterministic integral, or differential equation, or physical process.
+
+% The first thing we will do is obtain this Stratonovich integral as the limit of a Riemann-like construction in two ways: first by mollifying the integrand, and then by mollifying the integrator.
+
+\section{Integrals obtained as limits of meshes}
+
+Suppose we are given continuous semimartingales $X$ and $Y$, and make a naive attempt to define the stochastic integral ``$\int YdX$'' a la Riemann. For any series of partitions $\Delta$ of $[0,t]$ whose mesh $\abs{\Delta}$ goes to $0$, the limit
+\[
+    \lim_{\abs{\Delta}\to 0} \sum_{i=1}^n Y_{t_i} \left(X_{t_{i+1}} - X_{t_i}\right)    
+\]
+exists in probability, and recovers the familiar Ito integral $\int_0^t Y_s dX_s$. However, with some experience we realize that we were perhaps lucky in this naive definition, because it is not clear a priori that we should evaluate $Y$ at $t_i$ instead of $t_{i+1}$, and such a change makes a significant difference.
+
+Given CSMs $X,Y$, $f\in C^1$, a mesh $\Delta$, and a probability measure $\mu$ on $[0,1]$, we define the following two classes of pathwise-Riemann approximations to the stochastic processes:
+\[
+    P^\mu_\Delta = \sum_i \left(Y_{t_{i+1}} - Y_{t_i}\right) \int_0^1 f\left(X_{t_i} + s\left(X_{t_{i+1}} - X_{t_i}\right)\right) \mu(ds)    
+\]
+and
+\[
+    Q^\mu_\Delta = \sum_i \left(Y_{t_{i+1}} - Y_{t_i}\right) \int_0^1 f\left(X_{t_{i+1} + s\left(X_{t_{i+1}} - X_{t_i}\right)}\right) \mu(ds).   
+\]
+
+\begin{claim*}
+    [Integrals as the Limits of Meshes]
+    Let $\bar{\mu} = \int_0^1 sd\mu(s)$. In fact,
+    \begin{itemize}
+        \item In probability,
+        \[
+            \lim_{\abs{\Delta}\to 0} P^\mu_\Delta = \int_0^t f(X_s) dY_s + \bar{\mu}\int_0^t f'(X_s) d\braket{X, Y}_s.    
+        \]
+        \item If $d\braket{X,Y}$ is absolutely continuous with respect to Lebesgue measure, then $Q^\mu_\Delta$ obtains the same limit in probability.
+    \end{itemize}
+\end{claim*}
+
+The proof of this point-set result is not interesting: proofs can be found in Strook\cite{STROOCK_2019} and Revuz\cite{RevuzYor1999}.
+
+Thus, large families of such mesh-like approximations to stochastic-integral like objects are in fact of the same form as the Ito and Stratonovich integrals. Notably, the arguably more natural \emph{uniform measure} has mean $\bar{\mu} = \frac12$, and yields the Stratonovich integral, not the Ito integral!
+
+We also thus see that the Ito integral is \emph{unique} in that integrals with respect to CLMs remain CLMs. Heuristically, the reason is that for all $\mu$ except $\delta_0$, the integrand has the privilege of ``looking into the future'' to coordinate its movement with the change $X_{t_{i+1}} - X_{t_i}$.
+
+
+
+
+
+% From the results for the processes $\braket{X,Y}$ and $Y\cdot X$, we immediately obtain a characterization in probability:
+% \begin{thm}
+%     [Stratonovich Integral in Probability]
+%     Let $X$ and $Y$ be continuous semimartingales. Fix a time $t > 0$. For each $n\in \NN$, write a partition $0 = t^n_0 < t^n_1 < \dots < t^n_{p_n} = t$ such that the mesh of these partitions goes to zero as $n\to \infty$. Then, the Stratonovich integral of $Y$ with respect to $X$ is the limit in probability of the Riemann sums
+%     \[
+%         I(t) = \lim_{n\to \infty} \sum_{i=1}^{p_n} Y\left(\frac{t^n_{i-1} + t^n_i}{2}\right) \left(X\left(t^n_i\right) - X\left(t^n_{i-1}\right)\right).
+%     \]
+% \end{thm}
+
+% \begin{proof}
+%     It is immediately clear that in probability,
+%     \begin{align*}
+%         I(t) = \lim_{n\to \infty} \sum_{i=1}^{p_n} \left(\frac{Y\left(t^n_{i-1}\right) + Y\left(t^n_i\right)}{2}\right) \left(X\left(t^n_i\right) - X\left(t^n_{i-1}\right)\right).
+%     \end{align*}
+%     Allowing ourselves to define $t^n_{i + \frac12} = \frac12\left(t^n_i + t^n_{i+1}\right)$ for each $n$ and $0\leq i < p_n$, we can rewrite the difference between the two summations as
+% \end{proof}
+
+% Those used to working with Ito's theory of integration are immediately struck by a philosophical objection: the Stratonovich integral \emph{looks into the future} by evaluating $Y_{t_i}$.
+
+\subsection{Coordinate Invariance}
+
+Recall the celebrated It\^o's formula, which is a sort of ``chain rule'' in the context of stochastic integration. We immediately see that when written with the Stratonovich integral, the formula appears exactly as in the deterministic case.
+
+\begin{thm}
+    [It\^o's Formula]
+    Let $X$ be a continuous semimartingale on $\RR^n$ and $F\in C^2\left(\RR^n; \RR\right)$. We use Einstein summation notation, such that indices are implicitly summed over. Then, for all $t\geq 0$,
+    \begin{align*}
+        F(Z(t)) - F(Z(0)) &= \int_0^t \pa_i F(Z_s) dZ^i_s + \frac{1}{2} \int_0^t \pa_i \pa_j F(Z_s) d\braket{Z^i, Z^j}_s\\
+        &= \int_0^t \pa_i F(Z_s) \circ dZ^i_s.
+    \end{align*}
+\end{thm}
+
+% Intuitively, because ordinary Lebesgue / Riemann integrals obey the chain rule, we expect that any stochastic integral obtained as the $\omega$-wise limit of a series of ordinary integrals should also obey the chain rule, and hence must be the Stratonovich integral.
+
+The generalizations to higher dimensions are immediate. Stratonovich's chain rule solves stochastic differential equations faster than Ito's. Here's an illustrative example:
+
+\begin{prob}
+    [Exponential Martingale]
+    Let $X, A$ be $\Hom(\RR^n, \RR^n)$-valued continuous semimartingales such that
+    \[
+        dX_{ij}(t) = X_{ik}(t) dA_{kj}(t)
+    \]
+    as an \emph{Ito} SDE. Obtain a closed form for $X$ as a function of $A$ and quadratic variations thereof.
+\end{prob}
+
+\begin{proof}
+    This differential equation is trivial to solve in the ODE case; ``$X_t = e^{A_t}$''. If the differential equation read
+    \[
+        dX_{ij}(t) = X_{ik}(t) \circ dY_{kj}(t) \tag{$\star$}
+    \]
+    we would immediately obtain the same conclusion -- $de^{Y_t} = e^{Y_t} \circ dY_t$.
+
+    Thus, an efficient way to solve this Ito equation is by transforming the desired into a Stratonovich integral! Consider the substitutions
+    \[
+        Y_{ij} = A_{ij} - \frac12 \braket{A_{ik}, A_{kj}}\implies \braket{Y_{ij}, Y_{k\ell}} = \braket{A_{ij}, A_{k\ell}}.
+    \]
+    We immediately obtain $\star$.
+    \[
+        X(t) = e^{A(t) - \frac12 \braket{A(t), A(t)}}.
+    \]
+    (The bracket here is the matrix $\braket{A_{ij}(t), A_{jk}(t)}$).
+\end{proof}
+
+\subsection{Mollifying the Integrator}
+Let $W$ be a Brownian motion, and let $\psi(\eta, t)$ have continuous partial derivatives on $\RR\times [a,b]$. This time, wish to approximate an integral of the form
+\[
+    \int_a^b \psi(W_t, t) \circ dW_t
+\]
+via a limit of \textbf{finite variation processes} which approximate $W$. Recall that finite variation processes are significantly smoother than continuous semimartingales! Specifically, we construct FVPs $W^n_t$ such that for almost all $\omega$,
+\begin{itemize}
+    \item $W^n_t(\omega)\to W_t(\omega)$ for all $t\in [a,b]$.
+    \item There exist finite real numbers $n_0(\omega)$ and $k(\omega)$ such that for all $n > n_0$ and all $t\in [a,b]$, $\abs{W^n_t(\omega)}\leq k(\omega)$. If $\psi$ is independent of $t$, then this condition can be dropped.
+\end{itemize}
+
+\begin{thm}
+    [Baby Wong-Zakai Theorem]
+    Almost surely,
+    \[
+        \lim_{n\to \infty} \int_a^b \psi(W^n_t, t) \circ dW^n_t = \int_a^b \psi(W_t, t) \circ dW_t.
+    \]
+\end{thm}
+
+It is heuristically clear that the only possible stochastic limit of the (usual, Lebesgue) integrals with respect to $W^n_t$ is the Stratonovich integral, because the left-hand-side obeys the chain rule!
+% Hence the right-hand side must also obey these rules, and the only possible candidate is the Stratonovich integral.
+
+
+\begin{proof}
+As a reminder, this Stratonovich integral is
+$$
+\int_a^b \psi(W_t, t)dW_t + \frac12 \braket{\psi(W_t,t), W_t}_a^b = \int_a^b\psi(W_t, t)dW_t + \frac12 \int_a^b\frac{\pa\psi}{\pa \eta}(W_t,t) dt$$
+
+To prove this, we allow $F(\lambda, t) = \int_a^\lambda \psi(\eta, t)d\eta$. This is a $C^2$ function in $\lambda$ which we can hopefully apply Ito's formula to. Then,$$F(W^n_b, b) - F(W^n_a,a) = \int_a^b \psi\left(W^n_t, t\right) dW^n_t + \int_a^b \left(\frac{\pa F}{\pa t}\right)(W^n_t, t)dt.$$This is simply true for almost all $\omega$, by the Fundamental theorem of calculus, as $(W^n_t, t)$ is continuous.
+
+Now, the main reason we did all of this was because it is very hard to compute $\lim_{n\to \infty} \int_a^b \psi\left(W^n_t, t\right) dW^n_t$ in any sense. Your finite variation process is supposed to converge to a CLM, and neither Portmanteau theorem nor Dominated convergence theorem let you compute this limit in your integrand and integrator simultaneously. The above $\omega$-pointwise equality lets us rewrite this integral in terms of three very smooth well-understood objects.
+
+First off, $F(W^n_b, b) - F(W^n_a, a)\to F(W_b, b) - F(W_a, a)$ everywhere, because $W_n\to W$ and $F$ is continuous.
+
+\begin{claim*}
+    For almost all $\omega$,
+    \[
+        \int_a^b \left(\frac{\pa F}{\pa t}\right)(W^n_t, t)dt\to \int_a^b \left(\frac{\pa F}{\pa t}\right)(W_t, t)dt. \tag{$\star$}
+    \]
+\end{claim*}
+
+\begin{proof}
+$F$ is $C^1$, thus
+$$\frac{\pa F}{\pa t}(\lambda, t) = \int_a^\lambda \frac{\pa \psi(\eta, t)}{\pa t} d\eta$$
+
+Note that if $\psi$ is independent of $t$, we immediately conclude.
+
+So, fix an $\omega$. Observe that $\frac{\pa \psi(\eta, s)}{\pa s}$ is continuous everywhere, and thus bounded by say $K$ on $[-k(\omega), k(\omega)]\times [a,b]$.
+
+Fix a $a\leq t\leq b$. We'll show that $\left(\frac{\pa F}{\pa t}\right)(W^n_t, t)$ converges. Look at
+$$
+\int_a^{W^n_t} \frac{\pa \psi(\eta, t)}{\pa t}d\eta = \int_a^{k(\omega)} \id_{\eta \leq W^n_t} \frac{\pa \psi(\eta, t)}{\pa t}d\eta 
+$$
+
+These converge to $\left(\frac{\pa F}{\pa t}\right)\left(W_t, t\right)$. This is true for each fixed $t$. Hence, because $\frac{\pa F}{\pa t}(W^n_t, t)$ and $\frac{\pa F}{\pa t}(W_t, t)$ are each continuous functions, they converge pointwise on $[a,b]$ almost surely. Now, for each $t$, $\frac{\pa F}{\pa t}(W^n_t, t)$ is dominated by
+$$
+\int_a^{k(\omega)} K d\eta  = (k(\omega) - a)K < \infty.
+$$
+Hence we conclude.
+\end{proof}
+
+
+Now, by Ito's formula, we know that $F(W^n_b, b) - F(W^n_a, a)$ converges to$$
+\int_a^b \psi(W_t, t)dW_t + \int_a^b \left(\frac{\pa F}{\pa t}\right)(W_t, t)dt + \frac12 \int_a^b \frac{\pa \psi}{\pa \eta}(W_t,t)dt
+$$
+Plugging in $\star$, we conclude.
+
+\end{proof}
+
+This proof holds when $W$ is replaced by any CSM, so long as the approximating processes are FVPs.
+
+\section{Wong-Zakai Theorem}
+Going forward, our intuition is that the $\omega$-pointwise limits of smooth integrals must be Stratonovich. This continues to hold when we turn to look at stochastic differential equations.
+
+Specifically, let us consider the stochastic differential equation
+\[
+    dX_t = b(X_t)dt + \sigma(X_t) \circ dW_t, \qquad X_0 = x_0
+\]
+where $b$ is a $K$-Lipschitz $\RR^d$-valued function, $\sigma$ is a $K$-Lipschitz $\Hom(\RR^d, \RR^m)$-valued function, and  $X$ takes on values in $\RR^d$. Suppose we have a series of continuous piecewise-differentiable(so as to automatically admit Lebesgue integrals) processes $W^n_t$ which approximate Brownian motion; there exists an $m$-dimensional Wiener process $W_t$ such that
+\[
+\sup_{t\in [0,T]} \norm{W_t - W_t^n}\to 0
+\]
+almost surely. Then, we might hope that the usual solution to the differential equation, $\frac{d}{dt}X^n_t = b(X^n_t) + \sigma(X^n_t)\xi^n_t$, where $\xi^n_t = \frac{d W^t_n}{dt}$, coincides with the SDE solution. This is in fact true. We present two versions of this theorem, although there are generalizations with significantly less constraints that are also significantly harder to prove.
+
+\begin{thm}
+    [Wong-Zakai with External Noise]
+    Suppose $\sigma(x) = \sigma$ is constant, which would occur if such a system was driven by an external noise source. Then, $\sup_{t\in [0,T]} \norm{X^n_t - X_t}\to 0$ almost surely.
+\end{thm}
+
+\begin{proof}
+Indeed,$$X^n_t - X_t = \int_0^t \left(b(X^n_s) - b(X_s)\right)ds + \sigma(W^n_t - W_t)$$thus by triangle inequality and Lipschitz,$$\norm{X^n_t - X_t}\leq K\int_0^t \norm{X^n_s - X_s}ds + \norm{\sigma} \sup_{t\in [0,T]}\left(W^n_t - W_t\right).$$The supremum goes to $0$ almost surely. Then, Gronwall's Lemma concludes immediately.
+\end{proof}
+
+\begin{thm}
+    [Wong-Zakai in $1$ dimension]
+    Otherwise, let us restrict ourselves with the following regularity conditions:
+    \begin{enumerate}
+        \item $X,W, X^n, \xi^n$ are $\RR^1$-valued.
+        \item $b,\sigma$ are $K$-Lipschitz and bounded.
+        \item $\sigma$ is $C^1$ and $\sigma(x) \frac{d\sigma(x)}{dx}$ is Lipschitz continuous.
+        \item There is some $\beta > 0$ such that $\sigma(x)\geq\beta > 0$ for all $x$.
+    \end{enumerate}
+    Then, $\sup_{t\in [0,T]} \abs{X^n_t - X_t}\to 0$ almost surely.
+\end{thm}
+
+\begin{proof}
+We consider the function $\Phi(x) = \int_0^x \left(\sigma(y)\right)^{-1} dy$, which is well-defined and $C^2$, because $\sigma(y)$ is $C(1)$ and $\sigma(y) \geq \beta > 0$. Then,
+$$
+\frac{d}{dt} \Phi\left(X^n_t\right) = \left(\sigma(X^n_t)\right)^{-1} \left(b(X^n_t) + \sigma(X^n_t)\xi^n_t\right) = \frac{b(X^n_t)}{\sigma(X^n_t)}+\xi^n_t.
+$$
+
+Meanwhile,
+\begin{align*}
+d\Phi(X_t)&=\sigma^{-1}(X_t)\left\{b(X_t)dt + \sigma(X_t)dW_t + \frac12\sigma'(X_t)\sigma(X_t)dt\right\} -\frac12\frac{\sigma'}{\sigma^2}\sigma(X_t)^2dt\\
+&= \sigma^{-1}\left(X_t\right)\left(b\left(X_t\right)dt + \sigma(X_t)dW_t\right)\\
+&= \frac{b(X_t)}{\sigma(X_t)}dt + dW
+\end{align*}
+because the Stratonovich integral obeys the chain rule. We now want to smash with Gronwall.
+\[
+\norm{\Phi\left(X^n_t\right) - \Phi(X_t)} \leq \int_0^t \abs{\frac{b(X^n_s)}{\sigma(X^n_s)} - \frac{b(X_s)}{\sigma(X_s)}}ds + \sup_{t\in [0,T]} \abs{W^n_t - W_t}.
+\]
+Now, because $\sigma$ is bounded by $L$, $\sigma^{-1}$ is bounded by $\frac1L$ from below, hence $\abs{\Phi(x) - \Phi(z)}\geq \frac1L\abs{x-z}$. Meanwhile,$$\abs{\frac{b(x)}{\sigma(x)} - \frac{b(z)}{\sigma(z)}} \leq \frac{1}{\sigma(x)}\abs{b(x) - b(z)} + \frac{b(z)}{\sigma(x)\sigma(z)} \abs{\sigma(x) - \sigma(z)}\leq \frac{K}{\beta}\abs{x - z} + \frac{LK}{\beta^2}\abs{x-z}.$$Gronwall kills now.
+\end{proof}
+
+These limits of stochastic differential equations provides intuition on how one ought to construct and interpret models of physical processes with stochastic noise. We provide a pedagogical exposition of the \emph{Langevin equation} in an appendix. It has been omitted from the main text, because some results lack the rigor expected in the mathematical community.
+
+
+
+\section{Stochastic Integration on Manifolds}
+
+Away from the theory of probability, when discussing theories of differential geometry and algebra, a fundamental consideration is \emph{invariance under natural transformations}. In linear algebra, this places an emphasis on the \emph{eigenvalues and eigenvectors} of a linear map over its explicit presentation as a matrix; in the study of manifolds, this places an emphasis on the \emph{$C^k$/smooth/analytic/holomorphic structure} of the manifold as opposed to any particular atlas. In our specific case, we will often talk about \emph{invariance under coordinate transformations,} and this is a special case of the general principle.
+
+From this perspective, the Stratonovich integral is much more natural than the Ito integral. The manifest coordinate invariance of this Stratonovich formulation allows us to easily define the most basic objects in stochastic calculus on manifolds.
+
+Our main reference for this section is \cite{Hsu2002}.
+
+\subsection{Elementary Definitions}
+
+Let $M$ be a smooth manifold.
+
+\begin{defn}
+    [$M$-valued Semimartingale]
+    Given a stopping time $\tau$, an $M$-valued process $X$ defined on $[0,\tau)$ is an $M$-valued semimartingale if, for all $f\in C^\infty(M)$, $f(X)$ is a real-valued semimartingale.
+\end{defn}
+
+By Ito's formula, it is clear that this reduces to the usual definition of a semimartingale when $M = \RR^d$.
+
+
+Suppose $V_\alpha: \alpha = 1,\dots, \ell$ are smooth vector fields on $\RR^N$, and consider the Stratonovich SDE
+\[
+    X_t = X_0 + \int_0^t V_\alpha(X_s)\circ dZ^\alpha_s.    
+\]
+
+The equivalent Ito SDE is
+\[
+    X_t = X_0 + \int_0^t V_\alpha(X_s) dZ^\alpha_s + \frac{1}{2} \int_0^t \nabla_{V_\beta} V_\alpha(X_s) d\braket{Z^\alpha, Z^\beta}_s
+\]
+where $\nabla_{V_\beta} V_\alpha$ is the derivative of $V_\alpha$ in the direction of $V_\beta$.
+
+Then, if $X$ is a solution to such an SDE and $f\in C^2(\RR^d)$, Ito's formula immediately yields that
+\[
+    f(X_t) = f(X_0) + \int_0^t V_\alpha f(X_s)\circ dZ^\alpha_s,\qquad t < e(X).    
+\]
+
+Seeing this, we can immediately define solutions to stochastic differential equations on manifolds. Upgrade $V_\alpha$ to be smooth vector fields on $M$, and let $Z$ be a CSM on $\RR^\ell$. Then, we might consider an $M$-valued random variable $X_0\in \FFF_0$, and attempt to define solutions to the SDE
+\[
+    dX_t = V_\alpha(X_t) \circ dZ^\alpha_t.
+\]
+
+\begin{defn}
+    [Solution to SDE on Manifold]
+    A solution to the SDE $dX_t = V_\alpha(X_t) \circ dZ^\alpha_t$ is an $M$-valued semimartingale $X$ and a stopping time $\tau$ such that, for all $f\in C^\infty(M)$,
+    \[
+        f(X_t) = f(X_0) + \int_0^t V_\alpha f(X_s)\circ dZ^\alpha_s,\qquad t < \tau.
+    \]
+    We say that $X$ is a solution to the SDE $SDE(V_1,\dots, V_\ell; Z, X_0)$.
+\end{defn}
+
+This reduces to the usual definition of a solution to an SDE when $M = \RR^d$, because notably we can pick the coordinate functions $f = x_i$.
+
+
+The coordinate-invariance really shines through here:
+\begin{claim*}
+    [Diffeomorphisms preserve solutions to SDEs]
+    Let $\Phi: M\to N$ be a diffeomorphism between smooth manifolds, and let $X$ be a solution to $SDE(V_1,\dots, V_\ell; Z, X_0)$. Then, $\Phi(X)$ is a solution of the SDE $SDE(\Phi_*V_1,\dots, \Phi_*V_\ell; Z, \Phi(X_0))$ on $N$.
+\end{claim*}
+
+Indeed, let $f$ be any smooth function on $N$. Then, $f\circ \Phi$ is a smooth function on $M$, and we have
+\begin{align*}
+    f(Y_t) &= f(\Phi(X_0)) + \int_0^t V_\alpha(f\circ \Phi)(X_s)\circ dZ^\alpha_s\\
+    &= f(\Phi(X_0)) + \int_0^t (\Phi_*V_\alpha)(f)(\Phi(X_s))\circ dZ^\alpha_s
+\end{align*}
+which is exactly the definition of a solution to the SDE on $N$.
+
+\subsection{Existence and Uniqueness of Solutions}
+
+It is a bit unsatisfying to end here, as we have not shown how to obtain any solutions to these SDEs. Thus, we present a quick and dirty (extrinsic) way to establish the existence and uniqueness of solutions to SDEs on manifolds.
+
+\begin{thm}
+    [Whitney's Embedding Theorem]
+    Any smooth $n$-dimensional manifold $M$ can be smoothly embedded in $\RR^{2n}$ as a closed submanifold. Let $N = 2n$.
+\end{thm}
+
+Thus, without loss of generality, we identify $M$ with its image in $\RR^{N}$.
+
+\idea{
+    [Remark on Explosions]
+    Then, $\infty_M$ is mapped to $\infty_{\RR^{N}}$, in the sense that a sequence of points $x_n\in M$ will converge to $\infty_M$ in $\hat{M}$ iff $\abs{x_n}\to \infty$. Indeed, if $x_n\to \infty_M$, then for all $R$, $x_n$ is eventually outside the compact subset $M\cap B_0(R)$, hence $\abs{x_n}\to \infty$. Conversely, if $\abs{x_n}\to \infty$, it is clear that $\abs{x_n}$ do not converge in $\RR^N$ (or $M$), hence by compactness of $\hat{M}$, $x_n\to \infty_M$.
+}
+
+By Whitney extension theorem, we extend each $V_\alpha$ to a smooth vector field $\tilde{V}_\alpha$ on $\RR^n$. Then, we can give (disappointingly coordinate-laden) re-phrasings of semimartingales and solutions to SDEs.
+
+\begin{claim*}
+    [Semimartingales Characterized by Coordinate functions]
+    First, $X$ is semimartingale on $M$ iff $X$ is a semimartingale on $\RR^N$.
+
+    Also, consider some $SDE(V_1,\dots, V_\ell; Z, X_0)$ on $M$. Then, $X$ is a solution to $SDE(V_1,\dots, V_\ell; Z, X_0)$ on $M$ iff $X$ is a solution to $SDE(\tilde{V}_1,\dots, \tilde{V}_\ell; Z, X_0)$ on $\RR^N$.
+\end{claim*}
+\begin{proof}
+First, the only-if direction is trivial because each coordinate function is a smooth function. Conversely, any function $f\in C^\infty(M)$ can be extended to a function $\tilde{f}\in C^\infty(\RR^N)$ (by the Whitney extension theorem), where the statement is trivial.
+
+For the second claim, the only-if direction is trivial as each coordinate function is a smooth function. Conversely, for any $f\in C^\infty(M)$, we can extend $f$ to a function $\tilde{f}\in C^\infty(\RR^N)$, such that $f(X_t) = \tilde{f}(X^t_1,\dots, X^t_N)$. By Ito's formula,
+\begin{align*}
+    d\left[f(X_t)\right] &= \pa_i \tilde{f}\left(X^t_1, X^t_2, \dots, X^t_n\right)\circ d\left[X^t_i\right]\\
+    &= \pa_i \tilde{f}\left(X^t_1, X^t_2, \dots, X^t_n\right)\circ V^i_\alpha \circ d\left[Z^\alpha_i\right]\\
+    &= \left(\pa_i \tilde{f}\left(X^t_1, X^t_2, \dots, X^t_n\right) V^i_\alpha \right) \circ d\left[Z^\alpha_i\right]\\
+    &= V_\alpha f(X_t)\circ dZ^\alpha_t
+\end{align*}
+\end{proof}
+In order to use our well-understood formalism for SDEs in $\RR^N$, we need to show that solutions to the extended equation
+\[
+    X_t = X_0 + \int_0^t \tilde{V}_\alpha(X_s)\circ dZ_s^\alpha    
+\]
+which begin at $X_0\in M$ remain on $M$ for all $0\leq t < e(X)$. This is the main non-trivial step in porting our SDE solutions on $\RR^N$ to $M$.
+
+\begin{claim*}
+    Let $X$ be the solution of the extended equation up to its explosion time $e(X)$, with constant $X_0 \in M$. Then, $X_t\in M$ for all time.
+\end{claim*}
+
+We omit the details of this proof\cite{Hsu2002}, which is a careful local calculation bounding the distance of $X_t$ from $M$. Combining these two preceding results, we know that:
+\begin{itemize}
+    \item Given any solution to $SDE$ on $M$, we obtain a solution to $SDE$ on $\RR^N$.
+    \item Given any solution to $SDE$ on $\RR^N$ which starts at $X_0\in M$, we obtain a solution to $SDE$ on $M\subset \RR^N$ for all time, which is exactly a solution to $SDE$ on $M$.
+\end{itemize}
+
+By well-known results (see appendix B), we know that if $\tilde{V}_\alpha$ are locally Lipschitz, then the SDE on $\RR^N$ has a unique solution. Thus, we obtain the following result:
+
+\begin{thm}
+    If $\{V_i\}$ have a smooth extension $\tilde{V}_i$ to $\RR^N$ which is locally Lipschitz, then there exists a unique solution to $SDE(V_1,\dots, V_\ell; Z, X_0)$ on $M$ up to its explosion time.
+\end{thm}
+
+% \begin{proof}[Sketch of Proof]
+% Let $d_\RR^n(x,M) = \inf_{y\in M} \norm{x-y}$ be the distance from $x$ to $M$. Then, $d_\RR^n(x,M)^2$ is a smooth function in a neighborhood around $M$. By Whitney, we modify $f$ outside this neighborhood such that it is smooth on $C^\infty(\RR^N)$.
+
+% Now, $\tilde{V}_\alpha$ are tangent to $M$ along $M$. If we zoom in on any specific point $x\in M$ and Taylor expand $f$ around this point, we observe that $\tilde{V}_\alpha f$
+% \end{proof}
+% Then, by Ito's formula, for any $C^2(\RR^N)$ function $f$,
+% \[
+%     f(X_t) = f(X_0) + \int_0^t \pa_i f(X_s) \sigma^i_\alpha(X_s) dZ^\alpha_s + \int_0^t \frac{1}{2} \pa_i \pa_j f(X_s) \sigma^i_\alpha(X_s) \sigma^j_\beta(X_s) d\braket{Z^\alpha, Z^\beta}_s.    
+% \]
+
+
+% In differential geometry, the natural object to integrate against a smooth curve is a \emph{differential form}.
+
+\section{Bibliography}
+
+\let\oldoldsection\section
+\renewcommand{\section}[2]{}%
+\bibliographystyle{plain}
+\bibliography{main}
+
+% redefine the section command to its original definition
+\let\section\oldoldsection
+
+\appendix
+
+\section{Langevin Equation}
+
+Now, we will talk about the Langevin equation, which is a stochastic differential equation that describes a great variety of physical phenomena, to give a real-world example of how a stochastic differential equation arises as the heuristic limit of a sequence of ordinary differential equations. The purpose of this presentation is to elaborate upon the physical motivation for stochastic differential equations as the limit of a series of pathwise-ordinary differential equations.
+
+\begin{defn}
+    [Langevin Equation]
+    In its simplest form, the \vocab{Langevin equation} is a stochastic differential equation in two variables $X_t, P_t$ taking the form:
+    \[
+        dX_t = \frac{P_t}{M}dt, \qquad dP_t = -V'(X_t)dt - \frac{\gamma}{M} P_tdt + \sqrt{2\frac{\gamma}{\beta}} dW_t.    
+    \]
+\end{defn}
+
+
+We will present a rigorous derivation of a different, ``ordinary'' equation in the context of the movement of a \vocab{colloid} (mesoscopic object) in a fluid. Then, we will discuss some well-known results in the physics literature. The only physics knowledge needed for this section is used in establishing the equations of motion, which are then solved as a purely mathematical problem.
+
+\subsection{Colloid Model}
+In physics, one usually posits a theory through a \vocab{Hamiltonian} or energy function. To this end, consider the following Hamiltonian describing a single colloid particle with mass $M$, connected to $n$ particles of mass $\{m_i\}_{i = 1}^N$ through springs with varying spring constants $\{\omega_i\}_{i = 1}^N$:
+\[
+    H = \frac{P^2}{2M} + V(X) + \sum_i \frac{p_i^2}{2m_i} + \sum_i \frac{m_i\omega_i^2}{2} {(X-q_i)}^2
+\]
+Here, $X, q_i$ are the positions of the colloid and microscopic particles, and $P, p_i$ are their momenta. $X, q_i, P, p_i$ are a collection of $2n+2$ functions from $\RR_+$ (time) to vectors in $\RR^d$ space. We will take $d = 1$ for simplicity (but generalizations are immediate). The potential $V$ is some smooth positive function $\RR^d\to \RR$.
+
+Any physicist can immediately re-write this as a system of $2n+2$ first-order differential equations:
+\[
+    \dot{q_i} = \frac{p_i}{m_i}, \quad \dot{p_i} = m_i\omega_i^2 (X-q_i), \quad \dot{X} = \frac{P}{M}, \quad \dot{P} = -V'(X) + \sum_i m_i\omega_i^2 (q_i-X) \tag{$\star$}
+\]
+
+Such a first-order ODE has smooth solutions. For regularization purposes, we assume that there is some large $L, T$ such that we only consider $\abs{X}, \abs{P} \leq L$ for times $t\in [0,T]$.
+
+In principle, $\star$ is a deterministic ordinary differential equation, which can be exactly solved given precise information about the initial states of the particles. In real experiments however, we do not have such precise knowledge of the microscopic state of the system. Fortuitously, physicists are generally uninterested in the vast majority of the $2n+2$ degrees of freedom present in the system, and only care about a small subset. In our case, we are solely interested in the evolution of $X$ and $P$.
+
+To this end, we model the initial state of the system as a \vocab{Gaussian distribution} in the phase space of the particles. In statistical mechanics literature, this is known as the \vocab{Boltzmann distribution}:
+\[
+    P(q_i(0), p_i(0)) = \frac{1}{Z} \exp\left(-\beta\left[
+        \sum_i \frac{p_i^2}{2m_i} + \frac{m_i\omega_i^2}{2} {(q_i^0-X(0))}^2
+    \right]
+    \right)
+\]
+where $\beta$ is some fixed constant called the \vocab{inverse temperature}, and $Z$ is a normalization factor.
+
+\subsection{ODE Solution}
+
+We can now apply general ODE theory to solve this equation path-wise. Through Laplace transformations one immediately obtains the solution
+\[
+    q_i(t) = \underbrace{q_i^0 \cos(\omega_i t) + \frac{p_i^0}{m_i\omega_i} \sin(\omega_i t)}_{\text{homog.\ sol.}} + \omega_i (\sin(\omega_i \bullet ) * X)(t)
+\]
+By integration by parts (note that any solution $X, P$ must be smooth),
+\[
+    \omega_i (\sin(\omega_i \bullet ) * X)(t) = X(t) - \cos(\omega_i t)X(0) - \left(\cos(\omega_i\bullet) * \frac{P}{M}\right)(t).
+\]
+Returning to $\star$, we obtain
+\[
+    \dot P = -V'(X) - \sum_i m_i\omega_i^2 \left\{q_i^0 \cos(\omega_i t) + \frac{p_i^0}{m_i\omega_i} \sin(\omega_i t) - \cos(\omega_i t)X(0) - \left(\cos(\omega_i\bullet) * \frac{P}{M}\right)(t)\right\}
+\]
+where we observe that the $X(t)$ from our integration by parts has nicely canceled. Hence, our original system $(\star)$ has reduced to the following two equations:
+\[
+    \dot X = \frac{P}{M},\qquad \dot P = -V'(X) - \frac{1}{M} (P * K)(t) + \xi(t) \tag{$\spadesuit$}
+\]
+where $K(t) = \sum_i m_i\omega_i^2 \cos(\omega_i t)$ is the \vocab{friction kernel}, and
+\[
+    \xi(t) = \sum_i m_i\omega_i^2(q_i^0-X(0)) \cos(\omega_i t) + \omega_i p_i^0 \sin(\omega_i t)
+\]
+is the \vocab{noise} which has absorbed all of the dependence on the (random) microscopic initial conditions.
+
+$\spadesuit$ is a pre-cursor to the Langevin equation, which we will obtain after a suitable limit.
+
+\subsection{Fluctuations and friction}
+The friction kernel $K$ can be thought of as an \emph{average force} which controls dissipation, while the noise term $\xi$ can be thought of as a \emph{random force} which injects energy into the system. Observe that $\xi$ is manifestly a centered Gaussian process, whose covariance is given by
+\[
+    \EE\left[\xi(t) \xi(t')\right] = \frac{1}{\beta}\sum_i m_i \omega_i^2 \cos(\omega_j(t-t'))
+\]
+Note this is exactly $\frac{1}{\beta} K(t-t')$, where $K$ is the friction kernel. This is a manifestation of the \vocab{fluctuation-dissipation relation}, which is a general physical phenomenon.
+
+The limit we desire to take is the one in which $K$ becomes a point distribution at $0$. Then, $\spadesuit$ becomes a stochastic differential equation without the convolution, and $\xi$ becomes ``white noise,'' such that the $\xi(t)dt$ term becomes $dW_t$ for some Brownian motion. The fluctuation-dissipation relation is encouraging, because it says that these two limits are compatible.
+
+As an aside, in the physics literature, we distinguish these limiting cases. Observe that $K$ is a function of the composition of the fluid ($m_i, \omega_i$ model the distribution of particle types and their interaction strengths).
+\begin{itemize}
+    \item \vocab{White noise}: $K(t - t')\propto \delta(t-t')$, such that the spectrum is flat. The fluid is referred to as \vocab{Newtonian}. 
+    \item \vocab{Colored noise}: $K(t-t')$ is not a delta function, and the noise is correlated in time. The fluid is referred to as \vocab{visco-elastic}.
+\end{itemize}
+
+\subsection{Taking a limit of the damping term}
+
+We will now present a series of results which fall short of establishing the desired limit. We make no claims of rigor in this section, but hope that results such as these lead to a real proof.
+
+Fejer's theorem from elementary Fourier theory states there exists a sequence of $m^N_i$ and $\omega^N_i$ as $N\to \infty$ such that $K(t)$ uniformly converges to any smooth function with period $2T$. We are only interested in the region $[0,T]$, so we will drop the periodicity condition. Hence, for every $\eps, \delta$ we obtain a set of parameters $m_i$ and $\omega_i$ such that $K(t)$ is uniformly within $\eps$ from the sharp Gaussian function
+\[
+    K_\delta(t) = \frac{2\gamma}{\sqrt{2\pi}\delta} \exp\left(-t^2/2\delta\right)
+\]
+where $\gamma$ is some constant.
+
+Next, we would like to bound
+\[
+    \abs{(P * K_\delta)(t) - \gamma P(t)}.   
+\]
+This is an intuitively clear but difficult-to-prove result. Heuristically,
+\[
+    (P * K_\delta)(t) = \int_0^t P(s) K(t-s)ds \approx \int_0^t P(t) K_\delta(t-s)ds = \gamma P(t)
+\]
+
+For any particular set of these parameters, remember that we are still solving a smooth first-order ODE. Suppose we knew that with high probability along this sequence of parameters, sample paths of $P$ on $[0,T]$ are $\alpha$-Holder-continuous with constant $C$, independent of $\delta$. This is hard to justify rigorously. The Wiener process and the \vocab{Ornstein-Uhlenbeck process}, where $V(x) = \frac12 x^2$, exhibits Holder continuity on $[0,T]$; this follows immediately from the representation as a scaled, time-transformed Wiener process. Then, one could hope to bound the above as the sum over a vanishing quantity around $t$, and a vanishing quantity over all time.
+
+To conclude the proof, we wish to show that this limit of Gaussian processes $W^N_t = \int_0^t \xi^N_t$, as $K(t)$ becomes more and more peaked, is a Brownian motion, in distribution. We know that $W^N_t$ are zero-mean, with covariance functions $\EE\left[W^N_t W^N_{t'}\right]$ converging pointwise to $t\land t'$. In the finite-dimensional Brownain motion case, this is already sufficient to establish convergence in distribution to a Brownian motion.
+
+The conclusion of this proof likely requires Gronwall's lemma or a more sophisticated result such as Wong-Zakai to transform the given bounds into bounds on the full solution.
+
+
+\section{Results on Stochastic Differential Equations}
+
+We briefly review some details about SDEs on $\RR^n$.
+
+Give me a \vocab{diffusion coefficient matrix} $\sigma:\RR^n\to \Hom(\RR^\ell, \RR^n)$ and a \vocab{driving semimartingale} $Z$. $\sigma$ is always locally Lipschitz, and $Z$ is always a $(\FFF_t)_{t\geq 0}$-adapted continuous semimartingale with values on $\RR^\ell$. If $X_0$ is $\FFF_0$-measurable $\RR^n$-valued random variable, then a \vocab{solution to the SDE} $SDE(\sigma, Z, X_0)$ is a CSM $X_t$ and a stopping time $\tau$ such that there exists a sequence of stopping times $\tau_n\uparrow \tau$ such that for all $n$,
+\[
+    X_{t\land \tau_n} = X_0 + \int_0^{t\land \tau_n} \sigma(X_s)dZ_s, \qquad t\geq 0.
+\]
+Pictorially, we write
+\[
+    dX_t = \sigma(X_t)dZ_t,\qquad t < \tau.
+\]
+
+
+Theory then states that
+\begin{thm}
+    [Existence and Uniqueness of Global Solution]
+    If $\sigma$ is globally Lipschitz and $X_0\in L^2$, then $SDE(\sigma, Z, X_0)$ has a unique global solution ($\tau = \infty)$.
+\end{thm}
+
+If $\sigma$ is not declared to be globally Lipschitz, the possibility of \emph{explosion times} arises. For instance, the ODE $dx_t = x_t^2dt$ with $x_0 = 1$ has solution $X_t = \frac{1}{1-t}$, which explodes at $t = 1$.
+
+The standard way to deal with this is to consider the one-point compactification of your space. Explicitly, if $M$ is a locally compact metric space, let $\hat{M} = M\cup \{\infty_M\}$ be its one-point compactification. Then, a path on $M$ with explosion time $e$ is a continuous map $[0,\infty)\to \hat{M}$ such that $x_t \in M$ for $t < e$ and $x_t = \infty_M$ for $t\geq e$. The collection of all such paths is called the path space of $M$, denoted $W(M)$.
+
+\begin{thm}
+    [Existence and Uniqueness of Local Solution]
+    If $\sigma$ is locally Lipschitz and $X_0$ is merely $\FFF_0$-measurable, then there exists a unique $W(\RR^n)$-valued process $X$ which is a solution of $SDE(\sigma, Z, X_0)$ up to its explosion time $\tau = e(X)$.
+\end{thm}
+
+\end{document}

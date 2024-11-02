@@ -1,0 +1,1 @@
+![[Mapping Cone.png]]![[Mapping Cone Properties.png]]

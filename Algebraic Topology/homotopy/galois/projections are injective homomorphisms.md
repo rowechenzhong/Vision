@@ -1,0 +1,10 @@
+The fact that covering maps induce subgroups of the [[fundamental group]] is what motivates the entire study of the [[galois correspondence]].
+> [!theorem] Projections are injective homomorphisms
+Let $p: \tilde{X}\to X$ be a covering map. Then, $p_*: \pi_1(\tilde{X}, \tilde{x}_0)\to \pi_1(X, x_0)$ is injective. Furthermore, the image subgroup consists of exactly those homotopy classes of loops in $X$ whose lifts remain loops. 
+
+> [!proof]-
+> Our primary tool will be the [[lifting property]]. 
+ This is trivial, so we'll write out all the details. We must analyze the kernel of $p_*$. Pick some loop $\gamma$ at $\tilde{x}_0$ in $\tilde{X}$ for which $[\gamma]$ gets mapped to the trivial loop in $X$. In other words, $p\circ \gamma$ is a loop in $X$ at $x_0$, which is homotopic to the trivial loop. By the lifting property, this *uniquely* lifts to a homotopy in $\tilde{X}$. $p\circ \gamma$ lifts to $\gamma$ itself. The trivial loop is stationary at $x_0$, so it lifts to a constant loop at $\tilde{x}_0$. Thus, $\gamma$ is homotopic to the constant loop at $\tilde{x}_0$. Next up: suppose $\gamma$ is a loop in $X$ whose lift remains a loop. This implies that *all* of $[\gamma]$ lifts to loops, via the lifting property. Then clearly all of $[\gamma]$ is part of the image of $p_*$; each loop is the image of its lift. On the other hand, if $\gamma$ is in a homotopy class of loops in the image of $p_*$, then at least some element of this class had a lift, so the whole class has a lift by the lifting property. 
+
+> [!idea] 
+ This might feel kind of strange. A projection sends $X$ to $\tilde{X}$, which is ostensibly \"larger\" to $X$. We just showed that $p_*$ was injective, meaning that $\pi_1(\tilde{X})$ is a subgroup of $\pi_1(X)$. These actually don't contradict each other, because our groups will feel very \"free,\" and free groups behave strangely.

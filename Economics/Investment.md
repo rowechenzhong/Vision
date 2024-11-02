@@ -1,0 +1,1 @@
+The book does not assume strong problem-solving background, or something. Skipped.

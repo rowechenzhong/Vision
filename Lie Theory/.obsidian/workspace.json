@@ -1,0 +1,315 @@
+{
+  "main": {
+    "id": "3d8cba015e6da59a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f34e95a377d477e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43efde3921efbac0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lie Algebras/GLn/Schur-Weyl Duality.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a99e02a88f2ecac0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lie Algebras/GLn/Representations of GL.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2ad0b5e52e91f6e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9863417c8bc923f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72d8a553ad6548b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e365932afb4eaf8d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "3f98477e9eca53d5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "21141a58abd69b3c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d0fbb4b873e16de1",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Lie Algebras/GLn/Schur-Weyl Duality.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [
+                    {
+                      "query": "path:Lie/ ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:\"Lie Algebras/GLn/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:\"Lie Algebras/Core\"  ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Lie Algebras/Root Systems\"  ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431378
+                      }
+                    },
+                    {
+                      "query": "path:\"Lie Algebras/Universal Enveloping Algebra\"  ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:\"Lie Algebras\"  ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1.23745454545455,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.6423430687510112,
+                  "close": false
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 346.51103591918945,
+    "collapsed": true
+  },
+  "right": {
+    "id": "70876c55eafe561d",
+    "type": "split",
+    "children": [
+      {
+        "id": "37214656731dd7da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d8e401727da66b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c8338d49929b48a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Lie Algebras/GLn/Schur-Weyl Duality.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b7bba97d42829f2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Lie Algebras/GLn/Schur-Weyl Duality.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6656c33aadbb00c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Lie Algebras/GLn/Schur-Weyl Duality.md"
+              }
+            }
+          },
+          {
+            "id": "e149fd2ef76ec771",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 964.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "43efde3921efbac0",
+  "lastOpenFiles": [
+    "Untitled 1.md",
+    "Lie Algebras/GLn/Schur-Weyl Duality.md",
+    "Untitled.md",
+    "hw/hw3.synctex(busy)",
+    "hw/pdflatex12828.fls",
+    "hw/hw3.out",
+    "hw/hw3.log",
+    "hw/hw3.fls",
+    "hw/pdflatex16212.fls",
+    "hw/hw3.fdb_latexmk",
+    "hw/hw3.aux",
+    "hw/pdflatex18616.fls",
+    "hw/pdflatex2696.fls",
+    "Lie Algebras/Lie Algebras Homepage.md",
+    "Frobenius Character Formula.md",
+    "Lie Algebras/GLn/Representations of GL.md",
+    "Lie Algebras/GLn/Schur Functors.md",
+    "Weyl Dimension Formula.md",
+    "Weyl Character Formula.md",
+    "Lie Algebras/Characters in Lie Groups.md",
+    "Sign Character.md",
+    "Lie Algebras/Core/Lie Algebra.md",
+    "Howe Duality.md",
+    "Fundamental Theorem of Invariant Theory.md",
+    "Lie Algebras/GLn/Representations of SL.md",
+    "Lie Algebras/Root Systems/Dominant Weights.md",
+    "Lie Algebras/Universal Enveloping Algebra/Verma Module.md",
+    "Sierre Presentation.md",
+    "Lie Algebras/semisimple algebra.md",
+    "Lie Algebras/Radical.md",
+    "Lie Algebras/Representation Theory/fundamental representation.md",
+    "Lie Algebras/Core/Borel Subalgebra.md",
+    "Lie Algebras/All finite irreps are main diagonals.md",
+    "Lie Algebras/Root Systems/Classification of Simple Lie Algebras.md",
+    "hw/SL3_weight.jpg",
+    "Lie Algebras/Core/Fundamental Theorems of Lie Theory.md",
+    "Lie/SL2 Worked example.md",
+    "Lie Theory/Lie/hw/Root_vectors_b3_c3-d3.png",
+    "Lie Theory/Lie/hw/rootsystems.png",
+    "Lie Theory/Lie/hw/G2.png",
+    "Lie Theory/Lie/hw/C3.png",
+    "Lie Theory/Lie/hw/A2.png",
+    "Lie Theory/Lie/E6_SU5.png",
+    "Lie Theory/Lie/E6_SU2SU3.png",
+    "Lie Theory/Lie/E6_SO10.png",
+    "Lie Theory/Lie/E6.png",
+    "Untitled.canvas"
+  ]
+}

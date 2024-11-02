@@ -1,0 +1,1 @@
+In the below, $K_n = \im f_{n+1}\subset C_n$.![[fracture a long exact sequence into short exact sequences.png]]

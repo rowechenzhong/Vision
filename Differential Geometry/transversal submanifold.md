@@ -1,0 +1,3 @@
+Suppose you have an [[Embedding|embedded submanifold]] $S\subset M$ of dimension $k\leq n$. Pick an $x\in S$. A ==**transversal submanifold**== is an embedded submanifold $Q$ such that $T_x M = T_xQ \oplus T_x S$.
+
+This always exists, because the [[k-slicing theorem]] says that there's a chart around $x$ where $S$ looks like a plane; then we can take the image of a small (linearly) independent disk.

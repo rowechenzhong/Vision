@@ -1,0 +1,1 @@
+A ==**irreducible representation**== is one that has no invariant subspaces.

@@ -1,0 +1,1 @@
+A ==**ring**== is like a field (see [[measure]]) except that it doesn't have to contain $\Omega$. It is a nonempty family of sets $\mathcal{R}$ which is closed under $A\cup B \in \mathcal{R}$ and $A \setminus B \in \mathcal{R}$.

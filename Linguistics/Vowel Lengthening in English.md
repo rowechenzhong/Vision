@@ -1,0 +1,1 @@
+English vowels are [[Vowel Lengthening|lengthened]] when followed by a voiced obstruent in the coda position of the same syllable.

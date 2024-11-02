@@ -1,0 +1,3 @@
+Give a partition $\lambda$ of $N$, we defined the ==**Schur functor**== $S^\lambda$ on the category of $\CC$-vector spaces by $S^\lambda V = \Hom_{S_N}(\pi_\lambda, V^{\otimes N})$.
+
+This is yields a $\GL(V)$-representation isomorphic to $L_\lambda$, or to isomorphic to any subspace of $V^{\otimes N}$ with highest weight $\lambda$. We can compute its dimension with the [[Weyl Dimension Formula]] to yield $\dim S^\lambda V = P_\lambda(N)$, where $P_\lambda(N)$ is an integer-valued polynomial with roots on all integers in the interval $[1-\lambda_1,k-1]$.

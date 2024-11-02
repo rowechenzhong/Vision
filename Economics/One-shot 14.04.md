@@ -1,0 +1,23 @@
+We're doing physicist's math, so we ignore any singular phenomena in the sequel. We begin by postulating a collection of $n$ products $(x_i)_{i = 1}^n$ which take on $\RR_{\geq 0}^n$ values, and a utility function $u(x)$ which is
+- smooth (in examples which violate smoothness, consider a suitable limit of mollifications)
+- strictly increasing in each component (non-satiation)
+It is sometimes useful to think of $u: \RR^n_{\geq 0}\to\mathcal{U}$ where $\mathcal{U}$ is some abstract qualitative space. Given a price vector $p\in \RR^n_{\geq 0}$ and income $I\in \RR_{\geq 0}$, the admissible region is $\bar{B}(p, I) = \{x: p_ix^i\leq I\}$. The indirect utility function is $V(p, I) = \max_{x\in B(p, I)} u(x)$; this is always saturated on $B(p,I) = \{x: p_ix^i = I\}$ by non-decreasing. The Marshallian demand function is $x^{i}(p, I) = \arg\max_{x\in B(p, I)} u(x)$. The deep thing about the maxima under constraints is that perturbations to your constraints directly affect your utility to first order, and issues of "optimal" infinitesimal allocation affect your utility to second order; this is the Envelope theorem. Hence $\frac{\pa V}{\pa p} = -x\frac{\pa V}{\pa I}$; this is Roy's theorem. An elasticity is a partial derivative in log space; hence income and (own-price/cross-price) elasticity are $\frac{\pa \log x}{\pa \log I}$, $\frac{\pa \log x^i}{\pa \log p_j}$.
+
+The second deep idea: all of these quantities are unnatural because the $(p, I)$ basis is unnatural; we would prefer to discuss in terms of $u$. E.g. $x(p,I)$ is not always component-wise increasing with $I$. Hence e.g. own-price elasticity can be $> 0$ (a "Giffen good"), because when price increases, the value of money decreases.
+
+We can invert $u = V(p, I)$ for $I = E(p, u)$, yielding $x^i(p, u)$ (Hicksian demand function) by composition. Note that $I$ is not obviously natural to select for this basis change. In the sequel we will be explicit about $(p, u)$ versus $(p, I)$ basis. $E$ is concave in $p$, trivially. By Envelope, $x^i = \frac{\pa E}{\pa p_i}$; this is Shepherd's lemma. Hence $\frac{\pa x^i}{\pa p_i}\big\vert_u$ has negative diagonal trivially; there are no "Hicksian Giffen goods" as desired. By basis changing, we obtain $\frac{\pa x^i}{\pa p_j}\big\vert_{u} = \frac{\pa x^i}{\pa p_j}\big\vert_{I} + \frac{\pa x^i}{\pa I}\big\vert_p \frac{\pa E}{\pa p_j} =  \frac{\pa x^i}{\pa p_j}\big\vert_{I} + \frac{\pa x^i}{\pa I}\big\vert_p x^j$ which is the Slutsky equation. 
+
+Let's discuss second-order effects qualitatively. Given a price change $p\to p'$, a consumer is affected qualitatively by a change in utility function $u = u(p, I)\to u' = u(p', I)$. This can be quantified in two ways, because the value of money has changed. The Compensating Variation is $E(p', u) - E(p', u') = E(p', u) - E(p, u)$; it answers the questions:
+- How much should I be compensated for my change in utility -- *after* the event occurs, what is the *negative* of my utility change as measured in the new value of money?
+- How much more money would I need to spend in the new money, versus the old money, to obtain my old utility?
+The Equivalent Variation is $E(p, u)- E(p, u') = E(p', u') - E(p, u')$; it answers the questions:
+- How much should I (pay/be paid) for the incoming change, before it occurs? -- I can cash out this payment before the price change takes place! -- what is the *negative* of my utility change as measured in the old value of money?
+- What is the equivalent lump sum I would have to (pay/be paid) today to match the utility change I'll see after the change? (I'm just repeating myself.)
+
+The second-order effect, of course, is that when the price change is positive, money decreases in value, and $CV > EV> 0$ because a larger absolute value of the devalued money is needed to represent the same loss in utility. If instead the price change is negative, money increases in value, and $0 > CV > EV$ (i.e. $\abs{EV} > \abs{CV}$) because a smaller absolute value of the more-valuable money is needed to represent the same increase in utility.
+
+Note that the $CV$ and $EV$ are both integrals of the Hicksian demand curve. To round it out, we can include $\Delta CS$ which is the change in consumer surplus (measured by the integral of the Marshallian demand curve); $\Delta CS$ will always lie between $CV$ and $EV$, because the $\Delta CS$ curve passes through the limits of integration at $(x(p, I), p)$ and $(x(p', I), p)$.
+
+The Naive (Slutsky) variation of $(p'_i - p_i)x^i$ is a wild over-estimate of both the $CV$ and the $EV$;$$
+(p'_i - p_i)x^i \geq E(p', u) - E(p, u) = CV
+$$because the first inequality is an "obvious mistake" of not choosing the correct bundle $x'$ for price vector $p'$.

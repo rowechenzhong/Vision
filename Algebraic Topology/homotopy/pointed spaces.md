@@ -1,0 +1,2 @@
+> [!definition] Pointed Spaces
+ A ==**pointed space**== is a pair $(X, x_0)$ where $X$ is a space and $x_0\in X$ is a special point called the ==**basepoint**==. A continuous map between pointed spaces $f: (X, x_0)\to (Y, y_0)$ is also required to send $x_0$ to $y_0$.

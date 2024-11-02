@@ -1,0 +1,441 @@
+{
+  "main": {
+    "id": "3d8cba015e6da59a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4f49d5113383618",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad4c3346e8cefa95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Adapted Continuous-Time Processes.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2ad0b5e52e91f6e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9863417c8bc923f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72d8a553ad6548b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e365932afb4eaf8d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "21141a58abd69b3c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d0fbb4b873e16de1",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Adapted Continuous-Time Processes.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [
+                    {
+                      "query": "path:functional/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:homotopy/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:Lie/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Differential Geometry\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5429074
+                      }
+                    },
+                    {
+                      "query": "path:\"Tensor Fields/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:measure/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    },
+                    {
+                      "query": "path:integration/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5395168
+                      }
+                    },
+                    {
+                      "query": "path:Probability/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11621088
+                      }
+                    },
+                    {
+                      "query": "path:\"Lie Algebras/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 6736896
+                      }
+                    },
+                    {
+                      "query": "path:homology/ ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:\"Stochastic Calculus\"  ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 12630555
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1.23745454545455,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.6423430687510112,
+                  "close": false
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 346.51103591918945
+  },
+  "right": {
+    "id": "70876c55eafe561d",
+    "type": "split",
+    "children": [
+      {
+        "id": "37214656731dd7da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d8e401727da66b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c8338d49929b48a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Adapted Continuous-Time Processes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b7bba97d42829f2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Adapted Continuous-Time Processes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6656c33aadbb00c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Adapted Continuous-Time Processes.md"
+              }
+            }
+          },
+          {
+            "id": "22e3b88618a3b7a8",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Adapted Continuous-Time Processes.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 2,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [
+                    {
+                      "query": "path:functional/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:homotopy/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:Lie/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Differential Geometry\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5429074
+                      }
+                    },
+                    {
+                      "query": "path:\"Tensor Fields/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:measure/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    },
+                    {
+                      "query": "path:integration/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5395168
+                      }
+                    },
+                    {
+                      "query": "path:Probability/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11621088
+                      }
+                    },
+                    {
+                      "query": "path:\"Lie Algebras/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 6736896
+                      }
+                    },
+                    {
+                      "query": "path:homology/ ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:\"Stochastic Calculus\"  ",
+                      "color": {
+                        "a": 1,
+                        "rgb": 12630555
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1.58654545454545,
+                  "lineSizeMultiplier": 3.37854545454545,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 63,
+                  "scale": 1.0836030544960438,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "e149fd2ef76ec771",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 538.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "ad4c3346e8cefa95",
+  "lastOpenFiles": [
+    "Probability/Doob's upcrossing inequality.md",
+    "Untitled 2.md",
+    "Probability/Optional Stopping Theorem.md",
+    "Probability/upcrossings.md",
+    "Discrete Doob's Lp Inequalities.md",
+    "Probability/Discrete Doob's Maximal Inequalities.md",
+    "Square Integrable Martingale.md",
+    "Stochastic Calculus/Importing Doob Theorems to Continuous Time.md",
+    "Stochastic Calculus/Random Processes in Continuous Time.md",
+    "Stochastic Calculus/Martingales in Continuous Time.md",
+    "basic properties of CTMs.md",
+    "Independent Increments.md",
+    "Poisson Process.md",
+    "Stochastic Calculus/examples of CTMs.md",
+    "Stochastic Calculus/Continuous Random Process Definitions.md",
+    "Elementary Stopping Time Constructions.md",
+    "Continuous Time Stopping Times.md",
+    "Stochastic Calculus/Elementary Properties of Continuous Stopping Times.md",
+    "Index Progressive Process at Stopping Time.md",
+    "Adapted Continuous-Time Processes.md",
+    "Continuous Stopping Time Intuition.md",
+    "Stochastic Calculus/RPCT intuition.md",
+    "Stochastic Calculus/Importing Optional stopping to Continuous Time.md",
+    "Probability/Kolmogorov's Zero-One Law.md",
+    "Stochastic Calculus/hw/pdflatex10300.fls",
+    "Stochastic Calculus/hw/2.out",
+    "Stochastic Calculus/hw/2.synctex(busy)",
+    "Stochastic Calculus/hw/2.log",
+    "Stochastic Calculus/hw/2.fls",
+    "Stochastic Calculus/hw/pdflatex19184.fls",
+    "Stochastic Calculus/hw/2.fdb_latexmk",
+    "Stochastic Calculus/hw/2.aux",
+    "Stochastic Calculus/hw/pdflatex7936.fls",
+    "Stochastic Calculus/hw/pdflatex11564.fls",
+    "measure/Borel-Cantelli.md",
+    "Basic properties of Brownian Motion.md",
+    "Algebraic Topology/homotopy/images/homotopy.png",
+    "Algebraic Topology/homology/Exact Sequence.png",
+    "Algebraic Topology/homology/Chain Map.png",
+    "Algebraic Topology/homology/Chain Homotopy.png",
+    "Algebraic Topology/homology/Chain Complex.png",
+    "Lie Theory/Lie/hw/Root_vectors_b3_c3-d3.png",
+    "Lie Theory/Lie/hw/rootsystems.png",
+    "Lie Theory/Lie/hw/G2.png",
+    "Lie Theory/Lie/hw/C3.png",
+    "Lie Theory/Lie/hw/A2.png",
+    "Untitled.canvas"
+  ]
+}

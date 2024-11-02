@@ -1,0 +1,1 @@
+A ==**path**== in a space $X$ is a continuous function $p: I\to X$.

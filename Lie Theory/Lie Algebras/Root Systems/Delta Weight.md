@@ -1,0 +1,1 @@
+Let $\delta = \frac12 \sum_{\alpha \succ 0} \alpha\in \Lambda$. This is in fact $\sum_{j\leq \ell} \lambda_j$, a strongly dominant weight.

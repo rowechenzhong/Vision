@@ -1,0 +1,415 @@
+{
+  "main": {
+    "id": "3d8cba015e6da59a",
+    "type": "split",
+    "children": [
+      {
+        "id": "57967d4980ef2f42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "654fed3312bf92e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Differential.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ba43239f1235c816",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tangent spaces.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2ad0b5e52e91f6e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9863417c8bc923f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72d8a553ad6548b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e365932afb4eaf8d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "3f98477e9eca53d5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "21141a58abd69b3c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d0fbb4b873e16de1",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Differential.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [
+                    {
+                      "query": "path:functional/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:homotopy/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:Lie/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Differential Geometry\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431378
+                      }
+                    },
+                    {
+                      "query": "path:\"Tensor Fields/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:measure/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    },
+                    {
+                      "query": "path:integration/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5395168
+                      }
+                    },
+                    {
+                      "query": "path:Probability/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11621088
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1.23745454545455,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.6423430687510112,
+                  "close": false
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 346.51103591918945
+  },
+  "right": {
+    "id": "70876c55eafe561d",
+    "type": "split",
+    "children": [
+      {
+        "id": "37214656731dd7da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d8e401727da66b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c8338d49929b48a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Differential.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b7bba97d42829f2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Differential.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b6656c33aadbb00c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Differential.md"
+              }
+            }
+          },
+          {
+            "id": "22e3b88618a3b7a8",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Differential.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 2,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [
+                    {
+                      "query": "path:functional/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14701138
+                      }
+                    },
+                    {
+                      "query": "path:homotopy/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 14725458
+                      }
+                    },
+                    {
+                      "query": "path:Lie/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11657298
+                      }
+                    },
+                    {
+                      "query": "path:\"Differential Geometry\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431378
+                      }
+                    },
+                    {
+                      "query": "path:\"Tensor Fields/\"",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5431473
+                      }
+                    },
+                    {
+                      "query": "path:measure/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5419488
+                      }
+                    },
+                    {
+                      "query": "path:integration/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 5395168
+                      }
+                    },
+                    {
+                      "query": "path:Probability/",
+                      "color": {
+                        "a": 1,
+                        "rgb": 11621088
+                      }
+                    }
+                  ],
+                  "collapse-display": true,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1.58654545454545,
+                  "lineSizeMultiplier": 3.37854545454545,
+                  "collapse-forces": false,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 63,
+                  "scale": 1.0836030544960438,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "e149fd2ef76ec771",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 538.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "21141a58abd69b3c",
+  "lastOpenFiles": [
+    "Tensor Fields/Tangent Bundle.md",
+    "Tangent spaces.md",
+    "Tensor Fields/Vector Bundle.md",
+    "clutching functions.md",
+    "Tensor Fields/Fiber Bundle.md",
+    "Tensor Fields/Tensor Field.md",
+    "Tensor Fields/Differential Forms.md",
+    "Inverse Function Theorem.md",
+    "implicit function theorem.md",
+    "k-slicing theorem.md",
+    "Untitled 1.md",
+    "Contraction Mapping Theorem.md",
+    "Banach Fixed-point Theorem.md",
+    "contraction mapping.md",
+    "Untitled.md",
+    "preamble.sty",
+    "Differential Geometry/Inverse and Implicit Function Theorems.md",
+    "homology/Homology Theory.md",
+    "Differential Geometry/Tensor Fields/Tensor Field.md",
+    "Lie Algebras/Lie Algebras.md",
+    "Lie Algebras/Lie Algebra.md",
+    "Lie/Lie Groups.md",
+    "Differential Geometry/k-slicing theorem.md",
+    "homology/Reduced Homology Groups.md",
+    "homology/Introductory Exercises on Singular Homology.md",
+    "homology/Singular Homology.md",
+    "Differential Geometry/Embedding.md",
+    "measure/hw/hw6.synctex(busy)",
+    "measure/hw/pdflatex20236.fls",
+    "measure/hw/hw6.out",
+    "measure/hw/hw6.log",
+    "measure/hw/hw6.fls",
+    "measure/hw/pdflatex1568.fls",
+    "measure/hw/hw6.fdb_latexmk",
+    "measure/hw/hw6.aux",
+    "measure/hw/pdflatex20132.fls",
+    "graph.png",
+    "Lie/hw/rootsystems.png",
+    "Untitled.canvas",
+    "Pasted image 20231116183145.png",
+    "Pasted image 20231115165445.png",
+    "Pasted image 20230928144237.png",
+    "Pasted image 20230928144229.png",
+    "homotopy/images/homotopy.png"
+  ]
+}

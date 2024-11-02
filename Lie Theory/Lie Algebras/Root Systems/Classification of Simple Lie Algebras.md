@@ -1,0 +1,12 @@
+Subsequence:
+- [[Root Systems]]
+- Todo:
+	- [[Weyl Group]]
+	- [[Bases of Root Systems]]
+	- [[Fundamental Domain]]
+	- [[Cartan Matrix]]
+	- [[Classification of Irreducible Root Systems]]
+	- [[Coexter Graphs]]
+	- [[Dynkin Diagrams]]
+	- [[Construction of Root Systems]]
+- [[Weights]]

@@ -1,0 +1,2 @@
+> [!definition] Pushforward Measure
+> Let $(X, \AAA, \mu)$ be a measure space and $(Y, \BBB)$ be a measurable spaces. Let $f: X \to Y$ be a measurable function. Then, the ==**pushforward measure**== $f_\sharp\mu$ on $B\in \BBB$ is defined by $f_\sharp\mu(B) = \mu(f^{-1}(B))$.

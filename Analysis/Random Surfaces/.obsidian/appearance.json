@@ -1,0 +1,10 @@
+{
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "callouts",
+    "highlight"
+  ],
+  "theme": "obsidian",
+  "baseFontSize": 29,
+  "translucency": false
+}

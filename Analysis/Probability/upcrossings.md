@@ -1,0 +1,3 @@
+Suppose $X$ is a (possibly [[Continuous Random Process Definitions|continuous-time]]) [[Discrete-Time Random Process|random process]]. Fix a $\omega \in \Omega$. Let $a,b \in \RR$ with $a < b$. An ==**upcrossing**== of $[a,b]$ by $X(\omega)$ is just a pair $s < t$ such that $X_s(\omega) \leq a$ and $X_t(\omega) \geq b$.
+
+We write $U_n[a,b](\omega)$ for maximum number of *disjoint* upcrossings contained in $[0,n]$, which may be $0$; in discrete time this is bounded by $\frac{n+1}{2}$, while in continuous time this may be $\infty$. We write $U_n[a,b]\uparrow U[a,b]$. In discrete time, $U_n[a,b]$ and $U[a,b]$ are obviously measurable functions. If you restrict $X$ to a countable index set, or add continuity conditions, then this is still true for continuous-time.

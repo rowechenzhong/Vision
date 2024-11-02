@@ -1,0 +1,5 @@
+Let $V, U$ be neighborhoods of $P\in X$. Let us say that $f\in O(V)$, $g\in O(V)$ are ==**equal near**== $P$ if there exists a common neighborhood $W\subset U\cap V$ of $P$ such that $f|_W = g|_W$.
+
+This is also exactly what you would expect; it doesn't mean "approximately equal near $P$"; you really need strict equality on some open neighborhood. This is clearly an equivalence relation. The corresponding equivalence classes are called ==**germs**==.
+
+Then, the algebra of germs of regular functions at $P$ is denoted by $O_P$; its the lump sum of all possible behaviors of functions arbitrarily close to $P$. This basic idea is formalized by the statement: $$O_P = \varinjlim O(U)$$where this funny looking symbol is the [[direct limit]]. This is also an algebra, because the [[Regular Functions]] were algebras.

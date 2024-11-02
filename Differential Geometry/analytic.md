@@ -1,0 +1,1 @@
+An ==**analytic**== function is locally given by a convergent power series; this is more powerful than being smooth.

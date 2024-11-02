@@ -1,0 +1,1 @@
+A ==**measure**== is a function $\mu: \AAA \to [0,\infty]$. This $\mu$ is required to be countably additive, and $\mu(\emptyset) = 0$.

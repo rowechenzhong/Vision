@@ -1,0 +1,15 @@
+[[projections are injective homomorphisms|To each suitable class of covering spaces, there exists a corresponding class of subgroups.]] This subgroup is given precisely by $p_*(\pi_1(\tilde{X}))$. What the Galois Correspondence does is show that this correspondence is surprisingly meaningful.
+- First, we will show this correspondence exists by explicitly [[constructing the galois correspondence]].
+- Then, we will demonstrate a **[[basepoint-preserving isomorphism classes correspond to subgroups|bijection]]** between the set of **basepoint-preserving isomorphism classes of path-connected covering spaces** and the **subgroups of $\pi_1(X, x_0)$**. 
+- Next, we will show that if one ignores the basepoints, this same correspondence gives a **[[isomorphism classes correspond to conjugacy classes|bijection]]** between **isomorphism classes of path-connected covering spaces** and **conjugacy classes of subgroups of $\pi_1(X, x_0)$**. 
+- Finally, we will show that the [[galois correspondence preserves the natural poset ordering]] on subgroups and covering spaces.
+
+# Connected Components 
+
+So far we have mainly discussed connected covering spaces, which are nice because they correspond to *surjective* actions under $\pi_1(X,x_0)$. You can probably expect what happens in the general case; the covering space won't be a single subgroup, but a whole bunch of them acting independently. 
+
+> [!problem] 
+Suppose $p:\tilde{X}\to X$ is a covering space of an ==*unloopable*== $X$. Exhibit a bijection between the connected components of $\tilde{X}$ and the *orbits* of the action of $\pi_1(X, x_0)$ on the fiber $p^{-1}(x_0)$. Then, take any particular lift $\tilde{x}_0 \in p^{-1}(x_0)$. Let $C$ be the connected component of $\tilde{X}$ containing $\tilde{x}_0$, which is naturally a covering space of $X$. Show that under the Galois correspondence, $C$ corresponds to the *stabilizer* of $\tilde{x}_0$. 
+
+> [!solution]-
+Orbits are a partition of $p^{-1}(x_0)$. Connected components also induce a partition of $p^{-1}(x_0)$. We wish to show that these partitions are the same; $\tilde{x}, \tilde{x}'\in p^{-1}(x_0)$ are in the same connected component iff there exists a homotopy class $[\gamma]$ lifting to a path from $\tilde{x}$ to $\tilde{x}'$. Well, this is completely trivial; if there's a path from $\tilde{x}$ to $\tilde{x}'$ in $X'$ then it projects down to a path in $X$, which must lift to the original path by unique lifting. On the other hand, if there exists any path from $\tilde{x}$ to $\tilde{x}'$ they must be in the same connected component. The stabilizer of $\tilde{x}_0$ is a subgroup of $\pi_1(X, x_0)$ which fixes $\tilde{x}_0$; it contains all $[\gamma]$ which lift to a loop at $\tilde{x}_0$ in $C$. $p_* \pi_1(C, \tilde{x}_0)$ contains precisely those paths which lift to a loop at $\tilde{x}_0$.

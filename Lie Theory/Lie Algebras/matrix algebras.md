@@ -1,0 +1,1 @@
+A matrix algebra is an algebra of the form $\End V$ for some (finite-dimensional?) vector space $V$. This is usually written $Mat_d(k)$.

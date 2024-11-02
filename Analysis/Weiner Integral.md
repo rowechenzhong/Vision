@@ -1,0 +1,1 @@
+Let $B$ be a [[pre-Brownian motion]] and let $G$ be its [[Gaussian White Noise|GWN]]. Note that $G$ is determined by $B$ (because we have prescribed all intervals). Sometimes, we will write, for $f\in L^2(\RR_+, \BBB(\RR_+), dt)$,$$G(f) = \int_0^\infty f(s)dB_s.$$This is the ==**Wiener Integral**== with respect to $B$.

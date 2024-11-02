@@ -1,0 +1,2 @@
+A ==**Chain map**== $\phi: C\to D$ between two [[Chain Complexes]] $(C_n, \pa_n(C))$ and $(D_n, \pa_n(D))$ is a collection of homomorphisms $f_n:C_n\to D_n$ such that $\pa_n(D)\circ f_n = f_{n-1}\circ \pa_n(C)$. This is the following [[Commutative Diagram]]:
+![[Chain Map.png]]
