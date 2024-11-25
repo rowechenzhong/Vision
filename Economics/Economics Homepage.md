@@ -28,7 +28,8 @@ Here are some notes. I looked at the OCW but the notes are too scarce, so instea
 # 14.02 Blitz
 This class seems content-sparse.
 1. [[First 6 Lectures]]
-2. 
+2. [[Lectures 7 - 10]]
+3. [[Solow Model]]
 
 # Some 14.04 Topics
 
@@ -36,9 +37,18 @@ This class seems content-sparse.
 2. [[Preferences]]
 3. [[Technical Progress]]
 
+# Some 14.12 Topics
+1. [[Subgame-Perfect Nash Equilibrium]]
+2. [[Repeated Games]]
+3. [[Incomplete Information Games]]
+4. 
+
 # Some 14.19 Topics (Game Theory!)
 
 1. [[Vickrey-Clarke-Groves Mechanism]]
 2. [[Housing]]
 3. [[Marriage Problems]]
-4.
+4. [[College Admissions]]
+5. [[Large Matching Markets]]
+6. [[Firms]]
+7. 

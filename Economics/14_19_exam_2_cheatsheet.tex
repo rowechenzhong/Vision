@@ -1,0 +1,420 @@
+\documentclass[8pt]{scrartcl}
+\usepackage{savetrees}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+
+\newcommand{\var}{\operatorname{var}}
+\newcommand{\vocab}[1]{\textbf{\color{blue} #1}}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\pa}{\partial}
+\newcommand{\der}{\text{d}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\renewcommand{\section}[1]{\begin{center}\textbf{\color{red}#1}\end{center}}
+\renewcommand{\subsection}[1]{
+
+% create definition and theorem environments; they should just be blue and purple.
+\noindent \textbf{\color{red} $\star$ #1}}
+
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+
+\DeclareMathOperator*{\argmin}{argmin \ }
+\DeclareMathOperator*{\argmax}{argmax \ }
+
+\title{14.19 Cheatsheet 2}
+\author{Rowechen Zhong}
+\date{}
+\begin{document}
+\maketitle
+\begin{multicols*}{2}
+
+    \section{Arrow's Theorem}
+    \vocab{Universal Domain}: Admits all of $\Pi^n$.
+    \vocab{Pareto Efficiency:} $\forall a\neq b$ if all $a \succ_i b$ then $a\succ b$.
+    \vocab{Independence of Irrelevant Alternatives:}
+    $a\succ b$ is a function of $\left(a\succ_i b\right)_i$ only.
+
+    \vocab{Arrow's Theorem}: If $n\geq 3$, UD, PE, and IIA,
+    then the only social welfare function is a dictatorship.
+    \section{Social Choice Functions and Mechanisms}
+
+    \vocab{Revelation Principle}: Any SCF which can be implemented by a Bayesian-Nash
+    equilibrium can also be implemented by a BNIC mechanism. Any SCF which can be
+    implemented in dominant-strategies can also be implemented by a SP mechanism.
+
+    \vocab{Pareto Efficient} if for any state of the world, it chooses a social outcome
+    such that there exists no other social outcome that would
+    make everybody weakly better off and at least one agent strictly better off.
+    \vocab{Dictatorial} if there exists an agent $i$ such that for all
+    states $t \in T$, $\phi(t)$ is the top social alternative of $i$ when his type is $t_i$.
+
+    \vocab{Gibbard-Satterthwaite Theorem}: If $|A| \geq 3$ is finite and types of agents
+    are such that the utility functions represent \emph{all strict preference rankings} on $A$,
+    then any Pareto-efficient and strategy-proof mechanism is necessarily dictatorial.
+
+    Notably, utilities which allow for indifference
+    between alternatives are not covered by this theorem.
+
+    \section{Vickrey-Clarke-Groves Mechanism}
+        Each agent receives a monetary transfer designed to incentivize truthful reporting of their preferences. The transfer for agent \( i \) is determined as follows:
+        \[
+        y_i(t) = \sum_{j \neq i} v_j(t_j, d^*(t)) - \sum_{j \neq i} v_j(t_j, d^*(t_{-i}))
+        \]
+        where:
+        - \( d^*(t) \) is the efficient outcome when all agents' types are reported.
+        - \( d^*(t_{-i}) \) is the efficient outcome when agent \( i \) is excluded from the decision-making process (i.e., \( t_{-i} = (t_1, t_2, \dots, t_{i-1}, t_{i+1}, \dots, t_n) \)).
+        - The transfer \( y_i(t) \) represents the difference in the welfare of the other agents when agent \( i \) is included versus when agent \( i \) is excluded. This is called the \vocab{marginal contribution} of agent \( i \) to society.
+
+        The utility that agent \( i \) derives from participating in the mechanism is:
+        \[
+        u_i(t_i, t) = v_i(t_i, d^*(t)) + y_i(t)
+        \]
+        This utility consists of two parts: the direct utility from the chosen outcome \( d^*(t) \), and the transfer \( y_i(t) \).
+\vocab{Truthful Reporting as a Dominant Strategy}
+    In the VCG mechanism, truthful reporting of an agent's type \( t_i \) maximizes their utility, as their payment \( y_i \) is designed to account for their contribution to the overall welfare. Thus, truth-telling is a \vocab{dominant strategy} for each agent.
+    The mechanism is \vocab{efficient} because it is strategy-proof (it is not GTO
+    to deviate from telling the truth if nobody else deviates) and conditioned on
+    truth-telling it selects the utilitarian alternative (trivially).
+
+    \vocab{Groves}: Adding some $x_i(t_{-i})$ to the transfer rule $y_i$ does not
+    affect the efficiency of VCG; hence all of these are strategy-proof.
+    \vocab{Holmstrom-Green-Laffont}: If $d:T\to A$ is efficient, $(d,y)$ is
+    strategy-proof, and all type spaces are complete, then the transfer rule must be
+    VCG (plus constants).
+
+    \section{Housing Market}
+    \begin{enumerate}
+        \item \vocab{Housing Market} (Shapley - Scarf, 1974):
+        \[
+        \langle I, H, \succ, \mu \rangle
+        \]
+        where:
+        $\bullet$ \( I \): set of agents.
+        $\bullet$ \( H \): set of houses with \( |H| = |I| \).
+        $\bullet$ \( \succ \): list of strict preferences over houses.
+        $\bullet$ \( \mu \): initial endowment matching.
+        $\bullet$ \vocab{Pareto Efficiency}: Matching \( \mu \) is Pareto efficient if there is no matching \( \nu \) such that:
+        \[
+        \mu(i) \succeq_i \nu(i) \quad \forall i \in I, \quad \text{and} \quad \mu(i) \succ_i \nu(i) \quad \text{for some } i \in I
+        \]
+        
+        \item \vocab{Efficiency Equilibrium}: A matching $\mu$ is efficient if there
+        exists a price vectors $\pi$ such that $\forall i,j$ $\mu(j) \prec_i \mu(i)$
+        implies $p(\mu(j)) > p(\mu(i))$ i.e. nobody can afford a better house.
+        
+        A \vocab{competitive equilibrium}
+        is just an efficient matching $\nu$ which respects the initial endowment;
+        $p(\nu(i)) = p(\mu(i))$ for all $i$.
+
+        \item \vocab{Core of the Housing Market}:
+        A matching \( \eta \) is in the core if there is no coalition \( T \subseteq I \) and matching \( \nu\neq \mu \) such that:
+        \[
+        \nu(i) \in \{h_i\}_{i \in T}, \quad \nu(i) \succeq_i \eta(i) \quad \forall i \in T
+        \]
+        i.e. a subset which can weakly improve through internal collusion.
+        (If we only consider subsets of size 1, then this is called \vocab{individually rational}).
+
+        \item \vocab{Gale’s Top Trading Cycles (TTC) Algorithm}:
+        $\bullet$ Agents point to the owner of their favorite house.
+        $\bullet$ A cycle is formed, and each agent in the cycle is assigned their most preferred house.
+        $\bullet$ This process is repeated until all agents are assigned a house.
+
+        \item \vocab{Core Properties}:
+        $\bullet$ The outcome of Gale’s TTC algorithm is the unique matching in the core.
+        $\bullet$ This matching is the unique competitive allocation; there exists
+        a price vector $\pi$ that supports this outcome and respetcs the initial endowment.
+        $\bullet$ A direct mechanism is
+        \vocab{strategy-proof} if truth-telling is a dominant strategy. Core is SP.
+
+        \item \vocab{Ma 1994}: Core is the only mechanism which is PE, IR, and SP.
+
+        \item \vocab{Serial Dictatorship}:
+        A serial dictatorship mechanism \( \phi_f \) assigns houses based on a priority ordering \( f \). The agent with highest priority gets their top choice, followed by others in sequence:
+        \[
+        \phi_f[ \succ ] = \mu.
+        \]
+        SD is obviously PE and SP.
+    \end{enumerate}
+
+    \section{Housing Lotteries}
+
+    \textbf{Deep Result (Abdulkadiro˘glu \& S¨onmez, 1998)}
+
+\section{Lotteries}
+
+\begin{itemize}
+    \item \textbf{Definition: Lottery}
+    \begin{itemize}
+        \item A \textit{lottery} is a probability distribution over feasible assignments, formally denoted by:
+        $$ L = \sum \alpha_\mu \cdot \mu $$
+        where $\alpha_\mu \in [0, 1]$ is the probability weight of assignment $\mu: I\to H$.
+        \item Lotteries can be represented as matrices $P = [p_{ih}]$, where $p_{ih}$ is the probability of agent $i$ receiving house $h$.
+        \item The random assignment induced by lottery $\sum \alpha_\mu \cdot \mu$ is:
+        $$ P = \sum \alpha_\mu \cdot \pi(\mu) $$
+        where $\pi(\mu)$ is the corresponding permutation matrix.
+    \end{itemize}
+    \item There are various ways to define efficiency over random allocations:
+    \begin{itemize}
+        \item A lottery is \textit{ex-post efficient} if it assigns positive weight only to Pareto-efficient assignments.
+        \item Two lotteries are \textit{equivalent} if they induce the same random assignments.
+    \end{itemize}
+    \item \textbf{Theorem: Birkhoff-von Neumann Theorem}
+    \begin{itemize}
+        \item Any bistochastic matrix can be expressed as a convex combination of permutation matrices.
+    \end{itemize}
+\end{itemize}
+
+\section{Cardinal Treatment}
+
+\begin{itemize}
+    \item Assign Von Neumann–Morgenstern utility functions.
+    \item \textit{Ex-ante efficiency} is defined by the expectation of this utility function.
+    \item In the sequel, we discard these cardinal utility functions.
+\end{itemize}
+
+\section{Ordinal Treatment}
+
+\begin{itemize}
+    \item Probability distributions over allocations can be strictly preferred by agents.
+    \item A distribution $p$ is preferable to distribution $q$ over $H$ if \textit{every} compatible utility function would prefer $p$ to $q$.
+    \item We use the poset induced by lexicographic ordering via the ordinal preference function.
+    \item \textbf{Definition: Stochastic Dominance and Ordinal Efficiency}
+    \begin{itemize}
+        \item Given two random consumptions $P_i$ and $Q_i$ with strict preference $\succ_i$:
+        $$ \forall h \in H, \quad \sum_{h' \succeq_i h} p_{ih'} \geq \sum_{h' \succeq_i h} q_{ih'} $$
+        \item A random assignment $P$ is \textit{ordinally efficient} if it is not stochastically dominated by any other random assignment under preference ordering $\succ$.
+    \end{itemize}
+\end{itemize}
+
+\section{Probabilistic Serial (PS) Mechanism}
+
+\begin{itemize}
+    \item To realize an OE mechanism:
+    \begin{itemize}
+        \item Treat each house as a real-valued reservoir.
+        \item Agents "eat" from their top choices at the same rate as houses are consumed, moving to secondary choices as needed.
+    \end{itemize}
+    \item This mechanism is greedily OE.
+    \item The proof is tedious but conceptually straightforward.
+    \item \textbf{Note on SP}
+    \begin{itemize}
+        \item SP is not well-defined here since ordinal preferences do not induce a total ordering over probability distributions.
+        \item Assigning a VNM utility function, PS may not be SP.
+        \item If a single agent $i$'s utility function $u_i$ is fixed, there exists some $N$ such that if $n\geq N$, it is dominant for $i$ to truthfully reveal preferences under SP.
+    \end{itemize}
+\end{itemize}
+
+\section{Marriage Problem}
+
+A \textit{marriage problem} is a triple $(M, W, R)$ where:
+\begin{itemize}
+    \item $M$ is a set of men,
+    \item $W$ is a set of women,
+    \item $R_m \in \Pi^{W \cup \{m\}}$ and $R_w \in \Pi^{W \cup \{m\}}$ are (non-strict) preference functions.
+\end{itemize}
+
+Here, $m R_m w$ implies that man $m$ finds woman $w$ unacceptable. A matching is a permutation $\mu: M \cup W \to M \cup W$ that satisfies the obvious conditions.
+
+\textbf{Types of Matchings:}
+\begin{itemize}
+    \item A matching $\mu$ is \textit{Pareto efficient} in the usual sense.
+    \item Additional terms that generalize IR:
+    \begin{itemize}
+        \item A matching $\mu$ is \textit{blocked} by $i \in M \cup W$ if $i P_i \mu(i)$ (i.e., $i$ does not find the matching acceptable). If $\mu$ is not blocked by anyone, it is \textit{individually rational} (IR).
+        \item A matching $\mu$ is \textit{blocked by a pair} $(m, w) \in M \times W$ if $w P_m \mu(m)$ and $m P_w \mu(w)$.
+        \item A matching is \textit{stable} if it is not blocked by any individual or pair (essentially, IR against individuals and male-female pairs).
+    \end{itemize}
+\end{itemize}
+
+    \textbf{Man-Proposing Deferred Acceptance Algorithm (MPDAA)}
+
+\begin{itemize}
+    \item Each man records a set of women who have rejected him.
+    \item Each woman records a single man who is her current most preferred proposal.
+\end{itemize}
+
+The process:
+\begin{itemize}
+    \item While true:
+    \begin{itemize}
+        \item Each man $m$ who was rejected in the previous step proposes to his top acceptable choice who has not rejected him yet.
+        \item Each woman holds her most preferred acceptable proposal to date and rejects the rest. In particular, a woman may reject a man she previously accepted.
+        \item Terminate if no man is rejected in this step.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Note:} Women weakly improve throughout the process, while men weakly get worse off. Thus, the algorithm terminates due to monovariance.
+
+    MPDAA produces a valid matching.
+
+\textit{Proof:} $\mu$ is stable because it is clearly IR, and a woman would not leave a better match for a worse one, meaning the matching is never blocked by a pair.
+
+    \textbf{Stable Matchings}
+
+\begin{enumerate}
+    \item MPDAA produces a \textit{man-optimal stable matching} $\mu^M$, which is maximal in the poset induced by men.
+    \item It is also minimal in the poset induced by women.
+    \item The \textit{rural hospitals theorem} states that the set of agents matched is the same across all stable matchings.
+\end{enumerate}
+
+Maximality and minimality are straightforward arguments, and the rural hospitals theorem follows by sandwiching these two results.
+
+    \textbf{Lattice Theorem}
+
+The \textit{join} of two stable matchings $\mu$ and $\mu'$ is $\mu \lor_M \mu'$, which assigns each man his more preferred assignment under $\mu$ and $\mu'$, and each woman her less preferred assignment under $\mu$ and $\mu'$. The \textit{meet} is defined analogously.
+
+\textit{Result:} The join and meet of two stable matchings are stable matchings.
+
+    \textbf{You cannot improve strictly for all men}
+
+Even if blocking pairs are allowed, there is no IR matching $\nu$ such that $\nu(m) P_m \mu^M(m)$ for all $m \in M$. In other words, it is impossible to make all men strictly better off.
+
+\section{Mechanisms}
+
+A mechanism $\varphi$ is \textit{stable} if $\varphi(R)$ is stable for all $R$ (where $R$ is the set of responses). Similarly for Pareto efficiency (PE) and individual rationality (IR). Note that stable implies PE and IR. Define $\phi^M$ and $\phi^W$ as selecting the man-optimal and woman-optimal stable matchings for each problem.
+
+    There exists no stable and strategy-proof (SP) mechanism.
+
+\textit{Proof (by counterexample):} This can be shown with a simple example involving only two men and two women in opposing preferences; a man can defect by reporting that his less favored woman is unacceptable.
+
+    $\phi^M$ is strategy-proof for men.
+
+\section{College Admissions Problem}
+
+A \textit{college admissions problem} is a four-tuple $(C,S,q,R)$ where:
+\begin{itemize}
+    \item $C = \{c_1, \dots, c_m\}$ are colleges
+    \item $S = \{s_1, \dots, s_n\}$ are students
+    \item $q = (q_{c_1}, \dots, q_{c_m})$ are college capacities
+    \item $R = (R_{c_1}, \dots, R_{c_m}, R_{s_1}, \dots, R_{s_n})$ are preferences.
+    \begin{itemize}
+        \item Each $R_s$ is a preference relation over $C \cup \{\emptyset\}$
+        \item Each $R_c$ is a preference relation over $2^S$
+        \item $P_c, P_s$ are strict preferences derived from $R_c$ and $R_s$.
+    \end{itemize}
+\end{itemize}
+
+A college preference $R_c$ is \textit{responsive} if:
+\begin{itemize}
+    \item For each $T \subset S$ with $\abs{T} < q_c$ and every $s \in S \setminus T$, $(T \cup \{s\}) P_c T \iff \{s\} P_c \emptyset$.
+    \item Along the $(1, \dots, 1)$ slices of the cube, it is locally a prism: for every $T \subset S$ with $\abs{T} < q_c$ and all $s, s' \in S \setminus T$, $(T \cup \{s\}) P_c (T \cup \{s'\}) \iff \{s\} P_c \{s'\}$.
+\end{itemize}
+
+We assume college preferences are always responsive.
+
+\begin{itemize}
+    \item \textbf{Rigidity}
+    \begin{itemize}
+        \item This does not simplify the description substantially. Knowing that $\emptyset \prec \{1\} \prec \{2\} \prec \{3\}$ still induces a non-trivial Hasse diagram where $\{1,2\}$ and $\{3\}$ are incomparable. Along $(1, \dots, 1)$ slices, it is fixed by the level-$1$ permutation.
+        \item However, for simplicity, the theory proceeds as if the "important parts" of the preference function are determined by preferences on $\emptyset, \{s_1\}, \dots, \{s_n\}$ only.
+    \end{itemize}
+\end{itemize}
+
+A \textit{matching} is a correspondence $\mu: C \cup S \to C \cup S$. This can be viewed as the union $\mu$ of two functions $\mu_C: c \to 2^S$ and $\mu_S: s \to 2^C$ such that $\abs{\mu(c)} \leq q_c$, $\abs{\mu(s)} \leq 1$, and $s \in \mu(c) \iff \mu(s) \in c$ (forming a bipartite graph with each $c$ having degree $\leq q_c$ and each $s$ having degree $\leq 1$).
+
+One defines notions of \textit{blocked by a (college, student, pair)}, individually rational, and stable. These are based on small finite-case coalitions:
+\begin{itemize}
+    \item $\mu$ is blocked by $c$ if $\exists s \in \mu(c)$ such that $\emptyset P_c s$. Colleges can reject students individually.
+    \item $\mu$ is blocked by $s$ if $\emptyset P_s \mu(s)$.
+    \item $\mu$ is blocked by $(c, s)$ if:
+    \begin{itemize}
+        \item $c P_s \mu(s)$ and $s' \in \mu(c)$ such that $\{s\} P_c \{s'\}$, i.e., a college would replace a student with a preferred one.
+        \item or $\abs{\mu(c)} < q_c$ and $\{s\} P_c \emptyset$.
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{CPDAA and SPDAA}
+    \begin{itemize}
+        \item CPDAA: A college with $r$ standing offers proposes to its top $q_c - r$ remaining acceptable students who have not rejected them yet. Students hold most preferred acceptable offers.
+        \item SPDAA: Analogous.
+    \end{itemize}
+    \item \textbf{College to Marriage}
+    \begin{itemize}
+        \item Divide each college into $q_{c_i}$ slots and match. Given a marriage, a college admission is obtained, and vice versa.
+    \end{itemize}
+    \item \textbf{Stability Lemma}
+    \begin{itemize}
+        \item A college admission is stable if and only if its corresponding marriage is stable.
+    \end{itemize}
+\end{itemize}
+
+The admissions problem as presented may lack intuitive appeal:
+\begin{itemize}
+    \item There is a lattice of stable assignments.
+    \item SPDAA produces $\mu^S$ and CPDAA produces $\mu^C$, which are student-optimal and college-optimal.
+    \item These are maxima and minima on the stable lattice.
+    \item No IR matching makes each student strictly better off than $\mu^S$.
+    \item No stable and SP mechanism exists.
+    \item Truth-telling is dominant for students under SPDAA.
+\end{itemize}
+
+\subsection{New Results}
+
+\begin{itemize}
+    \item A college not filling all positions at some stable matching receives the same set of students in every matching.
+    \item If $\mu$ and $\nu$ are two stable matchings, then either:
+    \begin{itemize}
+        \item For all $s \in \mu(c) \setminus \nu(c)$ and $s' \in \nu(c) \setminus \mu(c)$, $\{s\} P_c \{s'\}$.
+        \item For all $s \in \mu(c) \setminus \nu(c)$ and $s' \in \nu(c) \setminus \mu(c)$, $\{s'\} P_c \{s\}$.
+    \end{itemize}
+    \item No stable mechanism exists where truth-telling is dominant for all colleges.
+\end{itemize}
+
+\section{School Choice Problem}
+
+The \textit{school choice problem} differs from college admissions in that colleges (public schools) have publicly known preferences, often due to regulations. Consequently, the mechanism does not need to be strategy-proof against the schools.
+\begin{itemize}
+    \item \textbf{SPDAA (Gale-Shapley Student Optimal Stable Mechanism)}
+    \begin{itemize}
+        \item \textit{Stable}: No college would reject a student in favor of another who also wants to attend.
+        \item \textit{Pareto dominates} any other stable mechanism.
+        \item \textit{Strategy-proof} for students.
+    \end{itemize}
+    \item However, it is not Pareto efficient for students in general.
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Example (Hastily Written)}
+    \begin{itemize}
+        \item Schools $1, 2, 3$ and students $a, b, c$ with preferences: $1acb, 2bac, 3bac, a213, b123, c123$.
+    \end{itemize}
+\end{itemize}
+
+Alternatively, one can focus on student preferences, using school preferences as priorities for the TTC algorithm:
+\begin{itemize}
+    \item The TTC algorithm (student-preferring version) allows each student to point to a preferred school in cycles, achieving IR, PE, and SP outcomes.
+\end{itemize}
+
+    \textbf{Kelso-Crawford Auction}
+
+This is similar to the Firm-Proposing Deferred Acceptance Algorithm. The process is as follows:
+
+\begin{enumerate}
+    \item Initialize all salaries to $0$.
+    \item Repeat the following steps:
+    \begin{enumerate}
+        \item Each firm makes an offer to its most preferred set of workers under $D^f(s)$. \textit{Offers cannot be withdrawn; the argmax is solely over the remaining workers}.
+        \item Each worker evaluates all offers received and holds the best acceptable offer.
+        \item Terminate if no rejections are made, then increase the salaries by an infinitesimal amount.
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{Notes:}
+\begin{itemize}
+    \item In step 1, even if firms were allowed to withdraw offers, they would not be incentivized to do so (locally), due to the property of gross substitution.
+    \item The worker's best offer (the best salary-firm utility) is non-decreasing throughout the process.
+\end{itemize}
+
+    The Kelso-Crawford auction terminates, producing an allocation in the core that is weakly preferred by every firm to every other core allocation.
+
+
+\end{multicols*}
+\end{document}

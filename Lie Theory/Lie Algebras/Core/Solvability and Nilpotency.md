@@ -18,7 +18,7 @@ There are two chains of ideals that are interesting to us:
 > 
 > I'm not sure about the slick solution for nilpotence, but $(I + J)^{2n}\subset (I^{2n}+J^0) + \cdots + (I^0 + J^{2n}) = 0$.
 
-(The second condition implies there exists a [[Radical|maximal solvable ideal]]).
+(The second condition implies there exists a [[radical|maximal solvable ideal]]).
 
 >[!problem] Solvability bootstrapping
 > If $I$ is a solvable ideal of $L$ such that $L / I$ is solvable, then $L$ is solvable too.

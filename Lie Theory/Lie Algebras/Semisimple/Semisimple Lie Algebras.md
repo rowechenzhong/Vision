@@ -4,7 +4,7 @@ aliases:
 ---
 $L$ is called ==**semi-simple**== iff:
 - It has no solvable ideals.
-- If [[Radical|$\Rad L = 0$]].
+- If [[radical|$\Rad L = 0$]].
 - [[Semisimple means no abelian ideals|It has no abelian ideals]] (other than $0$).
 - [[Semisimple Simple Decomposition|it decomposes into Simple ideals!!]] (this is insanely strong).
 

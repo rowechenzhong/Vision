@@ -13,7 +13,7 @@
 
 /* Red problem */
 .callout[data-callout="problem"] {
-    --callout-color: 255, 0, 0;
+    --callout-color: 255, 165, 0;
     --callout-icon: "lucide-help-circle";
 }
 /* Just don't use this. */

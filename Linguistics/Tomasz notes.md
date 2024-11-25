@@ -214,7 +214,7 @@ Chair
 kʃɛswɔ
 
 Book
-kʃɔwuʃka
+kʃɔwʃka
 
 Names
 
